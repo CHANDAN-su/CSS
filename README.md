@@ -11,11 +11,6 @@
         property2 : value2;
     }
 
-    h1{
-        color: red;
-        font-size: 25px;
-    }
-
 # Adding CSS to our document
 ## There are three different ways to apply CSS to an HTML document that you'll commonly come across.
 
@@ -24,5 +19,18 @@
 
      <link rel="stylesheet" href="styles.css" />
 
+## 2. Internal stylesheet
+###### An internal stylesheet resides within an HTML document.  you place CSS inside a <style> element contained inside the HTML <head>.
 
+    <style>
+        selector {
+            property : value;
+            property1 : value1;
+            property2 : value2;     }
+    </style>
+
+## 3. Inline style
+###### Inline styles are CSS declarations that affect a single HTML element, contained within a style attribute.
+
+    <h1 style="color: blue;background-color: yellow;"> Hello World! </h1>
 
