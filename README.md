@@ -11,3 +11,8 @@ Syntax - For example, you can decide to have the main heading on your page to be
         property2 : value2;
     }
 
+    h1{
+        color: red;
+        font-size: 25px;
+    }
+
