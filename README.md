@@ -1,9 +1,9 @@
 # CSS - Cascading Style Sheets
 # CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
-#CSS syntax
-CSS is a rule-based language
-Syntax - For example, you can decide to have the main heading on your page to be shown as large red text.
+# CSS syntax
+## CSS is a rule-based language
+###### Syntax - For example, you can decide to have the main heading on your page to be shown as large red text.
 
     selector {
         property : value;
@@ -16,5 +16,5 @@ Syntax - For example, you can decide to have the main heading on your page to be
         font-size: 25px;
     }
 
-#Adding CSS to our document
+# Adding CSS to our document
 
