@@ -32,5 +32,5 @@
 ## 3. Inline style
 ###### Inline styles are CSS declarations that affect a single HTML element, contained within a style attribute.
 
-    <h1 style="color: blue;background-color: yellow;"> Hello World! </h1>
+    <h1 style="property: value;property: value;"> Hello World! </h1>
 
