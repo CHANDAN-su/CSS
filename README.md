@@ -26,7 +26,8 @@
         selector {
             property : value;
             property1 : value1;
-            property2 : value2;     }
+            property2 : value2;     
+                }
     </style>
 
 ## 3. Inline style
@@ -34,3 +35,14 @@
 
     <h1 style="property: value;property: value;"> Hello World! </h1>
 
+## Comments
+###### Best practice to write comments along with CSS. This helps you to remember how the code works as you come back later for fixes or enhancement.
+
+    /* selector {
+        property : value;
+        property1 : value1;
+        property2 : value2;
+    } */
+
+## White space
+###### White space means actual spaces, tabs and new lines. Just as browsers ignore white space in HTML, browsers ignore white space inside CSS.
