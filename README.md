@@ -46,3 +46,11 @@
 
 ## White space
 ###### White space means actual spaces, tabs and new lines. Just as browsers ignore white space in HTML, browsers ignore white space inside CSS.
+
+## Selectors
+
+#### selectors type
+
+| Selectors | Symbol |
+|-----------|--------|
+| Universal Selectors | * | 
