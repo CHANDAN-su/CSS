@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <link rel="stylesheet" href="selectors.css">
+</head>
+
+<body>
+
+    <!-- example -->
+    <h2>Heading</h2>
+    <h3 class="special">Heading</h3>
+
+    <!-- Universal selectors -->
+    <p class="warning">
+        <span lang="en-us">A green span</span> in a red paragraph.
+    </p>
+    <p id="maincontent" lang="en-us">
+        <span class="warning">A red span</span> in a green paragraph.
+    </p>
+
+    <!-- Type selectors -->
+    <div class="box">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit maxime nisi!</span>
+        <a href="#">Lorem ipsum dolor sit amet.</a>
+        <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio.</h6>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit maxime nisi!</span>
+        <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio.</h6>
+        <a href="#">Lorem ipsum dolor sit amet.</a>
+    </div>
+
+    <!-- class selectors -->
+    <p class="red">This paragraph has red text.</p>
+    <p class="red yellow-bg">
+        This paragraph has red text and a yellow background.
+    </p>
+    <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
+    <p>This is just a regular paragraph.</p>
+
+    <!-- id selectors -->
+    <div id="identified">This div has a special ID on it!</div>
+    <div>This is just a regular div.</div>
+
+    <!-- Attributes selectors -->
+    <ul>
+        <li><a href="#internal">Internal link</a></li>
+        <li><a href="http://example.com">Example link</a></li>
+        <li><a href="#InSensitive">Insensitive internal link</a></li>
+        <li><a href="http://example.org">Example org link</a></li>
+        <li><a href="https://example.org">Example https org link</a></li>
+    </ul>
+
+    <ol type="A">
+        <li>
+          Red background for case-insensitive matching (default for the type selector)
+        </li>
+      </ol>
+      <ol type="b">
+        <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
+      </ol>
+      <ol type="B">
+        <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
+      </ol>
+      <ol type="C">
+        <li>
+          Green background if `i` modifier is supported (case-insensitive match)
+        </li>
+      </ol>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

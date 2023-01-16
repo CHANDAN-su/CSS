@@ -1,0 +1,168 @@
+body{
+    background-color: aquamarine;
+}
+
+/* Css selectors -> CSS selectors define the pattern to select elements to which a set of CSS rules are then applied.*/
+
+/* Example */
+h2 , .special{
+    color: rgb(99, 197, 99);
+}
+
+
+/* the invalid class selector rule will be ignored
+    h1, ..special{
+        ..CSS CODE...
+    }
+*/
+/* h1 , ..special{
+    color: aqua;
+} */
+
+
+/* Type of selectors  */
+/* 1. Universal selectors -> The CSS universal selector (*) matches elements of any type.*/
+
+/* Syntex
+    * { style properties }    
+*/
+
+*{
+    /* color: brown; */
+}
+
+*.warning{
+    /* color: red; */
+}
+/* same in id attribute*/
+.warning{
+    color: brown;
+}
+
+*[lang^="en-us"]{
+    color: blue;
+}
+
+
+/* 2. Type selectors -> The CSS type selector matches elements by node name. */
+
+/* Syntex
+    element { style properties }    
+*/
+.box a{
+    background-color: black;
+    color: white;
+}
+
+.box span{
+    background-color: red;
+    color: white;
+}
+
+
+/* class selectors -> The CSS class selector matches elements based on the contents of their class attribute.*/
+
+/* Syntex
+    class attribute { style properties }    
+*/
+
+.red{
+    color: red;
+}
+
+.yellow-bg{
+    background-color: yellow;
+}
+
+.fancy{
+    font-weight: bold;
+    text-shadow: 4px 4px 3px #77f;
+}
+
+
+/* id selectors -> The CSS ID selector matches an element based on the value of the element's id attribute. */
+
+/* Syntex
+    id attribute { style properties }    
+*/
+
+#identified{
+    background-color: rgb(117, 117, 206);
+}
+
+
+/* Attributes selectors -> The CSS attribute selector matches elements based on the presence or value of a given attribute. */
+
+/* Stynex -> [attr] , [attr=value] , [attr^=value] , [attr$=value] , [attr*=value] , [attr operator value i] , [attr operator value s] */
+
+
+a{
+    color: blue;
+}
+
+/* Internal links, beginning with "#" */
+a[href^="#"]{
+    background-color: gold;
+}
+
+/* Links with "example" anywhere in the URL */
+a[href*="example"]{
+    background-color: silver;
+}
+
+
+/* Links with "insensitive" anywhere in the URL, regardless of capitalization */
+a[href*="insensitive" i]{
+    background-color: aqua;
+}
+
+/* Links with "cAsE" anywhere in the URL, with matching capitalization */
+a[href*="cAsE" s]{
+    background-color: blueviolet;
+}
+
+/* Links that end in ".org" */
+a[href$=".org"]{
+    color: red;
+}
+
+/* Links that start with "https" and end in ".org" */
+a[href^="https"][href$=".org"]{
+    color: green;
+}
+
+
+ol[type="A"]{
+    background-color: red;
+}
+
+ol[type="b" s]{
+    color: red;
+}
+
+ol[type="B" s]{
+    color: green;
+}
+
+ol[type="c" i]{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
