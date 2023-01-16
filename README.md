@@ -49,7 +49,7 @@
 
 ## Selectors
 
-#### selectors type
+### **Selectors type**
 
 | Selectors | Symbol |
 |-----------|--------|
