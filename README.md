@@ -52,7 +52,7 @@
 ### **Selectors type**
 
 | Selectors | Symbol |
-|':'-----------':'|':'--------':'|
+|-----------|--------|
 | Universal Selectors | * | 
 | Type selectors | element |
 | Class selectors | .class attribute |
