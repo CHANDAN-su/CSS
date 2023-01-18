@@ -29,6 +29,9 @@ h2 , .special{
 
 *{
     /* color: brown; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 *.warning{
@@ -149,13 +152,96 @@ ol[type="c" i]{
 }
 
 
+ /* Grouping selectors */
+
+/* Selector list -> The CSS selector list (,) selects all the matching nodes. A selector list is a comma-separated list of selectors. */
+
+/* div{
+    color: red;
+}
+span{
+    color: red;
+} */
+
+/* same code */
+div , span{
+    color: red;
+}
+
+:is(div,span){
+    /* border: 2px solid black; */
+}
+
+h1,.heading2,#heading3,h4,h5,h6{
+    background-color: cadetblue;
+}
 
 
 
+/* Combinators */
+
+/* Descendant combinator -> two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. */
+
+/* syntax  selector1 selector2{
+    ..css code..
+} */
+
+ul li{
+    /* color: blue; */
+}
+
+li li{
+    /* background-color: red; */
+}
 
 
+/* Child combintor ->The child combinator (>) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. */
+
+/* syntax  selector1 > selector2{
+    ..css code...
+} */
+.container p{
+    background-color: black;
+    color: white;
+}
+
+.container > p{
+    font-weight: 900;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+}
 
 
+/* General sibling combinator ->  (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element.*/
+
+/* Syntax former_element ~ target_element{
+    ...css code...
+}*/
+
+.para ~ span{
+    background-color: chartreuse;
+    color: blue;
+}
+
+
+/* Adjacent sibling combinator -> The adjacent sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element. */
+
+/* Syntax former_element + target_element{
+    ...css code...
+}*/
+
+aside ~ article{
+    background-color: red;
+    color: black;
+    font-weight: 900;
+}
+
+aside + article{
+    background-color: black;
+    color: wheat;
+    font-weight: 900;
+}
 
 
 

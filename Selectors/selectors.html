@@ -2,93 +2,150 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selectors</title>
-    <link rel="stylesheet" href="selectors.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <link rel="stylesheet" href="selectors.css">
 </head>
 
 <body>
 
-    <!-- example -->
-    <h2>Heading</h2>
-    <h3 class="special">Heading</h3>
+  <!-- example -->
+  <h2>Heading</h2>
+  <h3 class="special">Heading</h3>
 
-    <!-- Universal selectors -->
-    <p class="warning">
-        <span lang="en-us">A green span</span> in a red paragraph.
-    </p>
-    <p id="maincontent" lang="en-us">
-        <span class="warning">A red span</span> in a green paragraph.
-    </p>
+  <!-- Universal selectors -->
+  <p class="warning">
+    <span lang="en-us">A green span</span> in a red paragraph.
+  </p>
+  <p id="maincontent" lang="en-us">
+    <span class="warning">A red span</span> in a green paragraph.
+  </p>
 
-    <!-- Type selectors -->
-    <div class="box">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit maxime nisi!</span>
-        <a href="#">Lorem ipsum dolor sit amet.</a>
-        <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio.</h6>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit maxime nisi!</span>
-        <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio.</h6>
-        <a href="#">Lorem ipsum dolor sit amet.</a>
+  <!-- Type selectors -->
+  <div class="box">
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit maxime nisi!</span>
+    <a href="#">Lorem ipsum dolor sit amet.</a>
+    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio.</h6>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit maxime nisi!</span>
+    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, distinctio.</h6>
+    <a href="#">Lorem ipsum dolor sit amet.</a>
+  </div>
+
+  <!-- class selectors -->
+  <p class="red">This paragraph has red text.</p>
+  <p class="red yellow-bg">
+    This paragraph has red text and a yellow background.
+  </p>
+  <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
+  <p>This is just a regular paragraph.</p>
+
+  <!-- id selectors -->
+  <div id="identified">This div has a special ID on it!</div>
+  <div>This is just a regular div.</div>
+
+  <!-- Attributes selectors -->
+  <ul>
+    <li><a href="#internal">Internal link</a></li>
+    <li><a href="http://example.com">Example link</a></li>
+    <li><a href="#InSensitive">Insensitive internal link</a></li>
+    <li><a href="http://example.org">Example org link</a></li>
+    <li><a href="https://example.org">Example https org link</a></li>
+  </ul>
+
+  <ol type="A">
+    <li>
+      Red background for case-insensitive matching (default for the type selector)
+    </li>
+  </ol>
+  <ol type="b">
+    <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
+  </ol>
+  <ol type="B">
+    <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
+  </ol>
+  <ol type="C">
+    <li>
+      Green background if `i` modifier is supported (case-insensitive match)
+    </li>
+  </ol>
+
+  <!-- Selector list -->
+
+  <div>Lorem, ipsum dolor.</div>
+  <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+
+  <h1>Heading....</h1>
+  <h3 class="heading2">Heading....</h3>
+  <h3 id="heading3">Heading....</h3>
+  <h4>Heading....</h4>
+  <h5>Heading....</h5>
+  <h6>Heading....</h6>
+
+
+  <!-- Combinators -->
+
+  <!-- Descendant combinator -->
+
+  <ul>
+    <li>Item 1
+      <ul>
+        <li>Sub item 1</li>
+        <li>Sub item 2</li>
+      </ul>
+    </li>
+    <!-- <aside>Lorem ipsum dolor sit amet.</aside> -->
+    <li>Item 2
+      <ul>
+        <li>Sub item 1</li>
+        <li>Sub item 2</li>
+      </ul>
+    </li>
+    <li>Item 3
+      <ul>
+        <li>Sub item 1</li>
+        <li>Sub item 2</li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <!-- Child combintor -->
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
     </div>
-
-    <!-- class selectors -->
-    <p class="red">This paragraph has red text.</p>
-    <p class="red yellow-bg">
-        This paragraph has red text and a yellow background.
-    </p>
-    <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
-    <p>This is just a regular paragraph.</p>
-
-    <!-- id selectors -->
-    <div id="identified">This div has a special ID on it!</div>
-    <div>This is just a regular div.</div>
-
-    <!-- Attributes selectors -->
-    <ul>
-        <li><a href="#internal">Internal link</a></li>
-        <li><a href="http://example.com">Example link</a></li>
-        <li><a href="#InSensitive">Insensitive internal link</a></li>
-        <li><a href="http://example.org">Example org link</a></li>
-        <li><a href="https://example.org">Example https org link</a></li>
-    </ul>
-
-    <ol type="A">
-        <li>
-          Red background for case-insensitive matching (default for the type selector)
-        </li>
-      </ol>
-      <ol type="b">
-        <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
-      </ol>
-      <ol type="B">
-        <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
-      </ol>
-      <ol type="C">
-        <li>
-          Green background if `i` modifier is supported (case-insensitive match)
-        </li>
-      </ol>
-      
-      
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  </div>
 
 
+  <!-- General sibling combinator -->
+  <span>This is not red.</span>
+  <p class="para">Here is a paragraph.</p>
+  <code>Here is some code.</code>
+  <span>And here is a red span!</span>
+  <span>And this is a red span!</span>
+  <code>More code…</code>
+  <div>How are you?</div>
+  <p>Whatever it may be, keep smiling.</p>
+  <h1>Dream big</h1>
+  <span>And yet again this is a red span!</span><br><br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Adjacent sibling combinator -->
+    <aside>Lorem ipsum dolor sit amet.</aside>  
+    <article>Lorem ipsum dolor sit amet.</article>
+    <article>Lorem ipsum dolor sit amet.</article>
+    <article>Lorem ipsum dolor sit amet.</article>
+    <section>Lorem ipsum dolor sit.</section>
+    <section>Lorem ipsum dolor sit.</section>
+    <article>Lorem ipsum dolor sit amet.</article>
+    <article>Lorem ipsum dolor sit amet.</article>
+  
 </body>
 
 </html>
