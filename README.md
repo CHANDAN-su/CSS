@@ -58,3 +58,18 @@
 | Class selectors | .class attribute |
 | Id selectors | #id attribute |
 | Attribute selectors | element[attribute] |
+
+#### Grouping selectors
+| Selectors | Symbol |
+|-----------|--------|
+| Selector list | "," | 
+
+
+#### Combinators
+| Combinators | Symbol |
+|-----------|--------|
+| Descendant combinator | " " | 
+| Child combintor | > |
+| General sibling combinator | ~ |
+| Adjacent sibling combinator | + |
+
