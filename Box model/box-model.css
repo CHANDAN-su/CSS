@@ -292,7 +292,28 @@ margin: all ;
     writing-mode: vertical-rl;
 }
 
+.box1{
+    display: flex;
+    gap: 9px;
+}
 
+
+/* margin collapring */
+.box2{
+    border: 2px solid blue;
+    width: 50%;
+    height: 200px;
+}
+
+.one{
+    border: 2px solid black;
+    margin-bottom: 50px;
+}
+
+.two{
+    border: 2px solid black;
+    margin-top: 30px;
+}
 
 
 
