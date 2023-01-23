@@ -1,0 +1,311 @@
+body{
+    background-color: aliceblue;
+}
+
+/* Box model */
+/* Two type of box molder 1. inner display type 2. outer dispaly type */
+
+/* 1. outer dispaly box 
+
+    block type
+    -> Breake into a new line
+    -> width, height, padding, margin and border apply
+
+    inlie  type
+    -> Will not Breake into a new line
+    -> width, height, padding, margin and border not apply apply karbana h to display block karna parega
+*/
+
+.para{
+    border: 1px solid black;
+}
+
+.unorderlist li{
+    border: 1px solid black;
+    list-style: none;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.unorderlist{
+    display: inline-flex;
+}
+
+.block1{
+    border: 1px solid red;
+    display: block;
+    width: 70%;
+}
+
+
+/* The example below has three different HTML elements, all of which have an outer display type of block. */
+.conainter{
+    margin: 40px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 50%;
+}
+
+.conainter p{
+    border: 1px solid red;
+}
+
+.conainter ul{
+    border: 1px solid red;
+}
+
+.conainter li , .block{
+    border: 1px solid black;
+    list-style: none;
+    margin: 5px;
+}
+
+.conainter ul{
+    display: flex;
+}
+
+.conainter p > .block{
+    display: block;
+}
+
+
+/* In the next example, we can see how inline elements behave. */
+
+.conainter1{
+    margin: 40px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 70%;    
+}
+
+.conainter1 p > span{
+    border: 1px solid green;
+}
+
+.conainter1 ul , .conainter1 ul p{
+    border: 2px solid black;
+}
+
+.conainter1 ul{
+    display: inline-flex;
+}
+.conainter1 ul li{
+    border: 1px solid red;
+    list-style: none;
+}
+
+.conainter1 .inline{
+    display: inline;
+}
+
+
+
+/* CSS box model */
+/* The CSS box model as a whole applies to block boxes and defines how the different parts of a box — margin, border, padding, and content */
+
+/* Parst of box */
+/* Content box:  The area where your content is displayed.
+Padding box:  The padding sits around the content as white space.
+Border box:   The border box wraps the content and any padding.
+Margin box:   The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements */
+
+.container3{
+    display: inline-flex;
+}
+
+
+.box{
+    width: 300px;
+    height: 150px;
+    border: 5px solid red;
+    margin: 40px;
+    padding: 40px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).*/
+
+
+.alternate{
+    box-sizing: border-box;
+}
+/* The actual space taken up by the box will be 350px in the inline direction and 150px in the block direction. */
+
+
+
+
+
+/* margin */
+/* The margin is an invisible space around your box. It pushes other elements away from the box. Margins can have positive or negative values 
+
+margin properties
+    margin-top
+    margin-left
+    margin-buttom
+    margin-right
+
+shorthand margin properties
+margin: all ;
+        top and botttom  |  left and right
+        top  |  left and right  |  bottom
+        top  |  right  |  bottom  |  left
+*/
+
+.container4{
+    width: 300px;
+    height: 150px;
+    border: 2px solid black; 
+}
+
+.container4 div{
+    border: 2px solid red;
+    box-sizing: border-box;
+    width: 17%;
+
+    /* margin: 20px; */
+    /* margin: 30px 20px; */
+    /* margin: 20px 20px 20px; */
+    /* margin: 20px 20px 20px 20px; */
+    /* margin: 12px auto; */
+}
+
+/* Horizontal centering */
+.center{
+    width: 11%;
+    margin: 0 auto;
+}
+
+
+/* margin block */
+/* physical margins depending on the element's writing mode, directionality, and text orientation.*/
+/* syntax -> margin: margin-block-start margin-block-end; */
+
+.container5 div{
+    height: 120px;
+    width: 120px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+
+.container5 div p{
+    margin: 0;
+    background-color: blueviolet;
+    margin-block: 20px 20px;
+}
+
+
+.veritcalexample{
+    writing-mode: vertical-rl;
+}
+
+
+/*margin-block-start  */
+.container6 div{
+    height: 120px;
+    width: 120px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+
+.container6 div p{
+    /* margin-block: 30px 20px; */ /*20px not work */
+    margin-block-start: 50px;
+    writing-mode: vertical-lr;
+}
+
+
+/*margin-block-end  */
+.container7 div{
+    height: 120px;
+    width: 120px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+
+.container7 div p{
+    /* margin-block: 30px 20px;*/  /*300px not work */
+    margin-block-end: 50px;
+    /* margin-top: 5px; */
+    /* margin-left: 50px; */
+    /* margin-bottom: 50px; */
+    /* margin-right: 50px; */
+    writing-mode: vertical-rl;
+}
+
+
+
+/* margin-inline */
+/* physical margins depending on the element's writing mode, directionality, and text orientation.*/
+/* syntax -> margin: margin-inline-start margin-inline-end; */
+
+.container8 div{
+    height: 120px;
+    width: 120px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+
+.container8 div p{
+    margin: 0;
+    background-color: blueviolet;
+    margin-inline: 20px 20px;
+}
+
+
+.veritcalexample1{
+    writing-mode: vertical-rl;
+}
+
+
+/* margin-inline-start */
+.container9 div{
+    height: 120px;
+    width: 120px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+
+.container9 div p{
+    /* margin-block: 30px 20px; */ /*20px not work */
+    margin-inline-start: 50px;
+    writing-mode: vertical-lr;
+}
+
+
+/* margin-inline-end */
+.container10 div{
+    height: 120px;
+    width: 120px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+
+.container10 div p{
+    /* margin-block: 30px 20px;*/  /*300px not work */
+    margin-inline-end: 50px;
+    /* margin-top: 5px; */
+    /* margin-left: 50px; */
+    /* margin-bottom: 50px; */
+    /* margin-right: 50px; */
+    writing-mode: vertical-rl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
