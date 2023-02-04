@@ -2,6 +2,10 @@ body{
     background-color: aliceblue;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 /* Box model */
 /* Two type of box molder 1. inner display type 2. outer dispaly type */
 
@@ -169,6 +173,11 @@ margin: all ;
     /* margin: 20px 20px 20px; */
     /* margin: 20px 20px 20px 20px; */
     /* margin: 12px auto; */
+
+    /* margin-top: 5px; */
+    /* margin-left: 50px; */
+    /* margin-bottom: 50px; */
+    /* margin-right: 50px; */
 }
 
 /* Horizontal centering */
@@ -313,6 +322,461 @@ margin: all ;
 .two{
     border: 2px solid black;
     margin-top: 30px;
+}
+
+
+/* padding */
+/* The padding CSS shorthand property sets the padding area on all four sides of an element at once.  */
+
+/* padding properties
+    padding-top
+    padding-left
+    padding-buttom
+    padding-right
+
+shorthand padding properties
+padding: all ;
+        top and botttom  |  left and right
+        top  |  left and right  |  bottom
+        top  |  right  |  bottom  |  left */
+
+   
+.box3{
+    display: flex;
+}
+
+.padding{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    margin-right: 10px;
+}
+
+.padall{
+    padding: 20px 50px;
+}
+
+.padall1{
+    padding: 100px 30% 60px 90px;
+    /* padding-top: 100px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+    padding-left: 90px; */
+}
+
+
+/* border */
+/* The border shorthand CSS property sets an element's border. It sets the values of border-width, border-style, and border-color. */
+
+/* border properties
+    border-width
+    border-style
+    border-color
+
+shorthand padding properties
+border: solid;
+        width  style
+        outsef #fcc
+        width style color
+*/
+
+.box4{
+    padding: 5px;
+
+    /* border: solid; */
+    /* border: 5px solid; */
+    /* border: outset red; */
+    border: 1px solid red;
+}
+
+
+/* boreder width */
+/* sets the width of an element's border. */
+
+/* border property
+    border-top-width
+    border-right-width
+    border-bottom-width
+    border-left-width
+
+shorthand padding properties
+     all side
+     top and botton | left and right
+    top | left and right | bottom
+    top | right | bottom | left
+*/
+
+#one-value{
+    border: solid red;
+    border-width: 6px;
+}
+
+#two-value{
+    border: double goldenrod;
+    border-width: 20px 10px;
+}
+
+#three-value{
+    border: dotted green;
+    border-width: 10px 9px 2px;
+}
+
+#four-value{
+    border: ridge gray;
+    border-width: thin medium thick 1em;
+}
+
+/* border style */
+/* sets the style of an element's border. */
+
+/* border property
+    border-top-style
+    border-right-style
+    border-bottom-style
+    border-left-style
+
+shorthand padding properties
+     all side
+     top and botton | left and right
+    top | left and right | bottom
+    top | right | bottom | left
+*/
+.box5{
+    display: flex;
+}
+
+pre{
+    width: 90px;
+    height: 90px;
+    background-color: aqua;
+    margin: 10px;
+    border-width: 6px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.b1{
+    border-style: none;
+}
+.b2{
+    border-style: hidden;
+}
+.b3{
+    border-style: dotted;
+}
+.b4{
+    border-style: dashed;
+}
+.b5{
+    border-style: double;
+}
+.b6{
+    border-style: solid;
+}
+.b7{
+    border-style: groove;
+}
+.b8{
+    border-style: ridge;
+}
+.b9{
+    border-style: inset;
+}
+.b10{
+    border-style: outset;
+}
+
+
+/* border color */
+/* sets the color of an element's border. */
+
+/* border property
+    border-top-style
+    border-right-style
+    border-bottom-style
+    border-left-style
+
+    shorthand padding properties
+     all side
+     top and botton | left and right
+    top | left and right | bottom
+    top | right | bottom | left
+*/
+.box6{
+    width: 70%;
+    height: 250px;
+    background-color: rgb(221, 147, 51);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.box6 ul li{
+    list-style: none;
+    margin: 20px 0;
+    padding: 5px;
+}
+
+.li1{
+    border: 5px solid;
+    border-color: red;
+}
+
+.li2{
+    border: 5px solid;
+    border-color: red green;
+}
+
+.li3{
+    border: 5px solid;
+    border-color: red greenyellow black;
+}
+
+.li4{
+    border: 5px solid;
+    border-color: red yellow orange purple;
+}
+
+
+/* border collapse */
+/* The border-collapse CSS property sets whether cells inside a <table> have shared or separate borders. */
+/* value => collapse , separate */
+
+.tables{
+    display: flex;
+}
+
+.separate{
+    margin-right: 30px;
+    /* border: 3px solid blue; */
+    border-collapse: separate;
+    /* border-collapse: collapse; */
+
+    border-spacing: 15px;
+}
+
+table th , table td{
+    /* border: 1px solid; */
+}
+
+.fe{
+    border: 1px solid;
+    border-color: yellow blue;
+}
+.gk{
+    border: 3px solid;
+    border-color: black purple;
+}
+.Eg{
+    border: 3px solid;
+    border-color: blue yellow;
+}
+.Eh{
+    border: 3px solid;
+    border-color: greenyellow;
+}
+.Sf{
+    border: 3px solid;
+    border-color: blue gray;
+}
+.Wk{
+    border: 3px solid;
+    border-color: yellow blue;
+}
+.Ch{
+    border:3px solid;
+    border-color: red  yellow green blue;
+}
+.bl{
+    border: 3px solid;
+    border-color: blue blueviolet sienna green;
+}
+.OP{
+    border: 3px solid;
+    border-color: red;
+}
+.Bi{
+    border: px solid;
+    border-color: blue blueviolet sienna green;
+}
+
+
+
+/* border spacing */
+/* The border-spacing CSS property sets the distance between the borders of adjacent cells in a <table>. This property applies only when border-collapse is separate. */
+/* syntax => border-spacinf: 2px;
+
+shorthand bporder-spacing properties 
+    all side
+    horizontal side | vertical side
+*/
+
+.spacing-M{
+    border: 3px solid yellow;
+    padding: 10px  30px;
+    border-spacing: 10px;
+
+}
+
+.spacing{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(114, 109, 109);
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* border radius */
+/* The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners. */
+
+/* Constituent properties
+
+border-top-left-radius
+border-top-right-radius
+border-bottom-right-radius
+border-bottom-left-radius 
+
+shorthand padding properties
+    all side
+    top-left and bottom-right | top-right and bottom-left
+    top-let | top-right and bottom-left | bottom-right
+    top-left | top-right | bottom-right | bottom-left
+
+    first radius value/all side
+    first radius value/top-left and bottom-right | top-right and bottom-left
+    first radius value/top-let | top-right and bottom-left | bottom-right
+    first radius vakue/top-left | top-right | bottom-right | bottom-left
+
+*/
+
+
+
+
+.radius{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    border: 2px solid black;
+    margin-top: 10px;
+
+    /* border radius */
+    /* border-radius: 40px 130px; */
+    /* border-radius: 30px 90px 30px; */
+    /* border-radius: 20px 40px 60px 80px; */
+
+    /* border-radius: 100px/200px; */
+    /* border-radius: 20px 20px/30px 40px; */
+    /* border-radius: 20px 30px 40px/50px 60px 70px; */
+    border-radius: 20px 30px 40px 50px/60px 70px 80px 90px;
+
+}
+
+.radius1{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 200px;
+}
+
+
+/* border image */
+/* The border-image CSS property draws an image around a given element. It replaces the element's regular border. */
+
+/* Constituent properties 
+    border-image-source
+    border-images-slice
+    border-image-width
+    border-image-outset
+    border-image-repeat
+
+
+    shorthand padding properties
+        sorece | slice
+        source | slice | width
+        source | slice |repeat
+        source | slice | width | outset |repate
+*/
+.liner{
+    border: 30px solid;
+    border-radius: 8px;
+    padding: 40px;
+    width: 20%;
+    margin-bottom: 30px;
+}
+.liner1{
+    border: 30px solid;
+    border-radius: 8px;
+    padding: 40px;
+    width: 20%;
+}
+.liner{
+    /* border-image: linear-gradient(red , blue ,yellow) 20; */
+    border-image: url("https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice/border-diamonds.png") 30 / 30px / 1px space;
+}
+
+/* border-image-source => sets the source image used to create an element's
+properties
+    border-image-source : url("")
+    border-image-source: linear-gradient()
+    https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice/border-diamonds.png
+    https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-width/border.png
+*/
+
+.liner1{
+    border-image-source: url("https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-width/border.png");
+}
+
+/* borderimage-slice => divides the image specified by border-image-source into regions. These regions form the components of an element's 
+
+shorthand 
+    border-image-slice: all side;
+                        top and bottom | left and right
+                        top | left and right | bottom
+                        top | left | bottom |right
+ */
+
+.liner1{
+    border-image-slice: 31;
+}
+
+ /* border-image-width => sets the width of an element's border image.
+ shorthand 
+    bordedr-image-width: all side;
+                        top and bottom | left and right
+                        top | left and right | bottom
+                        top | left | bottom |right
+ */
+
+.liner1{
+    border-image-width: 25px;
+}
+
+/* border-image-outset => sets the distance by which an element's border image is set out from its border box. 
+shorthand 
+    bordedr-image-width: all side;
+                        top and bottom | left and right
+                        top | left and right | bottom
+                        top | left | bottom |right
+*/
+.liner1{
+    border-image-outset: 5px;
+}
+
+/*border-image-repeat =>  defines how the edge regions and middle region of a source image are adjusted to fit the dimensions of an element's border image. The middle region can be displayed by using the keyword "fill" in the border-image-slice property. 
+shorthand
+    border-image-repeat: stretch,repeat,round, spece;
+                        top and bottom | left and right
+*/
+.liner1{
+    border-image-repeat: round;
 }
 
 
