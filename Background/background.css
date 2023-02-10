@@ -1,0 +1,164 @@
+body{
+    /* background: url("/Image/Desert.jpg") no-repeat;
+    background-size: cover; */
+    margin: 0;
+    padding: 0;
+    /* background-color: blue;  */ /* transparent ke liye*/
+}
+
+/* backgroung */
+/* The background shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method. */
+/* background  properties
+    background-attachment
+    background-clip
+    background-color
+    background-image
+    background-origin
+    background-position
+    background-repeat
+    background-size
+*/
+
+/* Syntax
+    ...backgroung color....
+    backgroung: green;    
+
+    ...backgroung-image | background-repeat....
+    backgroung: url("") no-repeat;
+*/
+
+.box{
+    width: 100%;
+    height: 300px;
+    /* background: red; */
+    background: url("/Image/cute-school.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/* backgroung color */
+/* this property sets the background color of an element. */
+/* Syntax
+    bacgroung-color: red | Hexadecimal  | RGB | HSL | transparent;
+*/
+.box1{
+    width: 70%;
+    height: 270px;
+    /* background-color: red; */
+    background-color: transparent;
+}
+
+
+/* backgroung image */
+/* This property sets one or more background images on an element. */
+/* Syntax
+    ...Single value...
+    background-image: url("") | all gradient;
+
+    ...Double...
+    background-image: url(") , url("") | gradient , gradient | url("") , all gradient;
+*/
+
+.box2{
+    width: 100vw;
+    height: 100vh;
+    /* background-repeat: no-repeat;
+    background-size: cover , 20px; */
+
+    /* background-image: url("/Image/Mask\ group.png") ; */
+
+    /* multiple image */
+    /* background-color: yellow;
+    background-image: url("/Image/sunday-school.jpg"), url("/Image/Mask\ group.png");
+    background-size: 500px, 500px;
+    background-repeat: no-repeat;
+    background-position: 10% 30% , 70% 60%; */
+
+    /* grandite */
+    background-image: url("/Image/Mask\ group.png"), linear-gradient(orange,yellow,rgb(221, 67, 67));
+    background-size: 50px;
+    }
+
+
+/* backgroung attachement */
+/* This property sets whether a background image's position is fixed within the viewport, or scrolls with its containing block. */
+
+/* Syntax
+    backgroung-attachement: scroll | fixed | local
+*/
+
+
+
+
+
+
+
+/* background clip */
+/* This property sets whether an element's background extends underneath its border box, padding box, or content box. */
+/* Syntax
+    backgroung-clip: border-box | padding-box | content-box | text;
+*/
+
+
+
+
+
+
+
+
+
+/* background origin*/
+/* This property sets the background's origin: from the border start, inside the border, or inside the padding. */
+/* Syntax
+    backgroung-origin: border-box | padding-box | content-vox;
+*/
+
+
+
+
+
+
+
+ /* background position*/
+ /* This property sets the initial position for each background image. The position is relative to the position layer set by background-origin. */
+/* Syntax
+    backgroung-position: top | left | bottom | right | center | 25% 29% | 0 0 center;
+*/
+
+
+
+
+
+
+
+
+/* background repeat */
+/* This property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all. */
+/* Syntax
+    ...value..
+    background-repeat: repeat-x | repeat-y | repeat | space | around | no-repeat;
+
+    ...horizontal | vertical...
+    background-repeat: repeat-x space;
+*/
+
+
+
+
+
+
+
+
+/* background size */
+/* This property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space. */
+/* Syntax
+    background-size: cover | contain;
+    
+    ... One-value syntax - the width of the image (height becomes 'auto')...
+    backgrouns-size: 50%
+
+    ...Two-value syntax - first value: width of the image, second value: height...
+    background-size: 50% auto | auto 6px | auto auto;
+*/
