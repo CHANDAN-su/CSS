@@ -36,8 +36,6 @@ body{
 }
 
 
-
-
 /* backgroung color */
 /* this property sets the background color of an element. */
 /* Syntax
@@ -77,8 +75,8 @@ body{
     background-position: 10% 30% , 70% 60%; */
 
     /* grandite */
-    background-image: url("/Image/Mask\ group.png"), linear-gradient(orange,yellow,rgb(221, 67, 67));
-    background-size: 50px;
+    background-image: url("/Image/Mask\ group.png"), linear-gradient(rgb(95, 95, 218),rgb(202, 202, 59),rgb(221, 67, 67));
+    background-size: 25px;
     }
 
 
@@ -89,10 +87,17 @@ body{
     backgroung-attachement: scroll | fixed | local
 */
 
+.box3{
+/* body{ */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background: url("/Image/Mask\ group.png") no-repeat;
+    background-position: 50% 30%;
 
-
-
-
+    /* background-attachment: scroll; */
+    /* background-attachment: local; */
+    background-attachment: fixed;
+}
 
 
 /* background clip */
@@ -100,12 +105,6 @@ body{
 /* Syntax
     backgroung-clip: border-box | padding-box | content-box | text;
 */
-
-
-
-
-
-
 
 
 
@@ -117,21 +116,22 @@ body{
 
 
 
-
-
-
-
  /* background position*/
  /* This property sets the initial position for each background image. The position is relative to the position layer set by background-origin. */
 /* Syntax
     backgroung-position: top | left | bottom | right | center | 25% 29% | 0 0 center;
 */
 
+.box4{
+    width: 100vw;
+    height: 100vh;
+    background: url("/Image/Mask\ group.png") no-repeat;
+    /* background-position: 20%; */
+    /* background-position: 20px 20px 20px 20px; */
+    /* background-position: center center; */
+    background-position: 30% 80%;
 
-
-
-
-
+}
 
 
 /* background repeat */
@@ -144,11 +144,17 @@ body{
     background-repeat: repeat-x space;
 */
 
-
-
-
-
-
+.box5{
+    width: 100vw;
+    height: 100vh;
+    background: url("/Image/Mask\ group.png");
+    /*background-repeat: repeat;*/ /*default value*/
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-repeat: round; */
+    background-repeat: space;
+    background-size: 200px;
+}
 
 
 /* background size */
@@ -162,3 +168,12 @@ body{
     ...Two-value syntax - first value: width of the image, second value: height...
     background-size: 50% auto | auto 6px | auto auto;
 */
+
+.box6{
+    width: 100vw;
+    height: 100vh;
+    background: url("/Image/Mask\ group.png") no-repeat;
+    background-size: 900px;
+    background-position: 0 0;
+}
+
