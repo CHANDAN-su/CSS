@@ -95,3 +95,17 @@ inline-size: 200px;
   border-right: 3px groove pink !important;
 
 }
+
+.wrapper1{
+    inline-size: 400px;
+    writing-mode: horizontal-tb;
+    border: 2px solid black;
+    margin-block-start: 10px;
+}
+
+
+.wrapper1 div img{
+    height: 90px;
+    width: 90px;
+    float: inline-start;
+}
