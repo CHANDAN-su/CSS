@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valus and units</title>
+
+    <style>
+        /*   absolute length */
+        .container2 {
+            border: 2px solid red;
+
+            width: 600px;
+            /*   width: 100mm; */
+            /*   width: 10cm; */
+            /*   width: 5in; */
+            /*   width: 40pc; */
+            /*   width: 190pt; */
+            margin-bottom: 10px;
+        }
+
+        /*relative length  */
+        .rel {
+            border: 2px solid black;
+            width: 270px;
+            /*   height: 200px; */
+            /*   padding: 10px; */
+            /*   font-size: 30px; absoulte length h */
+            font-size: 1.5rem;
+            /* html se jura h */
+
+        }
+
+        .child {
+            margin-top: 15px;
+            border: 2px solid red;
+            width: 50%;
+            font-size: 0.7em;
+            /* ye apane parent se jura h */
+        }
+
+
+        .viewport {
+            /* border: 2px solid black;
+            width: 20vw;
+            height: 100vh; */
+        }
+
+        .color-container {
+            display: flex;
+        }
+
+        /* color keyword */
+
+        /* Hexadecimal RGB value values between 0 and f (0123456789abcdef)-> 
+a hash/pound symbol (#) followed by six hexadecimal numbers */
+
+        .color-value {
+            width: 230px;
+            height: 230px;
+            margin: 5px;
+            /*   background-color: #5487f1; */
+            /*   background-color: #128923; */
+            /*   background-color: #000000; */
+            /*   background-color: #ffffff; */
+            background-color: #ffff34;
+        }
+
+        /*RGB values -> a decimal number between 0 and 255
+RGB value is a function — rgb() three parameters that represent the red, green, and blue */
+
+        .color-value1 {
+            width: 230px;
+            height: 230px;
+            margin: 5px;
+            /*   background-color: rgb(25,23, 58); */
+            /*   background-color: rgb(197, 93, 161); */
+            /*   background-color: rgb(0,0,0); */
+            /*   background-color: rgb(255,255,255); */
+            background-color: rgb(127.5, 127.5, 127.5);
+        }
+
+        /*RGBA  value a decimal number between 0 and 255 and opacity 0 and 1
+RGB value is a function — rgba() four parameters that represent the red, green,  blue, opacity */
+
+        .color-value2 {
+            width: 230px;
+            height: 230px;
+            margin: 5px;
+
+            background-color: rgba(50, 85, 68, 0.5);
+        }
+
+        /*HSL value the hsl() function accepts hue, saturation, and lightness values
+An alternative way to specify colors is the HSL color model. Instead of red, green, and blue values*/
+
+        /* Hue: The base shade of the color. This takes a value between 0 and 360, representing the angles around a color wheel.
+Saturation:  This takes a value from 0–100%, where 0 (gray) is no color and 100% is full color saturation.
+
+Lightness: This takes a value from 0–100%, where 0 is no light  and 100% is full light  */
+
+        .hsl {
+            width: 230px;
+            height: 230px;
+            margin: 5px;
+
+            background-color: hsl(120, 100%, 70%);
+            /*   color:red; */
+        }
+
+        /*hsla value 
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the object. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).*/
+
+        .hsla {
+            width: 230px;
+            height: 230px;
+            margin: 5px;
+
+            background-color: hsl(120, 100%, 70%, 0.7);
+        }
+
+
+        /* position */
+        .position{
+            width: 300px;
+            height: 300px;
+            border:2px solid black;
+            background-image: url("/Image/school.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: right 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container2">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam.</p>
+        <div class="cont">
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="rel">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quae!
+        <div class="child">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, totam?
+        </div>
+    </div>
+
+    <div style="display: flex;">
+        <div class="viewport">
+        </div>
+        <h1 style="float: right;">Hello</h1>
+    </div>
+
+    <div class="color-container">
+        <div class="color-value"></div>
+        <div class="color-value1"></div>
+        <div class="color-value2"></div>
+        <div class="hsl"></div>
+        <div class="hsla"></div>
+    </div>
+
+    <div class="position"></div>
+
+</body>
+
+</html>
