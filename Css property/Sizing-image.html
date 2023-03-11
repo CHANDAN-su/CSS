@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing image and object-fit</title>
+
+    <style>
+        /* <!-- two boxes, both 200 pixels in size:
+        One contains an image which is smaller than 200 pixels — it is smaller than the box and doesn't stretch to fill it.
+        The other is larger than 200 pixels and overflows the box. --> */
+
+        /* <!-- object-fit -> The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container. --> */
+        /* <!-- Syntax : object-fit: contain | cover | fill | none | scale-down --> */
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            border: 2px solid red;
+            margin: 5px;
+        }
+
+        .cover {
+            object-fit: cover;
+        }
+
+        .contain {
+            object-fit: contain;
+        }
+
+        .type{
+            background-color: red;
+            font-size: 35px;
+            margin-top: 20px;
+            background-clip: text;
+            /* -webkit-background-clip: text; */
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box"><img src="/Image/Mask group.png" class="contain"></div>
+        <div class="box"><img src="/Image/Hydrangeas.jpg" class="cover"></div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="box"><img src="https://mdn.github.io/css-examples/learn/images/balloons.jpg" alt="balloons"
+                class="cover"></div>
+        <div class="box"><img src="https://mdn.github.io/css-examples/learn/images/balloons.jpg" alt="balloons"
+                class="contain"></div>
+    </div>
+
+    <div class="type">Lorem ipsum dolor sit amet.</div>
+
+</body>
+
+</html>
