@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Source+Sans+Pro:ital,wght@0,200;0,400;1,700&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/*font family  */
+/* The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element. */
+/* that can be downloaded using a @font-face at-rule. */
+
+/*Insert three type of font family
+1. dafult
+2. web font -> link and import  (fonts.google.com)
+3. @font-face -> download resources
+*/
+
+.para{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+
+/*   Default */
+/*   font-family: sans-serif; */
+/*   font-family: Georgia, 'Times New Roman', Times, serif; */
+
+/*   web font (link) */
+  font-family: 'Open Sans', sans-serif;
+/* font-family: 'Source Sans Pro', sans-serif; */
+  
+}
+.para1{
+  font-size: 60px;
+  font-family: 'Rubik Iso', cursive;
+/* font-family: 'Source Sans Pro', sans-serif; */
+}
+
+
+/*@font-face  */
+/* a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer. *//* ttf otf woff woff2 exteration */
+/* Syntax  @font-face{
+     font-family: _____;
+    src: url(_____);
+    font-weight: ___;
+} */
+
+@font-face{
+  font-family: name;
+/*   src: url("/fonts/OpenSans-ExtraBoldItalic.ttf"); */
+  src: url("/Typography/font/After_Shok.ttf");
+  font-weight: 400;
+}
+
+.name{
+  font-family: name;
+  font-size: 100px;
+}
+
+
+
+/*font size:  Defines the size of the text.
+Changing the font size also updates the sizes of the font size-relative <length> units, such as em, ex, and so forth.*/
+/*value: xx-small | x-small | small | medium | larger | x-larger | xx-larger | leght unit  */
+
+.fontS{
+  /*     font-size: xx-large; */
+  /*     font-size: xx-smalll; */
+  /*     font-size: 80px; */
+      font-size: 5rem;
+    }
+  
+  /*font style: A font should be styled with a normal, italic, or oblique  */
+  /*value: normal  | italic | oblique */
+  
+  .fontSt{
+    font-size: 30px;
+  /*   font-style: italic; */
+    font-style: oblique;
+  }
+  
+  /*fonr-weight: the weight (or boldness) of the font. */
+  /*value: normal | bold | lighter | 100(Thin) | 200(Extra Light) | 300(Light) | 4000(Normal) | 500(Medium) | 600(Semi Bold) | 7000(Bold) | 800(Extra Bold) | 900(Ultra Bold)  */
+  
+  ul li:nth-child(1){
+    font-size: 25px;
+    font-weight: bold;
+  }
+  ul li:nth-child(2){
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  ul li:nth-child(3){
+    font-size: 25px;
+    font-weight: 100;
+  }
+  ul li:nth-child(4){
+    font-size: 25px;
+    font-weight:200 ;
+  }
+  ul li:nth-child(5){
+    font-size: 25px;
+  font-weight: 300;
+  }
+  ul li:nth-child(6){
+    font-size: 25px;
+    font-weight: 400;
+  }
+  ul li:nth-child(7){
+    font-size: 25px;
+    font-weight: 500;
+  }
+  ul li:nth-child(8){
+    font-size: 25px;
+    font-weight: 600;
+  }
+  ul li:nth-child(9){
+    font-size: 25px;
+    font-weight: 700;
+  }
+  ul li:nth-child(10){
+    font-size: 25px;
+    font-weight: 800;
+  }
+  ul li:nth-child(11){
+    font-size: 25px;
+    font-weight: 900;
+  }
+  
+  
+  /*font vaeient: Defines which glyph to use for each letter.  */
+  /*value: normal | small-caps  */
+  
+  
+  .fontV{
+    font-size: 30px;
+  /*   text-transform: uppercase; */
+    font-variant: small-caps;
+  }
+  
+  
+  /*font Shorthand property: font-style font-variant font-weight font-size line-height and font-family. */
+  
+  
+  
+  /*letter spacing: the horizontal spacing behavior between text characters. negative values of letter-spacing bring characters closer together.  */
+  /*value: normal | lehgth  */
+  
+  /*line height: he height of a line box. Defines the height of a single line of text.
+  block level use and not use inline level*/
+  /* value: normal | length */
+  
+  
+  .letterS-lineH{
+    font-size: 20px;
+  /*   letter-spacing: 4px; */
+    letter-spacing: 0.5em;
+    line-height: 35px;
+  }
+  
+  
+  /*text-aling: the horizontal alignment of the inline-level content inside a block element or table-cell box.  */
+  /* value: left (default) | right | center | justify */
+  
+  .box{
+    border: 2px solid black;
+    padding: 10px;
+    width: 700px;
+    border-radius: 10px;
+  
+  /*   text-align: right; */
+    text-align: center;
+  /*   text-align: justify; */
+  }
+  
+  
+  
+  /*text-decoration: Defines how the text content of the element is decorated.  */
+  /* text-decoration shorthand: text-decoration-line, text-decoration-color, text-decoration-style, */
+  /*value: underline | overline red | ubderline blue dotted  */
+  
+  
+  /*text-decoration-color: the color of decorations added to text  */
+  /*value: reb | reba | hex | hsl | hsl | name  */
+  
+  
+  /* text-decoration-line: the kind of decoration that is used on text in an element, such as an underline or overline.
+  /* value: underlive | overline | line-thriugh | blink  */
+  
+  
+  /* text-decoration-style: the style of the lines  */
+  /*value: soild | dotted | wavy | double | dashed  */
+  
+  
+  /*text-decoration-thickness: the stroke thickness of the decoration line that is used on text in an element, such as a line-through, underline, or overline.  */
+  /*value:   auto | from-font | length*/
+  
+  
+  
+  
+  
