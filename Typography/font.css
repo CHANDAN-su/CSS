@@ -196,6 +196,150 @@ Changing the font size also updates the sizes of the font size-relative <length>
   /*value:   auto | from-font | length*/
   
   
+.decortion a{
+  display: block;
+  margin: 20px;
+}
+
+.decortion .decortion1{
+  text-decoration: underline rgb(94, 94, 197) solid;
+  /* text-decoration: overline rgb(94, 94, 197) solid; */
+  /* text-decoration: line-through rgb(94, 94, 197) solid; */
+  text-decoration-thickness: 2px;
+}
   
-  
-  
+.decortion .decortion2{
+  text-decoration-line: underline;  
+  text-decoration-color: green;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 0.1em;
+}
+
+
+/*text-indent:  Defines the indentation of the element's first line of text. */
+/* value: length  */
+
+.indent p{
+  border: 2px solid black;
+  width: 700px;
+
+  text-indent: 15%;
+}
+
+
+/* text-overflow: Defines how the hidden text content behaves if it's overflowing. It can be clipped, display an ellipsis ('…'), or display a custom string.*/
+/* value: clip | ellipsis */
+
+/* Both of the following are required for text-overflow */
+/* white-space: nowrap;
+overflow: hidden; */
+
+/* .textO{
+  width: 80px;
+  background-color: aqua;
+  overflow: hidden;
+  white-space: nowrap;
+} */
+
+.textO p{
+  width: 75px;
+  border-radius: 5px;
+  background-color: aqua;
+  overflow: hidden;
+  /* white-space: nowrap; */
+
+  padding: 9px;
+  text-overflow: ellipsis;
+  /* text-overflow: " etc..";  only work in firefox */
+}
+
+
+/* text shadow: Defines the shadow of the text content.
+Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color. */
+/* value 
+offset-x | offset-y | blur-radius | color 
+color | offset-x | offset-y | blur-radius 
+offset-x | offset-y | color 
+color | offset-x | offset-y 
+offset-x | offset-y
+Use defaults for color and blur-radius */
+
+
+.text-Shadow{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 10px;
+  color: rgb(55,55, 55);
+
+  text-shadow: -1px 3px 2px rgb(226, 99, 99),
+              -1px 5px 4px rgb(0,0,0),
+              -1px 6px 6px rgb(253, 4, 4);
+}
+
+/* text-transform: Defines how the text content should be transformed.*/
+/* value: uppercase | capitalize | lowercase */
+
+.textTr{
+  /* text-transform: uppercase; */
+  /* text-transform: capitalize; */
+  text-transform: lowercase;
+}
+
+/* word-spacing: Defines the spacing between words of a block of text. */
+/* value: normal | length */
+
+.wordS{
+  word-spacing: 20px;
+  letter-spacing: 7px;
+}
+
+/* word-break: The word-break CSS property sets whether line breaks appear wherever the text would otherwise overflow its content box. */
+/* value: normal | break-all */
+
+.wordB{
+  width: 305px;
+  border-radius: 5px;
+  background-color: aqua; 
+
+  word-break: break-all;
+}
+
+
+/* white-space: Defines how the element's white space is handled.  */
+/* value: normal | nowrape | pre | pre-line | pre-wrap */
+.whiteS{
+  width: 305px;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  white-space: nowrap;  
+}
+
+.whiteS-pre{
+  width: 305px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+
+  white-space: pre;
+}
+
+.whiteS-pre-line{
+  width: 305px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+
+  white-space: pre-line;
+}
+
+.whiteS-pre-wrap{
+  width: 305px;
+  border-radius: 5px;
+  border: 2px solid black;
+
+  white-space: pre-wrap;
+}
