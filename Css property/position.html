@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        body {
+            /* height: 200vh; */
+        }
+
+        /*position: an element is positioned in a document. The top, right,  bottom,  and left properties determine the final location of positioned elements. */
+        /* Syntax position: static | relative | adsolute | fixed | sticky */
+        /*Static:  This is the default value.*/
+        /* relative: ye apne parent par depend ehata h*/
+        /* absolute: ye root element par depend rhata h or agar iska parent element me position relative h to parent element par depent hota h*/
+        /* fixed: Ye apne position par fixed rahata h*/
+        /* sticky:   the nearest actually scrolling ancestor.*/
+
+        .c1 {
+            display: flex;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            margin: 100px;
+            padding: 10px;
+            /* display: flex; */
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .red {
+            /* position: relative;
+            /* top: 70px; */
+            /* left: 90px;
+            bottom: -20px;  */
+            background-color: red;
+        }
+
+        .yellow {
+            /* ab root element relative ho */
+            /* position: absolute;
+            top: 10px;
+            left: 20px; */
+
+            /* prent's element ka position relativle ho  */
+            position: absolute;
+            /* bottom: 20px; */
+            top: 20px;
+            right: 30px;
+            background-color: yellow;
+        }
+
+        .blue {
+            background: blue;
+            position: sticky;
+            top: 0;
+        }
+
+        .fixed {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: greenyellow;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+        }
+
+
+
+        /*position sticky  */
+        .container1 {
+            margin-top: 10px;
+            padding: 0 0 10px 0;
+            width: 350px;
+            height: 300px;
+            /*   border: 2px solid #2d0606; */
+            overflow: scroll;
+            position: relative;
+            background-color: #e2dfd9;
+        }
+
+        dt {
+            background-color: #363535;
+            color: white;
+            width: 100%;
+            font-weight: 800;
+            padding-left: 10px;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 3px;
+
+            position: sticky;
+            top: 0;
+
+        }
+
+        dt~dd {
+            /*   background: #514d50; */
+            border-bottom: 1px solid black;
+            margin: 5px;
+            margin-bottom: 8px;
+            padding: 5px;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="c1">
+        <div class="container">
+            <div class="box red"></div>
+            <div class="box yellow"></div>
+            <div class="box blue"></div>
+        </div>
+
+        <div class="fixed"></div>
+    </div>
+
+    <div class="container1">
+        <div>
+            <dt>A</dt>
+            <dd>Andrew W.K.</dd>
+            <dd>Apparat</dd>
+            <dd>Arcade Fire</dd>
+            <dd>At The Drive-In</dd>
+            <dd>Aziz Ansari</dd>
+        </div>
+        <div>
+            <dt>C</dt>
+            <dd>Chromeo</dd>
+            <dd>Common</dd>
+            <dd>Converge</dd>
+            <dd>Crystal Castles</dd>
+            <dd>Cursive</dd>
+        </div>
+        <div>
+            <dt>E</dt>
+            <dd>Explosions In The Sky</dd>
+        </div>
+        <div>
+            <dt>T</dt>
+            <dd>Ted Leo & The Pharmacists</dd>
+            <dd>T-Pain</dd>
+            <dd>Thrice</dd>
+            <dd>TV On The Radio</dd>
+            <dd>Two Gallants</dd>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
