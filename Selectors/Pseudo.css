@@ -1,0 +1,217 @@
+/* Pseudo classes */
+
+/* A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). */
+/* Example- the pseudo-class :hover can be used to select a button when a user's pointer hovers over the button and this selected button can then be styled. */
+
+/* A pseudo-class consists of a colon (:) followed by the pseudo-class name (e.g., :hover). */
+
+/* Synrax 
+        selectors:psuedo-classes{
+            pporperty : value;
+        } */
+
+/* Functional pseudo-classes */
+/*:is(): The :is() CSS pseudo-class function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.  */
+/* This is useful for writing large selectors in a more compact form. */
+
+/* section h1, aside h1{
+  font-size: 20px;
+  color: red;
+} */
+
+/* .h{
+  color: red;
+} */
+
+/*specificity 1  */
+/* :is(section,aside){
+  background-color: red;
+} */
+
+:is(section, aside) h1 {
+    color: greenyellow;
+}
+
+
+/* .box section h1,section h2,section h3,section h4, section h5, section h6, article h1, article h2, article h3, article h4, article h5 , article h6, aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, nav h1, nav h2, nav h3, nav h3, nav h4, nav h5, nav h6{
+    color:red;
+  } */
+
+/* which would be the equivalent of */
+
+
+
+.box :is(section, article, aside, nav) :is(h1, h3, h5, h6) {
+    color: blue;
+}
+
+/* div p, div a{
+    color: red;
+  } */
+.box1 :is(p, a) {
+    background-color: black;
+    color: white;
+}
+
+
+
+/* .box2 section section p,
+  aside article p,
+  aside article a{
+    color: green;
+  }
+   */
+
+.box2 :is(section, aside) :is(section, article) :is(p, a:hover) {
+    color: purple;
+}
+
+
+
+.box3 a:is(:hover, :focus) {
+    color: red;
+}
+
+
+/*not work  */
+/* .example-1 h3,
+  .example-1 h4,
+  .example-1 a,
+  .example-1 .la{
+    color: green;
+    background-color: yellowgreen;
+  } */
+
+.example-1 :is(h3, h4, a, .la) {
+    color: red;
+}
+
+/*work  */
+.example-1 h3,
+.example-1 h4,
+.example-1 a,
+.example-1 .la {
+    color: green;
+}
+
+
+/* .card:hover .card-tittle,
+  .card:hover button{
+    background-color: red;
+  }
+  
+  .card:hover :is(.card-tittle,button){
+    background-color: red;
+  } */
+
+
+/*:were(): The :where() CSS pseudo-class function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. other wise same in :is() pseudo classes*/
+/* the specificity of :where() is always zero (0). */
+
+/* :where(h3,h4,a){
+    color: red;
+  } */
+/*specificity 0  */
+/* :where(h3,h4,#ld){
+    
+  } */
+.example-2 a {
+    color: darkblue;
+}
+
+.example-2 :where(h3, h4, #ld) {
+    color: red;
+}
+
+
+/* :not():  represents elements that do not match a list of selectors. */
+/* synatx:-  :not(all selectors) */
+/* <p> elements that don't have a class `.fancy` */
+/* p:not(.fancy){
+  color: green;
+} */
+
+/* Elements that are not <p> elements */
+/* body :not(p){
+  text-decoration: underline;
+} */
+
+/* Elements that are not <div>s or `.fancy` */
+/* body :not(div , .fancy){
+  font-weight: 900;
+  font-size: 25px;
+}
+
+body :not(div):not(.fancy){
+  text-decoration: overline underline;
+}
+
+body :not(:is(div,.fancy)){
+  text-transform: uppercase;
+} */
+
+/* Elements inside an <h2> that aren't a <span> with a class of `.foo` */
+/* h2 :not(span.far){
+  color: red;
+} */
+
+/* Class Selector on Nested Element */
+.entry-A .entry-content :not(.intro){
+  color: #45ff45;
+}
+
+/* Class Selector w/out Nesting */
+.entry-B :not(.intro){
+  font-size: 15px;
+}
+
+/* This demo uses the attribute as our simple selector */
+.entry-C button:not([disabled]){
+  font-size: 25px;
+}
+
+
+/* Attribute Selector */
+.entry-D a:not([href*="https://css-tricks"]){
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+
+/* won't work because ::first-line is a pseudo element */
+.entry-E p:not(::first-letter){
+  color: red;
+}
+
+/* nth-child Pseudo Class */
+.entry-F p:not(:nth-child(2n+1)){
+  color: red;
+}
+
+p:not(article *){
+  color: gray;
+  font-weight: 900;
+}
+/* 
+
+h2:not(:where(article *, section *)) {
+  ... 
+}
+
+<article>
+  <h2> No match! </h2>
+</article>
+
+<section>
+  <h2> No Match! </h2>
+</section>
+
+<aside>
+  <h2> Match! </h2>
+</aside> */
+
+
+
+/* :has():- This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a relative selector list as an argument. */
+
