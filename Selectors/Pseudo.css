@@ -916,7 +916,7 @@ tr:nth-child(even) or tr:nth-child(2n) - 2,4,6,8...
 :nth-child(-n+3) - 2,1,0,-1,-2
 */
 
-
+/* 
 table{
   width: 60%;
   border: 2px solid #6c6565;
@@ -983,16 +983,16 @@ tbody tr:nth-child(2n+1){
 
 tbody tr:nth-child(odd):hover{
   background-color: #aedbb5;
-}
+} */
 
 
-.one li:nth-child(2){
+/* .one li:nth-child(2){
   color: red;
-}
+} */
 
-.one :nth-child(2) :nth-child(3){
+/* .one :nth-child(2) :nth-child(3){
   color: hotpink;
-}
+} */
 
 /* :nth-child(an + b of <selector>) */
 /* :nth-child(pattern of .picture) {
@@ -1005,9 +1005,9 @@ tbody tr:nth-child(odd):hover{
      ... 
 }*/
 
-ul li:first-child{
+/* ul li:first-child{
   color: red;
-}
+} */
 
 /* :last-child :- The :last-child CSS pseudo-class represents the last element among a group of sibling elements. */
 /* Syntax:
@@ -1015,9 +1015,9 @@ ul li:first-child{
    ...
 } */
 
-ol li:last-child{
+/* ol li:last-child{
   color: blue;
-}
+} */
 
 
 /* nth-last-child :- The :nth-last-child() CSS pseudo-class matches elements based on their position among a group of siblings, counting from the end. other same in :nth-child*/
@@ -1025,9 +1025,522 @@ ol li:last-child{
   :nth-last-child(<nth> [of <complex-selector-list>]?) {
      ... 
 }*/
-.one :nth-child(3) li:nth-last-child(2n){
+/* .one :nth-child(3) li:nth-last-child(2n){
   color: blue;
-}
+} */
 
 
 /* :nth-child and :nth-of-type */
+
+/* li:nth-child(even){
+  color: red;
+}
+
+li:nth-of-type(even){
+color: green !important;
+}
+
+
+p:nth-child(2){
+  color: red !important;
+}
+
+p:nth-of-type(2){
+  color: green;
+} */
+
+/* same but seclect element different
+nth-child  -  nth-of-type
+nth-last-child  -  last-of-type
+first-child  -  first-of-type
+last-child  -  last-of-type
+onlu-child   -  only-of-type
+*/
+
+
+
+/* User action pseudo-classes */
+/* These pseudo-classes require some interaction by the user in order for them to apply, such as holding a mouse pointer over an element. */
+
+
+/* :hover :-  the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer). */
+
+/* To style links appropriately, put the :hover rule after the :link and :visited rules but before the :active one, as defined by the LVHA-order: :link — :visited — :hover — :active. */
+
+/* Syntax:
+    :hover {
+       ... 
+}
+*/
+
+
+/* ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+} */
+/* 
+
+ul li{
+  width: 100px;
+  list-style: none;
+  margin-right: 5px;
+  cursor: pointer;  
+  text-align: center;
+} */
+
+
+/* a{
+  display: inline-block;
+  width: 100%;
+  padding: 8px 3px;
+  border-radius: 5px;
+  font-family: 'Alkatra', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  position: relative;
+}
+
+a::before{
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  left: 10px;
+  width: 0px;
+  height: 3px;
+  background-color: black;
+}
+
+a:hover::before{
+  content: "";
+  transition: 0.5s;
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #4b0aff;
+} */
+
+
+/* 
+ul li:nth-child(1) a{
+  background-color: #b97e7e;
+  color: #363030;
+  transition: .5s;
+}
+ 
+ul li:nth-child(1):hover a{
+  background-color: #390404;
+  color: blue;
+  transition: .0.5s;
+}
+
+
+ul li:nth-child(2) a{
+  background-color: #b97e7e;
+  color: #363030;
+  transition: .5s;
+}
+ 
+ul li:nth-child(2):hover a{
+  background-color: #390404;
+  color: blue;
+  transition: .0.5s;
+}
+
+ul li:nth-child(3) a{
+  background-color: #b97e7e;
+  color: #363030;
+  transition: .5s;
+}
+ 
+ul li:nth-child(3):hover a{
+  background-color: #390404;
+  color: blue;
+  transition: .0.5s;
+}
+
+ul li:nth-child(4) a{
+  background-color: #b97e7e;
+  color: #363030;
+  transition: .5s;
+}
+ 
+ul li:nth-child(4):hover a{
+  background-color: #390404;
+  color: blue;
+  transition: .0.5s;
+}
+ */
+/* 
+ul li:nth-child(2) a{
+  background-color: #ac73b0;
+  color: #363030;
+}
+
+ul li:nth-child(2):hover a{
+  background-color: #360439;
+  color: whitesmoke;
+  transition: .0.5s;
+}
+
+
+ul li:nth-child(3) a{
+  background-color: #7677b7;
+  color: #363030;
+}
+ul li:nth-child(3):hover a{
+  background-color: #32335d;
+  color: whitesmoke;
+  transform: .0.5s;
+}
+
+
+ul li:nth-child(4) a{
+  background-color: #85b4c1;
+  color: #363030;
+}
+ul li:nth-child(4):hover a{
+  background-color: #32545d;
+  color: white;
+  transform: .0.5s;
+}
+ */
+/* 
+div[class] {
+  display:inline-block;
+  font-size:40px;
+  font-family:sans-serif;
+  margin:25px;
+  padding-bottom:5px;
+  cursor:pointer;
+} */
+/* div[class]:nth-child(odd) {
+  color:darkblue;
+} */
+/* :root{
+  --main-color:red;
+  --d:0;
+} */
+
+body {
+  /*   text-align:center; */
+  /*   background-color: var(--color,red); */
+  /*   background-color: var(--main-color); */
+  }
+  
+  /* .basic-0 {
+    background: 
+       linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c) 
+        0% 100%/var(--d,20px) 3px 
+        no-repeat;
+    transition: 0.5s;
+  }
+  
+  .basic-0:hover {
+    --d:100%
+  } */
+  
+  /*background-color
+    background-poistion: 25%-> l-to-r | 50%-> t-to-b /(than) 100%(width) | 50%(height)*/
+  
+  /* .test{
+    background: linear-gradient(#e66465, #9198e5) 0% 100%/var(--d,30px) 3px no-repeat;
+  
+  } */
+  
+  /* .test{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c) bottom/var(--d,0) 4px no-repeat;
+    transition: 0.5s;
+  }
+  .test:hover{
+    --d: 100%;
+  } */
+  
+
+
+/* :active :- When using a mouse, "activation" typically starts when the user presses down the primary mouse button.  */
+
+/* Syntax:
+    selector:active{
+      ......
+    }
+*/
+/* aside a{
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+} */
+
+/* aside a:nth-child(1):active{
+  color: green;
+}
+aside a:nth-child(2):active{
+  color: #9a3c45;
+}
+aside a:nth-child(3):active{
+  color: #6a770e;
+}
+aside a:nth-child(4):active{
+  color: #be8f0e;
+} */
+
+
+/*To style links appropriately, put the :hover rule after the :link and :visited rules but before the :active one, as defined by the LVHA-order: :link — :visited — :hover — :active.  */
+
+/* aside a{
+  color: #c03578;
+}
+aside a:link{
+  color: blue;
+}
+aside a:visited{
+  color: green;
+}
+aside a:hover{
+  background-color: yellow;
+}
+aside a:active{
+  color: red;
+} */
+
+/* Active form elements */
+/* form :active{
+  color: red;
+}
+form button{
+  background-color: white;
+  padding: 10px;
+} */
+
+
+
+
+/*:focus :-  It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key. The element will be focused by the script (element.focus()) and possibly the mouse (or pointer), but not the keyboard. */
+
+/*Syntax:
+  selector:focus{
+        .......
+        }
+  }
+*/
+/* 
+section{
+  background-color: #b6c8ad;
+  padding: 20px;
+}
+form div{
+  width: 100%;
+  display: inline;
+}
+
+form input{
+  outline: none;
+}
+
+form label{
+  margin-right: 30px;
+}
+
+.inst1{
+  cursor: not-allowed;
+} */
+
+/*chorm  */
+/* input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  display: none;
+} */
+
+/* input:focus{
+  border: 2px solid green;
+  background-color: yellow;
+} */
+/* select:focus{
+  border: 3px dotted green;
+  background-color: #f0f09e;
+} */
+
+/* firfox */
+/*  input[type=number] {
+        -moz-appearance: textfield;
+    } */
+/* 
+section{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  column-gap: 25px;
+} */
+
+
+/*:focus-within :-  Triggered when the user clicks or taps on any of its child element or itself, div’s children receive focus that this selector will get applied.*/
+/*Syntax:
+    :focus-within{
+        .......
+    
+}
+*/
+/* div:focus-within{
+  background-color: green;
+  color: red;
+} */
+/* label{
+  color: red;
+}
+label:focus-within{
+  color: green;
+} */
+
+
+/*focus-visible  :- The :focus-visible pseudo-class applies while an element matches the :focus pseudo-class and the UA (User Agent) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)*/
+
+/*Syntax:
+    :focus-visible{
+      .......
+    }
+*/
+/* input:focus-visible{
+  color: #1629b6;
+  background-color: yellow;
+} */
+
+
+
+/* Location pseudo-classes */
+/* :link :-  an element that has not yet been visited. It matches every unvisited <a> or <area> element that has an href attribute. */
+/*Syntx: 
+    :link {
+     ... 
+        }  
+*/
+/*notes: By default, most browsers apply a special color value to visited links. Thus, the links in this example will probably have special font colors only before you visit them. (After that, you'll need to clear your browser history to see them again.)  */
+
+/* :link{
+  color:green;
+} */
+/* dono same hi h */
+a:link{
+  color:green;
+}
+
+/*:any-link :-  an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every <a> or <area> element that has an href attribute.  */
+/*Syntax: 
+  :any-link {
+       ...
+        }
+*/
+/*notes:  If the term source anchor lost you, that’s a fancy name for the href attribute on the HTML elements <a>, <link> and <area>. Thus, it matches all elements that match :link or :visited. */
+
+:any-link{
+  color: green;
+}
+
+/* a:any-link{
+  color: red;
+} */
+
+
+/*:visited :-  the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The :visited pseudo-class applies only <a> and <area> elements that have an href attribute. */
+/*Syntax:
+    :visited {
+        ...
+        }  
+*/
+
+/*use property 
+color, background-color, border-color, border-bottom-color, border-left-color, border-right-color, border-top-color, column-rule-color, outline-color, text-decoration-color, and text-emphasis-color.
+The <link> element is never matched by :visited.
+
+*/
+
+/* a:visited{
+  color: red;
+} */
+
+/*:target :-   The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment.*/
+
+/* Selects an element with an ID matching the current URL's fragment */
+/* :target {
+  border: 2px solid black;
+} */
+
+p:target{
+/*   background-color: yellow; */
+}
+/* 
+p:target::before{
+  content: "►";
+  margin-right: 10px;
+}
+p:target i{
+  color: red;
+}
+
+
+.lightbox{
+  display: none;
+}
+
+.lightbox:target{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100;
+}
+
+.lightbox p{
+  background-color: hotpink;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+}
+
+.lightbox .close{
+  position: relative;
+  display: block;
+}
+
+.lightbox .close::after{
+  content: "×";
+  position: absolute;
+  top: -53px;
+  right: -728px;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.lightbox .close::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: default;
+} */
+
+
+
+
+
+
+
+
+
+
