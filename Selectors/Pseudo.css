@@ -1538,6 +1538,306 @@ p:target i{
 
 
 
+/* Input pseudo-classes */
+/* These pseudo-classes relate to form elements, and enable selecting elements based on HTML attributes and the state that the field is in before and after interaction. */
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  text-align: right;
+    margin-right: 70px;
+    text-decoration: underline;
+    color: #95323b;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+form{
+    /* width: 100%; */
+    background-color: #eee7e7;
+    /* height: 100vh; */
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+label{
+ display: block; 
+}
+table{
+  width: 100%;
+  border-collapse: 20px
+  ;
+}
+
+td{
+  width: 130px;
+}
+
+tr td:nth-child(1){
+  font-size: 1em;
+  color: #181716;
+  font-weight: 800;
+}
+
+#students{
+  width: 500px;
+  padding: 10px;
+}
+input{
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  margin-top: 5px;
+}
+
+textarea{
+  outline: none;
+  width: 500px;
+  height: 150px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button{
+  padding: 10px;
+  width: 150px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.address{
+  vertical-align: 5px;
+  margin-top: 10px;
+}
+
+
+/* :autofill :- The :autofill CSS pseudo-class matches when an <input> element has its value autofilled by the browser. The class stops matching if the user edits the field. */
+/*notes:  the :autofill pseudo-class to change the border of a text field that has been autocompleted by the browser  */
+/*Syntax:
+  :autofill {
+     ...
+  }
+*/
+
+
+/*:enabled :-  An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus.The element also has a disabled state, in which it can't be activated or accept focus  */
+/*Syntax: 
+  :enabled{
+     ......
+  }
+*/
+
+input:enabled{
+  background-color: #abceab;
+  color: white;
+}
+
+
+/*:disabled :- An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.  */
+/*Syntax:
+    :disabled {
+   ... 
+    }
+*/
+input:disabled{
+  background-color: gray;
+  border: 2px solid black;
+}
+
+
+/*:read-only :- The :read-only CSS pseudo-class represents an element (such as input or textarea) that is not editable by the user.*/
+/*Suntax: 
+    :read-only {
+   ... 
+  }
+*/
+input:read-only{
+    border: 2px solid darkorange;
+    border-radius: 5px;
+}
+
+/*:read-write :- The :read-write CSS pseudo-class represents an element (such as input or textarea) that is editable by the user. */
+/*Syntax:
+    :read-write {
+       ...
+    }
+*/
+input:read-write{
+  border: 2px dotted red;
+}
+
+/*:placeholder-shown :- The :placeholder-shown CSS pseudo-class represents any <input> or <textarea> element that is currently displaying placeholder text.*/
+/*Syntax: 
+      :placeholder-shown {
+       ...
+    }
+*/
+input:placeholder-shown{
+  color: #fb0909;
+  font-size: 15px;
+}
+
+/*:default :- The :default CSS pseudo-class selects form elements that are the default in a group of related elements. */
+
+/*  it may match the <button>, <input type="checkbox">, <input type="radio">, and <option> elements: */
+
+/*1. A default option element is the first one with the selected attribute, or the first enabled option in DOM order. multiple <select>s can have more than one selected option, so all will match :default.
+
+2. <input type="checkbox"> and <input type="radio"> match if they have the checked attribute.
+
+3. <button> matches if it is a <form>'s default submission button: the first <button> in DOM order that belongs to the form. This also applies to <input> types that submit forms, like image or submit.  */
+
+/*Syntax: 
+      :default {
+         ...
+      }
+*/
+
+
+input:default{
+  box-shadow: 0 0 2px 1px coral;
+}
+
+input:default + span{
+  color: green;
+}
+
+
+/*:checked :- The :checked CSS pseudo-class selector represents any radio (<input type="radio">), checkbox (<input type="checkbox">), or option (<option> in a <select>) element that is checked or toggled to an on state. */
+/*Syntax:
+        :checked {
+             ... 
+          }
+*/
+
+input:checked{
+  border: none;
+    outline: 2px solid deeppink;
+}
+
+
+/*:indeterminate :- The :indeterminate CSS pseudo-class represents any form element whose state is indeterminate, such as checkboxes which have their HTML indeterminate attribute set to true, radio buttons which are members of a group in which all radio buttons are unchecked, and indeterminate <progress> elements.  */
+/*Syntax:
+  Selects any <input> whose state is indeterminate 
+      input:indeterminate {
+          background: lime;
+      }
+*/
+
+
+/*:blank :- The :blank CSS pseudo-class selects empty user input elements (e.g. <input> or <textarea>).*/
+
+/*Syntax:
+    :blank {
+       ...
+    }
+*/
+
+
+/*:valid :- The :valid CSS pseudo-class represents any <input> or other <form> element whose contents validate successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.*/
+/*Syntax:
+        :valid {
+            ... 
+          }
+*/
+
+
+/*:invalid :- The :invalid CSS pseudo-class represents any <form>, <fieldset>, <input> or other <form> element whose contents fail to validate.*/
+
+/*Syntax:
+    :invalid {
+        ...
+      }
+*/
+
+
+/*:in-range :- The :in-range CSS pseudo-class represents an <input> element whose current value is within the range limits specified by the min and max attributes.  */
+
+/*Syntax:
+    :in-range {
+        ...
+      }
+*/
+
+
+/*:out-of-range :- The :out-of-range CSS pseudo-class represents an <input> element whose current value is outside the range limits specified by the min and max attributes.  */
+
+/*Syntax:
+    :out-of-range {
+       ... 
+    }
+*/
+
+
+/*:required :- The :required CSS pseudo-class represents any <input>, <select>, or <textarea> element that has the required attribute set on it.*/
+
+/*Syntax:
+      :required {
+      ... 
+  }
+*/
+
+
+/*:optional :- The :optional CSS pseudo-class represents any <input>, <select>, or <textarea> element that does not have the required attribute set on it. */
+
+/*Syntax:
+    :optional {
+       ... 
+    }
+*/
+
+/*example  */
+/* 
+div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+input{
+  appearance: none;
+  
+}
+
+label{
+  width: 80px;
+  height: 40px;
+  background-color: blue;
+  border-radius: 50px;
+  position: relative;
+}
+
+label::before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+input:checked + label{
+  background-color: green;
+  transition: 0.5s;
+}
+
+input:checked + label::before{
+  transform: translateX(40px);
+  transition: 0.5s;
+  background-color: white;
+}
+
+:root:has(input:checked){
+background-color: yellow;  
+} */
+
 
 
 
