@@ -1,4 +1,3 @@
-
 /* Pseudo classes */
 
 /* A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). */
@@ -336,10 +335,10 @@ label:has(:invalid){
   } */
 
 
-  .card:has(.card__content) .card__content{
-/*     padding: 10px;
+.card:has(.card__content) .card__content {
+  /*     padding: 10px;
     color: red; */
-  }
+}
 
 /* .card:has(.icon) .card__content :is(h2,p){
   padding: 0;
@@ -362,7 +361,7 @@ label:has(:invalid){
 
 
 /* example second*/
-  /* body {
+/* body {
     font-family: system-ui;
     font-size: 1.5rem;
     padding: 2rem;
@@ -403,8 +402,8 @@ label:has(:invalid){
   } */
 
 
-  /* example third */
-  /* body {
+/* example third */
+/* body {
     padding: 2rem;
     background: hsl(200 50% 5%);
   }
@@ -551,9 +550,9 @@ label:has(:invalid){
   .link:hover {
     filter: brightness(130%) contrast(1.3);
   }*/
-  
-   /* Demo Code */
-  /* :invalid {
+
+/* Demo Code */
+/* :invalid {
     border-bottom-color: hsl(0 100% 60%);
     border-left-color: hsl(0 100% 60%);
   }
@@ -708,7 +707,7 @@ label:has(:invalid){
   color: lightcoral;
   background-color: red;
 } */
-  
+
 
 /* // Page Style */
 /* :root {
@@ -831,13 +830,14 @@ li a:hover {
 */
 
 /* Declaring global CSS varibles */
-*{
+* {
   box-sizing: border-box;
 }
-:root{
- --main-color: rgb(160, 194, 96);
- --pane-padding: 12px 20px;
- --main-font: rgb(24, 23, 23);
+
+:root {
+  --main-color: rgb(160, 194, 96);
+  --pane-padding: 12px 20px;
+  --main-font: rgb(24, 23, 23);
 }
 
 /* use global varibles var() function */
@@ -881,7 +881,7 @@ li a:hover {
 }  
 */
 
-div:empty{
+div:empty {
   background-color: blue;
   height: 10px;
   width: 15%;
@@ -1228,9 +1228,9 @@ body {
   /*   text-align:center; */
   /*   background-color: var(--color,red); */
   /*   background-color: var(--main-color); */
-  }
-  
-  /* .basic-0 {
+}
+
+/* .basic-0 {
     background: 
        linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c) 
         0% 100%/var(--d,20px) 3px 
@@ -1241,23 +1241,23 @@ body {
   .basic-0:hover {
     --d:100%
   } */
-  
-  /*background-color
+
+/*background-color
     background-poistion: 25%-> l-to-r | 50%-> t-to-b /(than) 100%(width) | 50%(height)*/
-  
-  /* .test{
+
+/* .test{
     background: linear-gradient(#e66465, #9198e5) 0% 100%/var(--d,30px) 3px no-repeat;
   
   } */
-  
-  /* .test{
+
+/* .test{
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c) bottom/var(--d,0) 4px no-repeat;
     transition: 0.5s;
   }
   .test:hover{
     --d: 100%;
   } */
-  
+
 
 
 /* :active :- When using a mouse, "activation" typically starts when the user presses down the primary mouse button.  */
@@ -1420,8 +1420,8 @@ label:focus-within{
   color:green;
 } */
 /* dono same hi h */
-a:link{
-  color:green;
+a:link {
+  color: green;
 }
 
 /*:any-link :-  an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every <a> or <area> element that has an href attribute.  */
@@ -1432,7 +1432,7 @@ a:link{
 */
 /*notes:  If the term source anchor lost you, that’s a fancy name for the href attribute on the HTML elements <a>, <link> and <area>. Thus, it matches all elements that match :link or :visited. */
 
-:any-link{
+:any-link {
   color: green;
 }
 
@@ -1465,9 +1465,10 @@ The <link> element is never matched by :visited.
   border: 2px solid black;
 } */
 
-p:target{
-/*   background-color: yellow; */
+p:target {
+  /*   background-color: yellow; */
 }
+
 /* 
 p:target::before{
   content: "►";
@@ -1541,59 +1542,61 @@ p:target i{
 /* Input pseudo-classes */
 /* These pseudo-classes relate to form elements, and enable selecting elements based on HTML attributes and the state that the field is in before and after interaction. */
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-h2{
+h2 {
   text-align: right;
-    margin-right: 70px;
-    text-decoration: underline;
-    color: #95323b;
-    font-size: 22px;
-    font-weight: 900;
-    cursor: pointer;
-  }
-form{
-    /* width: 100%; */
-    background-color: #eee7e7;
-    /* height: 100vh; */
-    margin: 0 auto;
-    padding: 30px;
-  }
-
-label{
- display: block; 
+  margin-right: 70px;
+  text-decoration: underline;
+  color: #95323b;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
 }
-table{
+
+form {
+  /* width: 100%; */
+  background-color: #eee7e7;
+  /* height: 100vh; */
+  margin: 0 auto;
+  padding: 30px;
+}
+
+label {
+  display: block;
+}
+
+table {
   width: 100%;
-  border-collapse: 20px
-  ;
+  border-collapse: 20px;
 }
 
-td{
+td {
   width: 130px;
 }
 
-tr td:nth-child(1){
+tr td:nth-child(1) {
   font-size: 1em;
   color: #181716;
   font-weight: 800;
 }
 
-#students{
+#students {
   width: 500px;
   padding: 10px;
 }
-input{
+
+input {
   border-radius: 5px;
   outline: none;
   border: 1px solid gray;
   margin-top: 5px;
 }
 
-textarea{
+textarea {
   outline: none;
   width: 500px;
   height: 150px;
@@ -1601,7 +1604,7 @@ textarea{
   border-radius: 5px;
 }
 
-button{
+button {
   padding: 10px;
   width: 150px;
   background-color: green;
@@ -1610,7 +1613,8 @@ button{
   border-radius: 8px;
   cursor: pointer;
 }
-.address{
+
+.address {
   vertical-align: 5px;
   margin-top: 10px;
 }
@@ -1632,7 +1636,7 @@ button{
   }
 */
 
-input:enabled{
+input:enabled {
   background-color: #abceab;
   color: white;
 }
@@ -1644,7 +1648,7 @@ input:enabled{
    ... 
     }
 */
-input:disabled{
+input:disabled {
   background-color: gray;
   border: 2px solid black;
 }
@@ -1656,9 +1660,9 @@ input:disabled{
    ... 
   }
 */
-input:read-only{
-    border: 2px solid darkorange;
-    border-radius: 5px;
+input:read-only {
+  border: 2px solid darkorange;
+  border-radius: 5px;
 }
 
 /*:read-write :- The :read-write CSS pseudo-class represents an element (such as input or textarea) that is editable by the user. */
@@ -1667,7 +1671,7 @@ input:read-only{
        ...
     }
 */
-input:read-write{
+input:read-write {
   border: 2px dotted red;
 }
 
@@ -1677,7 +1681,7 @@ input:read-write{
        ...
     }
 */
-input:placeholder-shown{
+input:placeholder-shown {
   color: #fb0909;
   font-size: 15px;
 }
@@ -1699,11 +1703,11 @@ input:placeholder-shown{
 */
 
 
-input:default{
+input:default {
   box-shadow: 0 0 2px 1px coral;
 }
 
-input:default + span{
+input:default+span {
   color: green;
 }
 
@@ -1716,8 +1720,9 @@ input:default + span{
 */
 
 input:checked{
+  /* color: red; */
   border: none;
-    outline: 2px solid deeppink;
+    outline: 2px solid #0a0a0a;
 }
 
 
@@ -1729,6 +1734,32 @@ input:checked{
       }
 */
 
+input:indeterminate + span {
+  background: lime;
+}
+
+progress{
+  margin: 10px;
+}
+
+progress:indeterminate {
+  width: 80vw;
+  height: 20px;
+}
+
+/* input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate border-plus;
+}
+
+@keyframes border-plus {
+  from{
+    border: 2px solid red;
+  }
+  to{
+    border: 6px solid red;
+  }
+} */
 
 /*:blank :- The :blank CSS pseudo-class selects empty user input elements (e.g. <input> or <textarea>).*/
 
@@ -1746,6 +1777,9 @@ input:checked{
           }
 */
 
+input[type="email"]:valid{
+  background-color: gold;  
+}
 
 /*:invalid :- The :invalid CSS pseudo-class represents any <form>, <fieldset>, <input> or other <form> element whose contents fail to validate.*/
 
@@ -1755,6 +1789,9 @@ input:checked{
       }
 */
 
+input[type="email"]:invalid{
+  background-color: red;  
+}
 
 /*:in-range :- The :in-range CSS pseudo-class represents an <input> element whose current value is within the range limits specified by the min and max attributes.  */
 
@@ -1764,6 +1801,9 @@ input:checked{
       }
 */
 
+input[type="date"]:in-range{
+  background-color: goldenrod;
+}
 
 /*:out-of-range :- The :out-of-range CSS pseudo-class represents an <input> element whose current value is outside the range limits specified by the min and max attributes.  */
 
@@ -1773,6 +1813,9 @@ input:checked{
     }
 */
 
+input[type="date"]:out-of-range{
+  background-color: rebeccapurple;
+}
 
 /*:required :- The :required CSS pseudo-class represents any <input>, <select>, or <textarea> element that has the required attribute set on it.*/
 
@@ -1782,6 +1825,16 @@ input:checked{
   }
 */
 
+input:required + em{
+  color: red;
+  width: 80px;
+  padding: 10px;
+  background-color: black;
+  font-weight: 800;
+  border-radius: 4px;
+  margin-left: 10px ;
+}
+
 
 /*:optional :- The :optional CSS pseudo-class represents any <input>, <select>, or <textarea> element that does not have the required attribute set on it. */
 
@@ -1790,6 +1843,18 @@ input:checked{
        ... 
     }
 */
+
+input:optional + em{
+  color: red;
+  width: 80px;
+  padding: 10px;
+  background-color: black;
+  font-weight: 800;
+  border-radius: 4px;
+  margin-left: 10px ;
+}
+
+
 
 /*example  */
 /* 
@@ -1839,8 +1904,56 @@ background-color: yellow;
 } */
 
 
+/*example  */
+/* input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+} */
 
 
+/*example  */
+/* li {
+  list-style: none;
+  margin-bottom: 1em;
+}
 
+input {
+  border: 1px solid black;
+}
 
+input:in-range {
+  background-color: rgba(0, 255, 0, 0.25);
+}
 
+input:out-of-range {
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
+}
+
+input:in-range + label::after {
+  content: "okay.";
+}
+
+input:out-of-range + label::after {
+  content: "out of range!";
+}
+ */
