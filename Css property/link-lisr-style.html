@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link style</title>
+    <style>
+
+
+ Links style 
+ Link states:  These can be styled using different pseudo-classes, 
+
+ 1. Link: A link that has a destination (i.e., not just a named anchor), styled using the :link pseudo class.
+
+2. Visited: A link that has already been visited (exists in the browser's history), styled using the :visited pseudo class.
+
+3. Hover: A link that is hovered over by a user's mouse pointer, styled using the :hover pseudo class.
+
+4. Focus: A link that is focused (e.g., moved to by a keyboard user using the Tab key or something similar, or programmatically focused using HTMLElement.focus()) — this is styled using the :focus pseudo class.
+
+5. Active: A link that is activated (e.g., clicked on), styled using the :active pseudo class. 
+
+Default styles: Default links have the following properties
+
+1. Links are underlined.
+2. Unvisited links are blue.
+3. Visited links are purple.
+4. Hovering a link makes the mouse pointer change to a little hand icon.
+5.Focused links have an outline around them.
+6. Active links are red. Try holding down the mouse button on the link as you click it. 
+
+The default styles can be turned off/changed using the following CSS properties:
+
+1. color for the text color.
+2. cursor for the mouse pointer style.
+3. outline for the text outline.  
+
+
+To start off with, we'll write out our empty rulesets:
+
+a {
+}
+
+a:link {
+}
+
+a:visited {
+}
+
+a:focus {
+}
+
+a:hover {
+}
+
+a:active {
+} 
+
+
+Styling lists 
+
+    List-specific styles: there are three properties you should know about to start with, which can be set on <ul> or <ol> elements:
+        1. list-style-type: Sets the type of bullets to use for the list, for example, square or circle bullets for an unordered list, or numbers, letters, or roman numerals for an ordered list.
+        2. list-style-position: Sets whether the bullets, at the start of each item, appear inside or outside the lists.
+        3. list-style-image: Allows you to use a custom image for the bullet, rather than a simple square or circle.
+
+        shorthand : 
+            list-style: type image position;
+        
+        starting from a number other than 1, or counting backwards, or counting in steps of more than 1.
+        start attribute -> start the list counting
+        revesed attribue -> start the list counting down
+        value attribute -> set your list items to specofic numberical value 
+
+
+    list-style-type: The list-style-type CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element.
+
+        Syntax:
+            list-style-type{value}
+                value: <custom-ident> , symbols() , <string> , none , disc , circle , square , decimal , decimal-leading-zero , lower-roman
+                     , upper-roman , lower-alpha, lower-latin , upper-alpha, upper-latin ..etc
+
+    
+    list-style-position: The list-style-position CSS property sets the position of the ::marker relative to a list item.
+        Syntax:
+            list-style-position{value}
+                value: inside: The ::marker is the first element among the list item's contents. , outside: The ::marker is outside the principal block box.
+
+    
+    list-style-image: The list-style-image CSS property sets an image to be used as the list item marker. It is often more convenient to use the shorthand list-style.
+        Syntax: 
+            list-style-image{value}
+                value: none , url() , linear-gradient()
+
+
+
+Using CSS counters
+CSS counters let you adjust the appearance of content based on its location in a document. For example, you can use counters to automatically number the headings in a webpage, or to change the numbering on ordered lists.
+
+Using counters
+1. a counter it must first be initialized to a value with the counter-reset property. 
+2. The counter's value can then be increased or decreased using counter-increment property. 
+3. The current value of a counter is displayed using the counter() or counters() function, typically within a pseudo-element content property.
+
+an element is set to display: none then any counter operation on that element will be ignored.
+
+Manipulating a counter's value : use counter-reset property.
+Displaying a counter : use counter() or counters() function in a content property.
+Reversed counters: use counter-reset: reversed(); property.
+
+
+counter-reset:
+The counter-reset CSS property resets a CSS counter to a given value. 
+This property will create a new counter or reversed counter with the given name on the specified element. Default value 0.Reversed counters are intended to count down.
+
+Syntax:
+    counter-reset: value;
+
+    value:
+             my-counter :- (Set "my-counter" to 0 )
+             my-counter -3:- (Set "my-counter" to -3)
+             reversed(my-counter) :- (Set reversed "my-counter" to "the number of peer elements" )
+             reversed(my-counter) -1 :- (Set reversed "my-counter" to -1)
+             reversed(counter1) 1 counter2 9 reversed(counter3) 4 :- (Set counter2 to 9 and reversed "counter1" and "counter3" to 1 and 4, respectively)
+             none (Cancel any reset that could have been set in less specific rules )
+
+
+counter-increment:
+The counter-increment CSS property increases or decreases the value of a CSS counter by a given value.
+
+Syntax:
+    counter-increment: value;
+
+    value:
+             my-counter :- (Increment "my-counter" by 1)
+             my-counter -1 :- (Decrement "my-counter" by 1 )
+             counter1 counter2 -4 :- (Increment "counter1" by 1, and decrement "counter2" by 4)
+             none :- (Do not increment/decrement anything: used to override less specific rules)
+
+
+
+counter()
+The counter() CSS function returns a string representing the current value of the named counter, if there is one. It is generally used in the content property of pseudo-elements, but can theoretically be used anywhere a <string> value is supported.
+
+Syntax:
+        counter(countername) :- (Simple usage)
+        counter(countername, upper-roman) :- (changing the counter display)
+ 
+
+
+counters()
+The counters() CSS function enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
+    counters() function has two content: '\F1401';
+    1. counters(name, string)
+    2. counters(name, string, style)
+
+
+Syntax:
+        counters(countername, '-');  (Simple usage  - style defaults to decimal)
+        counters(countername, '.', upper-roman) (changing the counter display)
+
+
+
+@counter-style
+The @counter-style CSS at-rule lets you define counter styles that are not part of the predefined set of styles.
+A @counter-style rule defines how to convert a counter value into a string representation.
+
+                /* create */
+                @counter-style thumbs {
+                    system: cyclic;
+                    symbols: "\1F44D";
+                    suffix: " ";
+                }
+
+                /* use */
+                ul {
+                    list-style: thumbs;
+                }
+
+Syntax:
+    Each @counter-style is identified by a name and has a set of descriptors.
+
+    => system : The system descriptor specifies the algorithm to be used for converting the integer value of a counter to a string representation. It is used   in a @counter-style to define the behavior of the defined style.
+                value: 
+                    => cyclic: Cycles through the list of symbols provided.
+                    => fixed: Defines a finite set of symbols are specified. 
+                    => symbolic: Cycles through the provided list of symbols. Example: the original symbols provided were "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on.
+                    => alphabetic: Interprets the specified symbols as digits, to an alphabetic numbering system. However, after "z", it will continue as "aa", "ab", "ac"…
+                    => numeric: Interprets the counter symbols as digits in a place-value numbering system. The numeric system is similar to the alphabetic system, described above.
+                    => additive: Used to represent "sign-value" numbering systems, such as Roman numerals, which rather than reuse digits in different positions to obtain different values, define additional digits for larger values. An additional descriptor called additive-symbols must be specified with at least one additive tuple, or else the counter style rule will not be valid.
+                    => extends: Allows authors to use the algorithm of another counter style, but alter its other aspects. 
+
+    => negative: custom counter styles, the negative descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
+                value:
+                    => "-"; (Prepends '-' if value is negative)
+                    => "(" ")"; (Surrounds value by '(' and ')' if it is negative)
+
+    => prefix: The prefix descriptor of the @counter-style rule specifies content that will be prepended to the marker representation. If not specified, the default value will be "" (an empty string).
+                value:
+                    => "»" , "Page " , url()
+
+    => suffix: The suffix descriptor of the @counter-style rule specifies content that will be appended to the marker representation.
+                value:
+                    => "" , ") " , "Chepter "
+
+    => range: When defining custom counter styles, the range descriptor lets the author specify a range of counter values over which the style is applied.
+                value:
+                    => auto , 2 5 , infinite  10 , 6 infinite , infinite infinite , " 2 5,8 10" , " infinite 6,8 infinite "
+    
+    => pad: The pad descriptor can be used with custom counter style definitions when you need the marker representations to have a minimum length.
+                value: 
+                    => <integer> && <symbol>  example: 3 "0"
+
+    => fallback: The fallback descriptor can be used to specify a counter style to fall back to if the current counter style cannot create a marker representation for a particular counter value.
+                    value: 
+                        => lower-alpha , upper-alpha , custom-gangnam-style
+
+    => symbols: The symbols CSS descriptor is used to specify the symbols that the specified counter system will use to construct counter representations.The symbols descriptor must be specified when the value of the system descriptor is cyclic, numeric, alphabetic, symbolic, or fixed. When the additive system is used, use the additive-symbols descriptor instead to specify the symbols.
+                    value: <string> , <image> , <custom-ident> example: symbols: A B C D E , "\24B6""\24B7""\24B8"D E , "0" "1" "2" "4" "5" "6" "7" "8" "9" ,  url("first.svg") url("second.svg") url("third.svg") ,  indic-numbers
+
+    => additive-symbols: The additive-symbols descriptor lets you specify symbols when the value of a counter system descriptor is additive. The additive-symbols descriptor defines additive tuples, each of which is a pair containing a symbol and a non-negative integer weight. The additive system is used to construct sign-value numbering systems such as Roman numerals.
+            Syntax:
+                    @counter-style additive-symbols-example {
+                         system: additive;
+                        additive-symbols: V 5, IV 4, I 1;
+                        }
+                    value: 
+                        => 3 "0" , 3 "0", 2 "\2E\20" , 3 "0", 2 url()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+
+
+
+
+</body>
+</html>
