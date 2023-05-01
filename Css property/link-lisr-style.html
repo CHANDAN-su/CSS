@@ -8,7 +8,7 @@
     <style>
 
 
- Links style 
+ /* Links style 
  Link states:  These can be styled using different pseudo-classes, 
 
  1. Link: A link that has a destination (i.e., not just a named anchor), styled using the :link pseudo class.
@@ -55,10 +55,53 @@ a:hover {
 }
 
 a:active {
-} 
+}  */
+
+a{
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  background-color: #2f2d2d;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+a:visited{
+  color: red;
+  background-color: #544a4a;
+  transition: 0.5s;
+}
+
+a:hover{
+  color: hotpink;
+  background-color: #6b6666;
+  transition: 0.5s;
+}
+
+a:focus{
+  /* color: black;
+  background-color: transparent; */
+}
+
+a:active{
+  color: red;
+  font-weight: 800;
+  background-color: transparent;
+  border: 2px solid black;
+  transition: 0.5s;  
+}
 
 
-Styling lists 
+
+/* Styling lists 
 
     List-specific styles: there are three properties you should know about to start with, which can be set on <ul> or <ol> elements:
         1. list-style-type: Sets the type of bullets to use for the list, for example, square or circle bullets for an unordered list, or numbers, letters, or roman numerals for an ordered list.
@@ -91,11 +134,38 @@ Styling lists
     list-style-image: The list-style-image CSS property sets an image to be used as the list item marker. It is often more convenient to use the shorthand list-style.
         Syntax: 
             list-style-image{value}
-                value: none , url() , linear-gradient()
+                value: none , url() , linear-gradient() */
+
+    ol{
+        /* list-style-type: number; */
+        /* list-style-position: outside; */
+        /* list-style-position: inside; */
+        /* list-style-image: url("/Image/Mask\ group.png"); */
+    }
+
+    /* shorthand */
+    ol{
+        /* list-style: lower-alpha url("/Image/Mask\ group.png") inside; */
+    }
+
+
+    /* using background */
+    /* ol{
+        list-style-type: none;
+    }
+
+    ol li{
+        padding-left: 30px;
+        margin-bottom: 5px;
+        background-image: url("/Image/Mask\ group.png");
+        background-position: 0 0;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+    } */
 
 
 
-Using CSS counters
+/* Using CSS counters
 CSS counters let you adjust the appearance of content based on its location in a document. For example, you can use counters to automatically number the headings in a webpage, or to change the numbering on ordered lists.
 
 Using counters
@@ -150,7 +220,7 @@ Syntax:
 
 
 counters()
-The counters() CSS function enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
+The counters() CSS function enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. 
     counters() function has two content: '\F1401';
     1. counters(name, string)
     2. counters(name, string, style)
@@ -158,22 +228,74 @@ The counters() CSS function enables nested counters, returning a concatenated st
 
 Syntax:
         counters(countername, '-');  (Simple usage  - style defaults to decimal)
-        counters(countername, '.', upper-roman) (changing the counter display)
+        counters(countername, '.', upper-roman) (changing the counter display) */
+
+
+    /* body{
+        counter-reset: section;
+    }
+
+    h3::before{
+        counter-increment: section;
+        content: "Section: " counter(section) " ";
+        color: red;
+    } */
+
+    /* body{
+        counter-reset: reversed(section);
+    }
+
+    h3::before{
+        counter-increment: section;
+        content: "Section: " counter(section) " ";
+    } */
+
+    /* :root{
+        counter-reset: link;
+    }
+    a[href]{
+        counter-increment: link;
+    }
+    a[href]:empty::before{
+        content: "[" counter(link) "]";
+    } */
 
 
 
-@counter-style
+   /* ol{
+    list-style-type: none;
+    counter-reset: section;
+   } 
+   li::before{
+    counter-increment: section;
+    content: counters(section , "." , upper-alpha) " : ";
+   } */
+
+   body{
+    counter-reset: section page 1 chapter;
+   }
+
+   h4{
+    counter-increment: section page chapter 2;
+   }
+
+   h4::before{
+    content: counter(section) "- " "Chapter " counter(chapter) ": ";
+   }
+
+
+/* @counter-style
 The @counter-style CSS at-rule lets you define counter styles that are not part of the predefined set of styles.
 A @counter-style rule defines how to convert a counter value into a string representation.
 
-                /* create */
+                 create 
                 @counter-style thumbs {
                     system: cyclic;
                     symbols: "\1F44D";
                     suffix: " ";
                 }
 
-                /* use */
+                 use 
                 ul {
                     list-style: thumbs;
                 }
@@ -226,48 +348,97 @@ Syntax:
                         additive-symbols: V 5, IV 4, I 1;
                         }
                     value: 
-                        => 3 "0" , 3 "0", 2 "\2E\20" , 3 "0", 2 url()
+                        => 3 "0" , 3 "0", 2 "\2E\20" , 3 "0", 2 url() */
+
+        @counter-style thumb {
+            system: cyclic;
+            symbols: "\1F44D";
+            suffix: "  >>  ";
+            prefix: " "
+        }
+
+        ul{
+            list-style: thumb;
+            margin-left: 20px;
+        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </style>
+  </style>
 </head>
 <body>
     
+<div class="link">
+<a href="#1">Home</a>
+<a href="#2">Service</a>
+<a href="#3">Content us</a>
+<a href="#4">About</a>
+<a href="#5">Suppots</a>
+</div>
+
+<!-- <ol start="5" reversed> -->
+<ol>
+    <li value="2">item 1</li>
+    <li value="4">item 2</li>
+    <li value="6">item 3</li>
+    <li value="8">item 4</li>
+    <li value="10">item 5</li>
+    <li value="12">item 6</li>
+    <li value="14">item 7</li>
+    <li value="16">item 8</li>
+    <li value="18">item 9</li>
+    <li value="20">item 10</li>
+</ol>
+
+<h3>Introduction</h3>
+<h3>Body</h3>
+<h3>Conclusion</h3>
+
+<p>See <a href="https://www.mozilla.org/"></a></p>
+<p>Do not forget to <a href="contact-me.html">leave a message</a>!</p>
+<p>See also <a href="https://developer.mozilla.org/"></a></p>
+
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item               <!-- 2     -->
+    <ol>
+      <li>item</li>      <!-- 2.1   -->
+      <li>item</li>      <!-- 2.2   -->
+      <li>item           <!-- 2.3   -->
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+        </ol>
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+          <li>item</li>  <!-- 2.3.3 -->
+        </ol>
+      </li>
+      <li>item</li>      <!-- 2.4   -->
+    </ol>
+  </li>
+  <li>item</li>          <!-- 3     -->
+  <li>item</li>          <!-- 4     -->
+</ol>
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item</li>          <!-- 2     -->
+</ol>
+
+<h4>Hello 1</h4>
+<h4>Hello 2</h4>
+<h4>Hello 3</h4>
+<h4>Hello 4</h4>
+<h4>Hello 5</h4>
 
 
-
-
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+</ul>
 
 </body>
 </html>
