@@ -362,6 +362,125 @@ Syntax:
             margin-left: 20px;
         }
 
+        /* basic example  */
+@counter-style thumbs{
+  system: cyclic;
+  symbols: "@";
+  suffix: " ";
+  
+}
+
+/*Specifying symbols with counter-style  */
+@counter-style circled-alph{
+  system: fixed;
+  symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+  suffix: " ";
+}
+
+
+/*Cyclic counter */
+@counter-style cyclicd{
+  system: cyclic;
+  symbols: "◉";
+  suffix: " ";
+}
+
+/* Fixed counter */
+@counter-style fixed{
+  system: fixed;
+  symbols: ➀ ➁ ➂;
+  suffix: " ";
+}
+
+
+/* Symbolic counter */
+@counter-style abc{
+  system: symbolic;
+  symbols: a b c d e f g h i j k;
+  suffix: " ";
+}
+
+
+/* Alphabetic counter */
+@counter-style abcd{
+  system: alphabetic;
+  symbols: a b c d;
+  suffix: ". ";
+}
+
+/* Numeric counter */
+@counter-style numeric{
+  system: numeric;
+  symbols: a b c;
+  suffix: ". "
+}
+
+/* Numeric counter with numeric symbols */
+@counter-style numeric-symbols{
+  system: numeric;
+  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  suffix: ". ";
+}
+
+/* Additive counter */
+@counter-style additive{
+  system: additive;
+  range: 0 25; 
+  additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL,
+    10 X, 9 IX, 5 V, 4 IV, 1 I;
+}
+
+/* Extends example */
+@counter-style  alpha-modifie{
+  system: extends upper-alpha;
+  suffix: ") ";
+  prefix: "(";
+}
+
+
+/* Adding a prefix to a counter and Setting a suffix for a counter and Padding a counter*/
+@counter-style prefix{
+  system: numeric;
+  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  prefix: "Chepter ";
+  suffix: ") ";
+  pad: 2 "0";
+}
+
+
+/* Setting counter style over a range */
+@counter-style range{
+  system: cyclic;
+  /* symbols: "@" "$"; */
+  /* range: 2 4 , 7 9; */
+  symbols: "@";
+   range: 5 8; 
+}
+
+
+/* Specifying a fallback counter style */
+@counter-style fallback{
+  system:fixed;
+  symbols: A B C D E F;
+  fallback: lower-alpha;
+}
+
+
+ul , ol{
+  /* list-style-type: cyclicd ; */
+  /* list-style-type: fixed; */
+  /* list-style-type: abc; */
+  /* list-style-type: abcd; */
+  /* list-style-type: numeric; */
+  /* list-style-type: numeric-symbols; */
+  /* list-style-type: additive; */
+  /* list-style-type: alpha-modifie; */
+  /* list-style-type: prefix; */
+  /* list-style-type: range; */
+  list-style-type: fallback;
+  margin-left: 35px;
+}
+
 
   </style>
 </head>
@@ -439,6 +558,57 @@ Syntax:
     <li>Item 4</li>
     <li>Item 5</li>
 </ul>
+
+
+  <!-- /* basic example  */ -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    
+  </ul>
+  
+  
+    <!-- /*Specifying symbols with counter-style  */ -->
+  <ol>
+    <li>One 1</li>
+    <li>One 2</li>
+    <li>One 3</li>
+    <li>One 4</li>
+    <li>One 5</li>
+    <li>One 6</li>
+    <li>One 7</li>
+    <li>One 8</li>
+    <li>One 9</li>
+    <li>One 10</li>
+    <li>One 11</li>
+    <li>One 12</li>
+    <li>One 13</li>
+    <li>One 14</li>
+    <li>One 15</li>
+    <li>One 16</li>
+    <li>One 17</li>
+    <li>One 18</li>
+    <li>One 19</li>
+    <li>One 20</li>
+    <li>One 21</li>
+    <li>One 22</li>
+    <li>One 23</li>
+    <li>One 24</li>
+    <li>One 25</li>
+    <li>One 26</li>
+    <li>One 23</li>
+    <li>One 24</li>
+    <li>One 25</li>
+    <li>One 26</li>
+  </ol>
 
 </body>
 </html>
