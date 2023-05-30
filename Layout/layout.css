@@ -40,12 +40,12 @@ span{
 /* The float property became one of the most commonly used tools for creating multiple column layouts on webpages.
 
 The float property was introduced to allow web developers to implement layouts involving an image floating inside a column of text, with the text wrapping around the left or right of it. The kind of thing you might get in a newspaper layout. */
-body{
+/* body{
     width: 900px;
     margin: 10px auto;
-}
+} */
 
-.box{
+/* .box{
     width: 160px;
     height: 170px;
     border: 1px solid black;
@@ -61,11 +61,11 @@ body{
     margin-top: 20px;
     margin-left: 20px;
     
-}
+} */
 
-p{
+/* p{
     font-size: 1.2rem;
-}
+} */
 
 
 /* Visualizing the float */
@@ -178,7 +178,7 @@ Syntax:
 
 /* Example */
 
-.container{
+/* .container{
     border: 1px solid black;
     padding: 15px;
     height: 160px;
@@ -202,7 +202,7 @@ div{
 .right{
     background-color: blue;
     float: right;
-}
+} */
 
 
 
@@ -220,10 +220,15 @@ A three-column layout: We enable multicol by using one of two properties: column
 2. column-width: Setting column-width takes a width of column
         selector{
             column-width: unit;
-        }
+        } */
+
+.column{
+    column-count: auto;
+    column-width: 300px;
+}
 
 
-Styling the columns: You have two opportunities to change the way that columns display
+/* Styling the columns: You have two opportunities to change the way that columns display
 
 1. Changing the size of the gap between columns using the column-gap.
 2. Adding a rule between columns with column-rule.
@@ -235,20 +240,43 @@ Now add a rule between the columns with column-rule. In a similar way to the bor
             column-width: unit;
             column-gap: unit;
             column-rules: unit style color;
-        }
+        }*/
+
+/* .column{
+    column-gap: 30px;
+    column-rule: 2px solid red;
+} */
 
 
-Spanning columns: To cause an element to span all the columns, specify the value of all for the column-span property.
+/* Spanning columns: To cause an element to span all the columns, specify the value of all for the column-span property.
 
-Note: It isn't possible to cause an element to span just some columns. The property can only have the values of none (which is the default) or all.
+Note: It isn't possible to cause an element to span just some columns. The property can only have the values of none (which is the default) or all.*/
 
-Columns and fragmentation:
+/* h2{
+    column-span: all;
+    text-align: center;
+} */
+
+/* Columns and fragmentation:
 
 Fragmented boxes:  this breaking will happen in places that lead to a poor reading experience.
 
-Setting break-inside: This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property break-inside with a value of avoid to the rules for .card. This is the container of the heading and text, so we don't want it fragmented.
+Setting break-inside: This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property break-inside with a value of avoid to the rules for .card. This is the container of the heading and text, so we don't want it fragmented.*/
 
-columns: The columns CSS shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
+.column1{
+    column-width: 250px;
+    /* column-gap: 15px; */
+}
+
+.card{
+    break-inside: avoid;
+    border: 2px solid black;
+    background: green;
+    padding: 10px;
+    margin: 10px;
+}
+
+/*columns: The columns CSS shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
 
 Constituent properties
 1. column-count
@@ -264,6 +292,45 @@ Constituent properties
                 _____Both column width and count___
                 columns: 2 auto | auto unit | auto auto; */
 
+/* Example */
+
+.container{
+    margin-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.container .box{
+  margin: 0 auto;
+  width: 90%;
+  column-count: 2;
+  column-gap: 20px;
+  column-rule: 3px dotted black;
+}
+.container .box1{
+  border-left: 3px solid black;
+  margin-left: 5px;
+  padding: 15px;
+}
+
+.all-span{
+  column-span: all;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 900;
+  text-transform: lowercase;
+  color: #804242;
+  font-style: italic;
+}
+
+img{
+  margin: 10px;
+  padding: 10px;
+  width: 160px;
+}
+span{
+  display: block;
+}
 
 /* Flexbox:
 Flexbox is a one-dimensional layout method for arranging items in rows or columns. 
@@ -279,41 +346,59 @@ The following simple layout designs are either difficult or impossible to achiev
 3. Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.
 
     A flex container and its children to become flex items.
-    We have our multiple column layout with equal-sized columns, and the columns are all the same height.
+    We have our multiple column layout with equal-sized columns, and the columns are all the same height. */
+
+.flex{
+    border: 2px dotted rgb(32, 29, 29);
+    padding: 10px;
+    /* height: 500px;  tab use hoga to aling content  */
+}
+
+.flex-itam{
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
-The flex model:
+/*The flex model:
 When elements are laid out as flex items, they are laid out along two axes:
 
 ->  The main axis is the axis running in the direction the flex items are laid out in (for example, as a row across the page, or a column down the page.) The start and end of this axis are called the main start and main end.
 ->  The cross axis is the axis running perpendicular to the direction the flex items are laid out in. The start and end of this axis are called the cross start and cross end.
 ->  The parent element that has display: flex set on it (the <section> in our example) is called the flex container.
--> The items laid out as flexible boxes inside the flex container are called flex items (the <article> elements in our example).
+-> The items laid out as flexible boxes inside the flex container are called flex items (the <article> elements in our example).*/
 
 
-
-Columns or rows:
+/*Columns or rows:
 Flexbox provides a property called flex-direction that specifies which direction the main axis. By default this is set to row.
 
         flex-direction: row | column;
 
-    Note: You can also lay out flex items in a reverse direction using the row-reverse and column-reverse values.
+    Note: You can also lay out flex items in a reverse direction using the row-reverse and column-reverse values.*/
 
 
 
-Wrapping:
+/*Wrapping:
 One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. 
 
 you can fix this is to add flex-wrap propertycontent: 
         flex-wwrap: wrap;
         flex: 200px;
 
-We now have multiple rows. Any overflow is moved down to the next line.  The flex: 200px declaration set on the articles means that each will be at least 200px wide. 
+We now have multiple rows. Any overflow is moved down to the next line.  The flex: 200px declaration set on the articles means that each will be at least 200px wide. */
 
 
 
-flex-flow shorthand:
+/*flex-flow shorthand:
 A shorthand exists for flex-direction and flex-wrap: flex-flow. 
 
 
@@ -339,20 +424,20 @@ You can also specify a minimum size value within the flex value.
 
         selector:nth-child(2){
             flex: 2;
-        }
+        }*/
 
 
 
-flex: shorthand versus longhand
+/*flex: shorthand versus longhand
 flex is a shorthand property that can specify up to three different values:
 
 1. The unitless proportion value we discussed above. This can be specified separately using the flex-grow longhand property.
 2. A second unitless proportion value, flex-shrink, which comes into play when the flex items are overflowing their container. This value specifies how much an item will shrink in order to prevent overflow. This is quite an advanced flexbox feature and we won't be covering it any further in this article.
-3. The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value.
+3. The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value.*/
 
 
 
-Horizontal and vertical alignment:
+/*Horizontal and vertical alignment:
 You can also use flexbox features to align flex items along the main or cross axis. using justify-content and aling-content
 
     align-items controls where the flex items sit on the cross axis.
@@ -371,11 +456,11 @@ You can also use flexbox features to align flex items along the main or cross ax
         -> The value we've used above, space-around, is useful — it distributes all the items evenly along the main axis with a bit of space left at either end.
         -> There is another value, space-between, which is very similar to space-around except that it doesn't leave any space at either end.
 
-    The justify-items property is ignored in flexbox layouts.
+    The justify-items property is ignored in flexbox layouts.*/
 
 
 
-Ordering flex items:
+/*Ordering flex items:
 Flexbox also has a feature for changing the layout order of flex items without affecting the source order.
             orde: 1;
 
@@ -386,26 +471,36 @@ Flexbox also has a feature for changing the layout order of flex items without a
 
 
     You can set negative order values to make items appear earlier than items whose value is 0.
-            order: -1;
+            order: -1;*/
 
 
 
-flex container property
+.flex-container{
+    display: flex;
+}
 
-flex-direction:
+/* flex container property */
+
+/* flex-direction: 
 The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
 
 Syntax:
         flex-direction: row | row-reverse | column | column-reverse;
 
   row: The main-start and main-end points are the same as the content direction.
-  row-reverse: Behaves the same as row but the main-start and main-end points are opposite to the                  content direction.
-  column: The main-start and main-end points are the same as the before and after points of the               writing-mode.
-  column-reverse: Behaves the same as column but the main-start and main-end are opposite to the                      content direction.
+  row-reverse: Behaves the same as row but the main-start and main-end points are opposite to the content direction.
+  column: The main-start and main-end points are the same as the before and after points of the writing-mode.
+  column-reverse: Behaves the same as column but the main-start and main-end are opposite to the content direction. */
+
+.flex-container{
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+}
 
 
-
-flex-wrap: 
+/*flex-wrap: 
 The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
 
 Syntax: 
@@ -413,11 +508,15 @@ Syntax:
 
   nowrap: The flex items are laid out in a single line which may cause the flex container to                   overflow. The cross-start is either equivalent to start or before depending on the flex-            direction value. 
   wrap: The flex items break into multiple lines.
-  wrap-reverse: Behaves the same as wrap but cross-start and cross-end are permuted.
+  wrap-reverse: Behaves the same as wrap but cross-start and cross-end are permuted.*/
 
+.flex-container{
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+}
 
-
-flex-flow: 
+/*flex-flow: 
 The flex-flow CSS shorthand property specifies the direction of a flex container, as well as its wrapping behavior.
 
 Constituent properties
@@ -425,11 +524,16 @@ Constituent properties
 2. flex-wrap
 
 Syntax: 
-        flex-flow: row | row-reverse | column | column-reverse | nowrap | wrap | wrap-reverse | row         nowrap | column wrap | column-reverse wrap-reverse;
+        flex-flow: row | row-reverse | column | column-reverse | nowrap | wrap | wrap-reverse | row         nowrap | column wrap | column-reverse wrap-reverse; */
 
 
+.flex-container{
+    /* flex-flow: row nowrap; */
+    /* flex-flow: row  wrap; */
+}
 
-justify-content:
+
+/* justify-content:
 The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.
 
 The interactive example below demonstrates some of the values using Grid Layout.
@@ -451,11 +555,18 @@ Syntax:
   space-between:  Distribute items evenly The first item is flush with the start, the last is flush                   with the end 
   space-around: Distribute items evenly Items have a half-size space on either end.
   space-evenly: Distribute items evenly Items have equal space around them.
-  stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container.
+  stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container. */
   
+.flex-container{
+    /* justify-content: center; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+}
 
-
-align-content:
+/* align-content:
 The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis or a grid's block axis.
 
 The interactive example below uses Grid Layout to demonstrate some of the values of this property.
@@ -474,13 +585,74 @@ Syntax:
   baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment                 baseline of the box's first or last baseline set with the corresponding baseline in the            shared first or last baseline set of all the boxes in its baseline-sharing group.The                fallback alignment for first baseline is start, the one for last baseline is end.
 
   ______Distributed alignment_________
-  space-between: Distribute items evenly The first item is flush with the start,  the last is flush                 with the end.
+  space-between: Distribute items evenly The first item is flush with the start,  the last is flush with the end.
   space-around: Distribute items evenly Items have a half-size space on either end.
   space-evenly: Distribute items evenly Items have equal space around them.
-  stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container.
+  stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container. */
+
+.flex-container{
+    /* border: 2px solid black; */
+    /* width: 700px; */
+    /* height: 900px; */
+    /* flex-wrap: wrap;    */
+    /* align-content: center;  */
+    /* align-content: flex-start; */
+    /* align-content: space-around; */
+}
 
 
-align-items:
+.container1{
+    background: #eee;
+    margin: 50px;
+    padding: 10px;
+    border: 3px solid black;
+    height: 300px;
+    width: 300px;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    align-content: space-evenly;
+}
+
+.item{
+    margin-left: 10px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.item1{
+    background-color: red;
+}
+.item2{
+    background-color: aquamarine;
+}
+.item3{
+    background-color: blue;
+}
+.item4{
+    background-color: #804242;
+}
+.item5{
+    background-color: green;
+}
+.item6{
+    background-color: yellow;
+}
+.item7{
+    background-color: hotpink;
+}
+.item8{
+    background-color: brown;
+}
+
+
+
+/* align-items:
 The CSS align-items property sets the align-self value on all direct children as a group. In Flexbox, it controls the alignment of items on the Cross Axis. 
 
 The interactive example below demonstrates some of the values for align-items using grid layout.
@@ -496,12 +668,30 @@ Syntax:
   stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container.
   self-start: Pack flex items from the start.
   self-end: Pack flex items from the end.
-  baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment                 baseline of the box's first or last baseline set with the corresponding baseline in the            shared first or last baseline set of all the boxes in its baseline-sharing group.The                fallback alignment for first baseline is start, the one for last baseline is end.
+  baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.The fallback alignment for first baseline is start, the one for last baseline is end. */
 
+.container2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow;
+}
 
+/* div center */
+.box{
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
 
+    /* first method */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 
-Flex item properties:
+}
+
+/* Flex item properties:
 
 order:
 The order CSS property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending order value and then by their source code order.
@@ -509,12 +699,12 @@ The order CSS property sets the order to lay out an item in a flex or grid conta
 Syntax:
         order: 5 | -5;
 
-Since order is only meant to affect the visual order of elements and not their logical or tab order. order must not be used on non-visual media such as speech.
+Since order is only meant to affect the visual order of elements and not their logical or tab order. order must not be used on non-visual media such as speech. */
 
 
 
 
-align-self:
+/* align-self:
 The align-self CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.
 
 The property doesn't apply to block-level boxes, or to table cells. If a flexbox item's cross-axis margin is auto, then align-self is ignored.
@@ -530,10 +720,10 @@ Syntax:
   flex-start:  Put the flex item at the start. 
   flex-end: Put the flex item at the end. 
   stretch: Stretch 'auto'-sized items to fit the container.
-  baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the            shared first or last baseline set of all the boxes in its baseline-sharing group.The                fallback alignment for first baseline is start, the one for last baseline is end.
+  baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.The fallback alignment for first baseline is start, the one for last baseline is end. */
 
 
-flex-basis:
+/* flex-basis:
 The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
 
 The flex-grow and flex-shrink properties are both set to 1 on all these items, indicating that the flex item can grow and shrink from the initial flex-basis.
