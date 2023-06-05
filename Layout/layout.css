@@ -1,5 +1,3 @@
-
-
 /* Introduction to CSS layout */
 
 /* CSS page layout techniques allow us to take elements contained in a web page and control where they're positioned relative to the following factors: their default position in normal layout flow, the other elements around them, their parent container, and the main viewport/window. 
@@ -73,9 +71,9 @@ The float property was introduced to allow web developers to implement layouts i
 
 /* Add a class of special to the first paragraph of text */
 
-.special{
-    background-color: rgb(230, 226, 20);
-    padding: 20px;
+.special {
+  background-color: rgb(230, 226, 20);
+  padding: 20px;
 }
 
 /* The line boxes of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width. */
@@ -93,12 +91,12 @@ The float property was introduced to allow web developers to implement layouts i
 
 /* add a class of cleared to the second paragraph below the floated item.  */
 
-.cleared{
-    clear: left;
+.cleared {
+  clear: left;
 }
 
 
- /* Clearing boxes wrapped around a float 
+/* Clearing boxes wrapped around a float 
 You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around both elements. */
 
 /* The problem
@@ -107,8 +105,8 @@ Change your document so that the first paragraph and the floated box are jointly
 /* Soluction */
 /* display: flow-root (To solve this problem is to use the value flow-root of the display property. This exists only to create a BFC without using hacks — there will be no unintended consequences when you use it. Remove overflow: auto from your .wrapper rule and add display: flow-root and the box will clear.) */
 
-.wrapper{
-    display: flow-root;
+.wrapper {
+  display: flow-root;
 }
 
 
@@ -124,38 +122,64 @@ body{
 } */
 
 
-.wrapper{
-    padding-right: 20px;
+.wrapper {
+  padding-right: 20px;
 }
 
-.col{
-    float: left;
-    width: 40px;
-    /* height: 500px; */
-    background-color: hotpink;
-    margin-left: 20px;
-    margin-bottom: 20px;
+.col {
+  float: left;
+  width: 40px;
+  /* height: 500px; */
+  background-color: hotpink;
+  margin-left: 20px;
+  margin-bottom: 20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 50px;
 }
 
-.row{
-    clear: both;
+.row {
+  clear: both;
 }
 
-.col.span2{ width: 200px;   }
-.col.span1{  width: 200px;  }  
-.col.span4{  width: 300px;  }
-.col.span5{ width: 400px;    }
-.col.span6{  width: 120px;  }
-.col.span7{  width: 200px;  }
-.col.span8{  width: 520px;  }
-.col.span9{ width: 180px;   }
-.col.span10{  width: 340px;  }
+.col.span2 {
+  width: 200px;
+}
+
+.col.span1 {
+  width: 200px;
+}
+
+.col.span4 {
+  width: 300px;
+}
+
+.col.span5 {
+  width: 400px;
+}
+
+.col.span6 {
+  width: 120px;
+}
+
+.col.span7 {
+  width: 200px;
+}
+
+.col.span8 {
+  width: 520px;
+}
+
+.col.span9 {
+  width: 180px;
+}
+
+.col.span10 {
+  width: 340px;
+}
 
 
 /* .col.span2{ width: 20.83%;   }
@@ -222,9 +246,9 @@ A three-column layout: We enable multicol by using one of two properties: column
             column-width: unit;
         } */
 
-.column{
-    column-count: auto;
-    column-width: 300px;
+.column {
+  column-count: auto;
+  column-width: 300px;
 }
 
 
@@ -263,17 +287,17 @@ Fragmented boxes:  this breaking will happen in places that lead to a poor readi
 
 Setting break-inside: This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property break-inside with a value of avoid to the rules for .card. This is the container of the heading and text, so we don't want it fragmented.*/
 
-.column1{
-    column-width: 250px;
-    /* column-gap: 15px; */
+.column1 {
+  column-width: 250px;
+  /* column-gap: 15px; */
 }
 
-.card{
-    break-inside: avoid;
-    border: 2px solid black;
-    background: green;
-    padding: 10px;
-    margin: 10px;
+.card {
+  break-inside: avoid;
+  border: 2px solid black;
+  background: green;
+  padding: 10px;
+  margin: 10px;
 }
 
 /*columns: The columns CSS shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
@@ -294,26 +318,27 @@ Constituent properties
 
 /* Example */
 
-.container{
-    margin-top: 20px;
+.container {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 
-.container .box{
+.container .box {
   margin: 0 auto;
   width: 90%;
   column-count: 2;
   column-gap: 20px;
   column-rule: 3px dotted black;
 }
-.container .box1{
+
+.container .box1 {
   border-left: 3px solid black;
   margin-left: 5px;
   padding: 15px;
 }
 
-.all-span{
+.all-span {
   column-span: all;
   text-align: center;
   font-size: 45px;
@@ -323,14 +348,17 @@ Constituent properties
   font-style: italic;
 }
 
-img{
+img {
   margin: 10px;
   padding: 10px;
   width: 160px;
 }
-span{
+
+span {
   display: block;
 }
+
+
 
 /* Flexbox:
 Flexbox is a one-dimensional layout method for arranging items in rows or columns. 
@@ -348,26 +376,56 @@ The following simple layout designs are either difficult or impossible to achiev
     A flex container and its children to become flex items.
     We have our multiple column layout with equal-sized columns, and the columns are all the same height. */
 
-.flex{
-    border: 2px dotted rgb(32, 29, 29);
-    padding: 10px;
-    /* height: 500px;  tab use hoga to aling content  */
+body {
+  background-color: #8a7b7b;
 }
 
-.flex-itam{
-    width: 100px;
-    height: 100px;
-    background-color: hotpink;
-    margin: 10px;
-    font-size: 18px;
-    font-weight: 900;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h2 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
 }
 
+h2+div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
+}
+
+figure {
+  margin: 2px;
+  padding: 5px;
+  background-color: #656161;
+  border-radius: 8px;
+}
+
+.flex-item {
+  width: 40px;
+  height: 30px;
+  background-color: #e2657a;
+  margin: 10px;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  font-weight: 800;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: lowercase;
+  color: white;
+}
 
 /*The flex model:
 When elements are laid out as flex items, they are laid out along two axes:
@@ -475,8 +533,12 @@ Flexbox also has a feature for changing the layout order of flex items without a
 
 
 
-.flex-container{
-    display: flex;
+.box .figure1 .flex {
+  display: flex;
+}
+
+.box .figure2 .flex {
+  display: inline-flex;
 }
 
 /* flex container property */
@@ -492,11 +554,24 @@ Syntax:
   column: The main-start and main-end points are the same as the before and after points of the writing-mode.
   column-reverse: Behaves the same as column but the main-start and main-end are opposite to the content direction. */
 
-.flex-container{
-    /* flex-direction: row; */
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
-    /* flex-direction: column-reverse; */
+.box1 figure .flex {
+  display: flex;
+}
+
+.box1 .figure1 .flex {
+  flex-direction: row;
+}
+
+.box1 .figure2 .flex {
+  flex-direction: row-reverse;
+}
+
+.box1 .figure3 .flex {
+  flex-direction: column;
+}
+
+.box1 .figure4 .flex {
+  flex-direction: column-reverse;
 }
 
 
@@ -510,10 +585,24 @@ Syntax:
   wrap: The flex items break into multiple lines.
   wrap-reverse: Behaves the same as wrap but cross-start and cross-end are permuted.*/
 
-.flex-container{
-    /* flex-wrap: nowrap; */
-    /* flex-wrap: wrap; */
-    /* flex-wrap: wrap-reverse; */
+.box2 figure .flex {
+  display: flex;
+}
+
+.box2 figure {
+  width: 20% !important;
+}
+
+.box2 .figure1 .flex {
+  flex-wrap: nowrap;
+}
+
+.box2 .figure2 .flex {
+  flex-wrap: wrap;
+}
+
+.box2 .figure3 .flex {
+  flex-wrap: wrap-reverse;
 }
 
 /*flex-flow: 
@@ -527,10 +616,10 @@ Syntax:
         flex-flow: row | row-reverse | column | column-reverse | nowrap | wrap | wrap-reverse | row         nowrap | column wrap | column-reverse wrap-reverse; */
 
 
-.flex-container{
-    /* flex-flow: row nowrap; */
-    /* flex-flow: row  wrap; */
-}
+/* .flex-container{
+    flex-flow: row nowrap;
+    flex-flow: row  wrap;
+} */
 
 
 /* justify-content:
@@ -556,14 +645,37 @@ Syntax:
   space-around: Distribute items evenly Items have a half-size space on either end.
   space-evenly: Distribute items evenly Items have equal space around them.
   stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container. */
-  
-.flex-container{
-    /* justify-content: center; */
-    /* justify-content: flex-start; */
-    /* justify-content: flex-end; */
-    /* justify-content: space-around; */
-    /* justify-content: space-between; */
-    /* justify-content: space-evenly; */
+
+.box3 figure .flex {
+  display: flex;
+}
+
+.box3 figure {
+  width: 90%;
+}
+
+.box3 .figure1 .flex {
+  justify-content: flex-start;
+}
+
+.box3 .figure2 .flex {
+  justify-content: flex-end;
+}
+
+.box3 .figure3 .flex {
+  justify-content: center;
+}
+
+.box3 .figure4 .flex {
+  justify-content: space-around;
+}
+
+.box3 .figure5 .flex {
+  justify-content: space-between;
+}
+
+.box3 .figure6 .flex {
+  justify-content: space-evenly;
 }
 
 /* align-content:
@@ -590,64 +702,58 @@ Syntax:
   space-evenly: Distribute items evenly Items have equal space around them.
   stretch: Distribute items evenly Stretch 'auto'-sized items to fit the container. */
 
-.flex-container{
-    /* border: 2px solid black; */
-    /* width: 700px; */
-    /* height: 900px; */
-    /* flex-wrap: wrap;    */
-    /* align-content: center;  */
-    /* align-content: flex-start; */
-    /* align-content: space-around; */
+.box5 .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box5 :is(.figure1, .figure2, .figure3, .figure4, .figure5, .figure6, .figure7, .figure8, .figure9, .figure10) .flex {
+  height: 320px !important;
+}
+
+.box5 :is(.figure1, .figure2, .figure3, .figure4, .figure5, .figure6, .figure7, .figure8, .figure9, .figure10) {
+  width: 20%;
 }
 
 
-.container1{
-    background: #eee;
-    margin: 50px;
-    padding: 10px;
-    border: 3px solid black;
-    height: 300px;
-    width: 300px;
-
-    display: flex;
-    flex-wrap: wrap;
-    /* align-content: center; */
-    /* align-content: flex-start; */
-    /* align-content: flex-end; */
-    /* align-content: space-around; */
-    /* align-content: space-between; */
-    align-content: space-evenly;
+.box5 .figure1 .flex {
+  align-content: stretch;
 }
 
-.item{
-    margin-left: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
+.box5 .figure2 .flex {
+  align-content: center;
 }
 
-.item1{
-    background-color: red;
+.box5 .figure3 .flex {
+  align-content: flex-start;
 }
-.item2{
-    background-color: aquamarine;
+
+.box5 .figure4 .flex {
+  align-content: flex-end;
 }
-.item3{
-    background-color: blue;
+
+.box5 .figure5 .flex {
+  align-content: baseline;
 }
-.item4{
-    background-color: #804242;
+
+.box5 .figure6 .flex {
+  align-content: first baseline;
 }
-.item5{
-    background-color: green;
+
+.box5 .figure7 .flex {
+  align-content: last baseline;
 }
-.item6{
-    background-color: yellow;
+
+.box5 .figure8 .flex {
+  align-content: space-between;
 }
-.item7{
-    background-color: hotpink;
+
+.box5 .figure9 .flex {
+  align-content: space-around;
 }
-.item8{
-    background-color: brown;
+
+.box5 .figure10 .flex {
+  align-content: space-evenly;
 }
 
 
@@ -670,38 +776,56 @@ Syntax:
   self-end: Pack flex items from the end.
   baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.The fallback alignment for first baseline is start, the one for last baseline is end. */
 
-.container2{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: yellow;
+.box4 figure .flex {
+  display: flex;
 }
 
-/* div center */
-.box{
-    margin-top: 10px;
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-
-    /* first method */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
+.box4 .flex .flex-item:nth-child(1) {
+  height: 90px !important;
 }
 
-/* Flex item properties:
+.box4 .flex .flex-item:nth-child(2) {
+  height: 50px !important;
+}
 
-order:
-The order CSS property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending order value and then by their source code order.
+.box4 .flex .flex-item:nth-child(3) {
+  height: 35px !important;
+}
 
-Syntax:
-        order: 5 | -5;
+.box4 .flex .flex-item:nth-child(4) {
+  height: 70px !important;
+}
 
-Since order is only meant to affect the visual order of elements and not their logical or tab order. order must not be used on non-visual media such as speech. */
 
+.box4 .figure1 .flex {
+  align-items: stretch;
+}
 
+.box4 .figure2 .flex {
+  align-items: center;
+}
+
+.box4 .figure3 .flex {
+  align-items: flex-start;
+}
+
+.box4 .figure4 .flex {
+  align-items: flex-end;
+}
+
+.box4 .figure5 .flex {
+  align-items: baseline;
+}
+
+.box4 .figure6 .flex {
+  align-items: first baseline;
+}
+
+.box4 .figure7 .flex {
+  align-items: last baseline;
+}
+
+/* Flex item properties: */
 
 
 /* align-self:
@@ -722,6 +846,118 @@ Syntax:
   stretch: Stretch 'auto'-sized items to fit the container.
   baseline: Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.The fallback alignment for first baseline is start, the one for last baseline is end. */
 
+.box6 figure .flex {
+  display: flex;
+}
+
+.box6 .flex .flex-item:nth-child(1) {
+  height: 140px !important;
+}
+
+.box6 .flex .flex-item:nth-child(2) {
+  height: 30px !important;
+}
+
+.box6 .flex .flex-item:nth-child(3) {
+  height: 140px !important;
+}
+
+.box6 .figure1 .flex-item:nth-child(2) {
+  align-self: center;
+}
+
+.box6 .figure2 .flex-item:nth-child(2) {
+  align-self: self-start;
+}
+
+.box6 .figure3 .flex-item:nth-child(2) {
+  align-self: self-end;
+}
+
+.box6 .figure4 .flex-item:nth-child(2) {
+  align-self: flex-start;
+}
+
+.box6 .figure5 .flex-item:nth-child(2) {
+  align-self: flex-end;
+}
+
+.box6 .figure6 .flex-item:nth-child(2) {
+  align-self: baseline;
+}
+
+.box6 .figure7 .flex-item:nth-child(2) {
+  align-self: first baseline;
+}
+
+.box6 .figure8 .flex-item:nth-child(2) {
+  align-self: last baseline;
+}
+
+.box6 .figure9 .flex-item:nth-child(2) {
+  align-self: stretch;
+}
+
+
+
+/* order:
+The order CSS property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending order value and then by their source code order.
+
+Syntax:
+        order: 5 | -5;
+
+Since order is only meant to affect the visual order of elements and not their logical or tab order. order must not be used on non-visual media such as speech. */
+.box7 .figure{
+  width: 80%;
+}
+
+.box7 .figure .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box7 .figure .flex .flex-item:nth-child(1){
+  order: 2;
+}
+.box7 .figure .flex .flex-item:nth-child(2){
+  order: 3;
+}
+.box7 .figure .flex .flex-item:nth-child(3){
+  order: 1;
+}
+.box7 .figure .flex .flex-item:nth-child(4){
+  order: 3;
+}
+.box7 .figure .flex .flex-item:nth-child(5){
+  order: 1;
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .card{
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .card h2{
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+
+.wrapper .card .date{
+  text-align: right;
+
+  order: -1;
+  align-self: flex-end;
+}
 
 /* flex-basis:
 The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
@@ -745,11 +981,53 @@ Syntax:
 
 
 The main size is either width or height of the item which is dependent on the flex-direction value.
-flex-grow is used alongside the other flex properties flex-shrink and flex-basis, and normally defined using the flex shorthand to ensure all values are set.
+flex-grow is used alongside the other flex properties flex-shrink and flex-basis, and normally defined using the flex shorthand to ensure all values are set. */
+
+.grow .item{ 
+  height: 90px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grow{
+  padding: 10px 0;
+  /* width: 1000px !important; */
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.margin-itme1{
+  flex-grow: 1;
+  background-color: red;
+}
+.margin-itme2{
+  flex-grow: 3;
+  background-color: blue;
+}
+.margin-itme3{
+  flex-grow: 1;
+  background-color: yellow;
+}
+.margin-itme4{
+  flex-grow: 4;
+  background-color: green;
+}
 
 
 
-flex-shrink:
+
+/* flex-shrink:
 The flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink.
 
 In use, flex-shrink is used alongside the other flex properties flex-grow and flex-basis, and normally defined using the flex shorthand.
@@ -760,3 +1038,61 @@ Syntax:
 
 
 
+
+
+
+
+
+/* gaps , column-gaps and row-gaps */
+.gaps {
+  /* width: 60%; */
+  margin: 0 160px;
+  background-color: #656161;
+  padding: 8px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+  /* A shorthand that sets both together */
+  /* column-gap: 30px; /* creates gaps between items on the main axis.*/
+  /* row-gap: 30px; /* creates gaps between flex lines, when you have flex-wrap set to wrap */
+
+}
+
+
+/* Using auto margins for main axis alignment */
+.item {
+  width: 90px;
+  height: 90px;
+  background-color: hotpink;
+  margin: 5px;
+
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border: 3px dotted black;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.margin-itme1 {
+  margin-right: auto;
+}
+
+.margin-itme3 {
+  /* margin-left: auto; */
+  margin-right: auto;
+}
