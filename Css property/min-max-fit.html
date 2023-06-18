@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min-width, max-width, min-heigth, max-heigth, min-content, max-content, fit-content and minmax()</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* min-width */
+        /* kam se kam itana width to hona hi chahiye */
+        /* The min-width CSS property sets the minimum width of an element. */
+
+        /* Syntax:
+                min-width: length | max-content | min-content | fit-content(20em) | auto;
+
+
+            auto: The browser will calculate and select a min-width for the specified element.
+            max-content: The intrinsic preferred min-width.
+            min-content: The intrinsic minimum min-width.
+            fit-content(<length-percentage>): Uses the fit-content formula with the available space replaced by the specified argument, i.e. min(max-content, max(min-content, argument)). */
+
+
+        /* max-width */
+        /* jada se jada itana width to hona hi chahiye */
+        /* The max-width CSS property sets the maximum width of an element.  */
+
+        /* Syntax:
+                max-width: length | max-content | min-content | fit-content(20em) | auto;
+
+
+            auto: The browser will calculate and select a min-width for the specified element.
+            max-content: The intrinsic preferred min-width.
+            min-content: The intrinsic minimum min-width.
+            fit-content(<length-percentage>): Uses the fit-content formula with the available space replaced by the specified argument, i.e. min(max-content, max(min-content, argument)). */
+
+
+        .min-width-max-width {
+            /* width: 100%; */
+            min-width: 700px;
+            max-width: 1124px;
+
+            margin-bottom: 10px;
+        }
+
+        .min-width-max-width p {
+            background-color: yellow;
+            color: red;
+            padding: 20px;
+        }
+
+        /* min-height */
+        /* kam se kam itana height to hona hi chahiye */
+        /* The min-height CSS property sets the minimum height of an element.  */
+
+        /* Syntax:
+                min-height: length | max-content | min-content | fit-content(20em) | auto;
+
+
+            auto: The browser will calculate and select a min-width for the specified element.
+            max-content: The intrinsic preferred min-width.
+            min-content: The intrinsic minimum min-width.
+            fit-content(<length-percentage>): Uses the fit-content formula with the available space replaced by the specified argument, i.e. min(max-content, max(min-content, argument)). */
+
+
+        /* max-height */
+        /* jada se jada itana width to hona hi chahiye */
+        /* The max-height CSS property sets the maximum height of an element.  */
+
+        /* Syntax:
+                min-height: length | max-content | min-content | fit-content(20em) | auto;
+
+
+            auto: The browser will calculate and select a min-width for the specified element.
+            max-content: The intrinsic preferred min-width.
+            min-content: The intrinsic minimum min-width.
+            fit-content(<length-percentage>): Uses the fit-content formula with the available space replaced by the specified argument, i.e. min(max-content, max(min-content, argument)). */
+
+        .min-height-max-height {
+            border: 2px solid black;
+            overflow: auto;
+            min-height: 90px;
+            max-height: 120px;
+
+            background: yellow;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        /* min content */
+        /* The min-content sizing keyword represents the intrinsic minimum width of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word. */
+
+        /* Syntax:
+                ____Used as a length_____
+                width: min-content;
+                inline-size: min-content;
+                height: min-content;
+                block-size: min-content;
+
+                _____used in grid tracks______
+                grid-template-columns: 200px 1fr min-content; */
+
+
+        .item {
+            background-color: #8ca0ff;
+            padding: 10px;
+            margin-bottom: 5px;
+
+            width: min-content;
+        }
+
+        /* max content */
+        /* The max-content sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows. */
+
+
+        /* Syntax:
+                ____Used as a length_____
+                width: max-content;
+                inline-size: max-content;
+                height: max-content;
+                block-size: max-content;
+
+                _____used in grid tracks______
+                grid-template-columns: 200px 1fr max-content; */
+
+        #container {
+            background-color: #8cffa0;
+            padding: 10px;
+            width: 200px;
+        }
+
+        #container .item {
+            width: max-content;
+            background-color: #8ca0ff;
+            padding: 5px;
+            margin-bottom: 1em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="min-width-max-width">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dicta est, placeat dolore </p>
+    </div>
+
+    <div class="min-height-max-height">
+        <h2>Min height and max height</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quam perferendis accusantium excepturi soluta est? Nisi sint repellat doloremque obcaecati a iste quas
+            deserunt aperiam? Rerum, vero facilis nesciunt magnam praesentium eveniet magni sequi totam molestias atque
+            dolor nulla perspiciatis! Recusandae possimus quaerat similique expedita! Distinctio labore fugit, eos
+            numquam neque quos dolores beatae nulla minus culpa possimus soluta ex officiis nesciunt optio cumque odit
+            repudiandae. Aperiam fugit odit quod asperiores tenetur amet dolores similique? Rerum tenetur maiores,
+            repellendus doloribus nisi aut, voluptatibus eaque nemo sed provident, in quis cum magnam. Omnis a repellat
+            error esse iusto aliquid aliquam reprehenderit autem? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Aliquam placeat consequatur, ipsam, sint id nisi sed magnam vitae blanditiis ipsum atque eos ad?
+            Accusamus ducimus recusandae iure deleniti assumenda quos dolores ipsa quibusdam, et magnam nulla aperiam
+            omnis voluptate suscipit esse nisi consectetur dignissimos mollitia eum minus tempora doloremque! Vitae
+            laudantium dolorum ut pariatur, quam recusandae molestiae dicta culpa, unde id numquam. Praesentium ex
+            inventore nostrum minus sit omnis quaerat consectetur quae nisi ipsa quos nam, aperiam, dolorum
+            voluptatibus. Hic eligendi ducimus sed recusandae fugit temporibus doloribus vero animi fuga. Quam tempora
+            temporibus saepe adipisci rerum nemo placeat illo officiis.</p>
+    </div>
+
+
+    <div class="item">Item</div>
+    <div class="item">Item with more consectetur text in it.</div>
+
+    <div id="container">
+        <div class="item">Item</div>
+        <div class="item">
+            Item with more text in it which will overflow the fixed width box.
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
