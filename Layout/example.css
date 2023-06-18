@@ -1,0 +1,261 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0px; 
+  }
+  
+  header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    
+  
+    background-color: #566c2b;
+    padding: 12px;
+    cursor: pointer;
+    /* position: sticky;
+    top: 0; */
+  }
+  
+  header .menu li{
+    display: inline;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  
+  header .menu li a{
+    color: white;
+    font-size: 16px;
+  }
+  
+  header .logo{
+    /* ya to header ye kar do justify-content: space-between; ya flex auto use kar lo*/
+    margin: 0 auto; 
+  }
+  
+  header .logo h2{
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  header .social li{
+    display: inline;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  
+  header .social li a i{
+    color: white;
+    font-size: 16px;
+  }
+  
+  
+  .main1{
+    display: flex;
+  }
+  
+  aside{
+    flex: 0 0 20vw;  
+    background-color: #d4c7af;
+  }
+  aside ul{
+    padding-top: 30px;
+  }
+  aside li{
+    width: 90%;
+    margin: 18px 10px;
+  }
+  
+  aside li a{
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #927949;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  
+  aside .img{
+    width: 90%;
+  }
+  aside img{
+    width: 100%;
+    height: 300px;
+    margin: 0 10px;
+  }
+  
+  article{
+    margin-left: 12px;
+    margin-bottom: 20px;
+  }
+  
+  article h2{
+    margin: 13px 0;
+    font-weight: 900;
+  }
+  
+  .service-cotainer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .service-box{
+    margin: 10px 5px;
+    border: 1px solid #eee;
+    flex-basis: 32%;
+  
+    padding: 8px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-box img{
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .service-box .service-tittle h2{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  /* important */
+  .service-box .button{
+    align-self: flex-start;
+    margin-top: auto;
+  }
+  
+  .service-box a button{
+    padding: 8px 15px;
+    cursor: pointer;
+    color: white;
+    background-color: #249ec6;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 2px solid transparent;
+  }
+  .service-box a button:hover{
+    border: 2px solid gray;
+    background: white;
+    color: gray;
+    transition: 0.5s;
+  }
+  
+  footer{
+    background-color:  #566c2b;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+  }
+  
+  
+  
+  @media screen and (min-width: 741px){
+    .service-cotainer{
+    justify-content: space-around;
+  }
+    article p{
+      font-size: 18px;
+      padding: 5px;
+    }
+  }
+  
+  @media screen and (min-width: 741px) and (max-width: 951px){
+    aside{
+    flex: 0 0 25vw;  
+  }
+    .service-box{
+    flex-basis: 45%;
+  }
+  }
+  
+  @media screen and (min-width: 513px) and (max-width: 740px){
+     .service-cotainer{
+    justify-content: space-around;
+  }
+    aside{
+    flex: 0 0 28vw;  
+  }
+    .service-box{
+    flex-basis: 45%;
+  }
+  }
+  
+  
+  @media screen and (min-width: 310px) and (max-width: 512px){
+    header{
+      flex-direction: column;
+    }
+    .menu , .logo{
+      margin-bottom: 10px;
+    }
+    header{
+      gap: 10px; 
+    }
+    header .menu li{
+      display: inline;
+    }
+    .main1{
+      flex-direction: column;
+    }
+      .service-cotainer{
+    justify-content: center;
+  }
+     .service-box{
+    flex-basis: 100%;
+  }
+    .main article p{
+      padding: 10px;
+    }
+    aside img{
+      margin: 0 18px;
+      border-radius: 5px;
+    }
+    .services{
+      text-align: center;
+    }
+  }
+  
+
+
+
+
+  .image-grally{
+    width: 95%;
+    margin: 10px;
+    display: flex;
+    height: 70vh;
+  
+    border: 2px solid black;
+    padding: 10px;
+  }
+  
+  .single-image{
+    flex: 2;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5ms cubic-bezier(.14,.69,.93,1);
+  }
+  
+  .single-image:hover{
+    flex: 65vw;
+  }
