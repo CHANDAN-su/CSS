@@ -907,140 +907,62 @@ Syntax:
         order: 5 | -5;
 
 Since order is only meant to affect the visual order of elements and not their logical or tab order. order must not be used on non-visual media such as speech. */
-.box7 .figure{
+.box7 .figure {
   width: 80%;
 }
 
-.box7 .figure .flex{
+.box7 .figure .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.box7 .figure .flex .flex-item:nth-child(1){
+.box7 .figure .flex .flex-item:nth-child(1) {
   order: 2;
 }
-.box7 .figure .flex .flex-item:nth-child(2){
+
+.box7 .figure .flex .flex-item:nth-child(2) {
   order: 3;
 }
-.box7 .figure .flex .flex-item:nth-child(3){
+
+.box7 .figure .flex .flex-item:nth-child(3) {
   order: 1;
 }
-.box7 .figure .flex .flex-item:nth-child(4){
+
+.box7 .figure .flex .flex-item:nth-child(4) {
   order: 3;
 }
-.box7 .figure .flex .flex-item:nth-child(5){
+
+.box7 .figure .flex .flex-item:nth-child(5) {
   order: 1;
 }
 
 
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
 }
 
-.wrapper .card{
+.wrapper .card {
   background-color: white;
 
   display: flex;
   flex-direction: column;
 }
-.wrapper .card h2{
+
+.wrapper .card h2 {
   text-align: center;
   font-size: 16px;
   color: black;
   font-weight: 400;
 }
 
-.wrapper .card .date{
+.wrapper .card .date {
   text-align: right;
 
   order: -1;
   align-self: flex-end;
 }
-
-/* flex-basis:
-The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
-
-The flex-grow and flex-shrink properties are both set to 1 on all these items, indicating that the flex item can grow and shrink from the initial flex-basis.
-
-The demo then changes the flex-basis on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the flex-basis of the first item is 200px, it will start out at 200px but then shrink to fit the space available with the other items being at least min-content sized.
-
-Syntax:
-        flex-basis: unit | max-content | min-content | fit-content;
-
-
-
-flex-grow:
-The flex-grow CSS property sets the flex grow factor, which specifies how much of the flex container's remaining space should be assigned to the flex item's main size.
-
-When the flex-container's main size is larger than the combined main size's of the flex items, the extra space is distributed among the flex items, with each item growth being their growth factor value as a proportion of the sum total of all the container's items' flex grow factors.
-
-Syntax:
-        flex-grow: number;
-
-
-The main size is either width or height of the item which is dependent on the flex-direction value.
-flex-grow is used alongside the other flex properties flex-shrink and flex-basis, and normally defined using the flex shorthand to ensure all values are set. */
-
-.grow .item{ 
-  height: 90px;
-  font-size: 20px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: white;
-  border-radius: 5px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.grow{
-  padding: 10px 0;
-  /* width: 1000px !important; */
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.margin-itme1{
-  flex-grow: 1;
-  background-color: red;
-}
-.margin-itme2{
-  flex-grow: 3;
-  background-color: blue;
-}
-.margin-itme3{
-  flex-grow: 1;
-  background-color: yellow;
-}
-.margin-itme4{
-  flex-grow: 4;
-  background-color: green;
-}
-
-
-
-
-/* flex-shrink:
-The flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink.
-
-In use, flex-shrink is used alongside the other flex properties flex-grow and flex-basis, and normally defined using the flex shorthand.
-
-Syntax:
-        flex-shrink: number; */
-
-
-
-
-
-
-
 
 
 /* gaps , column-gaps and row-gaps */
@@ -1053,7 +975,7 @@ Syntax:
   display: flex;
   flex-wrap: wrap;
 
-  gap: 18px;
+  gap: 38px;
   /* A shorthand that sets both together */
   /* column-gap: 30px; /* creates gaps between items on the main axis.*/
   /* row-gap: 30px; /* creates gaps between flex lines, when you have flex-wrap set to wrap */
@@ -1095,4 +1017,242 @@ Syntax:
 .margin-itme3 {
   /* margin-left: auto; */
   margin-right: auto;
+}
+
+
+
+
+/* flex-basis:
+The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
+
+The flex-grow and flex-shrink properties are both set to 1 on all these items, indicating that the flex item can grow and shrink from the initial flex-basis.
+
+The demo then changes the flex-basis on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the flex-basis of the first item is 200px, it will start out at 200px but then shrink to fit the space available with the other items being at least min-content sized.
+
+Syntax:
+        flex-basis: unit | max-content | min-content | fit-content; */
+
+.basis .item1 {
+  width: 100px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  background-color: hotpink;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.basis {
+  padding: 10px 0;
+  width: 100% !important;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.basis-itmen1{
+  background-color: red !important;
+  flex-basis: 400px;
+}
+.basis-itmen4{
+  background-color: #e2657a;
+  flex-basis: 500px;
+}
+
+
+/* flex-grow:
+The flex-grow CSS property sets the flex grow factor, which specifies how much of the flex container's remaining space should be assigned to the flex item's main size.
+
+When the flex-container's main size is larger than the combined main size's of the flex items, the extra space is distributed among the flex items, with each item growth being their growth factor value as a proportion of the sum total of all the container's items' flex grow factors.
+
+Syntax:
+        flex-grow: number;
+
+
+The main size is either width or height of the item which is dependent on the flex-direction value.
+flex-grow is used alongside the other flex properties flex-shrink and flex-basis, and normally defined using the flex shorthand to ensure all values are set. */
+
+.grow .item {
+  height: 90px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grow {
+  padding: 10px 0;
+  /* width: 1000px !important; */
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.margin-itme1 {
+  flex-grow: 1;
+  background-color: red;
+}
+
+.margin-itme2 {
+  flex-grow: 3;
+  background-color: blue;
+}
+
+.margin-itme3 {
+  flex-grow: 1;
+  background-color: yellow;
+}
+
+.margin-itme4 {
+  flex-grow: 4;
+  background-color: green;
+}
+
+
+
+/* flex-shrink:
+The flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink.
+
+In use, flex-shrink is used alongside the other flex properties flex-grow and flex-basis, and normally defined using the flex shorthand.
+
+Syntax:
+        flex-shrink: number; */
+
+.shrink .item2 {
+  width: 100px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  background-color: hotpink;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shrink {
+  padding: 10px 0;
+  width: 100% !important;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.shrink-item1{
+  background-color:  green !important;
+  flex-basis: 400px;
+  flex-shrink: 0;
+}
+.shrink-item3{
+  background-color:  greenyellow !important;
+  flex-basis: 300px;
+  flex-shrink: 1;
+}
+
+
+/* flex shortand  */
+/* The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space available in its flex container. */
+/* Constituent properties
+This property is a shorthand for the following CSS properties:
+1. flex-grow
+2. flex-shrink
+3. flex-basis */
+
+  /* Syntax */
+    /* Keyword values */
+          /* flex: auto;
+          flex: initial;
+          flex: none; */
+
+    /* One value, unitless number: flex-grow flex-basis is then equal to 0. */
+          /* flex: 2; */
+
+    /* One value, width/height: flex-basis */
+          /* flex: 10em;
+          flex: 30%;
+          flex: min-content; */
+
+    /* Two values: flex-grow | flex-basis */
+          /* flex: 1 30px; */
+
+    /* Two values: flex-grow | flex-shrink */
+          /* flex: 2 2; */
+
+    /* Three values: flex-grow | flex-shrink | flex-basis */
+          /* flex: 2 2 10%; */
+
+  /* The flex property may be specified using one, two, or three values.
+
+      1. One-value syntax: the value must be one of:
+            -> a valid value for <flex-grow>: then the shorthand expands to flex: <flex-grow> 1 0.
+            -> a valid value for <flex-basis>: then the shorthand expands to flex: 1 1 <flex-basis>.
+            -> the keyword none or one of the global keywords.
+      2. Two-value syntax:
+            -> The first value must be a valid value for flex-grow.
+            -> The second value must be one of:
+            -> a valid value for flex-shrink: then the shorthand expands to flex: <flex-grow> <flex-shrink> 0.
+            -> a valid value for flex-basis: then the shorthand expands to flex: <flex-grow> 1 <flex-basis>.
+          Three-value syntax: the values must be in the following order:
+            -> a valid value for flex-grow.
+            -> a valid value for flex-shrink.
+            -> a valid value for flex-basis. */
+
+
+/* Mastering wrapping of flex items */
+
+/* .a{
+  width: 550px;
+  border: 1px solid black;
+  padding: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.a>*{
+  flex: 1 1 160px;
+
+  border: 1px solid red;
+  background-color: hotpink;
+} */
+
+
+.a{
+  /* width: 550px; */
+  height: 300px;
+  border: 1px solid black;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.a>*{
+  flex: 1 1 90px;
+
+  border: 1px solid red;
+  background-color: hotpink;
 }
