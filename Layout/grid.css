@@ -72,3 +72,128 @@ repeat()
 minmax()
 fit-content()
 */
+
+/* grid track */
+.wrapper1, .wrapper2, .wrapper3, .wrapper4{
+  grid-auto-rows: minmax(100px , auto);
+}
+
+.wrapper1 > div , .wrapper2>div{
+  background-color: black;
+  color: white;
+}
+
+/* Basic concepts of grid layout */
+/* CSS grid layout introduces a two-dimensional grid system to CSS. 
+The features shown in this overview will then be explained in greater detail in the rest of this guide.
+
+What is a grid?
+A grid is a set of intersecting horizontal and vertical lines defining columns and rows.
+
+CSS grid layout has the following features:
+
+1. Fixed and flexible track sizes:  You can create a grid with fixed track sizes – using pixels for example. You can also create a grid using flexible sizes with percentages or with the fr unit designed for this purpose.
+
+2. Item placement:  You can place items into a precise location on the grid using line numbers, names or by targeting an area of the grid. 
+
+3. Creation of additional tracks to hold content:  You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. 
+
+4. Alignment control:  Grid contains alignment features so we can control how the items align once placed into a grid area, and how the entire grid is aligned.
+
+5. Control of overlapping content:  More than one item can be placed into a grid cell or area and they can partially overlap each other. This layering may then be controlled with the z-index property. */
+
+/* Grid container
+We create a grid container by declaring display: grid or display: inline-grid on an element. As soon as we do this, all direct children of that element become grid items.
+
+In this example, I have a containing div with a class of wrapper and, inside are five child elements.All the direct children are now grid items. 
+
+  selector{
+      dispaly: grid;
+  } */
+
+
+.wrapper1{
+  display: grid;
+  gap: 10px;
+}
+
+/* Grid tracks
+We define rows and columns on our grid with the grid-template-rows and grid-template-columns properties. These define grid tracks. 
+A grid track is the space between any two adjacent lines on the grid. 
+the grid-template-columns and grid-template-rows properties or the shorthand grid or grid-template properties. */
+/* I can add to our earlier example by adding the grid-template-columns property, then defining the size of the column tracks.
+I have now created a grid with three 200-pixel-wide column tracks.  */
+
+.wrapper1{
+  grid-template-columns: 200px 200px 200px;
+}
+
+/*The fr unit  
+The new fr unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.
+*/
+
+.wrapper1{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Unequal sizes 
+In this next example, we create a definition with a 2fr track then two 1fr tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.
+*/
+
+.wrapper1{
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+/* Mixing flexible and absolute sizes
+The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks. */
+
+.wrapper1{
+    grid-template-columns: 800px 1fr 1fr;
+}
+
+/* Track listings with repeat() notation
+Large grids with many tracks can use the repeat() notation, to repeat all or a section of the track listing. For example the grid definition:
+  grid-templete-column:1fr 1fr 1fr; replaced (Can also be written as) grid-templete-column: repeat(3, 1fr); */
+
+
+  .wrapper1{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+/* In this next example I have created a grid with an initial 20-pixel track, then a repeating section of 6 1fr tracks then a final 20-pixel track.
+
+.wrapper1{
+  grid-template-columns: 20px repeat(6,1fr) 20px;
+} */
+
+
+/* In this next example, my grid will consist of 10 tracks, a 1fr track, and then followed by a 2fr track. This pattern will be repeated five times. */
+
+
+.wrapper1{
+  grid-template-columns: repeat(5, 1fr 2fr);
+}
+
+
+/* Implicit and explicit grids
+If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the implicit grid. These tracks will be auto-sized by default, resulting in their size being based on the content that is inside them.
+
+You can also define a set size for tracks created in the implicit grid with the grid-auto-rows and grid-auto-columns properties. */
+
+/* In the below example, we use grid-auto-rows to ensure that tracks created in the implicit grid are 200 pixels tall. */
+
+.wrapper1{
+  grid-auto-rows: 200px;
+}
+
+
+/* Track sizing and minmax
+For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.
+Grid has a solution for this with the minmax() function. */
+/* In this next example I am using minmax() in the value of grid-auto-rows. */
+
+.wrapper1{
+  grid-auto-rows: minmax(400px, auto);
+}
