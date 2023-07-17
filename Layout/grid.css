@@ -195,5 +195,291 @@ Grid has a solution for this with the minmax() function. */
 /* In this next example I am using minmax() in the value of grid-auto-rows. */
 
 .wrapper1{
-  grid-auto-rows: minmax(400px, auto);
+  grid-auto-rows: minmax(200px, auto);
+}
+
+/* Grid lines
+/* Grid then gives us numbered lines to use when positioning items. In our three column, two row grid we have four column lines.
+Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. (image show in thml line*/
+/* Positioning items against lines
+In the following example I am placing the first two items on our three column track grid, using the grid-column-start, grid-column-end, grid-row-start and grid-row-end properties.  */
+
+/* example
+the first item is placed against column line 1, and spans to column line 4, which in our case is the far-right line on the grid. It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.
+
+The second item starts on grid column line 1, and spans one track. This is the default so I do not need to specify the end line. It also spans two row tracks from row line 3 to row line 5.  */
+
+.wrapper1{
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.one-1{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.Two-1{
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+
+/* Line-positioning shorthands
+one line for columns with grid-column, and one line for rows with grid-row.
+The value before the forward slash character (/) is the start line, the value after the end line. */
+
+.one-1{
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+
+.Two-1{
+  grid-column: 1;
+  grid-row: 3 / 5;
+}
+
+.Five-1{
+  grid-column: 2 / 4;
+}
+
+/* Grid cell:  A grid cell is the smallest unit on a grid. */
+
+/*Grid areas:  Items can span one or more cells both by row or by column, and this creates a grid area. Grid areas must be rectangular. */
+
+/* Gutters: Gutters or alleys between grid cells can be created using the column-gap and row-gap properties, or the shorthand gap. */
+/* In the below example, I am creating a 10-pixel gap between columns and a 1em gap between rows.  */
+
+.wrapper1{
+  column-gap: 10px;
+  row-gap: 2em;
+}
+
+
+/*Nesting grids  */
+
+.one-1>div{
+  margin: 20px;
+   border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
+  color: black;
+}
+
+.one-1{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+}
+
+
+/* Relationship of grid layout to other layout methods */
+
+/* Grid and flexbox
+Grid was designed for two-dimensional layout - rows, and columns at the same time
+You have already learned how to use flexbox, the similarities should help you get to grips with Grid. */
+
+/* 
+One-dimensional versus two-dimensional layout
+
+A simple example can demonstrate the difference between one- and two-dimensional layouts.
+In this first example, I am using flexbox to lay out a set of boxes. I have five child items in my container, and I have given the flex properties values so that they can grow and shrink from a flex-basis of 150 pixels. I have also set the flex-wrap property to wrap
+ */
+
+
+.flexbox{
+  margin-top: 10px;
+  width: 600px;
+  border: 1px solid black;
+  padding: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox>div{
+  flex: 1 1 150px;
+  height: 50px;
+  margin: 10px;
+  background-color: blue;
+  color: white;
+}
+
+/* In the image, you can see that two items have wrapped onto a new line. These items are sharing the available space and not lining up underneath the items above. This is because when you wrap flex items, each new row (or column when working by column) is an independent flex line in the flex container. Space distribution happens across the flex line. */
+
+/* A common question then is how to make those items line up. This is where you want a two-dimensional layout method: You want to control the alignment by row and column, and this is where grid comes in. */
+
+/* 
+The same layout with CSS grids
+
+In this next example, I create the same layout using Grid. This time we have three 1fr column tracks. We do not need to set anything on the items themselves; they will lay themselves out one into each cell of the created grid. As you can see they stay in a strict grid, lining up in rows and columns. With five items, we get a gap on the end of row two. */
+
+.wrapper2{
+  margin: 10px auto;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* A simple question to ask yourself when deciding between grid or flexbox is:
+
+do I only need to control the layout by row or column – use a flexbox
+do I need to control the layout by row and column – use a grid */
+
+
+/* flexbox =>  they will work out their spacing based on their size and the available space on that line.
+grid =>  You allow the auto-placement rules to place the items into the grid cells according to that strict grid. It is possible to create tracks that respond to the size of the content, however, they will also change the entire track. */
+
+/* Box alignment */
+
+/* which uses flexbox aleady done */
+/* I have a container with three items inside. The wrapper min-height is set, so it defines the height of the flex container. I have set align-items on the flex container to flex-end so the items will line up at the end of the flex container. I have also set the align-self property on box1 so it will override the default and stretch to the height of the container and on box2 so it aligns to the start of the flex container. 
+      .wrapper {
+           display: flex;
+          align-items: flex-end;
+          min-height: 200px;
+        }
+      .box1 {
+        align-self: stretch;
+        }
+        .box2 {
+        align-self: flex-start;
+        }
+
+*/
+
+/* Alignment in CSS Grids
+This example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to start and end rather than flex-start and flex-end. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells. 
+
+          .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: end;
+            grid-auto-rows: 200px;
+          }
+          .box1 {
+            align-self: stretch;
+          }
+          .box2 {
+            align-self: start;
+          }
+*/
+
+/* The fr unit and flex-basis
+The fr unit works to assign a proportion of available space in the grid container to our grid tracks. The fr unit, when combined with the minmax() function can give us very similar behavior to the flex properties in flexbox while still enabling the creation of a layout in two dimensions. */
+
+
+/* Auto-filling grid tracks */
+/* We can use grid to create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the auto-fill and auto-fit properties. */
+
+/* In this next example, I have used the auto-fill keyword in place of an integer in the repeat notation and set the track listing to 200 pixels.
+
+This means that grid will create as many 200 pixels column tracks as will fit in the container. */
+
+.wrapper3>div{
+  background-color: red;
+}
+
+
+.wrapper3{
+  padding: 10px;
+  border: 2px solid black;
+  
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+  gap: 10px;
+}
+
+
+/* A flexible number of tracks */
+/* This isn't quite the same as flexbox. 
+
+ In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining auto-fit and the minmax() function. 
+
+In this next example, I create auto filled tracks with minmax. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be 1fr. */
+
+.wrapper4>div{
+  background-color: red;
+}
+
+
+.wrapper4{
+  padding: 10px;
+  border: 2px solid black;
+  
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  gap: 10px;
+}
+
+/* Grid and absolutely positioned elements and absolutely positioned elements*/
+/* Grid interacts with absolutely positioned elements, which can be useful if you want to position an item inside a grid or grid area.  */
+
+
+/* A grid container as containing block */
+/* To make the grid container a containing block you need to add the position property to the container with a value of relative, just as you would make a containing block for any other absolutely positioned items.
+
+In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has position: relative and so becomes the positioning context of this item. */
+
+.wrapper5{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+
+  border: 2px solid black;
+  position: relative;
+}
+
+.wrapper5>div{
+  background-color: hotpink;
+  border: 2px solid #dd0e72;
+  padding: 20px;
+  color: red;
+}
+
+.wrapper5 div:nth-child(3){
+  grid-column: 2/5;
+  grid-row: 1/3;
+
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+/* Using display: contents
+If I now add display: contents to the rules for box1, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rule */
+
+.wrapper6 {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
+
+  border: 2px solid yellowgreen;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+.wrapper6>div{
+  background-color: green;
+}
+.wrapper6 .box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: contents;
+}
+.wrapper6 .box1 .nested{
+  background-color: red;
+  margin: 10px;
 }
