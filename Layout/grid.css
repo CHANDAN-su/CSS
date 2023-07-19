@@ -778,3 +778,107 @@ In the second example, we specify the end row line we want the item to finish at
   grid-row-start: span 3;
   grid-row-end: 4;
 } */
+
+
+
+/* Grid template areas */
+/* This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout! */
+
+/* Naming a grid area */
+/* You have already encountered the grid-area property. This is the property that can take as a value all four of the lines used to position a grid area. */
+
+/* selector{
+  grid-area: 1 / 1 / 4 / 2;
+} */
+
+/* We can also define an area by giving it a name and then specify the location of that area in the value of the grid-template-areas property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.
+
+a header
+a footer
+a sidebar
+the main content */
+
+/* With the grid-area property I can assign each of these areas a name. */
+
+.wrapper9 > div{
+  background-color: #ffec99;
+}
+
+.wrapper9{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3,200px);
+  gap: 5px;
+  max-width: 900px;
+ margin: 0 auto;
+  grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd"
+    "sd sd sd ct ct ct ct ct ct" 
+    "ft ft ft ft ft ft ft ft ft"
+  ;
+
+}
+.header{
+  grid-area: hd;
+}
+.sidebar{
+  grid-area: sd;
+}
+.content{
+  grid-area: ct;
+}
+.footer{
+  grid-area: ft;
+}
+
+/* Leaving a grid cell empty */
+/* To leave a cell empty use the full stop character, '.'. */
+.wrapper9{
+  grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd"
+    "sd sd sd ct ct ct ct ct ct" 
+    ". . . ft ft ft ft ft ft"
+    ;
+}
+
+/* Spanning multiple cells */
+/* The area that you create by chaining the area names must be rectangular, at this point there is no way to create an L-shaped area. The specification does note that a future level might provide this functionality. You can however span rows just as easily as columns. For example we could make our sidebar span down to the end of the footer by replacing the . with sd. */
+
+.wrapper9{
+  grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd"
+    "sd sd sd ct ct ct ct ct ct" 
+    "sd sd sd ft ft ft ft ft ft"
+    ;  
+}
+
+
+/* Redefining the grid using media queries */
+/* the names for your areas outside of any media queries. That way the content area would always be called main no matter where on the grid it is placed. */
+
+.wrapper9{
+  grid-template-areas: 
+    "hd"
+    "sd" 
+    "ct"
+    "ft"
+    ;  
+}
+
+/* media queries */
+@media (min-width: 500px) {
+  .wrapper9 {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd ct ct ct ct ct ct"
+      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  }
+}
+@media (min-width: 700px) {
+  .wrapper9 {
+    grid-template-areas:
+      "hd hd hd   hd   hd   hd   hd   hd hd"
+      "sd sd ct ct ct ct ct ft ft";
+  }
+}
