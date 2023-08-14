@@ -1218,3 +1218,108 @@ The place-self property is shorthand for align-self and justify-self. */
   /* align-self: center; */
   justify-self: center;
 }
+
+
+/* Center an item in the area
+By combining the align and justify properties we can easily center an item inside a grid area. */
+
+.center{
+  margin: 10px auto;
+  max-width: 900px;
+  border: 2px solid green;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  grid-template-areas: 
+  '. a a .'
+  '. a a .'
+  ;
+}
+
+.center > .box-alignment{
+  background-color: rgb(46, 110, 167);
+  padding: 30px;
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  grid-area: a;
+  justify-self: center;
+  align-self: center;
+}
+
+
+
+
+.wrapper14{
+  margin: 10px auto;
+  border: 2px solid rgb(170, 115, 48);
+  background-color: rgb(245, 234, 221);
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  /* writing-mode: vertical-lr; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+
+  grid-template-areas:
+  'a a b'
+  'a a b'
+  'c d d'
+  ;
+
+  /* Aligning the grid tracks on the block axis */
+/* this operates on the block and inline axes, with align-content aligning tracks on the block axis, and justify-content performing alignment on the inline axis. The place-content property is shorthand for align-content and justify-content. The values for align-content, justify-content and place-content are: */
+/* normal | start | end |center | stretch | space-around | space-between | space-evenly | baseline | first baseline | last baseline */
+
+/* In the below example I have a grid container of 500 pixels by 500 pixels. I have defined 3 row and column tracks each of 100 pixels with a 10 pixel gutter. */
+
+  /* align-content: start; */
+  /* align-content: end; */
+  /* align-content: center; */
+  /* align-content: stretch; */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+  /* align-content: space-evenly; */
+  /* align-content: baseline; */
+  /* align-content: first baseline; */
+  /* align-content: last baseline; */
+
+  /* Justifying the grid tracks on the inline axis */
+/* On the inline axis, we can use justify-content to perform the same type of alignment that we used align-content for in the block axis. */
+
+  justify-content: space-evenly;
+}
+
+.wrapper14 > .placement{
+  background-color: #a18e2b;  
+  border-radius: 5px;
+  color: white;
+  font-size: 23px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper14 > .item1{
+  grid-area: a;
+
+  /* Alignment and auto margins */
+  /* Another way to align items inside their area is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to auto, you know that an auto margin absorbs all of the available space. */
+
+  margin-left: auto;
+  padding: 15px;
+}
+.wrapper14 > .item2{
+  grid-area: b;
+}
+.wrapper14 > .item3{
+  grid-area: c;
+}
+.wrapper14 > .item4{
+  grid-area: d;
+}
