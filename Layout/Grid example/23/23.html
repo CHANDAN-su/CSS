@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/23/23.css">
+</head>
+<body>
+    <main>
+        <section class="left__card">
+          <h3 class="text-center">Login Verification</h3>
+          <p class="text-center">To continue logging in we need you to complete one of the following:</p>
+          <div class="verfications">
+            <div>
+              <input type="radio" checked name="verification" id="email" value="email">
+              <label for="email">Verification code via email</label>
+            </div>
+            <div>
+              <input type="radio" name="verification" id="sms" value="sms">
+              <label for="sms">Verification code via SMS</label>
+              <p class="grey-color">We'll send a code to your mobile phone that can enter to verify your identity</p>
+              <button>Send SMS code</button>
+            </div>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" checked name="remember_device" id="remember_device">
+            <label for="remember_device">Remember this device</label>
+            <p class="grey-color">Don't select this option if you're using a public computer</p>
+          </div>
+          <a href="#" class="hyper-link">Return to Login</a>
+        </section>
+        <section class="right__card">
+          <h3 class="text-center">Login</h3>
+          <a href="#" class="hyper-link">Create an account</a>
+          <div class="input-container">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username">
+          </div>
+          <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+          </div>
+          <button type="submit">Log In</button>
+          <div class="checkbox-container">
+            <input type="checkbox" checked name="logged_in" id="logged_in">
+            <label for="logged_in">Keep me logged in</label>
+          </div>
+          <a href="#" class="hyper-link">Forgot password?</a>
+        </section>
+      </main>
+</body>
+</html>
