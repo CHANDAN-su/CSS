@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Inconsolata:wght@200;300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* @media screen and (min-width: 715px) {
+    body {
+        width: 100%;
+    }
+} */
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1528460033278-a6ba57020470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* overflow: hidden; */
+    font-size: 1.8em;
+}
+
+.navbar span{
+    display: none;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+/* .navbar .school-name span {
+    font-size: 35px;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 3px;
+}
+
+.navbar .school-name span:nth-child(1) {
+    color: red;
+}
+
+.navbar .school-name span:nth-child(2),
+.navbar .school-name span:nth-child(4) {
+    font-size: 40px;
+    color: #C4320A;
+}
+
+.navbar .school-name span:nth-child(3) {
+    color: blue;
+}
+
+.navbar .school-name span:nth-child(5) {
+    color: green;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    margin-bottom: 10px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 22px;
+    padding: 5px 15px;
+}
+
+.navbar ul li a {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #175CD3;
+    transition: .5s;
+    position: relative;
+}
+
+.navbar ul li a:hover {
+    color: #C4320A;
+}
+
+.navbar ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 20%;
+    background-color: #C4320A;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.navbar ul li .btn {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+.navbar ul li .btn:hover {
+    color: black;
+    background-color: white;
+}
+
+
+.home1 .heading1 {
+    font-family: 'Courgette', cursive;
+    color: gray;
+    text-align: center;
+}
+
+.home1 .para {
+    margin: 10px;
+    padding: 15px;
+    font-size: 30px;
+    /* font-family: 'Courgette', cursive; */
+    font-family: 'Inconsolata', monospace;
+}
+
+.min-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+
+    gap: 15px;
+    margin: 10px 15px;
+    padding: 5px;
+
+}
+
+.min-card .card img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.min-card .card {
+    border: 3px solid gray;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    /* background: url('https://images.unsplash.com/photo-1613831241098-1db1515ef312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    opacity: .9;
+}
+
+.min-card .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 5px;
+
+    flex-grow: 1;
+}
+
+.min-card .card .card-body .card-text {
+    font-size: 20px;
+}
+
+.min-card .card .card-body .card-title {
+    font-size: 25px;
+    color: black;
+    font-weight: 800;
+}
+
+.min-card .card .card-body .button a {
+    margin-top: auto;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 70%;
+    transition: .5s;
+}
+
+
+.min-card .card .card-body .button a:hover {
+    color: black;
+    background-color: white;
+}
+
+.contant {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading1 {
+    font-family: 'Courgette', cursive;
+    color: gray;
+    text-align: center;
+}
+
+.contant form {
+    flex-basis: 100%;
+    margin: auto;
+
+}
+
+.contant .contantus form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.contant .contantus form .mb-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contant .contantus form .mb-1 input {
+    width: 400px;
+    height: 35px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#emailHelp {
+    color: red;
+    font-size: 20px;
+}
+
+.mb-1 label {
+    font-family: 'Courgette', cursive;
+}
+
+.mb-1 button {
+    margin-top: auto;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+    transition: .5s;
+}
+
+.mb-1 button:hover {
+    color: black;
+    background-color: white;
+}
+
+iframe {
+    border-radius: 5px;
+    width: 700px;
+    height: 600px;
+}
+
+footer {
+    height: auto;
+    margin-top: 20px;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding-top: 40px;
+}
+
+footer .flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-footer img {
+    width: 300px;
+    height: 300px;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    padding-bottom: 5px;
+    color: red;
+    font-size: 20px;
+}
+
+footer .flex .link {
+    display: flex;
+    column-gap: 90px;
+}
+
+footer .flex .link ul li {
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+
+footer .flex .link ul li a {
+    color: black;
+    font-size: 22px;
+    font-family: 'Courgette', cursive;
+}
+
+footer .flex .link ul li i {
+    margin-left: 20px;
+    color: black;
+    font-size: 18px;
+}
+
+footer .content .phone span:nth-child(1),
+footer .content .email span:nth-child(1) {
+    color: rgb(34, 193, 195);
+    font-size: 25px;
+    font-family: 'Courgette', cursive;
+}
+
+footer .content .phone span:nth-child(2),
+footer .content .email span:nth-child(2) {
+    color: #fdf72d;
+    font-size: 22px;
+}
+
+/* Responsive web design (RWD) is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. It is the wa to design for a multi-device web. */
+
+/* If you create a web page containing only HTML, with no CSS, and resize the window, the browser will automatically reflow the text to fit the viewport. */
+
+/* Creating a non-resizable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens. */
+
+/* the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch. */
+
+/* ! better comment: * ! ? TODO */
+
+/* TODO  Media Queries */
+/* * Media queries allow you to apply CSS styles depending on a device's general type (such as print vs. screen) or other characteristics such as screen resolution or browser viewport width. */
+
+
+/* ? Media queries are used for the following: */
+/* * To conditionally apply styles with the CSS @media and @import at-rules. *
+/* * To target specific media for the <style>, <link>, <source>, and other HTML elements with the media= attribut. */
+/* * To test and monitor media states using the Window.matchMedia() and EventTarget.addEventListener() methods. */
+
+/* Todo Syntax */
+/* * A media query is composed of an optional media type and any number of media feature expressions, which may optionally be combined in various ways using logical operators.  */
+/* ! Media queries are case-insensitive. */
+
+
+/* todo Media types */
+/* * all :- Suitable for all devices.
+* print :- Intended for paged material and documents viewed on a screen in print preview mode.
+* screen :- Intended primarily for screens. */
+
+/* todo Media features  */
+/** any-hover | any-pointer | aspect-ratio | color | color-gamut | color-index | display-mode | dynamic-range | forced-colors | grid | height | hover | inverted-colors | monochrome | orientation | overflow-block | overflow-inline | pointer | prefers-color-scheme | prefers-contrast | prefers-reduced-motion |resolution | scripting | update | video-dynamic-range | width */
+/* * For example, the hover feature allows a query to test against whether the device supports hovering over elements. */
+
+/* Most important media features
+aspect-ratio
+color
+grid
+height
+hover
+monochrome
+orientation
+resolution
+width
+*/
+
+
+/* todo Logical operators: You can also combine multiple media queries into a single rule by separating them with commas. */
+/* * and :-Used for combining multiple media features together into a single media query
+* not :- Used to negate a media query, returning true if the query would otherwise return false.
+* only :- Applies a style only if an entire query matches. */
+
+
+/*todo Targeting media types */
+/** Media types describe the general category of a given device.  For example, this CSS targets printers */
+
+/* @media print { 
+    .....
+  } */
+
+/* @media all { */
+@media print {
+    /* @media screen{ */
+
+    body {
+        color: #833ab4;
+    }
+
+    .min-card .card .card-body .card-title {
+        color: red;
+    }
+
+    .min-card .card {
+        background-image: none;
+        background-color: aquamarine;
+    }
+
+    .navbar .school-name {
+        display: none;
+    }
+
+    .min-card {
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    footer .flex .link {
+        display: none;
+    }
+}
+
+
+
+/** You can also target multiple devices. For instance, this @media rule uses two media queries to target both screen and print devices: */
+
+/* @media screen , print {
+    ........
+} */
+
+/* @media screen , print {
+    body {
+        color: #833ab4;
+    }
+
+    .min-card .card .card-body .card-title {
+        color: red;
+    }
+
+    .min-card .card {
+        background-image: none;
+        background-color: aquamarine;
+    }
+
+    .navbar .school-name{
+        display: none;
+    }
+
+    .min-card{
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    footer .flex .link{
+        display: none;
+    }
+} */
+
+
+/*todo Targeting media features */
+/** Media features describe the specific characteristics of a given user agent, output device, or environment. For instance, you can apply specific styles to widescreen monitors, computers that use mice, or to devices that are being used in low-light conditions. */
+
+/* @media (hover:hover){
+    .......
+} */
+
+/* @media (hover:hover) {
+    .navbar ul li .btn{
+        background-color: black;
+        color: white;
+        border: none;
+    }
+} */
+
+/** Many media features are range features, which means they can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints. */
+
+/* @media (max-width: 1250px){
+    .......
+} */
+
+/** If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero. */
+
+/* @media (color){
+    ......
+} */
+
+
+/*todo Combining multiple types or features */
+/** The and keyword combines a media feature with a media type or other media features. This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems: */
+
+/* @media (max-width: 30ems) and (orientation: landscape){
+                            ......
+                        } */
+
+/** To limit the styles to devices with a screen, you can chain the media features to the screen media type: */
+
+/* @media screen and (max-width: 30ems) and (orientation: landscape){
+                            ......
+                        } */
+
+
+/*todo Testing for multiple queries */
+/** You can use a comma-separated list to apply styles when the user's device matches any one of various media types, features, or states. */
+
+/* @media (min-height: 600px), screen and (orientation: landscape){
+                            .....
+                        } */
+
+
+/*todo Inverting a query's meaning */
+/** The not keyword inverts the meaning of an entire media query. It will only negate the specific media query it is applied to.  (Thus, it will not apply to every media query in a comma-separated list of media queries.) */
+
+/* @media not all and (monochrome){
+                            .......
+                        } */
+
+/* another example */
+
+/* @media not screen and (color), print and (color) {
+                            .......
+                          } */
+
+
+/*todo Improving compatibility with older browsers */
+/** The only keyword prevents older browsers that do not support media queries with media features from applying the given styles. It has no effect on modern browsers. */
+
+/* @media only screen and (color){
+                            .....
+                        } */
+
+
+/** The Media Queries Level 4 specification includes some syntax improvements to make media queries using features that have a "range" type, for example width or height, less verbose. */
+
+/* @media (max-width : 30em){
+    ...
+} */
+
+/** In Media Queries Level 4 this can be written as: */
+
+/* @media (width <= 30em) {
+    ....
+} */
+
+/** Using min- and max- we might test for a width between two values like so: */
+
+/* @media (min-width: 30em) and (max-width: 50em) {
+    ....
+} */
+
+/** This would convert to the Level 4 syntax as: */
+
+/* @media (30em <= width <= 50em) {
+    ....
+} */
+
+@media (max-width: 1200px) {
+    iframe {
+        width: 600px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1160px) {
+    footer .content{
+        display: none;
+    }
+    /* .navbar .school-name{
+        display: none;
+    } */
+    .navbar ul li{
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar{
+        width: 100%;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .navbar span{
+        display: block;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    footer .flex{
+        flex-direction: column;
+    }
+    .home .home1 .heading1{
+        font-size: 40px;
+    }
+    .heading1{
+        font-size: 40px;
+    }
+    footer .flex .link{
+        flex-grow: 1;
+    }
+    .home .home1 .para{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    iframe {
+        width: 500px;
+        height: 400px;
+    }   
+}
+
+@media (max-width: 545px) {
+    iframe {
+        width: 400px;
+        height: 300px;
+    }   
+    .heading1{
+        margin-bottom: 20px;
+    }
+    footer p{
+        display: none;
+    }
+    footer{
+        margin-top: 10px;
+        padding: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .home .home1 .heading1, .heading1{
+        font-size: 30px;
+    }   
+}
+
+@media (max-width: 400px) {
+    iframe{
+        width: 300px;
+        height: 200px;
+    } 
+    .contant .contantus form .mb-1 input  {
+        width: 80%;
+    }
+    .mb-1 button{
+        padding: 10px;
+    }
+}
