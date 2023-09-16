@@ -1704,11 +1704,7 @@ Repeat():
                        (auto-fill, [col-start] minmax(100px, 1fr) [col-end])
                        (auto-fill, 10px [col-start] 30% [col-middle] 400px [col-end])
                        (4, 250px)
-                       (4, [col-start] 250px [col-end])
-                       (4, [col-start] 60% [col-end])
-                       (4, [col-start] minmax(100px, 1fr) [col-end])
-                       (4, [col-start] fit-content(200px) [col-end])
-                       (4, 10px [col-start] 30% [col-middle] 400px [col-end])
+                    
 
 minmax(): The minmax() CSS function defines a size range greater than or equal to min and less than or equal to max. It is used with CSS Grids.
 
