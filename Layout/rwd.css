@@ -372,7 +372,7 @@ footer .content .email span:nth-child(2) {
 
 /* todo Media types */
 /* * all :- Suitable for all devices.
-* print :- Intended for paged material and documents viewed on a screen in print preview mode.
+* print :- Intended for paged material and documents  viewed on a screen in print preview mode.
 * screen :- Intended primarily for screens. */
 
 /* todo Media features  */
@@ -661,4 +661,5 @@ width
     .mb-1 button{
         padding: 10px;
     }
+    
 }
