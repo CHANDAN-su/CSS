@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /** CSS animations make it possible to animate transitions from one CSS style configuration to another. */
 
 /** Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints. */
@@ -241,6 +246,60 @@ animation-timing-function */
   3s linear slidein,
   3s ease-out 5s slideout; */
 
+.container{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(190, 190, 202);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .sun{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: gold;
+    animation: 4s linear 0s infinite alternate sun,
+        /* Applying Multiple Animations */
+                3s linear 0s infinite hue
+    ;
+   
+
+}
+
+@keyframes sun {
+    /* 0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(0);
+    } */
+
+
+    /* Animating Multiple Properties */
+    0%{
+        transform: translateY(52vw);
+        background-color: red;
+        filter: brightness(75%);
+    }
+    100%{
+        transform: translateY(0);
+        background-color: orange;
+    }
+}
+
+
+/* Applying Multiple Animations  */
+@keyframes hue {
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+    filter: hue-rotate(360deg);
+    }
+}
 
 
 
@@ -249,14 +308,40 @@ animation-timing-function */
 
 /* animation-name: none | tezt_05 | -seplific | test1 , animation5; */
 
+.animation-name{
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
 
+.animation-name:hover{
+    animation-name: a;
+}
 
+@keyframes a {
+    0%{
+        transform: rotate(0deg);
+        border-radius: 20px;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+}
 
 /* animation-duration:  The animation-duration CSS property sets the length of time that an animation takes to complete one cycle.*/
 
 /* Syntax */
 /* animation-duration: auto | 6s | 120ms | 10s , 35s , 230ms; */
 
+.animation-name:hover{
+    animation-duration: 5s;
+}
 
 
 
@@ -294,7 +379,84 @@ step-start: Equal to steps(1, jump-start)
 step-end: Equal to steps(1, jump-end)
 */
 
+.timing-function{
+    margin: 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.timing-function .keyword{
+    flex: 1 1 40px;
+}
+.timing-function .step{
+    flex: 1 1 100px;
+}
 
+.timing-function .timing{
+    border: 1px solid red;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: lightcoral;
+    
+    animation-name: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.ease{
+    animation-timing-function: ease;
+}
+.ease-in{
+    animation-timing-function: ease-in;
+}
+.ease-out{
+    animation-timing-function: ease-out;
+}
+.ease-in-out{
+    animation-timing-function: ease-in-out;
+}
+.linear{
+    animation-timing-function: linear;
+}
+.cubic{
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+.jump-start{
+    animation-timing-function: steps(5, jump-start);
+}
+.jump-end{
+    animation-timing-function: steps(5, jump-end);
+}
+.jump-none{
+    animation-timing-function: steps(5, none);
+}
+.jump-both{
+    animation-timing-function: steps(5, jump-both);
+}
+.start{
+    animation-timing-function: steps(5, start);
+}
+.end{
+    animation-timing-function: steps(5, end);
+}
+.step-start{
+    animation-timing-function: step-start;
+}
+.step-end{
+    animation-timing-function: step-end;
+}
+
+@keyframes ease {
+    0%{
+        width: 12%;
+    }
+    100%{
+        width: 100%;
+    }
+}
 
 
 /* animation-delay: The animation-delay CSS property specifies the amount of time to wait from applying the animation to an element before beginning to perform the animation. */
@@ -302,7 +464,9 @@ step-end: Equal to steps(1, jump-end)
 /* Syntax */
 /* animation-delay: 3s | 0s | -1500ms | 2.1s , 400ms; */
 
-
+.animation-name:hover{
+    animation-delay: 0s;
+}
 
 /* animation-iteration-count */
 /* The animation-iteration-count CSS property sets the number of times an animation sequence should be played before stopping. */
@@ -310,10 +474,130 @@ step-end: Equal to steps(1, jump-end)
 /* Syntax */
 /* animation-iterations-count: infinite | 3 | 2.4 | 2 , 0 , infinite; */
 
-
+.animation-name:hover{
+    /* animation-iteration-count: 3; */
+    /* animation-iteration-count: 2.5; */
+    animation-iteration-count: infinite;
+}
 
 /* animation-direction:  The animation-direction CSS property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.*/
 
 /* Syntax */
 /* animation-direction: normal | reverse | alternaate | alternate-reverse | normal , reverse; */
 
+.animation-name:hover{
+    /* animation-direction: normal; */
+    animation-direction: alternate;
+}
+
+
+
+/* animation-fill-mode:  The animation-fill-mode CSS property sets how a CSS animation applies styles to its target before and after its execution.*/
+
+/* Syntax */
+/* animation-fill-mode: none | forwards | backwards | both; */
+
+/* forwards: The target will retain the computed values set by the last keyframe encountered during execution. The last keyframe depends on the value of animation-direction and animation-iteration-count:
+
+backwards: The animation will apply the values defined in the first relevant keyframe as soon as it is applied to the target, and retain this during the animation-delay period. The first relevant keyframe depends on the value of animation-direction: */
+
+.fill-mode{
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+    margin: 10px;
+
+    animation: 3s linear 2s fill-mode;
+    /* animation-fill-mode: forwards; */
+    animation-fill-mode: backwards;
+}
+
+@keyframes fill-mode {
+    0%{
+        background-color: rgb(4, 252, 25);
+        width: 180px;
+    }
+    50%{
+        background-color: yellow;
+        width: 200px;
+    }
+    100%{
+        background-color: red;
+        width: 300px;
+    }
+}
+
+.demo{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 180px;
+}
+
+.demo .container{
+    width: 20%;
+    height: 100px;
+    background-color: gray;
+}
+
+.demo .container .grows{
+    position: absolute;
+    bottom: -60px;
+    left: 10px;
+}
+
+.demo .container .growsandstays{
+    position: absolute;
+    bottom: -100px;
+    left: 10px;
+}
+
+
+.demo .container:hover .grows{
+    animation-name: c;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.demo .container:hover .growsandstays{
+    animation-name: c;
+    animation-duration: 3s;
+}
+
+@keyframes c {
+    0%{
+        font-size: 0;
+    }
+    100%{
+        font-size: 40px;
+    }
+}
+
+
+/* animation-play-state: The animation-play-state CSS property sets whether an animation is running or paused. */
+/* Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence. */
+
+/* Syntax */
+/* animation-play-state: runing | paused | paused runing runing; */
+
+.play-state{
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    margin: 20px 30px;
+    border-radius: 10px;
+    animation: 5s infinite play-state;
+    animation-play-state: paused;
+}
+
+.play-state:hover{
+    animation-play-state: running;
+}
+
+@keyframes play-state {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
