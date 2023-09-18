@@ -1,7 +1,221 @@
 /* CSS transitions */
-/* CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time.*/
+/* CSS transitions provide a way to control transition speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time.*/
 
 /* For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized. */
 
-/* Animations that involve transitioning between two states are often called implicit transitions as the states in between the start and final states are implicitly defined by the browser. */
+/* transitions that involve transitioning between two states are often called implicit transitions as the states in between the start and final states are implicitly defined by the browser. */
 
+
+
+
+/* transitions that involve transitioning between two states are often called implicit transitions as the states in between the start and final states are implicitly defined by the browser. */
+.container{
+    display: flex;
+    gap: 20px;
+}
+.container p{
+    font-size: 22px;
+}
+
+/* Defining transitions: CSS Transitions are controlled using the shorthand transition property.
+
+You can control the individual components of the transition with the following sub-properties:
+
+transition-property:  Specifies the name or names of the CSS properties to which transitions should be applied.
+
+
+transition-duration: Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
+
+
+transition-timing-function: Specifies a function to define how intermediate values for properties are computed. Easing functions determine how intermediate values of the transition are calculated. 
+
+
+transition-delay: Defines how long to wait between the time a property is changed and the transition actually begins.
+*/
+
+/* The transition shorthand CSS syntax is written as follows:
+    transition: <property> <duration> <timing-function>  <delay>;
+*/
+
+/* Sample example */
+
+.simple-example{
+    font-size: 2rem;
+    cursor: pointer;
+
+    /* transition-property: font-size;
+    transition-duration: 2s;
+    transition-timing-function: linear; */
+
+    /* shorthand porperty */
+    transition: font-size 2s linear 1s;
+}
+
+.simple-example:hover{
+    font-size: 4rem;
+}
+
+
+
+/* Multiple animated properties example */
+
+.multiple{
+    width: 130px;
+    height: 130px;
+    background-color: blue;
+    border: 1px solid black;
+    color: white;
+    font-size: 1rem;
+
+    transition: width 2s, height 2s, background-color 2s, rotate 2s;
+}
+
+.multiple:hover{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    rotate: 180deg;
+}
+
+
+
+/* When property value lists are of different lengths */
+
+/* selector{
+    transition-property: width , height , background-color  , rotate;
+    transition-duration: 3s , 3s , 5s , 5s;
+}
+
+            __________same__________
+
+selector{
+    transition-property: width , height , background-color , rotate;
+    transition-duration: 3s , 5s;
+} */
+
+
+
+
+/* Using transitions when highlighting button */
+.btn{
+    margin: 10px auto;
+    display: block;
+    padding: 0.8rem 3rem;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+
+    transition: all 0.6s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* transition: The transition CSS property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. */
+
+/* Transitions enable you to define the transition between two states of an element. Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript. */
+
+
+/* Constituent properties
+
+transition-delay
+transition-duration
+transition-property
+transition-timing-function */
+
+/* Syntax
+
+Apply to 1 property
+
+        property-name | duration
+        transition: margin 3s;
+
+        property-name | duration | timing-function;
+        transition: margin 3s linear;
+
+        property-name | duration | delay
+        transition: margin 3s 2s;
+
+        property-name | dration | timing-function | delay;
+        transition: margin 3s linear 2s;
+
+
+ Apply to 2 properties
+
+        trasition: margin 3s, color 2s;
+
+
+Apply to all changed properties
+
+        transtion: all 0.3s ease-in0ot;
+*/
+
+/* The transition property is specified as one or more single-property transitions, separated by commas. */
+
+
+
+/* transition-property: The transition-property CSS property sets the CSS properties to which a transition effect should be applied. */
+
+/* Syntax
+
+transition-name: none | all | color  | background-color | color , margin , font-size;
+*/
+
+
+
+/* transition-duration: The transition-duration CSS property sets the length of time a transition transition should take to complete. By default, the value is 0s, meaning that no transition will occur. */
+
+/* Syntax
+transition-duration: 2s | 3s | 2s , 3s | 3s , 5s , 2s;
+*/
+
+
+
+/* transition-timing-function:  The transition-timing-function CSS property sets how intermediate values are calculated for CSS properties being affected by a transition effect. */
+
+/* Syntax*/
+
+/* Keyword values */
+/* transition-timing-function: ease | ease-in | ease-out | ease-in-out | linear | step-start | step-end */
+
+/* Function values */
+/* transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1) | steps(4, end); */
+
+/* Steps Function keywords */
+/* transition-timing-function: steps(4, jump-start) | steps(10, jump-end) | steps(20, jump-none) | steps(5, jump-both) | steps(6, start) | steps(8, end); */
+
+/* Multiple transitions */
+/* transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1); */
+
+/* 
+esse: the default value, increases in velocity towards the middle of the transition, slowing back down at the end.
+linear: animates at an even speed.
+ease-in: starts off slowly, with the speed of the transition of the animating property increasing until complete.
+ease-out: starts quickly, slowing down the transition continues.
+ease-in-out: the animating properties slowly transitioning, speeding up, and then slowing down again.
+cubic-bezier(p1, p2, p3, p4): An author defined cubic-bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
+steps(n, <jumpterm>): Displays an transition iteration along n stops along the transition, displaying each stop for equal lengths of time. For example, if n is 5, there are 5 steps.
+jump-start: Denotes a left-continuous function, so that the first jump happens when the transition begins;
+jump-end: Denotes a right-continuous function, so that the last jump happens when the transition ends;
+jump-none: There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration.
+jump-both: Includes pauses at both the 0% and 100% marks, effectively adding a step during the transition iteration.
+start: Same as jump-start.
+end: Same as jump-end.
+step-start: Equal to steps(1, jump-start)
+step-end: Equal to steps(1, jump-end)
+*/
+
+
+
+/* transition-delay: The transition-delay CSS property specifies the duration to wait before starting a property's transition effect when its value changes. */
+
+/* Syntax
+transition-delay: 2s | 2s , 3s | 3s , 5s , 2s;
+*/
