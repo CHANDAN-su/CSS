@@ -1,0 +1,62 @@
+/* CSS transforms change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
+
+These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
+
+
+CSS transforms properties:  
+
+Two major properties are used to define CSS transforms: 
+1.  transform (or the individual translate, rotate, and scale properties) 
+2.  transform-origin.
+
+
+1.  transform: Specifies the transforms to apply to the element. It is a space-separated list of transforms Composite transforms are effectively applied in order from right to left.
+
+
+2. transform-origin:  the position of the origin. By default, it is at the center of the element and can be moved. It is used by several transforms, like rotations, scaling or skewing, that need a specific point as a parameter. */
+
+
+/* Example */
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    margin: 25px;
+    position: relative;
+    /* text-align: center; */
+}
+
+.img::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+}
+
+
+.flex .img:nth-child(2) {
+
+    /* Here is the MDN logo rotated 90 degrees from its bottom-right corner */
+    /* transform: rotate(90deg);
+    transform-origin: bottom right; */
+
+    /* Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X-axis. */
+    /* transform: skew(10deg) translateX(150px); */
+    /* transform-origin: bottom right; */
+}
+
+
+/* 3D specific CSS properties */
+/* CSS transformations in 3D space is a bit more complex. You have to start by configuring the 3D space by giving it a perspective, then you have to configure how your 2D elements will behave in that space. */
+
+
+/* Perspective
+The perspective is what gives us the 3D impression. The farther from the viewer the elements are, the smaller they are. How quick the cube shrinks is defined by the perspective property. The smaller its value is, the deeper the perspective is. */
+
+.flex .img:nth-child(2){
+    transform: perspective(300px) rotateY(55deg);
+}
