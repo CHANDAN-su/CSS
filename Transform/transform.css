@@ -60,3 +60,86 @@ The perspective is what gives us the 3D impression. The farther from the viewer 
 .flex .img:nth-child(2){
     transform: perspective(300px) rotateY(55deg);
 }
+
+
+
+
+/* transform-function: The <transform-function> CSS data type represents a transformation that affects an element's appearance. Transformation functions can rotate, resize, distort, or move an element in 2D or 3D space. It is used in the transform property.
+
+Syntax: */
+
+
+/* Translation (moving)
+
+    translate: The translate() CSS function repositions an element in the horizontal and/or vertical directions. Its result is a    <transform-function> data type. */
+
+    /* Syntax:  */
+            /* transform: translate(200px) | translate(100px, 230px) | translate(120px,50%); */
+
+            /* Value:
+                    single value: representing the abscissa (horizontal, x-component) of the translating vector [tx, 0]. The ordinate (vertical, y-component) of the translating vector will be set to 0. For example, translate(2px) is equivalent to translate(2px, 0).
+
+                    Double value: representing both the abscissa (horizontal, x-component) and the ordinate (vertical, y-component) of the translating vector [tx, ty]. */
+
+
+.translate{
+    width: 160px;
+    height: 160px;
+    background: blue;
+    border: 2px solid black;
+    border-radius: 10px;
+
+    /* transform: translate(200px); */
+    /* transform: translate(200px,300px); */
+}
+
+
+    /* translateX(): The translateX() CSS function repositions an element horizontally on the 2D plane. Its result is a <transform-function> data type.
+
+    Syntax: 
+            transform: translateX(200px) | translate(40%); */
+
+.translate{
+    /* transform: translateX(200px); */
+    /* transform: translateX(60rem); */
+}
+
+
+    /* translateY(): The translateY() CSS function repositions an element vertically on the 2D plane. Its result is a <transform-function> data type.
+
+    Syntax: 
+            transforn: translateY(100PX) | translateY(50%); */
+
+
+.translate{
+    /* transform: translateY(100px); */
+}
+
+
+    /* translateZ(): The translateZ() CSS function repositions an element along the z-axis in 3D space, i.e., closer to or farther away from the viewer. Its result is a <transform-function> data type.
+
+    Syntax:
+            transform: translateZ(100px) | translate(28%) */
+
+.translate{
+    /* transform: perspective(500px) translateZ(200px) translateX(100px); */
+}
+
+
+
+    /* translate3d(): The translate3d() CSS function repositions an element in 3D space. Its result is a <transform-function> data type.
+
+    Syntax:
+            transform: translate3d(tx , ty , tz); */
+
+.translate{
+    transform: translate3d(100px , 200px , 100px);
+}
+
+
+/* transform:  The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
+
+
+/* Syntax */
+
+    /* transform: translate(12px,50%); */
