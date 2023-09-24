@@ -137,6 +137,41 @@ Syntax: */
 }
 
 
+/* Rotation */
+
+    /* rotate(): The rotate() CSS function defines a transformation that rotates an element around a fixed point on the 2D plane, without deforming it. Its result is a <transform-function> data type.
+    The fixed point that the element rotates around — mentioned above — is also known as the transform origin. This defaults to the center of the element, but you can set your own custom transform origin using the transform-origin property.
+
+
+    Syntax:
+            transform: rotate(deg)  Equal to rotateZ(45deg) ; */
+
+
+.rotate{
+    width: 160px;
+    height: 160px;
+    background: blue;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* animation: 3s linear 2s infinite a; */
+
+    transform: rotate(340deg) translateX(200px);
+}
+
+
+/* @keyframes a {
+    0%{
+        transform: rotate(0deg) ;
+        transform-origin: center;
+    }
+    100%{
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+} */
+
+
+
 /* transform:  The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
 
 
