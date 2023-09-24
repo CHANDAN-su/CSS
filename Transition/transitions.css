@@ -122,10 +122,11 @@ selector{
 
 /* Constituent properties
 
-transition-delay
-transition-duration
 transition-property
-transition-timing-function */
+transition-duration
+transition-timing-function
+transition-delay
+*/
 
 /* Syntax
 
