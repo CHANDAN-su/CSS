@@ -303,8 +303,86 @@ Syntax: */
     This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling is done in each direction. 
     When a coordinate value is outside the [-1, 1] range, the element grows along that dimension; when inside, it shrinks. */
 
+    /* Syntax: 
+            transform: scale3d(sx , sy , sz); */
+
+.scale3{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.scale3 div{
+    font-size: 22px;
+}
+
+.scale3 .normal{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+.scale3 .scaled{
+    transform: perspective(500px) scale3d(3,0.7,0.2) translateZ(100px);
+    background-color: red;
+}
 
 
+/* Skewing (distortion) */
+
+    /* skew(): The skew() CSS function defines a transformation that skews an element on the 2D plane. Its result is a <transform-function> data type.
+    The coordinates of each point are modified by a value proportionate to the specified angle and the distance to the origin. Thus, the farther from the origin a point is, the greater the value added to it.
+
+    Syntax:
+    The skew() function is specified with either one or two values, which represent the amount of skewing to be applied in each direction. If you only specify one value it is used for the x-axis and there will be no skewing on the y-axis.
+
+            transform: skew(ax) | skew(ax,ay); */
+                /* a = angle */
+
+.skew{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+                
+.skew div{
+    font-size: 22px;
+    width: 100px;
+    height: 100px;
+}
+                
+.skew .normal{
+    background-color: pink;
+}
+                
+.skew .scaled{
+    /* transform: skew(20deg); */
+    /* transform: skew(-25deg , 25deg); */
+    background-color: red;
+}
+
+
+    /* skewX(): The skewX() CSS function defines a transformation that skews an element in the horizontal direction on the 2D plane. Its result is a <transform-function> data type.
+
+    Syntax:
+            transform: skew(angle); */
+
+.skew .scaled{
+    /* transform: skewX(45deg); */
+}
+
+/* 
+    skewY(): The skewY() CSS function defines a transformation that skews an element in the vertical direction on the 2D plane. Its result is a <transform-function> data type.
+
+    Syntax:     
+            transform: skewY(angle); */
+
+
+.skew .scaled{
+    transform: skewY(50deg);
+}
 /* transform:  The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
 
 
