@@ -171,6 +171,139 @@ Syntax: */
 } */
 
 
+    /* rotateX: The rotateX() CSS function defines a transformation that rotates an element around the x-axis (horizontal) without deforming it. Its result is a <transform-function> data type.
+    The axis of rotation passes through an origin, defined by the transform-origin CSS property.
+
+    Syntax: 
+            transform: rotateX(angle); */
+
+.rot{
+    width: 180px;
+    height: 180px;
+
+    /* transform: rotateX(-0.2turn); */
+    /* transform: rotateX(3.142rad); */
+    /* transform: rotateX(180deg); */
+}
+
+
+
+    /* rotateY: The rotateY() CSS function defines a transformation that rotates an element around the y-axis (vertical) without deforming it. Its result is a <transform-function> data type.
+    The axis of rotation passes through an origin, defined by the transform-origin CSS property.
+
+    Syntax:
+            transform: rotateY(); */
+
+.rot{
+    /* transform: rotateY(120deg); */
+}
+
+
+    /* rotateZ: The rotateZ() CSS function defines a transformation that rotates an element around the z-axis without deforming it. Its result is a <transform-function> data type.
+
+    Syntax:
+            transform: rotateZ(angle) */
+
+
+.rot{
+     /* transform: rotateZ(60deg); */
+}
+
+    /* rotate3d(): The rotate3d() CSS function defines a transformation that rotates an element around a fixed axis in 3D space, without deforming it. Its result is a <transform-function> data type.
+
+    Syntax: 
+    The amount of rotation created by rotate3d() is specified by three <number>s and one <angle>. The <number>s represent the x-, y-, and z-coordinates of the vector denoting the axis of rotation. The <angle> represents the angle of rotation; if positive, the movement will be clockwise; if negative, it will be counter-clockwise.
+
+            transform: rotate3d(x, y , z , angle); */
+
+
+.rot{
+    transform: rotate3d(1 , 2 , 3 , 106deg);
+}
+
+
+   
+/* Scaling (resizing) */
+
+    /* scale(): The scale() CSS function defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector [sx, sy], it can resize the horizontal and vertical dimensions at different scales.
+
+    When a coordinate value is outside the [-1, 1] range, the element grows along that dimension; when inside, it shrinks. A negative value results in a point reflection in that dimension. The value 1 has no effect.
+
+    Syntax: 
+            transform: scale(sx) | scale(sx , sy); */
+
+
+.scale{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 70px;
+}
+
+.scale .scale-child{
+    width: 120px;
+    height: 120px;
+}
+
+.scale .scale-child-2{
+
+    /* Equal to scaleX(0.7) scaleY(0.7) */
+    /* transform: scale(0.7);  */
+
+    /* transform: scale(2 , .5); */
+}
+
+
+    /* ScaleX: The scaleX() CSS function defines a transformation that resizes an element along the x-axis (horizontally). Its result is a <transform-function> data type.
+    It modifies the abscissa (horizontal, x-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case the function is the identity transform.
+
+    Note: scaleX(sx) is equivalent to scale(sx, 1) or scale3d(sx, 1, 1).
+
+    Syntax: 
+            transform: scaleX(value) */
+
+
+
+.scale .scale-child-2{
+    /* transform: scaleX(2); */
+}
+
+
+    /* scaleY: The scaleY() CSS function defines a transformation that resizes an element along the y-axis (vertically). Its result is a <transform-function> data type.
+    It modifies the ordinate (vertical, y-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case the function is the identity transform.
+
+    Note: scaleY(sy) is equivalent to scale(1, sy) or scale3d(1, sy, 1). transform: rotateX(180deg); === transform: scaleY(-1);
+
+    Suntax: 
+            transform: scaleY(value) */
+
+.scale .scale-child-2{
+    /* transform: scaleY(2); */
+}
+
+
+    /* scaleZ(): The scaleZ() CSS function defines a transformation that resizes an element along the z-axis. Its result is a <transform-function> data type.
+    This scaling transformation modifies the z-coordinate of each element point by a constant factor, except when the scale factor is 1, in which case the function is the identity transform.
+
+    In the above interactive examples, perspective: 550px; (to create a 3D space) and transform-style: preserve-3d; (so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.
+
+
+    Syntax: 
+            transform: scaleZ(value); */
+
+
+.scale .scale-child-2{
+    transform:  perspective(400px) scaleZ(2) translateZ(-100px);
+    /* transform: perspective(400px) translateZ(-100px); */
+}
+
+
+    /* scale3d(): The scale3d() CSS function defines a transformation that resizes an element in 3D space. Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. Its result is a <transform-function> data type.
+
+    This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling is done in each direction. 
+    When a coordinate value is outside the [-1, 1] range, the element grows along that dimension; when inside, it shrinks. */
+
+
 
 /* transform:  The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
 
