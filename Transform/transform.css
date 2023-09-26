@@ -383,9 +383,285 @@ Syntax: */
 .skew .scaled{
     transform: skewY(50deg);
 }
+
+
+
+/* Matrix transformation */
+
+    /* matrix(): The matrix() CSS function defines a homogeneous 2D transformation matrix. Its result is a <transform-function> data type.
+
+    Syntax: 
+            transform: matrix(a , b , c , d , tx , ty);
+
+    The matrix() function is specified with six values. 
+            a, b, c, d: These parameters are used to describe the linear transformation.
+            tx: This parameter is used to describe the linear translation on x-axis.
+            ty: This parameter is used to describe the linear translation on y-axis. */
+
+
+.matrix{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    margin-bottom: 40px;
+    margin-left: 30px;
+
+    transform: matrix(1 , 0 , 2 , 1 , 13 , 1);
+}
+
+
+    /* matrix3d(): The matrix3d() CSS function defines a 3D transformation as a 4x4 homogeneous matrix. Its result is a <transform-function> data type.
+
+    Syntax: 
+            transform: matrix3d(a1 , b1 , c1 , d1 , a2 , b2 , c2 , d2 , a3 , b3 , c3 , d3 , a4 , b4 , c4 , d4);
+
+    The matrix3d() function is specified with 16 values.
+            a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, d4: These parameters are used to hold the value for linear transformation.
+            a4, b4, c4: These parameters are used to hold the value of translation. */
+
+
+.matrix3{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    margin-bottom: 40px;
+    margin-left: 30px;
+
+    transform: matrix3d(
+        0.6, 0.1, 0.7, 0,
+        -0.5, 0.8, 0.1, 0,
+        -0.6, -0.5, 0.5, 0,
+        0, 0, 0, 1
+    );
+}
+
+
+/* Perspective */
+
+    /* perspective(): The perspective() CSS function defines a transformation that sets the distance between the user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were 3-dimensional. Its result is a <transform-function> data type.
+
+    This differs from the perspective and perspective-origin properties which are attached to the parent of a child transformed in 3-dimensional space.
+
+    Syntax:
+            transform: perspective(lenght);
+
+    The distance between the user and the z=0 plane, or by none.  The z=0 plane is the plane where everything appears in a 2-dimensional view, or the screen.
+    Negative values are syntax errors. 
+    Large values of perspective represent a small transformation; small values of perspective() represent a large transformation; perspective(none) represents perspective from infinite distance and no transformation. */
+
+    
+.perspective img{
+    transform: perspective(400px) rotateY(70deg);
+}
+
+
 /* transform:  The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
 
 
 /* Syntax */
 
-    /* transform: translate(12px,50%); */
+    /* transform: translate | scale | skew | matrix | matrix3d | Perspective | rotate; */
+
+    /* Multiple function values  */
+    /* transform: translateX() rotate() translateY; */
+    /* tranform: perspective() translate rotate(); */
+
+/* example */
+/* Translating and rotating an element */
+
+.example1{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    width: 150px;
+    height: 100px;
+    padding: 3px;
+
+    transform: translateX(20px) rotate(25deg);
+}
+
+/* Transform order */
+/* The order of transform functions matters. In this example, two boxes are rotated and translated by the same values; only the transform function order is different. */
+
+.order{
+    width: 200px;
+    height: 200px;
+    border: 2px dotted black;
+    margin: 30px auto;
+    position: relative;
+}
+
+.order .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.order .face:nth-child(1){
+    background-color: aqua;
+    transform: translateX(200px) rotate(135deg);
+}
+
+.order .face:nth-child(2){
+    background-color: burlywood;
+    transform: rotate(135deg) translateX(200px) ;
+}
+
+.lineX{
+    width: 250%;
+    height: 2px;
+    border-top: 2px dotted  black;
+
+    position: relative;
+    top: 50%;
+    left: -80%;
+}
+
+.lineY{
+    width: 250%;
+    height: 2px;
+    border-top: 2px dotted  black;
+
+    position: relative;
+    top: 50%;
+    left: -79%;
+
+    transform: rotate(135deg);
+    transform-origin: center;
+}
+
+
+/* transform-origin: The transform-origin CSS property sets the origin for an element's transformations. 
+The transform origin is the point around which a transformation is applied. For example, the transform origin of the rotate() function is the center of rotation. The first translation moves the transform origin to the true origin at (0,0). */
+
+/* transform-origin: -100% 50%;
+transform: rotate(45deg);
+
+results in the same transformation as
+
+transform-origin: 0 0;
+transform: translate(100%,-50%) rotate(45deg) translate(-100% , 50%); */
+
+/* Syntax:  */
+        /* single value (horizontal offset)*/
+        /* transform-origin: 20px | left | right | top | bottom | center; */
+
+        /* x-offset | y-offset */
+        /* transform-origin: 2px 3px; */
+
+        /* x-offset-keyword | y-offset */
+        /* transform-origin: left 2px | right 2px | top 2px | bottom 4px | center 4px; */
+
+        /* x-offset-keyword | y-offset-keyword */
+        /* transform-origin: left top | left bottom | right top | right bottom | top left | top right | bottom left | bottom right; */
+
+        /* x-offset | y-offset | z-offset */
+        /* tansform-origin: 2px 20% 3cm; */
+
+        /* x-offset-keyword | y-offset | z-offset */
+        /* transform-origin: top 2px 3px | bottom 4px 5px | left 5px 6px | right 3px 9px; */
+
+        /* x-offset-keyword | y-offset-keyword | z-offset */
+        /* transform-origin: top left 3px | top right 4px | bottom left 7px | bottom right 8px | left top 2px | left bottom 5px | right top 8px | right bottom 9px; */
+
+        /* y-offset-keyword | x-offset-keyword | z-offset */
+        /* transform-origin: top left 3px | top right 4px | bottom left 7px | bottom right 8px | left top 2px | left bottom 5px | right top 8px | right bottom 9px; */
+
+        /* value */
+        /* x-offset , y-offset , z-offset = length | pecentage
+        offset-keyword = left | right | top | bottom | center
+        x-offset-keyword , y-offset-keyword = left | right | top | bottom | center */
+
+        /* The transform-origin property may be specified using one, two, or three values, where each value represents an offset.  */
+
+        /* Keyword	 Value
+        left	  0%
+        center	  50%
+        right	  100%
+        top	      0%
+        bottom	  100% */
+
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 200px;
+    padding: 35px;
+
+    margin-top: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    height: 1800px;
+}
+
+.container .face{
+    height: 188px;
+    border: 1.5px solid rgb(63, 59, 59);
+
+    flex: 0 0 188px;
+}
+
+.container .face .child{
+    width: 188px;
+    height: 188px;
+    background-color: lightpink;
+    border: 1.5px solid black;
+}
+
+.container .face h4{
+  font-size: 12px;
+  line-height: 0.5px;
+  margin-top: 80px;
+}
+
+.container .face h4:nth-child(3){
+    margin-top: 0px !important;
+}
+
+.container .face:nth-child(1) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(2) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(3) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(4) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(5) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(6) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(7) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(8) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(9) .child{
+    transform: rotate(45deg);
+}
+
+.container .face:nth-child(10) .child{
+    transform: rotate(45deg);
+}
