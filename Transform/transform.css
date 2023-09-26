@@ -383,6 +383,78 @@ Syntax: */
 .skew .scaled{
     transform: skewY(50deg);
 }
+
+
+
+/* Matrix transformation */
+
+    /* matrix(): The matrix() CSS function defines a homogeneous 2D transformation matrix. Its result is a <transform-function> data type.
+
+    Syntax: 
+            transform: matrix(a , b , c , d , tx , ty);
+
+    The matrix() function is specified with six values. 
+            a, b, c, d: These parameters are used to describe the linear transformation.
+            tx: This parameter is used to describe the linear translation on x-axis.
+            ty: This parameter is used to describe the linear translation on y-axis. */
+
+
+.matrix{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    margin-bottom: 40px;
+    margin-left: 30px;
+
+    transform: matrix(1 , 0 , 2 , 1 , 13 , 1);
+}
+
+
+    /* matrix3d(): The matrix3d() CSS function defines a 3D transformation as a 4x4 homogeneous matrix. Its result is a <transform-function> data type.
+
+    Syntax: 
+            transform: matrix3d(a1 , b1 , c1 , d1 , a2 , b2 , c2 , d2 , a3 , b3 , c3 , d3 , a4 , b4 , c4 , d4);
+
+    The matrix3d() function is specified with 16 values.
+            a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, d4: These parameters are used to hold the value for linear transformation.
+            a4, b4, c4: These parameters are used to hold the value of translation. */
+
+
+.matrix3{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    margin-bottom: 40px;
+    margin-left: 30px;
+
+    transform: matrix3d(
+        0.6, 0.1, 0.7, 0,
+        -0.5, 0.8, 0.1, 0,
+        -0.6, -0.5, 0.5, 0,
+        0, 0, 0, 1
+    );
+}
+
+
+/* Perspective */
+
+    /* perspective(): The perspective() CSS function defines a transformation that sets the distance between the user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were 3-dimensional. Its result is a <transform-function> data type.
+
+    This differs from the perspective and perspective-origin properties which are attached to the parent of a child transformed in 3-dimensional space.
+
+    Syntax:
+            transform: perspective(lenght);
+
+    The distance between the user and the z=0 plane, or by none.  The z=0 plane is the plane where everything appears in a 2-dimensional view, or the screen.
+    Negative values are syntax errors. 
+    Large values of perspective represent a small transformation; small values of perspective() represent a large transformation; perspective(none) represents perspective from infinite distance and no transformation. */
+
+    
+.perspective img{
+    transform: perspective(400px) rotateY(70deg);
+}
+
+
 /* transform:  The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
 
 
