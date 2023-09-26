@@ -460,4 +460,4 @@ Syntax: */
 
 /* Syntax */
 
-    /* transform: translate(12px,50%); */
+    /* transform: translate | scale | skew | matrix | matrix3d | Perspective | rotate; */
