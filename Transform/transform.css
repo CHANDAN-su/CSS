@@ -607,6 +607,7 @@ transform: translate(100%,-50%) rotate(45deg) translate(-100% , 50%); */
     border: 1.5px solid rgb(63, 59, 59);
 
     flex: 0 0 188px;
+    opacity: 1;
 }
 
 .container .face .child{
@@ -614,6 +615,7 @@ transform: translate(100%,-50%) rotate(45deg) translate(-100% , 50%); */
     height: 188px;
     background-color: lightpink;
     border: 1.5px solid black;
+    opacity: 0.6;
 }
 
 .container .face h4{
@@ -627,41 +629,201 @@ transform: translate(100%,-50%) rotate(45deg) translate(-100% , 50%); */
 }
 
 .container .face:nth-child(1) .child{
-    transform: rotate(45deg);
+    transform: none;
 }
 
 .container .face:nth-child(2) .child{
-    transform: rotate(45deg);
+    transform: rotate(30deg);
 }
 
 .container .face:nth-child(3) .child{
-    transform: rotate(45deg);
+    transform: rotate(30deg);
+    transform-origin: 0 0;
+    /* transform-origin: top left; */
 }
 
 .container .face:nth-child(4) .child{
-    transform: rotate(45deg);
+    transform: rotate(30deg);
+    /* transform-origin: 100% 100%; */
+    transform-origin: right bottom;
 }
 
 .container .face:nth-child(5) .child{
-    transform: rotate(45deg);
+    transform: rotate(30deg);
+    transform-origin: -1em -3em;
 }
 
 .container .face:nth-child(6) .child{
-    transform: rotate(45deg);
+    transform: scale(1.7);
 }
 
 .container .face:nth-child(7) .child{
-    transform: rotate(45deg);
+    transform: scale(1.7);
+    /* transform-origin: 0 0; */
+    transform-origin: top left;
 }
 
 .container .face:nth-child(8) .child{
-    transform: rotate(45deg);
+    transform: scale(1.7);
+    transform-origin: 100% -30%;
 }
 
 .container .face:nth-child(9) .child{
-    transform: rotate(45deg);
+    transform: skewX(50deg);
+    transform-origin: 100% -30%;
 }
 
 .container .face:nth-child(10) .child{
-    transform: rotate(45deg);
+    transform: skewY(50deg);
+    transform-origin: 100% -30%;
+}
+
+
+
+
+/* 3D transform */
+
+/* rotateX()
+rotateY()
+rotateZ()
+rotate3d()
+translateZ()
+translate3d()
+scaleZ()
+scale3d()
+perspective()
+matrix3d() */
+
+.base{
+    width: 190px;
+    height: 190px;
+    background-color: rgb(185, 171, 171);
+    margin: 20px auto;
+    /* perspective: 500px; */
+}
+
+.base .child{
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+
+    /* rotateX */
+    /* transform:perspective(500px) rotateX(80deg);
+    transform-origin: left bottom; */
+
+    /* rotateY */
+    /* transform:perspective(500px) rotateY(60deg);
+    transform-origin:left center; */
+
+    /* rotateZ */
+    /* transform: rotate(80deg);
+    transform-origin: top left; */
+
+    /* translateZ */
+    /* transform:perspective(600px) rotateY(60deg) translateX(120px); */
+    /* transform:perspective(600px) rotateY(60deg) translateZ(120px); */
+    /* transform:perspective(600px) rotateY(60deg) translate3d(120px,200px,150px); */
+
+    /* scale */
+    /* transform: perspective(500px) scaleZ(2) rotateX(60deg); */
+    transform: perspective(500px) scale3d(2,2,2) rotateX(60deg);
+    
+}
+
+
+
+/* transform-style: The transform-style CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
+If flattened, the element's children will not exist on their own in the 3D-space.
+
+Syntax: 
+        transform-style: flat | preserve-3d;
+
+Values
+flat
+Indicates that the children of the element are lying in the plane of the element itself.
+
+preserve-3d
+Indicates that the children of the element should be positioned in the 3D-space. */
+
+.parent{
+    width: 350px;
+    height: 300px;
+    background-color: rgba(185, 171, 171,0.7);
+    margin: 20px auto;
+    transform-style: preserve-3d;
+    transform: skewX(20deg);
+}
+
+.parent .child{
+    width: 300px;
+    height: 250px;
+    background-image: url('https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    transform: perspective(900px) rotateX(45deg);
+    transform-origin: top;
+
+    animation: 6s linear infinite alternate cat;
+}
+
+@keyframes cat {
+    0%{
+        transform: perspective(900px) rotateX(45deg);
+    }
+    100%{
+        transform: perspective(900px) rotateX(-45deg);
+    }
+}
+
+
+/* backface-visibility: The backface-visibility CSS property sets whether the back face of an element is visible when turned towards the user.
+
+An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space.
+
+Syntax: 
+        backface-visibility: hidden | visible;
+
+        Values
+        visible
+        The back face is visible when turned towards the user.
+        
+        hidden
+        The back face is hidden, effectively making the element invisible when turned away from the user. */
+
+.card{
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    margin: 10px auto;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 400px;
+    transition: transform 2s;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.card .front , .card .back{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    color: #fff;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 900;
+    backface-visibility: hidden;
+}
+
+.card .back{
+    background-color: tomato;
+    color: white;
+    transform: perspective(400px) rotateY(180deg);
 }
