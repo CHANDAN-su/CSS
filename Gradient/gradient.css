@@ -1,0 +1,144 @@
+/* Using CSS gradients */
+/* CSS gradients are represented by the <gradient> data type, a special type of <image> made of a progressive transition between two or more colors.
+
+Three types of gradients: 
+1. linear (created with the linear-gradient() function)
+2. radial (created with the radial-gradient() function) 
+3. conic (created with the conic-gradient() function). 
+
+You can also create repeating gradients with the repeating-linear-gradient(), repeating-radial-gradient(), and repeating-conic-gradient() functions.
+
+
+Using linear gradients:
+
+  linear-gradient(): The linear-gradient() CSS function creates an image consisting of a progressive transition between two or   more colors along a straight line. 
+
+  Because <gradient>s belong to the <image> data type, they can only be used where <image>s can be used. For this reason,     
+  linear-gradient() won't work on background-color and other properties that use the <color> data type.
+
+  Syntax: 
+    
+        A gradient tilted 45 degrees, starting blue and finishing red
+        linear-gradient(45deg , blue , red);
+
+        A gradient going from the bottom right to the top left corner,  starting blue and finishing red 
+        linear-gradient(to left top, blue , red);
+
+        Color stop: A gradient going from the bottom to top, starting blue, turning green at 40% of its length, and finishing   red
+          linear-gradient(0deg, blue , green 40% , red);
+
+        Color hint: A gradient going from the left to right, starting red, getting to the midpoint color 10% of the way across  the length of the gradient, taking the rest of the 90% of the length to change to blue 
+          linear-gradient(.25turn,red,10%,blue);
+
+         Multi-position color stop: A gradient tilted 45 degrees, with a red bottom-left half and a blue top-right half,
+          with a hard line where the gradient changes from red to blue 
+            linear-gradient(45deg, red 0 50%,blue 50% 100%);
+
+          linear-gradient(direction,color1,color2);
+          linear-gradient(<side-or-corner> , <angle> , <linear-color-stop> , <color-hint>);
+
+            Values
+              side-or-corner:  The position of the gradient line's starting point. If specified, it consists of the word to and up to two keywords: the horizontal side (left or right), and  the vertical side (top or bottom). 
+                            to top  =  0deg
+                            to bottom = 100dge
+                            to left = 270deg
+                            to right = 90deg
+              color-hint: An interpolation hint defining how the gradient progresses between adjacent color stops. The length   defines at which point between two color stops the gradient color should reach the midpoint of the  color transition.  */
+
+.linear-gradient{
+    width: 48%;
+    height: 250px;
+    
+    /* Customizing Gradients */
+    /* By adding more color-stop points on the gradient line, you can create a highly customized transition betwemultiple colors. */
+    
+    /* background: linear-gradient(red,orange,yellow,green,blue); */
+    /* The following two gradients are equivalent. */
+    /* background: linear-gradient(red 0%,orange 25%,yellow 50%,green 75%,blue 100%); */
+    
+      
+    /* The following example is solid red from the start to the 10% mark and solid blue from 90% to the enBetween 10% and 90% the color transitions from red to blue, however, the midpoint of the transition is at t30% mark rather than 50% as would have happened without the 30% color hint. */
+    /* If two or more color-stops are at the same location, the transition will be a hard line between the firand last colors declared at that location. */
+    
+    /* background: linear-gradient(red 10%, 50%, blue 90%); */
+    
+    
+    /* The following changes from red to yellow at the 40% mark, and then transitions from yellow to blue over 2of the gradient: */
+    
+    /* background: linear-gradient(red 40%,yellow 30%, blue 65%); */
+    
+    
+    /* Multi-position color-stops are allowed. A color can be declared as two adjacent color-stops by includiboth positions in the CSS declaration. The following three gradients are equivalent: */
+    
+    /* background: linear-gradient(red 0%,orange 10%,orange 30%,yellow 50%,yellow 70%,blue 90%,blue 100%); */
+    /* background: linear-gradient(red 0%,orange 10% 30%,yellow 50% 70%,blue 90%); */
+    /* background: linear-gradient(red 0%,orange 10% 30%,yellow 50% 70%,blue 90% 100%); */
+    
+    
+    /* example */
+    
+    /* A basic linear gradient */
+    /* background: linear-gradient(blue , pink); */
+              
+    /* Changing the direction */
+    /* background: linear-gradient(to left, blue , pink); */
+    
+    /* Diagonal gradients */
+    /* background: linear-gradient(to top right, blue , pink); */
+    
+    /* Creating hard lines */
+    /* background: linear-gradient(to bottom right, blue 50%, pink 50%); */
+    
+    /* Gradient at a 45-degree angle */
+    /* background: linear-gradient(45deg, red, yellow); */
+    
+    /* Gradient that starts at 60% of the gradient line */
+    /* background: linear-gradient(135deg, yellow 60%, cyan); */
+    
+    /* Gradient with multi-position color-stops */
+    /* background: linear-gradient(90deg,red 20%,orange 20% 40%,yellow 40% 60%,green 60% 80%,blue 80%); */
+    
+    /* Overlaying gradients */
+    background: linear-gradient(to right, transparent, mistyrose) , url('/Layout/Image/aaesthetic.jpg') no-repeat;
+    
+    
+    /* Stacked gradients */
+    /* You can even stack gradients with other gradients. As long as the top gradients aren't entirely opaque, tgradients below will still be visible. */
+    
+      /* background: 
+        linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), 
+        linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%); */
+}
+
+
+/* radial-gradient(): The radial-gradient() CSS function creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. 
+
+A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the ending shape (the 100% ellipse).
+
+Because <gradient>s belong to the <image> data type, they can only be used where <image>s can be used. For this reason, radial-gradient() won't work on background-color and other properties that use the <color> data type.
+
+Syntax:
+        radial-gradient: circle at circle, red 0%, blue , green 100%;
+        radial-gradient: <ending-shaps> <size> at <position> , <color-stop-list>
+
+        Value
+            <position>: The position of the gradient, interpreted in the same way as background-position or transform-origin. If unspecified, it defaults to center.
+            left , right , top , bottom , center , length-percentage , left top , length-percentage length-percentage
+
+            <ending-shape>: The value can be circle (meaning that the gradient's shape is a circle with a constant radius) or ellipse (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to ellipse.
+
+            <size>:  If omitted it defaults to farthest-corner. It can be given explicitly or by keyword.
+                closest-side , closest-corner , farthest-side	, farthest-corner	
+
+            <linear-color-stop>: A color-stop's <color> value, followed by one or two optional stop positions (either a <percentage> or a <length> along the gradient's axis). A percentage of 0%, or a length of 0, represents the center of the gradient; the value 100% represents the intersection of the ending shape with the virtual gradient ray.
+
+            <color-hint>: The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. */
+
+
+
+
+
+
+
+
