@@ -48,6 +48,7 @@ Using linear gradients:
 .linear-gradient{
     width: 48%;
     height: 250px;
+    margin: 10px auto;
     
     /* Customizing Gradients */
     /* By adding more color-stop points on the gradient line, you can create a highly customized transition betwemultiple colors. */
@@ -136,7 +137,62 @@ Syntax:
             <color-hint>: The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. */
 
 
+.radial-gradient{
+  width: 40%;
+  height: 250px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;
 
+  /* A basic radial gradient */
+  background: radial-gradient(red , blue);
+
+
+  /* Positioning radial color stops */
+  background: radial-gradient(red 20% , green 66%, blue 60%);
+
+
+  /* Positioning the center of the gradient */
+  /* You can position the center of the gradient with keyterms, percentage, or absolute lengths, length and percentage values repeating if only one is present, otherwise in the order of position from the left and position from the top. */
+  background: radial-gradient(at 0% 53%,red 10px, yellow 30% , green 30%);
+
+
+  /* Sizing radial gradients */
+  /* Unlike linear gradients, you can specify the size of radial gradients. Possible values include closest-corner, closest-side, farthest-corner, and farthest-side, with farthest-corner being the default. */
+
+
+  /* closest-side for ellipses:  the distance from the starting point (the center) to the closest side of the enclosing box. */
+  background: radial-gradient(ellipse closest-side,red , yellow 10% , hotpink 80%);
+
+
+  /* farthest-corner for ellipses:  the distance from the starting point to the farthest corner of the enclosing box from the starting point. */
+  background: radial-gradient(ellipse farthest-corner at 90% 90%, red , yellow 60% , hotpink 70%);
+
+
+  /* closest-side for circles:  the distance between the center and the bottom edge, because the gradient is placed 25% from the left and 25% from the bottom, and the div element's height is smaller than the width. */
+  background: radial-gradient(circle closest-side at 25% 75% , red , yellow 60% , hotpink 70%);
+
+
+  /* length or percentage for ellipses: The first value represents the horizontal radius, the second the vertical radius, where you use a percentage this corresponds to the size of the box in that dimension. In the below example I have used a percentage for the horizontal radius. */
+  background: radial-gradient(ellipse 50% 50px, red,  yellow 10%,  #1e90ff 50%,  beige);
+
+
+  /* length for circles */
+  background: radial-gradient(circle 50px , red,  yellow 10%,  #1e90ff 50%,  beige);
+
+  /* Non-centered gradient */
+  background: radial-gradient(farthest-corner at 40px 40px,#f35 0%,  #43e 100%);
+
+  background: radial-gradient(circle , red , yellow , green);
+
+
+  /* Stacked radial gradients: you can also stack radial gradients. The first specified is on top, the last on the bottom. */
+  background:  radial-gradient(circle at 50% 0,  rgba(255, 0, 0, 0.5),  rgba(255, 0, 0, 0) 70.71%  ),
+               radial-gradient(circle at 6.7% 75%,   rgba(0, 0, 255, 0.5),    rgba(0, 0, 255, 0) 70.71%  ),
+               radial-gradient(circle at 93.3% 75%,  rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71% ) beige;;
+
+
+}
 
 
 
