@@ -195,6 +195,76 @@ Syntax:
 }
 
 
+/* Using conic gradients */
+/* The conic-gradient() CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and color wheels, but they can also be used for creating checker boards and other interesting effects.
+
+The conic-gradient syntax is similar to the radial-gradient syntax, but the color-stops are placed around a gradient arc, the circumference of a circle, rather than on the gradient line emerging from the center of the gradient, and the color-stops are percentages or degrees: absolute lengths are not valid. */
+
+
+/* Syntax: */
+        /* A conic gradient rotated 45 degrees, starting blue and finishing red  */
+                    /* conic-gradient(from 45deg, blue , red) */
+
+        /* A bluish purple box: the gradient goes from blue to red,but only the bottom right quadrant is visible, as the          center of the conic gradient is at the top left corner */
+                    /* conic-gradient(from 90deg at 0 0 , red , blue); */
+
+        /* Color wheel  */
+                    /* conic-gradient(
+                              hsl(360, 100%, 50%),
+                              hsl(315, 100%, 50%),
+                              hsl(270, 100%, 50%),
+                              hsl(225, 100%, 50%),
+                              hsl(180, 100%, 50%),
+                              hsl(135, 100%, 50%),
+                              hsl(90, 100%, 50%),
+                              hsl(45, 100%, 50%),
+                              hsl(0, 100%, 50%)
+                          ); */
+
+/* The following two gradients are equivalent:
+conic-gradient(red, orange, yellow, green, blue);
+              same
+conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg); */
+
+
+/* The following two declarations are equivalent:
+conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
+              same
+conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn); */
+
+
+
+
+.conic-gradient{
+  width: 40%;
+  height: 250px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  /* A basic conic gradient */
+  background: conic-gradient(red,blue);
+
+  /* Off-centered gradient CSS */
+  background: conic-gradient(from 0deg at 0% 25%,red , blue , green);
+
+  /* Gradient at 40-degrees */
+  background: conic-gradient(from 45deg, #fff , #000);
+
+  /* Gradient pie-chart */
+  background: conic-gradient(red 36deg , orange 36deg 170deg , yellow 170deg);
+
+  /* Gradient pie-chart */
+  background: conic-gradient(
+    #fff 0.25turn,
+    #000 0.25turn 0.5turn,
+    #fff 0.5turn 0.75turn,
+    #000 0.75turn
+  ) top left / 25% 25% repeat;
+} 
+
+
+
 
 
 
