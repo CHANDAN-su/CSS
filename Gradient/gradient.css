@@ -100,9 +100,104 @@ Using linear gradients:
     /* background: linear-gradient(90deg,red 20%,orange 20% 40%,yellow 40% 60%,green 60% 80%,blue 80%); */
     
     /* Overlaying gradients */
-    background: linear-gradient(to right, transparent, mistyrose) , url('/Layout/Image/aaesthetic.jpg') no-repeat;
+    /* background: linear-gradient(to right, transparent, mistyrose) , url('/Layout/Image/aaesthetic.jpg') no-repeat; */
+
+    /* compare to repeating linear gradient*/
+    background: linear-gradient(-45deg , red 0 120px , black 20px 40px);
+    background: linear-gradient(to bottom , red , green 7% , yellow 10%);
+    background: linear-gradient(
+      190deg,
+      rgba(255, 0, 0, 0.5) 40px,
+      rgba(255, 153, 0, 0.5) 80px,
+      rgba(255, 255, 0, 0.5) 120px,
+      rgba(0, 255, 0, 0.5) 160px,
+      rgba(0, 0, 255, 0.5) 200px,
+      rgba(75, 0, 130, 0.5) 240px,
+      rgba(238, 130, 238, 0.5) 280px,
+      rgba(255, 0, 0, 0.5) 300px
+    ), linear-gradient(
+      -190deg,
+      rgba(255, 0, 0, 0.5) 30px,
+      rgba(255, 153, 0, 0.5) 60px,
+      rgba(255, 255, 0, 0.5) 90px,
+      rgba(0, 255, 0, 0.5) 120px,
+      rgba(0, 0, 255, 0.5) 150px,
+      rgba(75, 0, 130, 0.5) 180px,
+      rgba(238, 130, 238, 0.5) 210px,
+      rgba(255, 0, 0, 0.5) 230px
+    ), linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
+        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+
+        background: repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 50px,
+          rgba(255, 127, 0, 0.25) 50px,
+          rgba(255, 127, 0, 0.25) 56px,
+          transparent 56px,
+          transparent 63px,
+          rgba(255, 127, 0, 0.25) 63px,
+          rgba(255, 127, 0, 0.25) 69px,
+          transparent 69px,
+          transparent 116px,
+          rgba(255, 206, 0, 0.25) 116px,
+          rgba(255, 206, 0, 0.25) 166px
+        ), repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 50px,
+          rgba(255, 127, 0, 0.25) 50px,
+          rgba(255, 127, 0, 0.25) 56px,
+          transparent 56px,
+          transparent 63px,
+          rgba(255, 127, 0, 0.25) 63px,
+          rgba(255, 127, 0, 0.25) 69px,
+          transparent 69px,
+          transparent 116px,
+          rgba(255, 206, 0, 0.25) 116px,
+          rgba(255, 206, 0, 0.25) 166px
+        ), repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 5px,
+          rgba(143, 77, 63, 0.25) 5px,
+          rgba(143, 77, 63, 0.25) 10px
+        ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(
+              143,
+              77,
+              63,
+              0.25
+            ) 5px, rgba(143, 77, 63, 0.25) 10px);
     
-    
+      background: linear-gradient(
+          90deg,
+          transparent 0 50px,
+          rgba(255, 127, 0, 0.25) 50px 56px,
+          transparent 56px 63px,
+          rgba(255, 127, 0, 0.25) 63px 69px,
+          transparent 69px 116px,
+          rgba(255, 206, 0, 0.25) 116px 166px
+        )
+        , linear-gradient(
+          0deg,
+          transparent 0 50px,
+          rgba(255, 127, 0, 0.25) 50px 56px,
+          transparent 56px 63px,
+          rgba(255, 127, 0, 0.25) 63px 69px,
+          transparent 69px 116px,
+          rgba(255, 206, 0, 0.25) 116px 166px
+        ), linear-gradient(
+          -45deg,
+          transparent 0 5px,
+          rgba(143, 77, 63, 0.25) 5px 10px
+        ), linear-gradient(45deg, transparent 0 5px, rgba(
+              143,
+              77,
+              63,
+              0.25
+            ) 5px 10px);
+
+
     /* Stacked gradients */
     /* You can even stack gradients with other gradients. As long as the top gradients aren't entirely opaque, tgradients below will still be visible. */
     
@@ -192,6 +287,24 @@ Syntax:
                radial-gradient(circle at 93.3% 75%,  rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71% ) beige;;
 
 
+    /* compare to repeating radial gradient */
+    background: radial-gradient(black, black 5px, white 5px ,white 10px);
+    background: radial-gradient(ellipse farthest-corner at 20% 20%,red,black 5% ,blue 5%,green 10%);
+    background:
+    radial-gradient(
+      ellipse at 80% 50%,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 15px,
+      rgba(255, 255, 255, 0.5) 15px,
+      rgba(255, 255, 255, 0.5) 30px
+    ) top left no-repeat,
+    radial-gradient(
+      ellipse at 20% 50%,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 10px,
+      rgba(255, 255, 255, 0.5) 10px,
+      rgba(255, 255, 255, 0.5) 20px
+    ) top left no-repeat yellow;
 }
 
 
@@ -261,10 +374,216 @@ conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54tu
     #fff 0.5turn 0.75turn,
     #000 0.75turn
   ) top left / 25% 25% repeat;
+
+  /* compare to repeating conic gradient */
+  background: conic-gradient(red 0%,yellow 15%,red 35%);
+  background: conic-gradient(from 45deg at 10% 50%,brown 0deg 10deg,  darkgoldenrod 10deg 20deg,  chocolate 20deg 30deg);
+  background-image: conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background: conic-gradient(
+    from 3deg at 25% 25%,
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
+
 } 
 
 
+/* Using repeating gradients */
+/* The linear-gradient(), radial-gradient(), and conic-gradient() functions don't support automatically repeated color stops. However, the repeating-linear-gradient(), repeating-radial-gradient(), and repeating-conic-gradient() functions are available to offer this functionality. */
+
+
+/* Repeating linear gradients */
+/* The repeating-linear-gradient() CSS function creates an image consisting of repeating linear gradients. It is similar to linear-gradient() and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.  */
+
+.repeating-linear-gradient{
+  width: 40%;
+  height: 250px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;  
+
+  /* example */
+
+  /* Zebra stripes */
+  background: repeating-linear-gradient(-45deg , red 0 20px , black 20px , black 40px);
+
+  /* Ten repeating horizontal bars */
+  /* Because the last color stop is 10% and the gradient is vertical, each gradient in the repeated gradient is 10% of the height, fitting 10 horizontal bars. */
+  background: repeating-linear-gradient(to bottom, red , green 7% , yellow 10%);
+
+
+  /* Multiple repeating linear gradients */
+  background: repeating-linear-gradient(
+      190deg,
+      rgba(255, 0, 0, 0.5) 40px,
+      rgba(255, 153, 0, 0.5) 80px,
+      rgba(255, 255, 0, 0.5) 120px,
+      rgba(0, 255, 0, 0.5) 160px,
+      rgba(0, 0, 255, 0.5) 200px,
+      rgba(75, 0, 130, 0.5) 240px,
+      rgba(238, 130, 238, 0.5) 280px,
+      rgba(255, 0, 0, 0.5) 300px
+    ), repeating-linear-gradient(
+      -190deg,
+      rgba(255, 0, 0, 0.5) 30px,
+      rgba(255, 153, 0, 0.5) 60px,
+      rgba(255, 255, 0, 0.5) 90px,
+      rgba(0, 255, 0, 0.5) 120px,
+      rgba(0, 0, 255, 0.5) 150px,
+      rgba(75, 0, 130, 0.5) 180px,
+      rgba(238, 130, 238, 0.5) 210px,
+      rgba(255, 0, 0, 0.5) 230px
+    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
+        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+
+
+  /* Plaid gradient */
+  /* To create plaid we include several overlapping gradients with transparency. In the first background declaration we listed every color stop separately. The second background property declaration using the multiple position color stop syntax: */
+
+  background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(255, 127, 0, 0.25) 50px,
+      rgba(255, 127, 0, 0.25) 56px,
+      transparent 56px,
+      transparent 63px,
+      rgba(255, 127, 0, 0.25) 63px,
+      rgba(255, 127, 0, 0.25) 69px,
+      transparent 69px,
+      transparent 116px,
+      rgba(255, 206, 0, 0.25) 116px,
+      rgba(255, 206, 0, 0.25) 166px
+    ), repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(255, 127, 0, 0.25) 50px,
+      rgba(255, 127, 0, 0.25) 56px,
+      transparent 56px,
+      transparent 63px,
+      rgba(255, 127, 0, 0.25) 63px,
+      rgba(255, 127, 0, 0.25) 69px,
+      transparent 69px,
+      transparent 116px,
+      rgba(255, 206, 0, 0.25) 116px,
+      rgba(255, 206, 0, 0.25) 166px
+    ), repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      rgba(143, 77, 63, 0.25) 5px,
+      rgba(143, 77, 63, 0.25) 10px
+    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(
+          143,
+          77,
+          63,
+          0.25
+        ) 5px, rgba(143, 77, 63, 0.25) 10px);
+
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0 50px,
+      rgba(255, 127, 0, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(255, 127, 0, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(255, 206, 0, 0.25) 116px 166px
+    ), repeating-linear-gradient(
+      0deg,
+      transparent 0 50px,
+      rgba(255, 127, 0, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(255, 127, 0, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(255, 206, 0, 0.25) 116px 166px
+    ), repeating-linear-gradient(
+      -45deg,
+      transparent 0 5px,
+      rgba(143, 77, 63, 0.25) 5px 10px
+    ), repeating-linear-gradient(45deg, transparent 0 5px, rgba(
+          143,
+          77,
+          63,
+          0.25
+        ) 5px 10px);
+
+
+}
 
 
 
+/* repeating-radial-gradient() */
+/* The repeating-radial-gradient() CSS function creates an image consisting of repeating gradients that radiate from an origin. It is similar to radial-gradient() and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to repeating-linear-gradient(). */
 
+/* example */
+
+
+/* Black and white gradient */
+.repeating-radial-gradient{
+  width: 40%;
+  height: 250px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;    
+
+  /* Black and white gradient */
+  background: repeating-radial-gradient(black 0 5px, white 5px 10px);
+
+  /* Farthest-corner */
+  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,red,black 5% ,blue 5%,green 10%);
+  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,red 0 5%,green 5% 10%);
+
+  /* Multiple repeating radial gradients */
+  background:
+  repeating-radial-gradient(
+      ellipse at 80% 50%,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 15px,
+      rgba(255, 255, 255, 0.5) 15px,
+      rgba(255, 255, 255, 0.5) 30px
+    ) top left no-repeat,
+  repeating-radial-gradient(
+      ellipse at 20% 50%,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 10px,
+      rgba(255, 255, 255, 0.5) 10px,
+      rgba(255, 255, 255, 0.5) 20px
+    ) top left no-repeat yellow;
+
+}
+
+
+/* repeating-conic-gradient() */
+/* The repeating-conic-gradient() CSS function creates an image consisting of a repeating gradient (rather than a single gradient) with color transitions rotated around a center point (rather than radiating from the center). */
+
+.repeating-conic-gradient{
+  width: 40%;
+  height: 250px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;    
+  
+  /* example */
+  background: repeating-conic-gradient(red 0%,yellow 15%,red 35%);
+
+  background: repeating-conic-gradient(from 45deg at 10% 50%,brown 0deg 10deg,  darkgoldenrod 10deg 20deg,  chocolate 20deg 30deg);
+
+  /* Black and white starburst */
+  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+
+/* Off-centered gradient */
+/* This gradient repeats 18 times, but since we only see the right half, we only see 9 repeats. */
+background: repeating-conic-gradient(
+    from 3deg at 25% 25%,
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
+
+}
