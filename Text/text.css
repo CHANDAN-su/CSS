@@ -71,3 +71,162 @@ A hard break (‐) will always break, even if it is not necessary to do so. A so
     hyphens: auto;
     hyphenate-character: ">>";
 }
+
+
+/* text properties */
+
+/* text align: The text-align CSS property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.
+
+Syntax:
+        text-align: start | end | left | right | justify | justify-all | match-parent; */
+
+
+.align{
+    border: 2px solid red;
+    padding: 10px;
+    width: 50%;
+    height: 150px;
+    margin: 0 auto;
+
+    text-align: start;
+}
+
+
+/* text-decoration: The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.*/
+
+/* Constituent properties
+This property is a shorthand for the following CSS properties:
+
+text-decoration-color
+text-decoration-line
+text-decoration-style
+text-decoration-thickness */
+
+/* Syntax: 
+        ------line-------
+        text-decoration: underline;
+
+        ------line style--------
+        text-decoration: underline dotted;
+
+        ----line style color-------
+        text-decoration: underline dotted red;
+
+        ------color style line-------
+        text-decoration: red wavy dotted;
+
+        ------style line color------
+        text-decoration: wavy overline lime; */
+
+.under{
+    text-decoration: underline;
+    text-decoration: underline double;
+    text-decoration: underline wavy red;
+    text-decoration: dotted red overline;
+    text-decoration: red overline wavy;
+    text-decoration: red wavy underline;
+    text-decoration: red underline;
+}
+
+.over{
+    text-decoration: blue overline wavy;
+}
+.line{
+    text-decoration: line-through red dotted;
+}
+.plain{
+    text-decoration: none;
+}
+.underover{
+    text-decoration: dashed underline overline;
+}
+.thick{
+    text-decoration: solid underline purple 4px;
+}
+
+
+
+/* text-decoration-color: The text-decoration-color CSS property sets the color of decorations added to text by text-decoration-line.
+The color applies to decorations, such as underlines, overlines, strikethroughs, and wavy lines like those used to mark misspellings, in the scope of the property's value. 
+
+Syntax:
+        text-decoration-color: transparent | currentcolor | red | rgb(); */
+
+
+
+/* text-decoration-line: The text-decoration-line CSS property sets the kind of decoration that is used on text in an element, such as an underline or overline. */
+
+/* Syntax:
+        text-decoration-line: none | underline | overline | line-through | underline overline | underline overline line-through; */
+
+
+.line1{
+    text-decoration: red underline overline line-through dashed;
+    /* text-decoration: red underline overline line-through 3px; */
+}
+
+
+/* text-decoration-style: The text-decoration-style CSS property sets the style of the lines specified by text-decoration-line. The style applies to all lines that are set with text-decoration-line. */
+
+/* Syntax:
+        text-decoration-style: none | solid | dotted | dashed | double | wavy; */
+
+
+/* text-decoration-thickness: The text-decoration-thickness CSS property sets the stroke thickness of the decoration line that is used on text in an element, such as a line-through, underline, or overline. */
+
+/* Syntax:
+        test-decoration-thickness: length; */
+
+.line1{
+    text-decoration-thickness: 5px;
+}
+
+
+
+
+/* text-emphasis:  The text-emphasis CSS property applies emphasis marks to text (except spaces and control characters). It is a shorthand for text-emphasis-style and text-emphasis-color.
+
+The text-emphasis property is quite different from text-decoration. The text-decoration property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
+
+Constituent properties
+This property is a shorthand for the following CSS properties:
+
+text-emphasis-color
+text-emphasis-style */
+
+/* Syntax: 
+        text-emphasis: none | filled  red | open red | dot red | circle red | double-circle red| triangle red | sesame red | <string> red| <color> red*/
+
+    
+.emphasis{
+    font-size: 25px;
+    margin: 40px;
+
+    /* text-emphasis: '*';  */
+    /* text-emphasis: double-circle red; */
+}
+
+
+/* text-emphasis-color: The text-emphasis-color CSS property sets the color of emphasis marks. This value can also be set using the text-emphasis shorthand. */
+
+/* Syntax: 
+        text-emphasis-color: transparent | currentcolor | red | rgb(); */
+
+.emphasis{
+    text-emphasis-color: red;
+}
+
+/* text-emphasis:  The text-emphasis-style CSS property sets the appearance of emphasis marks. It can also be set, and reset, using the text-emphasis shorthand.
+
+/* Syntax: 
+        text-emphasis: none | filled | open | dot | circle | double-circle | triangle | sesame | <string> | <color> */
+
+    
+.emphasis{
+    font-size: 25px;
+    margin: 40px;
+        
+    /* text-emphasis: '*';  */
+    text-emphasis: double-circle red;
+}
+
