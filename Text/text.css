@@ -1,0 +1,73 @@
+ /* Wrapping and breaking text  */
+
+     /* What is overflowing text?  */
+    /* an unbreakable string such as a very long word, by default it will overflow any container that is too small for it in the inline direction.  --> */
+
+    /* In this example - */
+
+.wrapping{
+    /* inline-size: 150px; */
+    width: 200px;
+    border: 2px solid black;
+    margin: 20px 20px;
+}
+
+/* CSS will display overflow in this way, because doing something else could cause data loss. In CSS data loss means that some of your content vanishes.  */
+/* the initial value of overflow is visible, and we can see the overflowing text.  */
+.wrapping{
+    /* overflow: hidden; */
+}
+
+
+/* Finding the min-content size */
+/* To find the minimum size of the box that will contain its contents with no overflows, set the width or inline-size property of the box to min-content.*/
+
+.wrapping{
+    /* inline-size: min-content; */
+}
+
+
+/* Breaking long words */
+/* If the box needs to be a fixed size, or you are keen to ensure that long words can't overflow, then the overflow-wrap property can help. */
+
+.wrapping{
+    /* overflow-wrap: break-word; */
+}
+
+/* An alternative property to try is word-break. 
+This property will break the word at the point it overflows. It will cause a break-even if placing the word onto a new line would allow it to display without breaking. */
+
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 20px 305px;
+}
+
+.wrap .box{
+    border: 2px solid red;
+    width: 200px;
+    padding: 30px;
+}
+
+.first{
+    word-break: break-all;
+}
+.second{
+    overflow-wrap: break-word;
+}
+
+/* Adding hyphens */
+/* To add hyphens when words are broken, use the CSS hyphens property. Using a value of auto, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses.
+A hard break (‐) will always break, even if it is not necessary to do so. A soft break (&shy;) only breaks if breaking is needed. */
+
+/*  hyphenate-character pendingh 
+    overflow pending*/
+
+.wrapping{
+    inline-size: 150px;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    hyphenate-character: ">>";
+}
