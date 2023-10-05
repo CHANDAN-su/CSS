@@ -181,6 +181,27 @@ Syntax:
     text-decoration-thickness: 5px;
 }
 
+/* text-underline-offset */
+/* The text-underline-offset CSS property sets the offset distance of an underline text decoration line (applied using text-decoration) from its original position.
+
+text-underline-offset is not part of the text-decoration shorthand. While an element can have multiple text-decoration lines, text-underline-offset only impacts underlining, and not other possible line decoration options such as overline or line-through.
+
+Syntx:
+        text-underline-offset: length; */
+
+.under{
+    /* text-underline-offset: 10px; */
+}
+
+/* text-underline-position
+The text-underline-position CSS property specifies the position of the underline which is set using the text-decoration property's underline value.
+
+Syntax: 
+        text-underline-position: under | auto | left |right; */
+
+.under{
+    text-underline-position: left;
+}
 
 
 
@@ -230,3 +251,97 @@ text-emphasis-style */
     text-emphasis: double-circle red;
 }
 
+
+.simple-indent{
+    border: 2px solid red;
+    padding: 20px;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+
+/* text indent */
+/* The text-indent CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
+Horizontal spacing is with respect to the left (or right, for right-to-left layout) edge of the containing block-level element's content box.
+
+
+Syntax:
+        text-indent: length; */
+
+    text-indent: 30%;
+
+}
+
+
+/* text overflow */
+/* The text-overflow CSS property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('…'), or display a custom string.
+
+The text-overflow property doesn't force an overflow to occur. To make text overflow its container, you have to set other CSS properties: overflow and white-space.
+For example: 
+    overflow: hidden;
+    white-space: nowrap;
+
+The text-overflow property only affects content that is overflowing a block container element in its inline progression direction (not text overflowing at the bottom of a box, for example). */
+
+/* Syntax: 
+        text-overflow: clip | ellipsis  | ellipsis  ellipsis  | ellipsis  "[..]"; */
+
+
+.text-overflow{
+    border: 2px solid red;
+    padding: 20px;
+    width: 40%;
+    margin: 20px auto;
+
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* text-shadow */
+/* The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations.
+
+Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color. */
+
+/* Syntax: */
+        /* x-offset y-offset blur-radius color*/
+        /* text-shadow: 5px 5px 3px red; */
+
+        /* color x-offset y-offset blur-radius */
+        /* text-shadow: red 5px 5px 4px; */
+
+        /* x-offset -offset color */
+        /* text-shadow: 4px 5px blue; */
+
+        /* color x-offet y-offset */
+        /* text-shadow: blue 5px 9px; */
+
+        /* x-offset y-offset */
+        /* text-shadow: 5px 6px */
+
+.text-shadow{
+    border: 2px solid red;
+    padding: 20px;
+    width: 40%;
+    margin: 20px auto;
+    font-size: 22px;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-shadow: 4px 3px 2px red;
+}
+
+
+/* text-transform */
+/* The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby. */
+
+/* Syntax:
+        text-trnsform: none | capitalize | uppercase | lowercase | full-width | full-size-kana; */
+
+.text-shadow{
+    text-transform: uppercase;
+}
