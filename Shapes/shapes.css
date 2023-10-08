@@ -1,0 +1,57 @@
+/* The specification defines three new properties: */
+/* 1. Shape-outside: allows definition of basic shapes
+2. shape-image-threshold: Sets an opacity threshold value. If an image is being used to define the shape, only the parts of the image that are the same opacity or greater than the threshold value are used in the shape. Any other parts are ignored.
+3. shape-margin: sets a margin around the defined shape */
+
+/* Defining basic shapes */
+/* The shape-outside property allows us to a define a shape. It takes a variety of values, all of which define different shapes, specified in the <basic-shape> datatype. */
+
+
+.shape img{
+    float: left;
+    shape-outside: circle(50%);
+
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}   
+
+
+/* Basic shapes */
+/* The specification defines four <basic-shape> values, which are: */
+/* inset()
+circle()
+ellipse()
+polygon() */
+
+
+/* Shapes from the box value */
+/* Shapes can also be created around the box value. Therefore, you could create your shape on */
+/* border-box
+padding-box
+content-box
+margin-box */
+
+/* example */
+.shape-basic{
+    margin-top: 248px ;
+}
+
+/* example */
+.shape-basic .shape{
+    background-color:red;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    border-right: 5px solid black;
+    margin: 28px;
+    padding: 20px;
+
+    shape-outside: border-box;
+    shape-outside: content-box;
+    shape-outside: padding-box;
+    shape-outside: margin-box;
+
+}
+
