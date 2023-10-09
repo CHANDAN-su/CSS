@@ -97,4 +97,69 @@ Examples of ink overflows include box shadows, border images, text decoration, o
             color: #4c4ca9;
             font-size: 16px;
           }
+
+
+/* overflow-x */
+/* The overflow-x CSS property sets what shows when content overflows a block-level element's left and right edges. This may be nothing, a scroll bar, or the overflow content. 
+
+Syntax:
+        overflow-x: auto | visible | hidden | clip | scroll; */ 
+
+.selector{
+  overflow-x: hidden;
+}
+
+
+/* overflow-y */
+/* The overflow-y CSS property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content.
+
+Syntax: 
+        overflow-x: auto | visible | hidden | clip | scroll; */
+
+
+.selector{
+  overflow-y: scroll;
+}
+
           
+/* overflow-wrap */
+/* The overflow-wrap CSS property applies to inline elements, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
+
+The property was originally a nonstandard and unprefixed Microsoft extension called word-wrap, and was implemented by most browsers with the same name.
+
+
+Syntax:
+          overflow-wrap: normal | anywhere | break-work;
+
+normal: Lines may only break at normal word break points.
+
+anywhere: To prevent overflow, an otherwise unbreakable string of characters — like a long word or URL — may be broken at any point if there are no otherwise-acceptable break points in the line.
+
+break-word: The same as the anywhere value, with normally unbreakable words allowed to be broken at arbitrary points if there are no otherwise acceptable break points in the line, but soft wrap opportunities introduced by the word break are NOT considered when calculating min-content intrinsic sizes. */
+
+p{
+  width: 100px;
+  border: 2px solid black;
+}
+
+.normal{
+  overflow-wrap: normal;
+}
+
+.ow-anywhere{
+  overflow-wrap: anywhere;
+}
+
+.ow-break-word{
+  overflow-wrap: break-word;
+}
+
+.word-break{
+  overflow-wrap: word-break;
+  word-break: break-all;
+}
+
+.hyphens{
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
