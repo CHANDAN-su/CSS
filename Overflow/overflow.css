@@ -1,0 +1,100 @@
+/* CSS overflow: The CSS overflow module properties enable you to handle scrollable overflow in visual media.
+
+Scrollable overflow is the content that appears outside the element box for which you might want to add a scrolling mechanism.
+Examples of ink overflows include box shadows, border images, text decoration, overhanging glyphs, and outlines. Ink overflows do not extend the scrollable overflow region. */
+
+
+/* CSS properties */
+
+/* overflow propert */
+        /* Overflow happens when there is too much content to fit in a box.  the default behavior of CSS when there is overflow. The default value of overflow is visible. With this default, we can see content when it overflows.*/
+
+        /* Constituent properties This property is a shorthand for the following CSS properties: overflow-x and  overflow-y */
+
+        /* stntax:
+        overflow: visible | hidden | scroll clip | auto | hidden visible;        
+        */
+        /* two value: one value overflow-x and second value overflow-y */
+
+        /************** Overflow  ******************/
+        .box3{
+            width: 150px;
+            height: 200px;
+          /*   border: 2px solid black; */
+          
+          /*   overflow: scroll; */
+          /*   overflow: visible; */
+          /*   overflow: hidden; */
+          /*   overflow: auto; */
+          /*   overflow: clip; */
+          /*   overflow: visible auto; */
+          
+            overflow-y: auto;
+            
+          }
+          
+          #div1{
+            width: 200px;
+            border: 2px solid red;
+          
+            overflow-x: scroll;
+          }
+          
+          .container1{
+            display: flex;
+            
+          
+            width: 100%;
+          /*   border: 2px solid red; */
+          /*   overflow: auto; */
+            /* overflow-x: scroll; */
+            overflow: auto;
+            scroll-snap-type: x mandatory;
+          }
+          .container1 .travel{
+            margin: 5px;
+            border: 2px solid #b5b0b0;
+            padding: 10px;
+            border-radius: 3px;
+            scroll-snap-align: start;
+          }
+          
+          .container1 .travel img{
+            width: 160px;
+            height: 160px;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 0.9;
+            margin-bottom: 3px;
+          }
+          
+          .container1 .travel h3{
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #303040;
+            margin-bottom: 5px;
+          }
+          
+          .container1 .travel p{
+            font-size: 12px;
+            color: #504444;
+            margin-bottom: 3px;
+          }
+          
+          .container1 .travel .price{
+              display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }  
+          
+          .container1 .travel .price span{
+            font-size: 14px;
+            font-weight: bold;
+          }
+          
+          .container1 .travel .price span:last-child{
+            color: #4c4ca9;
+            font-size: 16px;
+          }
+          
