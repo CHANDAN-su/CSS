@@ -1,0 +1,48 @@
+/* Basic concepts of scroll snap
+The properties in the CSS scroll snap module enable you to define how scrolling snaps to specific points as a user scrolls through a document. */
+
+
+/* Key properties for CSS scroll snap:
+You can do this by ensuring that the scroll container has a defined size and that it has overflow enabled. */
+
+
+/* The scroll container by using the following two key properties: */
+
+/* scroll-snap-type: Using this property, you can define whether or not the scrollable viewport can be snapped to, whether snapping is required or optional, and the axis on which the snapping should occur. */
+
+/* scroll-snap-align: This property is set on every child of the scroll container and you can use it to define each child's snap position or lack thereof. */
+
+/* scroll-snap-stop: This property ensures that a child is snapped to during scrolling and not passed over. */
+
+/* scroll-padding: This property can be set on the scroll container to create a snapping offset. */
+
+/* scroll-margin: This property can be set on child elements that are snapped to during scrolling to create an outset from the defined box. */
+
+.scroller{
+    height: 300px;
+    border: 2px solid black;
+    width: 25%;
+    overflow-y: scroll;
+}
+
+.scroller section{
+    height: 300px;
+    padding: 5px;
+}
+
+.scroller section h1{
+    margin: 0;
+    padding: 0;
+}
+article section:nth-child(1){
+    background-color: red;
+}
+.scroller section:nth-child(2){
+    background-color: yellow;
+}
+.scroller section:nth-child(3){
+    background-color: green;
+}
+.scroller section:nth-child(4){
+    background-color: aqua;
+}
