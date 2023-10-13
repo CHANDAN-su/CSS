@@ -18,6 +18,13 @@ You can do this by ensuring that the scroll container has a defined size and tha
 
 /* scroll-margin: This property can be set on child elements that are snapped to during scrolling to create an outset from the defined box. */
 
+
+
+.scroll{
+    display: flex;
+    gap: 20px;
+}
+
 .scroller{
     height: 300px;
     border: 2px solid black;
@@ -34,7 +41,7 @@ You can do this by ensuring that the scroll container has a defined size and tha
     margin: 0;
     padding: 0;
 }
-article section:nth-child(1){
+.scroller section:nth-child(1){
     background-color: red;
 }
 .scroller section:nth-child(2){
@@ -45,4 +52,124 @@ article section:nth-child(1){
 }
 .scroller section:nth-child(4){
     background-color: aqua;
+}
+
+
+/* Using scroll-snap-type */
+/* The scroll-snap-type property needs to know the direction in which scroll snapping happens.
+This can be x, y, or the logical mappings block or inline. You can also use the keyword both to have scroll snapping work along both axes. */
+
+/* You can also pass in the keywords mandatory or proximity.
+
+The mandatory keyword tells the browser whether the content has to snap to a certain point, no matter where the scroll is. 
+The proximity keyword means that the content may snap to the point, but does not have to.
+
+Using mandatory creates a very consistent scrolling experience — you know the browser will always snap to each defined point. 
+
+The proximity value only snaps child elements to a position when it is close by, with the browsers determining the exact distance.*/
+
+/* Syntax:
+        scroll-snap-type: x | y | both | block | inline | x mandatory | x proximity | both mandatory; */
+
+.scroller-container{
+    height: 300px;
+    border: 2px solid black;
+    width: 25%;
+
+    overflow-x: scroll;
+
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Using scroll-snap-aling:
+The scroll-snap-align property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snapport (as the alignment container).
+
+The two values specify the snapping alignment in the block axis and inline axis, respectively.
+The second value defaults to the same value.
+
+The valid values for the scroll-snap-align property include start, end, center, and none.
+
+Syntax:
+        scroll-snap-align: start | end | center | none | start end; */
+
+
+.scroller-container section{
+    height: 350px;
+    padding: 5px;
+
+    scroll-snap-align: start;
+}
+
+.scroller-container section h1{
+    margin: 0;
+    padding: 0;
+}
+.scroller-container section:nth-child(1){
+    background-color: red;
+}
+.scroller-container section:nth-child(2){
+    background-color: yellow;
+}
+.scroller-container section:nth-child(3){
+    background-color: green;
+}
+.scroller-container section:nth-child(4){
+    background-color: aqua;
+}
+
+/* If the content doesn't overflow its container, there is nothing to scroll. */
+
+.scroll1{
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+
+    scroll-snap-type: x mandatory;
+}
+
+.scroll1 .scroll-child{
+    flex: 1 0 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+
+    scroll-snap-align: center;
+    scroll-snap-align: end;
+}
+
+.scroll1 .scroll-1:nth-child(1){
+    background-color: red;
+}
+.scroll1 .scroll-2:nth-child(2){
+    background-color: yellow;
+}
+.scroll1 .scroll-3:nth-child(3){
+    background-color: green;
+}
+.scroll1 .scroll-4:nth-child(4){
+    background-color: aqua;
+}
+.scroll1 .scroll-5:nth-child(5){
+    background-color: blue;
+}
+
+/* Using scroll-padding */
+/* The scroll-padding shorthand property sets scroll padding on all sides of an element at once, much like the padding property does for padding on an element.
+
+When using start or end, if you do not want the content to snap right to the edge of the scroll container, or if you want the snap position to be slightly offset from center when using center, use the scroll-padding property or its equivalent longhand values to add some padding. */
+
+/* In the example below, scroll-padding is set to 40px. When the content snaps to the start of the second and third sections, scrolling stops 40 pixels away from the start of the section. */
+
+.scroll1{
+    scroll-padding: 40px;
 }
