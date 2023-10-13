@@ -170,6 +170,76 @@ When using start or end, if you do not want the content to snap right to the edg
 
 /* In the example below, scroll-padding is set to 40px. When the content snaps to the start of the second and third sections, scrolling stops 40 pixels away from the start of the section. */
 
+/* Syntax:
+        scroll-padding: 10px | 10px 10px | 10px 10px 10px | 10px 10px 10px 10px; */
+
 .scroll1{
     scroll-padding: 40px;
+}
+
+/* This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars), or to put more breathing room between a targeted element and the edges of the scrollport.
+
+Constituent properties
+This property is a shorthand for the following CSS properties:
+
+scroll-padding-bottom
+scroll-padding-left
+scroll-padding-right
+scroll-padding-top */
+
+
+/* scroll-padding
+scroll-padding-left
+scroll-padding-right
+scroll-padding-top
+scroll-padding-bottom
+scroll-padding-block
+scroll-padding-block-start
+scroll-padding-block-end
+scroll-padding-inline
+scroll-padding-inline-start
+scroll-paddong-inline-end */
+
+
+
+/* Using scroll-margin */
+/* The scroll-margin property or the longhand scroll margin values can be set on child elements, defining an outset from the defined box. 
+The scroll-margin shorthand property sets all of the scroll margins of an element at once, assigning values much like the margin property does for margins of an element.scroll
+
+Syntax:
+        scroll-margin: 10px | 10px 10px | 10px 10px 10px | 10px 10px 10px 10px; */
+
+/* Constituent properties
+This property is a shorthand for the following CSS properties:
+
+scroll-margin-bottom
+scroll-margin-left
+scroll-margin-right
+scroll-margin-top */
+
+/* scroll-margin-left
+scroll-margin-right
+scroll-margin-top
+scroll-margin-bottom
+scroll-margin-block
+scroll-margin-block-start
+scroll-margin-block-end
+scroll-margin-inline
+scroll-margin-inline-start
+scroll-margin-inline-end */
+
+.scroller-container section{
+    scroll-margin: 30px;
+}
+
+/* Using scroll-snap-stop */
+/* The scroll-snap-stop CSS property defines whether or not the scroll container is allowed to "pass over" possible snap positions.
+
+The effect of this property can be noticed on devices with a touchpad. Try to scroll through all items with a single swing. Value 'normal' should pass through all pages, while 'always' will stop at the second page.
+
+Syntax:
+        scroll-snap-stop: normal | always; */
+
+.scroll1{
+    scroll-snap-stop: always;
 }
