@@ -243,3 +243,22 @@ Syntax:
 .scroll1{
     scroll-snap-stop: always;
 }
+
+
+/* example */
+.scroll-grid{
+    width: 940px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    grid-auto-rows: 250px;
+    gap: 20px;
+
+    overflow: scroll;
+    scroll-snap-type: both mandatory;
+}
+
+.scroll-grid > div{
+    background-color: hotpink;
+    scroll-snap-align: start;
+}
