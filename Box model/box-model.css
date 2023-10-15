@@ -780,17 +780,74 @@ shorthand
 }
 
 
+/* outline */
+/* The outline CSS shorthand property sets most of the outline properties in a single declaration.
+
+Constituent properties
+This property is a shorthand for the following CSS properties:
+
+outline-color
+outline-style
+outline-width
+
+Syntax: 
+        ____style____
+        outline: solid | dotted | dashed | double;
+
+        ____color style____
+        outline: red solid;
+
+        ____color style width____
+        outline: red dashed 3px;
+
+
+ The outline property may be specified using one, two, or three of the values listed below. The order of the values does not matter.  */
+
+ /* Outline is a line outside of the element's border. Unlike other areas of the box, outlines don't take up space, so they don't affect the layout of the document in any way.
+
+ the distance from the border using the outline-offset property, and corner angles using the border-radius property. */
+
+
+.outline a{
+    display: inline-block;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.outline a:focus{
+    outline: 5px dashed red;
+    background: yellowgreen;
+}
+
+/* outline-color
+The outline-color CSS property sets the color of an element's outline.
+
+Syntax: 
+        outline-color: red | #fff | rgb(0,0,0); */
 
 
 
+/* outline-style */
+/* The outline-style CSS property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the border.
+
+Syntax: 
+        outlinr-style: none | solid | dashed | double | dotted | groove | inset | outset | ridge; */
 
 
+/* outline-width*/
+/* The CSS outline-width property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the border.
+
+Syntax: 
+        outline-width: none | thi | medium | thick | length; */
 
 
+/* outline-offset */
+/* The outline-offset CSS property sets the amount of space between an outline and the edge or border of an element.
 
+Syntax: 
+        outline-offset: length; */
 
-
-
-
-
-
+.outline a:focus{
+    outline-offset: 8px;
+}
