@@ -253,10 +253,12 @@ Syntax:
     grid-template-columns: repeat(5, 300px);
     grid-auto-rows: 250px;
     gap: 20px;
+    resize: both;
 
     overflow: scroll;
     scroll-snap-type: both mandatory;
 }
+
 
 .scroll-grid > div{
     background-color: hotpink;
@@ -290,3 +292,89 @@ You can use the following pseudo-elements to customize various parts of the scro
 /* ::-webkit-scrollbar
 ::-webkit-scrollbar-thumb
 ::-webkit-scrollbar-track */
+
+
+
+/* very simple example */
+
+/* ::-webkit-scrollbar — the entire scrollbar. */
+.scroll-grid::-webkit-scrollbar{
+    /* display: none; */
+    width: 12px;
+    height: 15px;
+}
+
+/* ::-webkit-scrollbar-button — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time). */
+.scroll-grid::-webkit-scrollbar-button{
+    display: none;
+}
+
+/* ::-webkit-scrollbar-track — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar. */
+.scroll-grid::-webkit-scrollbar-track{
+    /* background-color: gray; */
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+/* ::-webkit-scrollbar-thumb — the draggable scrolling handle. */
+.scroll-grid::-webkit-scrollbar-thumb{
+    /* background-color: red; */
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+    background: linear-gradient(45deg, red , yellow , green);
+    border-radius: 5px;
+}
+
+/* ::-webkit-scrollbar-track-piece — the part of the track (progress bar) not covered by the handle. */
+.scroll-grid::-webkit-scrollbar-track-piece{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* ::-webkit-scrollbar-corner — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window. */
+.scroll-grid::-webkit-scrollbar-corner{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+/* ::-webkit-resizer — the draggable resizing handle that appears at the bottom corner of some elements. 
+iske liye resize property use karna parega
+*/ 
+.scroll-grid::-webkit-resizer{
+    background-color: hotpink;
+}
+
+
+/* The Different States */
+/* These are the pseudo-class selectors. They allow for more specific selection of the parts, like when the scrollbar is in different states.
+
+:horizontal – The horizontal pseudo-class applies to any scrollbar pieces that have a horizontal orientation.
+
+:vertical – The vertical pseudo-class applies to any scrollbar pieces that have a vertical orientation.
+
+:decrement – The decrement pseudo-class applies to buttons and track pieces. It indicates whether or not the button or track piece will decrement the view’s position when used (e.g., up on a vertical scrollbar, left on a horizontal scrollbar).
+
+:increment – The increment pseudo-class applies to buttons and track pieces. It indicates whether or not a button or track piece will increment the view’s position when used (e.g., down on a vertical scrollbar, right on a horizontal scrollbar).
+
+:start – The start pseudo-class applies to buttons and track pieces. It indicates whether the object is placed before the thumb.
+
+:end – The end pseudo-class applies to buttons and track pieces. It indicates whether the object is placed after the thumb.
+
+:double-button – The double-button pseudo-class applies to buttons and track pieces. It is used to detect whether a button is part of a pair of buttons that are together at the same end of a scrollbar. For track pieces it indicates whether the track piece abuts a pair of buttons.
+
+:single-button – The single-button pseudo-class applies to buttons and track pieces. It is used to detect whether a button is by itself at the end of a scrollbar. For track pieces it indicates whether the track piece abuts a singleton button.
+
+:no-button – Applies to track pieces and indicates whether or not the track piece runs to the edge of the scrollbar, i.e., there is no button at that end of the track.
+
+:corner-present – Applies to all scrollbar pieces and indicates whether or not a scrollbar corner is present.
+
+:window-inactive – Applies to all scrollbar pieces and indicates whether or not the window containing the scrollbar is currently active. (In recent nightlies, this pseudo-class now applies to ::selection as well. We plan to extend it to work with any content and to propose it as a new standard pseudo-class.) */
+
+/* ::-webkit-scrollbar-track-piece:start {
+    Select the top half (or left half) or scrollbar track individually
+ } */
+ 
+ /* ::-webkit-scrollbar-thumb:window-inactive {
+    Select the thumb when the browser window isn't in focus
+ } */
+ 
+ /* ::-webkit-scrollbar-button:horizontal:decrement:hover {
+    Select the down or left scroll button when it's being hovered by the mouse
+ } */
