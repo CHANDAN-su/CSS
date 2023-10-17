@@ -1,0 +1,31 @@
+/* offset */
+/* The offset CSS shorthand property sets all the properties required for animating an element along a defined path.
+
+Constituent properties
+This property is a shorthand for the following CSS properties:
+
+offset-anchor
+offset-distance
+offset-path
+offset-position
+offset-rotate */
+
+.svg{
+    width: 30px;
+    height: 30px;
+    background-color: hotpink;
+    clip-path: polygon(41% 20%, 41% 40%, 100% 40%, 100% 60%, 43% 60%, 42% 85%, 12% 52%);
+    transform: rotate(180deg);
+    /* offset: path("M 20 60 L 120 60 L 70 10 L 20 60"); */
+    offset: path("M 163 91 C 231 131 75 184 165 208");
+    animation: move 3s ease-in-out 2s infinite alternate;
+}
+
+@keyframes move {
+    0%{
+        offset-distance: 0%;
+    }
+    100%{
+        offset-distance: 100%;
+    }
+}
