@@ -62,7 +62,7 @@ offset-rotate */
 Syntax:
         offset-anchor: auto | top | left | right | bottom | center | 20px 30px | 0 0 | top lrft | bottom 20px right 30px; */
 
-
+/* In the following example, we have three <div> elements nested in <section> elements. Each <div> is given the same offset-path (a horizontal line 200 pixels long) and animated to move along it. The three are then given different background-color and offset-anchor values. */
 
 
 section{
@@ -70,17 +70,14 @@ section{
     margin: 20px;
     width: 40%;
 
-    background: linear-gradient(to bottom, transparent , transparent 49%, #000 50% , #000 51%, transparent 52%)
+    background: linear-gradient(to bottom, transparent , transparent 49%, #000 50% , #000 51%, transparent 52%);
 }
 
-div{
+section div{
     width: 50px;
     height: 50px;
-    background-color: rgb(52, 201, 39);
-
     animation: anchor 3s ease-in-out 2s infinite;
-
-    offset: path('M 0 325L 86 25');
+    offset: path('M 25 25 L 515 25');
 }
 
 @keyframes anchor {
@@ -91,3 +88,143 @@ div{
         offset-distance: 100%;
     }
 }
+
+.offset-anchor1{
+    background-color: rgb(52, 201, 39);
+    offset-anchor: bottom;
+}
+
+.offset-anchor2{
+    background-color: rgb(206, 125, 32);
+    /* offset-anchor: right 30px; */
+    offset-anchor: 50px 60px;
+}
+
+.offset-anchor3{
+    background-color: rgb(85, 27, 194);
+    /* offset-anchor: top left; */
+    offset-anchor: left 40px;
+}
+
+
+/* offset-distance */
+/* The offset-distance CSS property specifies a position along an offset-path for an element to be placed.
+
+Syntax: 
+        offset-distance: length; */
+
+/* The motion aspect in CSS Motion Path typically comes from animating the offset-distance property. If you want to animate an element along its full path, you would define its offset-path and then set up an animation that takes the offset-distance from 0% to 100%. */
+
+.offset-distance{
+    width: 40px;
+    height: 40px;
+    background-color: hotpink;
+
+    offset: path('M20,20 C20,100 200,0 200,100');
+    animation: move1 3s ease-in-out infinite;
+}
+
+@keyframes move1 {
+    0%{
+        offset-distance: 0%;
+    }
+    100%{
+        offset-distance: 100%;
+    }
+}
+
+
+/* offset-path */
+/* The offset-path CSS property specifies a path for an element to follow and determines the element's positioning within the path's parent container or the SVG coordinate system. The path is a line, a curve, or a geometrical shape along which the element gets positioned or moves.
+
+The offset-path property is used in combination with the offset-distance, offset-rotate, and offset-anchor properties to control the position and orientation of the element along a path. */
+
+/* Syntax: */
+        /* offset-path: auto | 10px 20px  | none;
+        offset: ray(45deg, closestr-side) | path('M 100 100 L 300 100 L 200 300 z') | url('arc.svg'); */
+
+        /* Offset path with distance and/or rotation */
+        /* offseft-path: url(circle.svg) 100px | url(circle.svg) 30% | url(circle.svg) 45deg | url(circle.svg) 50px 90deg; */
+
+        /* Including offset anchor */
+        /* offset-path: ray(45deg closest-side) / 40px 20px |  url(arc.svg) 2cm / 0.5cm 3cm; | : url(arc.svg) 30deg / 50px 100px; 
+        
+        offset-path: content-box | paddong-box | border-box | fill-box | view-box | stroke-box
+        */
+
+/* Creating an offset-path using box-edge positioning */
+.box{
+    width: 450px;
+    height: 250px;
+    border: 30px dashed yellow;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.box div{
+    width: 70px;
+    height: 20px;
+    margin: 20px;
+    animation: allmove 3s ease-in infinite;
+}
+
+.box .firstbox{
+    background-color: aquamarine;
+    offset-path: content-box;
+    offset-distance: 16%;
+}
+.box .secondbox{
+    background-color: blueviolet;
+    offset-path: padding-box;
+    offset-distance: 13%;
+}
+.box .thirdbox{
+    background-color: burlywood;
+    offset-path: border-box;
+    offset-distance: 10%;
+}
+@keyframes allmove {
+    to{
+        offset-distance: 100%;
+    }
+}
+
+/* Creating an offset-path using path() */
+/* In this example, the <svg> element creates a house with a chimney and also defines two halves of a scissor. */
+
+.scissorHalf {
+    /* offset-path: path(
+      "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
+    ); */
+
+    /* Creating an offset-path using url() */
+    offset-path: url('#house');
+    animation: followpath 4s linear infinite;
+  }
+  
+  @keyframes followpath {
+    to {
+      offset-distance: 100%;
+    }
+  }
+  
+
+/* offset-rotate */
+/* The offset-rotate CSS property defines the orientation/direction of the element as it is positioned along the offset-path.
+
+Syntax: 
+        offset-rotate: |auto 90deg | auto 90deg | 2.3turn | reverse; */
+
+.scissorHalf{
+    offset-rotate: 177deg;
+}
+
+
+/* offset-position */
+/* The offset-position CSS property defines the initial position of an element along a path. This property is typically used in combination with the offset-path property to create a motion effect. The value of offset-position determines where the element gets placed initially for moving along an offset-path if the offset-path function does not specify its own starting position.
+
+The offset-position property is part of a motion system based on offset constituent properties, including offset-anchor, offset-distance, and offset-path. These properties work together to create various motion effects along a path.
+
+Syntax: 
+        offset-anchor: auto | top | left | right | bottom | center | 20px 30px | 0 0 | top lrft | bottom 20px right 30px;  */
+        
