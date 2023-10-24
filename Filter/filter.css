@@ -1,1 +1,65 @@
 /* filter */
+/* The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+
+Several functions, such as blur() and contrast(), are available to help you achieve predefined effects.
+
+Syntax: 
+        ___filter-function value___
+        filter: none | blue(5px) | brightness(0.4) | contrast(200%) | drop-shadow(16px 16px 20px blue) | grayscale(50%) | hue-rotate(90deg) | invert(75%) | opacity(25%) | saturate(30%) | sepia(60%);
+
+        ___URL___
+        filter: url('filters.svg#filter-id');
+
+        ___Multiple value___
+        filter: contrast(100%) brightness(0.4) | drop-shadow(3px 3px red) sepia(60%) drop-shadow(-3px -3px blue); */
+
+.filter{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+}
+
+
+.filter img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Function
+When the filter property values contains multiple functions, the filters are applied in order. */
+
+/* blur():  The blur() CSS function applies a Gaussian blur to the input image. Its result is a <filter-function>.
+
+Syntax: 
+        filter: blur(radius);
+
+        radius: length value (px, rem, em, %) */
+
+.filter img{
+    /* filter: blur(5px); */
+}
+
+/* brightness(): The brightness() CSS <filter-function> applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
+
+Syntax: 
+        filter: brightness(amount);
+
+        amount: Brightness specified as a <number> or a <percentage>. A value less than 100% darkens the input image or element, while a value over 100% brightens it. A value of 0% creates a completely black image or element, while a value of 100% leaves the input unchanged. The default value, when nothing is specified, is 1. */
+
+.filter img{
+    /* filter: brightness(1) */
+    /* filter: brightness(2); */
+    /* filter: brightness(20%); */
+}
+
+/* contrast(): The contrast() CSS function adjusts the contrast of the input image. Its result is a <filter-function>.
+
+Syntax: 
+        filter: contrast(amount);
+
+        amount: The contrast of the result, specified as a <number> or a <percentage>. A value under 100% decreases the contrast, while a value over 100% increases it. A value of 0 or 0% will create an image that is completely gray, while a value of 1 or 100% leaves the input unchanged. Negative values are not allowed. The initial value for interpolation is 1. */
+
+.filter img{
+    filter: contrast(7%);
+}
