@@ -14,6 +14,33 @@
             padding: 0;
         }
 
+        /* min() */
+        /* The min() CSS function lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value. The min() function can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+
+        the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). 
+
+        Syntax: 
+        The min() function takes one or more comma-separated expressions as its parameter  */
+
+.min{
+    border: 2px solid black;
+    margin: 30px;
+    padding: 40px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+
+.min p:nth-child(1){
+    border: 1px solid black;
+    /* width: 60%; */
+}
+
+.min p:nth-child(2){
+    border: 1px solid black;
+    /* width: min(60%,80%); */
+}
 
         /* min-width */
         /* kam se kam itana width to hona hi chahiye */
@@ -148,6 +175,11 @@
 </head>
 
 <body>
+
+    <section class="min">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dicta.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </section>
 
     <div class="min-width-max-width">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dicta est, placeat dolore </p>
