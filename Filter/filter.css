@@ -162,9 +162,17 @@ Syntax:
 
 .filter img{
     /* filter: sepia(.65); */
-    filter: sepia(100%);
+    /* filter: sepia(100%); */
 }
 
+/* blur, brightness, contrast, drop-shadow, hue-rotate, opacity, grayscale, invert, saturate, sepia */
 
+/* Combining functions */
+/* You may combine any number of functions to manipulate the rendering. The filters are applied in the order declared. */
 
-
+.filter img{
+    /* filter: contrast(66%) brightness(170%); */
+    /* filter: grayscale(80%) blur(1px); */
+    filter: drop-shadow(5px 5px 0 red) hue-rotate(180deg) drop-shadow(5px 5px 0
+        red);
+}
