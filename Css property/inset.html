@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inset</title>
+    <style>
+
+    /* The inset CSS property is a shorthand that corresponds to the top, right, bottom, and/or left properties. It has the same multi-value syntax of the margin shorthand.
+
+    Constituent properties
+    This property is a shorthand for the following CSS properties:
+
+    top
+    right
+    bottom
+    left
+
+    Syntax:
+            ___top___
+            inset: 10px;
+
+            ___top/bottom left/right___
+            inset: 10px 20px;
+
+            ___top right bottom left___
+            inset: 10px 20px 30px 40px;
+
+    relative to the containing block’s size in the corresponding axis (e.g. width for left or right, height for top or bottom) */
+    /* isme width and height property use nhi kare to bhi chalata h */
+    
+.container{
+    background-color: yellow;
+    position: absolute;
+    inset: 30px;
+}
+
+.container-box{
+    background-color: red;
+    position: absolute;
+    /* left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px; */
+
+    /* shorthand */
+    /* inset: 10px;
+    inset: 10px 50px;
+    inset: 0 20%;
+    inset: 10% 0;
+    inset: 10px 20px 30px 40px; */
+}
+
+    /* inset-block: The inset-block CSS property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. 
+    
+    It corresponds to the top and bottom, or right and left properties depending on the values defined for writing-mode, direction, and text-orientation.
+
+    Constituent properties
+    This property is a shorthand for the following CSS properties:
+
+    inset-block-end
+    inset-block-start
+
+    Syntax: 
+            ___top/bottom | start/end___
+            inset-block: 20px;
+
+            ___top bottom | start end___
+            inset: 20px 30px; */
+
+    
+.container-box{
+    inset: 0 0 0 0;
+    /* inset-block: 10%; */
+}
+
+    /* inset-block-start: The inset-block-start CSS property defines the logical block start offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the top, right, bottom, or left property depending on the values defined for writing-mode, direction, and text-orientation.
+
+    Syntax:
+            inset-block-start: 20px | 10%; */
+
+.container-box{
+    inset-block-start: 10%;
+}
+
+
+    /* inset-block-end: The inset-block-end CSS property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the top, right, bottom, or left property depending on the values defined for writing-mode, direction, and text-orientation.
+
+    Syntax: 
+            inset-block-end: 30px; */
+
+.container-box{
+    inset-block-end: 20%;
+}
+
+
+    /* inset-inline: The inset-inline CSS property defines the logical start and end offsets of an element in the inline direction, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the top and bottom, or right and left properties depending on the values defined for writing-mode, direction, and text-orientation.
+
+    Constituent properties
+    This property is a shorthand for the following CSS properties:
+
+    inset-inline-end
+    inset-inline-start
+
+    Syntax: 
+            ___left/right | start/end___
+            inset-inline: 30px;
+
+            ___left right | start end___
+            inset-inline: 20px 40px; */
+
+
+.container-box{
+    /* inset-inline: 20%; */
+}
+
+
+    /* inset-inline-start: The inset-inline-start CSS property defines the logical inline start inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the top, right, bottom, or left property depending on the values defined for writing-mode, direction, and text-orientation.
+
+    Syntax: 
+            inset-inline-start: 20px;
+            inset-inline-start 20%; */
+
+
+.container-box{
+    inset-inline-start: 70px;
+}
+
+    /* inset-inline-end: The inset-inline-end CSS property defines the logical inline end inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the top, right, bottom, or left property depending on the values defined for writing-mode, direction, and text-orientation.
+
+    Syntax: 
+            inset-inline-end: 20px;
+            inset-inline-end: 10%; */
+
+.container-box{
+    inset-inline-end: 180px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-box"></div>
+    </div>
+
+</body>
+</html>
