@@ -190,7 +190,7 @@ Syntx:
         text-underline-offset: length; */
 
 .under{
-    /* text-underline-offset: 10px; */
+    /* text-underline-offset: 10px !important; */
 }
 
 /* text-underline-position
