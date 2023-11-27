@@ -1,0 +1,151 @@
+/* attr() css function */
+
+/* The attr() CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element's originating element is returned.
+
+Syntax: 
+        ___Simple usage___
+        attr(data-count)
+        attr(tittle)
+
+        ___With type___
+        attr(src url)
+        attr(data-count number)
+        attr(data-width px)
+
+        ___With fallback___
+        attr(data-count number , 0)
+        attr(src url,"")
+        attr(data-width px. inherit)
+        attr(data-something,"default" ) */
+
+/* blockquote::after{
+    display: block;
+    content: ' ( Source: ' attr(city) " )";
+    color: hotpink;
+} */
+
+blockquote::after{
+    display: block;
+    content: ' "<<" ' attr(x) " '>>' ";
+    color: hotpink;
+}
+
+
+/* Example */
+/* content property 
+In this example, we prepend the value of the data-foo data-* global attribute to the contents of the <p> element. */
+[data-foo]::before{
+    content: attr(data-foo) " ";
+}
+
+
+/* color value 
+In this example, we set the CSS value of background-color to the value of the data-background data-* global attribute assigned to the <div> element. */
+.background{
+    background-color: red;
+}
+
+.background[data-background]{
+    background-color: attr(data-background color, red);
+}
+
+
+/* calc() css function */
+/* The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used with <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> values.
+
+Syntax: 
+        width: calc(100% - 80px);
+
+The expression can be any simple expression combining the following operators, using standard operator precedence rules:
+-> Addition (+)
+-> Subtraction (-)
+-> Multiplication (*)
+-> Division (/) */
+
+h1{
+    font-size: calc(1.8rem + 15px);
+}
+
+.banner{
+    font-size: calc(2rem + 12px);
+    background-color: yellow;
+    padding: 10px;
+    box-shadow: 5px 5px 3px red;
+    text-align: center;
+    width: calc(100% - 400px);
+}
+
+
+/* path() css function */
+/* The path() CSS function accepts an SVG path string, and is used in CSS Shapes and CSS Motion Path to enable a shape to be drawn.
+
+Syntax: 
+        path(<string>) 
+        path('M  20  240 \    L  20  80 L 160  80 \    L 160  20 L 280 100 \    L 160 180 L 160 120 \    L  60 120 L  60 240 Z') */
+
+
+/* url() css function */
+/* The url() CSS function is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The url() function can be passed as a parameter of another CSS functions, like the attr() function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The url() functional notation is the value for the <url> data type.
+
+
+Syntax:
+            ___Simple usage___
+            url(https://example.com/images/myImg.jpg);
+            url(data:image/png;base64,iRxVB0…);
+            url(myFont.woff);
+            url(#IDofSVGpath);
+
+            ___associated properties___
+            background-image: url("star.gif");
+            list-style-image: url('../images/bullet.jpg');
+            content: url("pdficon.jpg");
+            cursor: url(mycursor.cur);
+            border-image-source: url(/media/diamonds.png);
+            src: url('fantasticfont.woff');
+            offset-path: url(#path);
+            mask-image: url("masks.svg#mask1");
+
+            ____Properties with fallbacks___
+            cursor: url(pointer.cur), pointer;
+
+            ___Associated short-hand properties___
+            background: url('star.gif') bottom right repeat-x blue;
+            border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
+
+            ___As a parameter in another CSS function___
+            background-image: cross-fade(20% url(first.png), url(second.png));
+            mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), transparent));
+
+            ___as part of a non-shorthand multiple value___
+            content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
+
+            ___at-rules___
+            @document url("https://www.example.com/") { 
+                Experimental }
+
+            @import url("https://www.example.com/style.css");
+            @namespace url(http://www.w3.org/1999/xhtml); */
+
+
+/* var() css function */
+/* The var() CSS function can be used to insert the value of a custom property (sometimes called a "CSS variable") instead of any part of a value of another property.
+
+Suntax:
+            var(--custom-prop); */
+
+:root{
+    --main-color: red;
+    --font-color: blue;
+    --main-border-color: 2px solid black;
+    --font-size: 20px;
+    --padding: 20px;
+}
+
+
+.para{
+    background-color: var(--main-color);
+    padding: var(--padding);
+    font-size: var(--font-size, 12px);
+    border: var(--main-border-color);
+    color: var(--font-color, green);
+}
