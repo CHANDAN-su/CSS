@@ -219,5 +219,138 @@ Syntax:
 }
 
 .image img{
-  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  /* clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */
+}
+
+/* cursor */
+/* The cursor CSS property sets the mouse cursor, if any, to show when the mouse pointer is over an element.
+
+The cursor setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on.
+
+Syntax: 
+        cursor: auto;
+        cursor: pointer | zoom-out | url();
+        
+        ___URL with mandatory  keyword___
+        cursor: url(hand.cur) , pointer;
+
+        ___URL and coordinates, with mandatory keyword___
+        cursor: url(cursur_1.png) 4 12 , auto;
+        cursor: url(cursor_2.png) 2 2 , pointer;
+
+  The cursor property is specified as zero or more <url> values, separated by commas, followed by a single mandatory keyword value. Each <url> should point to an image file. */
+
+
+/* General:
+        auto:The UA will determine the cursor to display based on the current context. E.g., equivalent to text when hovering text.
+        default: The platform-dependent default cursor. Typically an arrow.
+        none: 	No cursor is rendered.
+
+Links & status:
+        context-menu: A context menu is available.
+        help: Help information is available.
+        pointer: The cursor is a pointer that indicates a link. Typically an image of a pointing hand.
+        progress: The program is busy in the background, but the user can still interact with the interface (in contrast to wait).
+        wait: The program is busy, and the user can't interact with the interface (in contrast to progress). Sometimes an image of an hourglass or a watch.
+
+Selection:
+        cell: The table cell or set of cells can be selected.
+        crosshair: 	Cross cursor, often used to indicate selection in a bitmap.
+        text: The text can be selected. Typically the shape of an I-beam.
+        vertical-text: The vertical text can be selected. Typically the shape of a sideways I-beam.
+
+Drag & Drop:
+        alias: An alias or shortcut is to be created.
+        copy: Something is to be copied.
+        move: Something is to be moved.
+        no-drop: An item may not be dropped at the current location.
+        not-allowed: The requested action will not be carried out.
+        grab: Something can be grabbed (dragged to be moved).
+        grabbing: Something is being grabbed (dragged to be moved).
+
+Resizing & Scrolling: 
+        all-scroll: Something is being grabbed (dragged to be moved).
+        col-resize: The item/column can be resized horizontally. Often rendered as arrows pointing left and right with a vertical bar separating them.
+        row-resize: The item/row can be resized vertically. Often rendered as arrows pointing up and down with a horizontal bar separating them.
+        n-resize: Some edge is to be moved.
+        e-resize: Some edge is to be moved.
+        s-resize: Some edge is to be moved.
+        w-resize: Some edge is to be moved.
+        ne-resize: Some edge is to be moved.
+        nw-resize: Some edge is to be moved.
+        se-resize: Some edge is to be moved.
+        sw-resize: Some edge is to be moved.
+        ew-resize:Bidirectional resize cursor.
+        ns-resize: Bidirectional resize cursor.
+        nesw-resize: Bidirectional resize cursor.
+        nwse-resize: Bidirectional resize cursor.
+
+Zooming:
+        zoon-in: Something can be zoomed (magnified) in or out.
+        zoom-out: Something can be zoomed (magnified) in or out. */
+
+.cursor{
+  border: 1px solid;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  font-size: 25px;
+  border-radius: 8px;
+  cursor: ne-resize;
+  margin: 0 auto;
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* empty-cell */
+/* The empty-cells CSS property sets whether borders and backgrounds appear around <table> cells that have no visible content.
+This property has an effect only when the border-collapse property is separate.
+
+Syntax: 
+      empty-cells: show | hide; */
+
+.top{
+  border-collapse: separate;
+  empty-cells: hide;
+}
+
+
+/* mix-blend-mode */
+/* The mix-blend-mode CSS property sets how an element's content should blend with the content of the element's parent and the element's background.
+
+Syntax:
+      mix-blend-mode: normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity; */
+
+.image img{
+  border-radius: 50%;
+  mix-blend-mode: darken;
+}
+
+
+/* opacity */
+/* The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
+
+Syntax: 
+        opacity: 0 | 0.33 | 1 | 0.9 | 90%; */
+
+.opacity{
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.light {
+  opacity: 0.2; /* Barely see the text over the background */
+}
+
+.medium {
+  opacity: 0.5; /* See the text more clearly over the background */
+}
+
+.heavy {
+  opacity: 0.9; /* See the text very clearly over the background */
 }
