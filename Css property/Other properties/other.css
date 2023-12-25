@@ -354,3 +354,60 @@ Syntax:
 .heavy {
   opacity: 0.9; /* See the text very clearly over the background */
 }
+
+
+/* quotes */
+/* The CSS quotes property sets how the browser should render quotation marks that are automatically added to the HTML <q> element or added using the open-quotes or close-quotes (or omitted using the no-open-quote and no-close-quote) values of the of the CSS content property.
+
+Browsers insert quotation marks at the opening and closing of <q> elements and for the open-quote and close-quote values of the content property. 
+
+Syntax:
+        quotes: auto | none | "<<" ">>" | "<" ">" ; */
+
+ul li{
+  quotes: auto;
+}
+
+.specialQuotes{
+  quotes: "--> " " <--- " "..." "...";
+}
+
+
+
+.quote{
+  quotes: '"' '"' "'" "'";
+}
+
+.quote::before{
+  content: open-quotes;
+}
+
+.quote::after{
+  content: close-quotes;
+}
+
+
+/* resize */
+/* The resize CSS property sets whether an element is resizable, and if so, in which directions.
+
+resize does not apply to the following:
+Inline elements
+Block elements for which the overflow property is set to visible
+
+Syntax:
+        resize: none | both | horizontal | vertical | block | inline; */
+
+
+textarea{
+  resize: horizontal;
+  outline: none;
+  border: none;
+}
+        
+        
+/* table-layout */
+/* The table-layout CSS property sets the algorithm used to lay out <table> cells, rows, and columns.
+
+Syntax: 
+        table-layout: auto | fixed; */
+
