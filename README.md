@@ -75,3 +75,173 @@
 | General sibling combinator | ~ |
 | Adjacent sibling combinator | + |
 
+## Box model
+###### The css box model as a whole applies to block and define how the different part of a box
+
+1. Content box
+2. Padding box
+3. border box
+4. margin box
+
+### Margin
+
+#### Magin properties:
+
+| Properties | Value |
+| ------------ | -------- |
+| margin-top | px, em, rem ..etc |
+| margin-left | px, em, rem ..etc |
+| margin-bottom | px, em, rem ..etc | 
+| margin-right | px, em, rem ..etc |
+
+#### Margin shorthand properties:
+
+| Properties | equal |
+| ----- | ----- |
+| margin: 10px; | all side |
+| margin: 10px 10px; | margin-top and margin-bottom, margin-left and margin-right |
+| margin: 10px 10px 10px | margin-top, margin-left and margin-right, margin-bottom |
+| margin: 10px 10px 10px 10px | margin-top, margin-right, margin-bottom , margin-left |
+
+#### Margin physical properties:
+
+| Properties | Value |
+| ------ | ------ |
+| margin-block-start | px, em, rem ..etc |
+| margin-block-end | px, em, rem ..etc |
+| margin-inline-start | px, em, rem ..etc |
+| margin-inline-end | px, em, rem ..etc |
+
+#### Margin physical sharthand properties:
+
+| Properties | equal |
+| ------ | ----- |
+| margin-block-start | margin-top |
+| margin-block-end | margin-bottom |
+| margin-inline-start | margin-left |
+| margin-inline-end | margin-right |
+| margin-block: 10px; | margin-block-start and margin-block-end |
+| margin-block: 10px 10px; | margin-block-start, margin-block-end |
+| margin-inline: 10px; | margin-inline-start and margin-inline-end |
+| margin-inline: 10px 10px | margin-inline-start, margin-inline-end | 
+ 
+
+### Padding
+
+#### Padding properties:
+
+| Properties | Value |
+| ------------ | -------- |
+| padding-top | px, em, rem ..etc |
+| padding-left | px, em, rem ..etc |
+| padding-bottom | px, em, rem ..etc | 
+| padding-right | px, em, rem ..etc |
+
+#### padding shorthand properties:
+
+| Properties | equal |
+| ----- | ----- |
+| padding: 10px; | all side |
+| padding: 10px 10px; | padding-top and padding-bottom, padding-left and padding-right |
+| padding: 10px 10px 10px; | padding-top, padding-left and padding-right | padding-bottom |
+| padding: 10px 10px 10px 10px | padding top, padding right, padding bottom , padding left |
+
+#### Padding physical properties:
+
+| Properties | Value |
+| ------ | ------ |
+| padding-block-start | px, em, rem ..etc |
+| padding-block-end | px, em, rem ..etc |
+| padding-inline-start | px, em, rem ..etc |
+| padding-inline-end | px, em, rem ..etc |
+
+#### Padding physical sharthand properties:
+
+| Properties | equal |
+| ------ | ----- |
+| padding-block-start | padding-top |
+| padding-block-end | padding-bottom |
+| padding-inline-start | padding-left |
+| padding-inline-end | padding-right |
+| padding-block: 10px; | padding-block-start and padding-block-end |
+| padding-block: 10px 10px; | padding-block-start, padding-block-end |
+| padding-inline: 10px; | padding-inline-start and padding-inline-end |
+| padding-inline: 10px 10px | padding-inline-start, padding-inline-end | 
+
+
+### Border
+
+#### Border propertie
+
+Properties | Value
+-------- | ---------- 
+border-top-color | red, rgb() ..etc
+border-top-style | solid, dotted, double, wavys, dashed ..etc
+border-top-width | px, em, rem ..etc
+border-right-color | red, rgb() ..etc
+border-right-style | solid, dotted, double, wavys, dashed ..etc
+border-right-width | px, em, rem ..etc
+border-bottom-color | red, rgb() ..etc
+border-bottom-style | solid, dotted, double, wavys, dashed ..etc
+border-bottom-width | px, em, rem ..etc
+border-left-color | red, rgb() ..etc
+border-left-style | solid, dotted, double, wavys, dashed ..etc
+border-left-width | px, em, rem ..etc
+border-collapse | collapse, separate
+border-specing | px, px px
+border | border-width border-style border-color
+border-top | border-top-width border-top-style border-top-color
+border-right | border-right-width border-right-style border-right-color
+border-bottom | border-bottom-width border-bottom-style border-bottom-color
+border-left | border-left-width border-left-style border-left-color
+
+#### Border shorthand properties
+
+Properties | Equal
+------- | -------
+border-color: white; | border-top-color and border-right-color and border-bottom and border-top-left
+border-color: white black; | border-top-color and border-bottom, border-left-color and border-right-color
+border-color: white red black; | border-top-color, border-left-color and border-right-color, border-bottom-color
+border-color: white red black orange; | border-top-color, border-right-color, border-bottom-color, border-left-color
+border-style: solid; | border-top-style and border-right-style and border-bottom-style, border-left-style
+border-style: solid dashed; | border-top-style and border-bottom-style, border-left-style and border-right-style
+border-style: solid wavys double; | border-top-style, border-left-style and border-right-style. border-bottom-style
+border-style: solid, dashed, wavys, double; | border-top-style, border-right-style, border-bottom-style, border-left-style
+border-width: 2px; | border-top-width and border-right-width and border-bottom-width, border-left-width
+border-width: 2px 2px; | border-top-width and border-bottom-width, border-left-width and border-right-width
+border-width: 2px 2px 2px; | border-top-width, border-left-width and border-right-width. border-bottom-width
+border-width: 2px 2px 2px 2px; | border-top-width, border-right-width, border-bottom-width, border-left-width
+
+### Border radius
+
+#### Border-radius properties
+
+Properties | value
+------ | -------
+border-top-left-radius | px, em, rem ..etc
+border-top-right-radius | px, em, rem ...etc
+border-bottom-left-radius | px, em, rem ..etc
+border-bottom-right-radius | px, em, rem ...etc
+border-top-left-radius: 10px 20px; | horizontal_line_value vertical_line_value
+border-top-right-radius: 10px 20px | horizontal_line_value vertical_line_value
+border-bottom-right-radius: 10px 20px | horizontal_line_value vertical_line_value
+border-bottom-left-radius: 10px 20px | horizontal_line_value vertical_line_value
+
+
+#### Border-radius shorthand properties
+
+Properties | Equal
+-------- | -------
+border-radius: 20px; | border-top-left-radius and border-top-right-radius and border-bottom-left-radius and border-bottom-right-radius
+border-radius:10px 10px; | border-top-left-radius and border-bottom-right, border-top-right-radius and border-bottom-left-radius
+border-radius: 10px 10px 10px; | border-top-left-radius, border-top-right-radius and border-bottom-left-radius, border-bottom-right-tadius
+border-radius:10px 10px 10px 10px; | border-top-left-radius, border-top-right-radius | border-bottom-right-radius, border-bottom-left-radius
+border-radius: 20px/30px; | border-top-left-radius:20px 30px;, border-top-right-radius: 20px 30px;, border-bottom-right-radius:20px 30px:, border-bottom-left-radius: 20px 30px;
+border-radius: 20px 50px/30px; | border-top-left-radius: 20px 30px;, border-top-right-radius: 50px 30px;, border-bottom-right-radius: 20px 30px;, borrder-bottom-left-radius: 50px 30px;
+border-radius: 20px 30px 40px/30px; | border-top-left-radius: 20px 30px;, border-top-right:30px 30px;, border-bottom-right-radius: 40px 30px;, border-bottom-left-radius: 30px 30px;
+border-radius: 20px 30px 40px 50px/30px; | border-top-left-radius: 20px 30px;, border-top-right:30px 30px;, border-bottom-right-radius: 40px 30px;, border-bottom-left-radius: 50px 30px;
+bordder-radius: 20px/30px 40px; | border-top-left-radius: 20px 30px;, border-top-right:20px 40px;, border-bottom-right-radius: 20px 30px;, border-bottom-left-radius: 20px 40px;
+border-radius: 20px/30px 40px 50px; | border-top-left-radius: 20px 30px;, border-top-right:20px 40px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 40px;
+border-radius: 20px/30px 40px 50px 60px; | border-top-left-radius: 20px 30px;, border-top-right:20px 40px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 60px;
+border-radius: 20px 30px/40px 50px; | border-top-left-radius: 20px 40px;, border-top-right:30px 50px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 50px;
+border-radius: 20px 30px 8px/10px 15px; | border-top-left-radius: 20px 10px;, border-top-right:30px 15px;, border-bottom-right-radius: 8px 10px;, border-bottom-left-radius: 30px 10px;
