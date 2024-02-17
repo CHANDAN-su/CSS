@@ -75,6 +75,46 @@
 | General sibling combinator | ~ |
 | Adjacent sibling combinator | + |
 
+## Css value and unit
+
+### Absolute Value
+
+#### Absolute Value properties
+
+Unit | Name | Equivalent to
+------ | ----- | ---
+cm | Centimeters | 1cm = 37.8px = 25.2\6in
+mm | Milimeters | 1mm = 1\10th of 1cm
+in | Inches | 1in = 2.54cm = 96px
+pc | Picas | 1pc = 1\6th of 1in
+pt | Points | 1pt = 1\72nd of 1in
+px | Pixecs | 1px = 1\96th of 1in
+
+### Relative Value
+
+#### Relative Value properties
+
+Unit | Descripition
+---- | ---
+em | em is relative to the size of its direct parent.
+rem | rem is only relative to root element (html tag) sixe
+vh | 1% of view port height
+vw | 1% of view port width
+% | relative to parent
+
+## Color
+
+#### Color properties 
+color value between to 0-255
+
+Properties | Value
+---| ----
+rgb() | rgb(red, green, blue), reg(255, 130, 80)
+rgba() | rgba(red, green, blue, alpha), rgba(255,99,71,0.5)
+
+
+
+
 ## Box model
 ###### The css box model as a whole applies to block and define how the different part of a box
 
@@ -245,3 +285,86 @@ border-radius: 20px/30px 40px 50px; | border-top-left-radius: 20px 30px;, border
 border-radius: 20px/30px 40px 50px 60px; | border-top-left-radius: 20px 30px;, border-top-right:20px 40px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 60px;
 border-radius: 20px 30px/40px 50px; | border-top-left-radius: 20px 40px;, border-top-right:30px 50px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 50px;
 border-radius: 20px 30px 8px/10px 15px; | border-top-left-radius: 20px 10px;, border-top-right:30px 15px;, border-bottom-right-radius: 8px 10px;, border-bottom-left-radius: 30px 10px;
+
+#### Border other properties
+Properties | Value
+---- | -----
+border-image-source | url(""), grandient all value
+brder-image-slice | px, rem, em
+border-image-width | px,rem, em
+border-image-outset | px,rem, em
+border-image-repeat | stretch, repeat, round space
+
+#### Border other shorthand properties
+
+Properties | Equal
+--- | ---
+border-image: url() 27; | border-image-source border-image-slice
+border-image: url() space; | border-image-source border-image-repeat
+border-image: url() 27 135px; | bprder-image-source border-image-slice border-image-width
+border-image: url() 27 135px 50px round; | border-image-source border-image-slice border-image-width border-image-outset border-image-repeat
+border-image-slice: 10px; | top right bottom left
+border-image-slice: 10px 10px; |top and bottom, left and right
+border-image-slice: 10px 10px 10px; | top, left and right, bottom
+border-image-slice: 10px 10px 10px 10px; | top right bottom left
+border-image-width: 10px; | top right bottom left
+border-image-width: 10px 10px; |top and bottom, left and right
+border-image-width: 10px 10px 10px; | top, left and right, bottom
+border-image-width: 10px 10px 10px 10px; | top right bottom left
+border-image-outset: 10px; | top right bottom left
+border-image-outset: 10px 10px; |top and bottom, left and right
+border-image-outst: 10px 10px 10px; | top, left and right, bottom
+border-image-outset: 10px 10px 10px 10px; | top right bottom left
+border-image-repeat: round space; | top and bottom, left and right
+
+## Background
+
+#### Background properties
+
+Properties | Value
+----- | -----
+background-attachment | scroll, fixed
+background-clip | border-box, padding-box, content-box, text
+background-color | red, rgb(), rega(), hsl()
+bockground-image | url(), grandient
+background-position | px, rem em, %
+background-repeat | repeat, no-repeat, space, repeat-x, repeat-y, space
+background-size | px, rem em, %, cover, contain
+
+#### Background shorthand properties
+
+Properties | Equal
+----- | ------
+background: green; | background-color
+background: url() repeat-x; | background-image background-repeat
+background: border-box green; | background-clip background-color
+background-position: 5px 10px 15px 20px; | top right bottom left
+background-position: 25% 15%, 0 0, 1em 2em, 10ch 8rem; | top position, right position, bottom position, left position 
+..etc
+
+## Writing mode
+
+#### Writing-mode properties
+
+Properties | Value
+--- | ---
+writing-mode: tb; | top to bottom
+writing-mode: rl; | right to left
+writing-mode: lr; | left to right
+
+## Overflow
+
+#### Overflow properties
+
+Properties | Value
+---- | ----
+overflow-x | visible, hidden, scroll, auto, clip
+overflow-y | visible, hidden, scroll, auto, clip
+
+#### Overflow shorthand propertes
+
+Properties | Equal
+--- | ---
+overflow: auto; | overflow-x overflow-y
+overflow: hidden auto; | overflow-x, overflow-y
+
