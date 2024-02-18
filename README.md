@@ -368,3 +368,70 @@ Properties | Equal
 overflow: auto; | overflow-x overflow-y
 overflow: hidden auto; | overflow-x, overflow-y
 
+## Object-fit
+
+##### Object-fit properties
+
+Properties | Value
+----- | -----
+object-fit | contain, cover, none, fill, scale-down
+
+## Typoraphy
+
+#### Typoraphy properties
+
+Properties | Value
+----- | ------
+font-family | Time New Roman ...etc
+font-size | px, em rem, %
+font-style | normal, italic, oblique, oblique 40deg
+font-weight | 100(Thin), 200(Extra light), 300(Light), 400(Normal), 500(Medium), 600(Semi bold), 700(Bold), 800(Extra bold), 900(Black), 950(Extra black)
+font-varient | normal, small-caps
+letter-spacing | normal, px, em, rem, %
+line-height | normal, em, rem, %
+white-space | normal, nowrap, pre, pre-wrap, pre-line, break-space
+word-break | normal, break-all, kepp-all, break-word
+word-spacing | normal, px, em, rem, %
+
+## Text
+
+#### Text properties
+
+Properties | Value
+----- | -----
+text-align | left, right, center, justify
+text-decoration-color | red, rgb(), rgba()
+text-decoration-line | underline, overline, line-through, blink, underline overline
+text-decortion-style | dotted, dashed, double, solid, ways
+text-indent | 0, px, em, rem, %
+text-overflow | ellipsis(....), clip
+text-transform | capitalize, upperCase, lowerCase, none
+
+#### Text shorthand properties
+
+Properties | Equal
+---- | ----
+text-decoration: underline/overline; | text-decoration-line
+text-decoration: overline dotted red: | text-decoration-line text-decoration-style text-decoration-color
+text-shadow: 5px 5px; | x-offset y-offset
+text-shadow: 5px 10px red; | x-offset y-offset color
+text-shadow: red 5px 15px; | color x-offset y-offset
+text-shadow: 2x 2px 5px red; | x-offset y-offset blur-radius color
+
+## Position
+
+#### Position properties
+
+Properties | Value
+--- | ---
+position | static, relative, absoulte, fixed, sticty
+
+## Pseudo-classe
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:root | Represent an element that is the root of the document. In HTML this is usually the ```<html>``` element | ``` :root{ color: red; } ```
+:empty | Represent any element that has no children. | ``` :empty{ background-color: blue; ``` 
+:nth-child | Allows yot ot select one or more element based on their source order, according to a formula | ``` :nth-child(2n+1); ```
+:first-child | Represents the first element among a group of sibling elements | ``` :first-child{ css propertirs } ```
+:last-child | Represent the last element among a group of sibling element | ``` :last-child{ css propertirs } ```
