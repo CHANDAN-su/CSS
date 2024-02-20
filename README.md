@@ -368,3 +368,154 @@ Properties | Equal
 overflow: auto; | overflow-x overflow-y
 overflow: hidden auto; | overflow-x, overflow-y
 
+## Object-fit
+
+##### Object-fit properties
+
+Properties | Value
+----- | -----
+object-fit | contain, cover, none, fill, scale-down
+
+## Typoraphy
+
+#### Typoraphy properties
+
+Properties | Value
+----- | ------
+font-family | Time New Roman ...etc
+font-size | px, em rem, %
+font-style | normal, italic, oblique, oblique 40deg
+font-weight | 100(Thin), 200(Extra light), 300(Light), 400(Normal), 500(Medium), 600(Semi bold), 700(Bold), 800(Extra bold), 900(Black), 950(Extra black)
+font-varient | normal, small-caps
+letter-spacing | normal, px, em, rem, %
+line-height | normal, em, rem, %
+white-space | normal, nowrap, pre, pre-wrap, pre-line, break-space
+word-break | normal, break-all, kepp-all, break-word
+word-spacing | normal, px, em, rem, %
+
+## Text
+
+#### Text properties
+
+Properties | Value
+----- | -----
+text-align | left, right, center, justify
+text-decoration-color | red, rgb(), rgba()
+text-decoration-line | underline, overline, line-through, blink, underline overline
+text-decortion-style | dotted, dashed, double, solid, ways
+text-indent | 0, px, em, rem, %
+text-overflow | ellipsis(....), clip
+text-transform | capitalize, upperCase, lowerCase, none
+
+#### Text shorthand properties
+
+Properties | Equal
+---- | ----
+text-decoration: underline/overline; | text-decoration-line
+text-decoration: overline dotted red: | text-decoration-line text-decoration-style text-decoration-color
+text-shadow: 5px 5px; | x-offset y-offset
+text-shadow: 5px 10px red; | x-offset y-offset color
+text-shadow: red 5px 15px; | color x-offset y-offset
+text-shadow: 2x 2px 5px red; | x-offset y-offset blur-radius color
+
+## Position
+
+#### Position properties
+
+Properties | Value
+--- | ---
+position | static, relative, absoulte, fixed, sticty
+
+## Pseudo-classes
+
+#### Function pseudo-classes
+
+Pesudo-element | Explain | Example
+--- | ---- | ----
+:is() | A selector list as its argument and selects any element that can be selected by one of the selector in that list. | ``` selector:is(selector1, selector2){ css properties } ```
+:where() | The :wher() psudeo-classes selector in css functionally identical to the :is() pseudo selector in that it takes a comma-separatedlist of selectors to match against, expect that where :is() takes the most specific among then as specificity of thst whole part, the specificity of :where() is always zero (0) | ``` :where(selector1, selector2){ css properties ) ```
+:not() | Represent elements that do not match a list of selectors. It is known as the negative pseudo classes. | ``` :not(x){ css properties } ```
+:has() | Represents an element if any of the relative selectors. It's often refcrred to as "the parents selector" because of its ability to elect a parent element based on the child element it contains and apply styles to the parent. | ``` :has(+selectors){ css properties } ```
+
+#### Tree-structural pseudo-element properties
+
+Pesudo-element | Explain | Example
+--- | ---- | ----
+:root | Represent an element that is the root of the document. In HTML this is usually the ```<html>``` element | ``` :root{ css propertirs } ```
+:empty | Represent any element that has no children. | ``` :empty{ css propertirs } ``` 
+:nth-child | Allows yot ot select one or more element based on their source order, according to a formula | ``` :nth-child(2n+1); ```
+:first-child | Represents the first element among a group of sibling elements | ``` :first-child{ css propertirs } ```
+:last-child | Represent the last element among a group of sibling element | ``` :last-child{ css propertirs } ```
+:nth-last-child | Propety match element based on their positing among a group of siblings, counting form the end | ``` :nth-last-child(2n+1) ```
+:only-child | Represent an element without any sibling. This is same as ``` :first-child ``` ``` :last-child ``` ``` :nth-child(1) ``` ``` :nth-last-child(1) ```, but with a lower specificity | ``` :only-child{ css propertirs } ```
+:nth-of-type | Matches element based on their position among siblings of the same type (tag name) | ``` :nth-of-type(2) ```
+:nth-last-of-type | Matches elements based on their position among sibling of the same (tag name), counting from the end | ``` :nth-last-of-type(n+1) ```
+:first-of-type | Represents the first element og its type among a group of sibling elements | ``` :first-of-type(n+2) ```
+:last-of-type | Represent the last element of its type among a group of sibling elements | ``` :last-of-type(2n+1) ```
+:only-of-type | Represents an element that has no sibling of the same type | ``` :only-of-type(n) ```
+
+#### User active pseudo-class properties
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:hover | It is generally when the user hovers over an element with the cursor (mouse pointer) | ``` :hover {  css properties } ```
+:active | An element ( such as a button) that is being activated by the user | ``` :active{ css properties  } ```
+:focus | It is generally triggered when the user clicks or tabs on an element or selects it with the keywords Tab keys | ``` :focus{ css properties  } ```
+
+#### Location pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:any-link | An element that acts as the source anchor of a hyperlink, independent of wether it has been visited. | ``` :any-link{ css properties } ```
+:link | An element that has not yet been visited. It matches every unvisited ``` <a> ``` or ``` <area> ``` element that has an href attribute | ``` :link{ css properties } ```
+:visited | The link has been visited by the user. The style that can be modiffied using this selector are very limited | ``` :visited{  css properties  } ```
+:local-link | A link to the same document. The source anchor of a hyperlink whase targets absoulte URL matches the element own document URL | ``` :local-link{ css properties }  ```
+:target | A uniqe element (the target element) with an id matching the URL fragment | ``` :target{ css properties } ```
+
+#### Resource pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:playing | Appay to media that is capable of being in a state where it would be described as playing, such as a video | ``` :playing{ css properties } ```
+:paused | A resource state pseduo-classes taht will matches an audio, video or similair resource that is capble of being "played" or "paused", when that element is "paused". | ``` :paused{ css properties }
+
+#### Time-dimensional pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:current | Resperents an element or the ancestor of an element that is currently being displayed and same :past and :future |``` :current{ css properties } ```
+
+#### Element displayed state pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:fullscreen | Every element which is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects then all | ``` :fullscreen{ css properties } ```
+
+#### Input pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:autofill | Whwn an input element has its value autofilled by the browers. The clases stop matching if the user edit the filed. | ``` :outfill{ css properties } ```
+:enabled | An element is enabled if it can be activated (selected, clicked on, typed into, ..etc) oraccept focus. | ``` :enabled{ css properties } ```
+:disabled | An element is disabled if it can't be activated (selected, click on, type into ..etc) or accept focus. | ``` :disabled{ css properties } ```
+:read-only | An element (such as input or testarea) that is not editable by the user. | ``` :readonly{ css properties } ```
+:read-write | An element (such as input or textarea) that is editable by the user. | ``` :read-write{ css properties } ```
+:placeholder-shown | Represent any input or textarea element that is currently displaying placeholder text. | ``` :placeholder-show{ css properties } ``` 
+:default | The default is a group of related element. | ``` :default{ css properties } ```
+:checked | Represents any radio, checkbox or option (caption in a ``` <select> ```) element that is checked ot tagged to an on state. | ``` :checked{ css properties } ```
+:indeterminate | Represents any element whose state is indeterminate,  such as checkbox is which have their HTML indeterminate attribute set to true, radio buttons which are memeber of a group in which all radio buttons are unchecked and indeterminate ``` <progress> ``` element ``` | ``` :indeterminate{ css properties } ```
+:valid | Represents any ``` <input> ``` or other ``` <from> ``` element whose contents varidate successfully. | ``` valid{ css properties } ```
+:blank | Empty user unput element (e.g. ``` <input> ``` or ``` <textarea> ```) | ``` :blank{ css properties } ```
+:invalid | Represent any ``` <from> ```, ``` <fieldset> ````, ``` <input> ``` or other ```<from> ``` element whose contents fail to validate. | ``` :invalid{ css properties } ```
+:in-range | Represents an ``` <input> ``` element whose current value is within the range limits specified by the min and max attribute. | ``` :in-range{ css properties } ```
+:out-of-range | Represent an ``` <input> ``` element whose current value is outside the range limits specified by tht min and max attribute. | ``` :out-of-range{ css propertis } ```
+:required | Represent any ``` <input> ```, ``` <select>```or ``` <textarea> ``` element that has the required attribute set an it. | ``` :required{ css properties } ```
+:optional | Represent any ``` <input> ```, ``` <select> ``` or ``` <textarea> ``` that does not have the required attribute set on it. | ``` :optional{ css properties } ```
+
+
+## Pseduo-element
+
+#### Pseudo-element properties
+
+Pesudo-element | Explain | Example
+--- | ---- | ----
