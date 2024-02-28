@@ -573,3 +573,34 @@ column-count | any integer
 column-width | px, em, rem, % ..etc
 column-gap | px, em, rem, % ..etc
 column-rule-color | red, rgb(), hsl() ..etc
+
+## Flexbox
+
+#### Flexbox properties
+
+Properties | Value
+----- | -----
+display | none, block, inline, inline-block, flex, inline-flex, grid, inline-grid, flex-root
+flex-direction | row, row-reverse, column, column-reverse
+flex-wrap | nowrap, wrap, wrap-reverse
+justify-cotent | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+align-content | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+aling-item | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+aling-self | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+order | integer value, netaive interger value
+flex-basis | px, rem, em, %, max-content, min-content, fit-content
+flex-grow | integer value, netaive interger value
+flex-shrinks | integer value, netaive interger value
+gap | px, rem, em, %
+column-gap | px, rem, em, %
+row-gap | px, rem, em, %
+
+#### Flexbox shorthand properties
+
+Properties | Equal
+----- | -----
+flex-flow: row; | flex-direction
+flex-flow: wrap; | flex-wrap
+flex-flow: row wrap: | flex-direction flex-wrap
+flex-flow: wrap column | flex-wrap flex-direction
+flex: 0 0 50px; | flex-grow flex-shrinks flex-basis
