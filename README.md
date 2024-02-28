@@ -75,6 +75,108 @@
 | General sibling combinator | ~ |
 | Adjacent sibling combinator | + |
 
+
+## Pseudo-classes
+
+#### Function pseudo-classes
+
+Pesudo-element | Explain | Example
+--- | ---- | ----
+:is() | A selector list as its argument and selects any element that can be selected by one of the selector in that list. | ``` selector:is(selector1, selector2){ css properties } ```
+:where() | The :wher() psudeo-classes selector in css functionally identical to the :is() pseudo selector in that it takes a comma-separatedlist of selectors to match against, expect that where :is() takes the most specific among then as specificity of thst whole part, the specificity of :where() is always zero (0) | ``` :where(selector1, selector2){ css properties ) ```
+:not() | Represent elements that do not match a list of selectors. It is known as the negative pseudo classes. | ``` :not(x){ css properties } ```
+:has() | Represents an element if any of the relative selectors. It's often refcrred to as "the parents selector" because of its ability to elect a parent element based on the child element it contains and apply styles to the parent. | ``` :has(+selectors){ css properties } ```
+
+#### Tree-structural pseudo-element properties
+
+Pesudo-element | Explain | Example
+--- | ---- | ----
+:root | Represent an element that is the root of the document. In HTML this is usually the ```<html>``` element | ``` :root{ css propertirs } ```
+:empty | Represent any element that has no children. | ``` :empty{ css propertirs } ``` 
+:nth-child | Allows yot ot select one or more element based on their source order, according to a formula | ``` :nth-child(2n+1); ```
+:first-child | Represents the first element among a group of sibling elements | ``` :first-child{ css propertirs } ```
+:last-child | Represent the last element among a group of sibling element | ``` :last-child{ css propertirs } ```
+:nth-last-child | Propety match element based on their positing among a group of siblings, counting form the end | ``` :nth-last-child(2n+1) ```
+:only-child | Represent an element without any sibling. This is same as ``` :first-child ``` ``` :last-child ``` ``` :nth-child(1) ``` ``` :nth-last-child(1) ```, but with a lower specificity | ``` :only-child{ css propertirs } ```
+:nth-of-type | Matches element based on their position among siblings of the same type (tag name) | ``` :nth-of-type(2) ```
+:nth-last-of-type | Matches elements based on their position among sibling of the same (tag name), counting from the end | ``` :nth-last-of-type(n+1) ```
+:first-of-type | Represents the first element og its type among a group of sibling elements | ``` :first-of-type(n+2) ```
+:last-of-type | Represent the last element of its type among a group of sibling elements | ``` :last-of-type(2n+1) ```
+:only-of-type | Represents an element that has no sibling of the same type | ``` :only-of-type(n) ```
+
+#### User active pseudo-class properties
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:hover | It is generally when the user hovers over an element with the cursor (mouse pointer) | ``` :hover {  css properties } ```
+:active | An element ( such as a button) that is being activated by the user | ``` :active{ css properties  } ```
+:focus | It is generally triggered when the user clicks or tabs on an element or selects it with the keywords Tab keys | ``` :focus{ css properties  } ```
+
+#### Location pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:any-link | An element that acts as the source anchor of a hyperlink, independent of wether it has been visited. | ``` :any-link{ css properties } ```
+:link | An element that has not yet been visited. It matches every unvisited ``` <a> ``` or ``` <area> ``` element that has an href attribute | ``` :link{ css properties } ```
+:visited | The link has been visited by the user. The style that can be modiffied using this selector are very limited | ``` :visited{  css properties  } ```
+:local-link | A link to the same document. The source anchor of a hyperlink whase targets absoulte URL matches the element own document URL | ``` :local-link{ css properties }  ```
+:target | A uniqe element (the target element) with an id matching the URL fragment | ``` :target{ css properties } ```
+
+#### Resource pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:playing | Appay to media that is capable of being in a state where it would be described as playing, such as a video | ``` :playing{ css properties } ```
+:paused | A resource state pseduo-classes taht will matches an audio, video or similair resource that is capble of being "played" or "paused", when that element is "paused". | ``` :paused{ css properties }
+
+#### Time-dimensional pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:current | Resperents an element or the ancestor of an element that is currently being displayed and same :past and :future |``` :current{ css properties } ```
+
+#### Element displayed state pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:fullscreen | Every element which is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects then all | ``` :fullscreen{ css properties } ```
+
+#### Input pseudo-classes
+
+Pesudo-classes | Explain | Example
+--- | ---- | ----
+:autofill | Whwn an input element has its value autofilled by the browers. The clases stop matching if the user edit the filed. | ``` :outfill{ css properties } ```
+:enabled | An element is enabled if it can be activated (selected, clicked on, typed into, ..etc) oraccept focus. | ``` :enabled{ css properties } ```
+:disabled | An element is disabled if it can't be activated (selected, click on, type into ..etc) or accept focus. | ``` :disabled{ css properties } ```
+:read-only | An element (such as input or testarea) that is not editable by the user. | ``` :readonly{ css properties } ```
+:read-write | An element (such as input or textarea) that is editable by the user. | ``` :read-write{ css properties } ```
+:placeholder-shown | Represent any input or textarea element that is currently displaying placeholder text. | ``` :placeholder-show{ css properties } ``` 
+:default | The default is a group of related element. | ``` :default{ css properties } ```
+:checked | Represents any radio, checkbox or option (caption in a ``` <select> ```) element that is checked ot tagged to an on state. | ``` :checked{ css properties } ```
+:indeterminate | Represents any element whose state is indeterminate,  such as checkbox is which have their HTML indeterminate attribute set to true, radio buttons which are memeber of a group in which all radio buttons are unchecked and indeterminate ``` <progress> ``` element ``` | ``` :indeterminate{ css properties } ```
+:valid | Represents any ``` <input> ``` or other ``` <from> ``` element whose contents varidate successfully. | ``` valid{ css properties } ```
+:blank | Empty user unput element (e.g. ``` <input> ``` or ``` <textarea> ```) | ``` :blank{ css properties } ```
+:invalid | Represent any ``` <from> ```, ``` <fieldset> ````, ``` <input> ``` or other ```<from> ``` element whose contents fail to validate. | ``` :invalid{ css properties } ```
+:in-range | Represents an ``` <input> ``` element whose current value is within the range limits specified by the min and max attribute. | ``` :in-range{ css properties } ```
+:out-of-range | Represent an ``` <input> ``` element whose current value is outside the range limits specified by tht min and max attribute. | ``` :out-of-range{ css propertis } ```
+:required | Represent any ``` <input> ```, ``` <select>```or ``` <textarea> ``` element that has the required attribute set an it. | ``` :required{ css properties } ```
+:optional | Represent any ``` <input> ```, ``` <select> ``` or ``` <textarea> ``` that does not have the required attribute set on it. | ``` :optional{ css properties } ```
+
+
+## Pseduo-element
+
+#### Pseudo-element properties
+
+Pesudo-element | Explain | Example
+--- | ---- | ----
+::after | In cc ::after create a pseudo-element that is the last child of the selector element. It is often used to add cosmltic content to an element with the content property. It is inline by default. | ``` ::after{ css properties }  ```
+::before | In css ::before create a pseudo-element that is the first child of the selector element. It is often used to add cosmetic content to an element with the content property. It is inline by default other same ``` ::after ``` pseudo-element | ```::before{ css properties } ```
+::first-letter | The :;first-letter applies style to the first letter by the first line of a block level element but only not precded by the other content (such as image or inline tables) | ``` :first-letter{ css properties }  ```
+::first-line | The ::first-line applies style to the first line of a block-level element | `` ::first-line{ css properties } ```
+::marker | The ::marker selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to display: list-item, such as the ```<li>``` and ``` <nummar>``` element | ``` ::marker{ css properties } ```
+::placeholder | The ::placeholder represent the placeholder text in an input ot textarea element | ``` ::placeholder{ css properties } ```
+::selection | The ::selection applies style to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text) | ``` ::selection{ css properties } ```
+
 ## Css value and unit
 
 ### Absolute Value
@@ -426,96 +528,48 @@ Properties | Value
 --- | ---
 position | static, relative, absoulte, fixed, sticty
 
-## Pseudo-classes
+## Styline lists
 
-#### Function pseudo-classes
+#### styline lists properties
 
-Pesudo-element | Explain | Example
---- | ---- | ----
-:is() | A selector list as its argument and selects any element that can be selected by one of the selector in that list. | ``` selector:is(selector1, selector2){ css properties } ```
-:where() | The :wher() psudeo-classes selector in css functionally identical to the :is() pseudo selector in that it takes a comma-separatedlist of selectors to match against, expect that where :is() takes the most specific among then as specificity of thst whole part, the specificity of :where() is always zero (0) | ``` :where(selector1, selector2){ css properties ) ```
-:not() | Represent elements that do not match a list of selectors. It is known as the negative pseudo classes. | ``` :not(x){ css properties } ```
-:has() | Represents an element if any of the relative selectors. It's often refcrred to as "the parents selector" because of its ability to elect a parent element based on the child element it contains and apply styles to the parent. | ``` :has(+selectors){ css properties } ```
+Properties | Value
+----- | -----
+list-style-type | symbols, disc, circle, square decimal, lower-roman, upper-roman, lower-alpha, upper-alpha ..etc
+list-style-position | inside, outside
+list-style-image | non, url(), liner-grandient()
 
-#### Tree-structural pseudo-element properties
+#### styline lists shorthant properties
 
-Pesudo-element | Explain | Example
---- | ---- | ----
-:root | Represent an element that is the root of the document. In HTML this is usually the ```<html>``` element | ``` :root{ css propertirs } ```
-:empty | Represent any element that has no children. | ``` :empty{ css propertirs } ``` 
-:nth-child | Allows yot ot select one or more element based on their source order, according to a formula | ``` :nth-child(2n+1); ```
-:first-child | Represents the first element among a group of sibling elements | ``` :first-child{ css propertirs } ```
-:last-child | Represent the last element among a group of sibling element | ``` :last-child{ css propertirs } ```
-:nth-last-child | Propety match element based on their positing among a group of siblings, counting form the end | ``` :nth-last-child(2n+1) ```
-:only-child | Represent an element without any sibling. This is same as ``` :first-child ``` ``` :last-child ``` ``` :nth-child(1) ``` ``` :nth-last-child(1) ```, but with a lower specificity | ``` :only-child{ css propertirs } ```
-:nth-of-type | Matches element based on their position among siblings of the same type (tag name) | ``` :nth-of-type(2) ```
-:nth-last-of-type | Matches elements based on their position among sibling of the same (tag name), counting from the end | ``` :nth-last-of-type(n+1) ```
-:first-of-type | Represents the first element og its type among a group of sibling elements | ``` :first-of-type(n+2) ```
-:last-of-type | Represent the last element of its type among a group of sibling elements | ``` :last-of-type(2n+1) ```
-:only-of-type | Represents an element that has no sibling of the same type | ``` :only-of-type(n) ```
+Properties | Equal
+----- | -----
+list-style: disc url() inside; |  list-style-type list-style-image list-style-position.
 
-#### User active pseudo-class properties
+## Using counter
 
-Pesudo-classes | Explain | Example
---- | ---- | ----
-:hover | It is generally when the user hovers over an element with the cursor (mouse pointer) | ``` :hover {  css properties } ```
-:active | An element ( such as a button) that is being activated by the user | ``` :active{ css properties  } ```
-:focus | It is generally triggered when the user clicks or tabs on an element or selects it with the keywords Tab keys | ``` :focus{ css properties  } ```
+#### counter properties
 
-#### Location pseudo-classes
+Properties | Value
+----- | -----
+counter-reset | chapter section 1 page, 0, 1.5
+counter-increment | chapter section 2 page, 0, 1.5
+counter() | conters(name, string), counter(name, string, style)
 
-Pesudo-classes | Explain | Example
---- | ---- | ----
-:any-link | An element that acts as the source anchor of a hyperlink, independent of wether it has been visited. | ``` :any-link{ css properties } ```
-:link | An element that has not yet been visited. It matches every unvisited ``` <a> ``` or ``` <area> ``` element that has an href attribute | ``` :link{ css properties } ```
-:visited | The link has been visited by the user. The style that can be modiffied using this selector are very limited | ``` :visited{  css properties  } ```
-:local-link | A link to the same document. The source anchor of a hyperlink whase targets absoulte URL matches the element own document URL | ``` :local-link{ css properties }  ```
-:target | A uniqe element (the target element) with an id matching the URL fragment | ``` :target{ css properties } ```
+## Floats 
 
-#### Resource pseudo-classes
+#### Floats properties
 
-Pesudo-classes | Explain | Example
---- | ---- | ----
-:playing | Appay to media that is capable of being in a state where it would be described as playing, such as a video | ``` :playing{ css properties } ```
-:paused | A resource state pseduo-classes taht will matches an audio, video or similair resource that is capble of being "played" or "paused", when that element is "paused". | ``` :paused{ css properties }
+Properties | Value
+----- | -----
+float | left, right, none, inline-start, inline-end
+clear | left, right, none, both, inline-start, inline-end
 
-#### Time-dimensional pseudo-classes
+## Multiple column layout
 
-Pesudo-classes | Explain | Example
---- | ---- | ----
-:current | Resperents an element or the ancestor of an element that is currently being displayed and same :past and :future |``` :current{ css properties } ```
+#### Column properties
 
-#### Element displayed state pseudo-classes
-
-Pesudo-classes | Explain | Example
---- | ---- | ----
-:fullscreen | Every element which is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects then all | ``` :fullscreen{ css properties } ```
-
-#### Input pseudo-classes
-
-Pesudo-classes | Explain | Example
---- | ---- | ----
-:autofill | Whwn an input element has its value autofilled by the browers. The clases stop matching if the user edit the filed. | ``` :outfill{ css properties } ```
-:enabled | An element is enabled if it can be activated (selected, clicked on, typed into, ..etc) oraccept focus. | ``` :enabled{ css properties } ```
-:disabled | An element is disabled if it can't be activated (selected, click on, type into ..etc) or accept focus. | ``` :disabled{ css properties } ```
-:read-only | An element (such as input or testarea) that is not editable by the user. | ``` :readonly{ css properties } ```
-:read-write | An element (such as input or textarea) that is editable by the user. | ``` :read-write{ css properties } ```
-:placeholder-shown | Represent any input or textarea element that is currently displaying placeholder text. | ``` :placeholder-show{ css properties } ``` 
-:default | The default is a group of related element. | ``` :default{ css properties } ```
-:checked | Represents any radio, checkbox or option (caption in a ``` <select> ```) element that is checked ot tagged to an on state. | ``` :checked{ css properties } ```
-:indeterminate | Represents any element whose state is indeterminate,  such as checkbox is which have their HTML indeterminate attribute set to true, radio buttons which are memeber of a group in which all radio buttons are unchecked and indeterminate ``` <progress> ``` element ``` | ``` :indeterminate{ css properties } ```
-:valid | Represents any ``` <input> ``` or other ``` <from> ``` element whose contents varidate successfully. | ``` valid{ css properties } ```
-:blank | Empty user unput element (e.g. ``` <input> ``` or ``` <textarea> ```) | ``` :blank{ css properties } ```
-:invalid | Represent any ``` <from> ```, ``` <fieldset> ````, ``` <input> ``` or other ```<from> ``` element whose contents fail to validate. | ``` :invalid{ css properties } ```
-:in-range | Represents an ``` <input> ``` element whose current value is within the range limits specified by the min and max attribute. | ``` :in-range{ css properties } ```
-:out-of-range | Represent an ``` <input> ``` element whose current value is outside the range limits specified by tht min and max attribute. | ``` :out-of-range{ css propertis } ```
-:required | Represent any ``` <input> ```, ``` <select>```or ``` <textarea> ``` element that has the required attribute set an it. | ``` :required{ css properties } ```
-:optional | Represent any ``` <input> ```, ``` <select> ``` or ``` <textarea> ``` that does not have the required attribute set on it. | ``` :optional{ css properties } ```
-
-
-## Pseduo-element
-
-#### Pseudo-element properties
-
-Pesudo-element | Explain | Example
---- | ---- | ----
+Properties | Value
+----- | -----
+column-count | any integer
+column-width | px, em, rem, % ..etc
+column-gap | px, em, rem, % ..etc
+column-rule-color | red, rgb(), hsl() ..etc
