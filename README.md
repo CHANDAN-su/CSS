@@ -604,3 +604,52 @@ flex-flow: wrap; | flex-wrap
 flex-flow: row wrap: | flex-direction flex-wrap
 flex-flow: wrap column | flex-wrap flex-direction
 flex: 0 0 50px; | flex-grow flex-shrinks flex-basis
+
+
+## Grid
+
+#### Grid properties
+
+Properties | Value
+----- | -------
+display | grid
+grid-template-columns | ``` auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry ```
+grid-template-row | ``` auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry ```
+grid-auto-column | ```auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px```
+grid-auto-row | ```auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px```
+grid-auto-flow | ```row, colummn, dense, row dense, column dense```
+grid-row-start | ```auto, positive interge value, span 2```
+grid-row-end | ```auto, positive interge value, span 2```
+grid-column-start | ```auto, positive interge value, span 2```
+grid-column-end | ```auto, positive interge value, span 2```
+grid-template-area | ```hd hd hd hd hd \n sd sd main main main \n fr fr fr fr fr```
+gap | px, rem, em, %
+column-gap | px, rem, em, %
+row-gap | px, rem, em, %
+justify-cotent | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+align-content | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+aling-item | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+aling-self | center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch
+order | integer value, netaive interger value
+
+#### Grid shorthand properties
+
+Properties | Equal
+----- | -------
+grid-row: auto; | ```grid-row-start and grid-row-end```
+grid-row: auto auto; | ```grid-row-start grid-row-end```
+grid-row: 5 7; | ```grid-row-start grid-row-end```
+grid-row: span 5; | ```grid-row-start grid-row-end```
+grid-row: span 3 7; | ```grid-row-start grid-row-end```
+grid-row: 2 span 2; | ```grid-row-start grid-row-end```
+grid-column: auto; | ```grid-row-start and grid-row-end```
+grid-column: auto auto; | ```grid-row-start grid-row-end```
+grid-column: 5 7; | ```grid-row-start grid-row-end```
+grid-column: span 5; | ```grid-row-start grid-row-end```
+grid-column: span 3 7; | ```grid-row-start grid-row-end```
+grid-column: 2 span 2; | ```grid-row-start grid-row-end```
+grid-column: 2/5; | ```grid-colum-start / grid-column-end```
+grid-row: 1/4; | ```grid-row-start / grid-row-end```
+grid-area: auto; | ```grid-row-start, grid-colum-start, grid-row-end and grid-coumn-end```
+grid-ared: auto / auto; | ```grid-row-start grid-colum-start and grid-row-end grid-coumn-end```
+grid-ared: auto / auto / auto / auto; | ```grid-row-start, grid-colum-start, grid-row-end, grid-coumn-end```
