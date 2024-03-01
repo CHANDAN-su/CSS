@@ -653,3 +653,101 @@ grid-row: 1/4; | ```grid-row-start / grid-row-end```
 grid-area: auto; | ```grid-row-start, grid-colum-start, grid-row-end and grid-coumn-end```
 grid-ared: auto / auto; | ```grid-row-start grid-colum-start and grid-row-end grid-coumn-end```
 grid-ared: auto / auto / auto / auto; | ```grid-row-start, grid-colum-start, grid-row-end, grid-coumn-end```
+
+## Animation
+
+#### Animation properties
+
+Properties | value
+--- | ----
+animation-name | ```none, test_05, _sepwcific, test1, animation4```
+animation-durection | ```auto, s, ms, mm```
+animation-tiing-function | ```ease, ease-in, ease-out, ease-in-out, lineare, step-start, step-end, cubic-bezier(), steps(), jump-start, jump-end, jump-none, jump-both, start, end```
+animatiom-delay | ```auto, s, ms, mm```
+animation-iteration-count | ```infinite, , 2.5```
+animation-direction | ```normal, reverse, atlernate, alternate-reverse, normal-reverse```
+animation-fill-mode | ```none, forwards, backwards, both```
+animation-pay-state | ```runong, pasued, pasued runing runing```
+
+#### Animation shorthand properties
+
+Properties | Equal
+--- | ----
+```animation:3s ease-in 2 reverse both pased slidein;``` | animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state name
+```anmation: 3s ease-out 1s animation_name;``` | animation-duration animation-timing-function animation-delay animation-animation-name
+```animation: animation_name 3s ease-in-out 3s;``` | animation-animation-name animation-duration animation-timing-function delay
+
+## Transition
+
+#### transition properties
+
+Properties | Value
+--- | ----
+transiton-property | ``` color, madgin, padding, all, none ...etc```
+transition-duration | ```s ,ma, mm```
+transition-timing-function | ```ease, ease-in, ease-out, ease-in-out, lineare, step-start, step-end, cubic-bezier(), steps(), jump-start, jump-end, jump-none, jump-both, start, end```
+transition-delay | ```s ,ma, mm```
+
+#### transition shorthand properties
+
+Properties | Equal
+--- | ----
+```transition: margin 2s;``` | transition-property transition-durection
+```transition: margin 2s linear;``` | transition-proerty transition-durection transition-timing-function
+```transition: margin 3s 2s;``` | transition-property transition-durection transition-delay
+````transition: margin 3s ease-in-out 5s;``` | transition-property transition-durection transition-timing-function transition-delay
+```transition: margin 3s;``` | transition-property transition-durection
+```transition: all 0.5s ease-in-out; ``` | transition-property transition-durection transition-timing-function
+
+## Transform
+
+#### Transform properties
+
+Properties | Value
+--- | ---
+transform | ```all transform-function propertes```
+transform-origin | ```px, left, right, top, bottom```
+transform-style | ```flat, preserve-3d```
+backface-visibility | ```hidden, visible```
+
+#### Transform shorthand properties
+
+Properties | Value
+--- | ---
+```transform-origin(2px,5px);``` | x-offset, y-offset
+```transform-origin(5px,8px,10px); ``` | x-offset, y-offset, z-offset
+
+#### Transform-function properties
+
+Properties | Value
+---- | -----
+translateX() | ```px, %, em, rem```
+translateY() | ```px, %, em, rem```
+translateZ()  | ```px, %, em, rem```
+rotateX() | ```angle, turn```
+rotateY() | ```angle, turn```
+rotateZ() | ```angle, turn```
+scalex() | ``` pasitive interge value ```
+scaleY() | ``` pasitive interge value ```
+scaleZ() | ``` pasitive interge value ```
+skewX() | ``````angle, turn```
+skewY() | ```angle, turn```
+perspective() | ```px, %, em, rem```
+
+#### Transform-function shorthand properties
+
+Properties | Equal
+---- | -----
+```translate(px);``` | translateX() and translateY()
+```translate(px,px);``` | translateX(), translateY()
+```translate3d(px,px,px)``` | translateX(), translateY(), translateZ()
+```rotate(deg);``` | rotateX() and rotateY()
+```rotate(deg,deg);``` | rotateX(), rotateY()
+```rotate3d(x,y,z,deg);``` | x-coordinates, y-coordinates, z-coordinates, deg
+```scale(2); ``` | scaleX() and scaleY()
+```scale(3,5);``` | scaleX(), scaleY()
+```scale3d(x,y,z);``` | scaleX(), scaleY(), scalez()
+```skew(deg);``` | skewX() and skewY()
+```skew(deg,deg);``` | skewX(), skewY()
+```matrix(a,b,c,d,tx,ty);``` | a,b,c,d (linear transformation) and tx, ty (translateX(), translateY())
+```matrix3d(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3,a4,b4,c4,d4);``` | a1,b1,c1,a2,b2,c2,a3,b3,c3,a4,b4,c4 (linear transformation) and a4,b4,c4,d4 (hold the valueof translation)
