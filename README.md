@@ -236,30 +236,32 @@ rgba() | rgba(red, green, blue, alpha), rgba(255,99,71,0.5)
 
 #### Magin properties:
 
-| Properties | Value |
-| ------------ | -------- |
-| margin-top | px, em, rem ..etc |
-| margin-left | px, em, rem ..etc |
-| margin-bottom | px, em, rem ..etc | 
-| margin-right | px, em, rem ..etc |
+| Properties | Value | tailwind
+| ------------ | -------- | ----- |
+| margin-top | px, em, rem ..etc | mt |
+| margin-left | px, em, rem ..etc | ml |
+| margin-bottom | px, em, rem ..etc | mb |
+| margin-right | px, em, rem ..etc | mr |
 
 #### Margin shorthand properties:
 
-| Properties | equal |
-| ----- | ----- |
-| margin: 10px; | all side |
+| Properties | equal | tailwind
+| ----- | ----- | -------| 
+| margin: 10px; | all side | m |
+| margin: 10px 0; | margin-top and margon-bottom | my |
+| margin: 0 10px; | margin-left and margin-right | mx |
 | margin: 10px 10px; | margin-top and margin-bottom, margin-left and margin-right |
 | margin: 10px 10px 10px | margin-top, margin-left and margin-right, margin-bottom |
 | margin: 10px 10px 10px 10px | margin-top, margin-right, margin-bottom , margin-left |
 
 #### Margin physical properties:
 
-| Properties | Value |
-| ------ | ------ |
+| Properties | Value | tailwind |
+| ------ | ------ | --- |
 | margin-block-start | px, em, rem ..etc |
 | margin-block-end | px, em, rem ..etc |
-| margin-inline-start | px, em, rem ..etc |
-| margin-inline-end | px, em, rem ..etc |
+| margin-inline-start | px, em, rem ..etc | ms |
+| margin-inline-end | px, em, rem ..etc | me |
 
 #### Margin physical sharthand properties:
 
