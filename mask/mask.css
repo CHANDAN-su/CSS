@@ -1,0 +1,110 @@
+/* mask */
+/* The mask CSS shorthand property hides an element (partially or fully) by masking or clipping the image at specific points.
+
+The CSS mask-image property specifies a mask layer image.
+The mask layer image can be a PNG image, an SVG image, a CSS gradient, or an SVG <mask> element.
+
+Constituent properties
+This property is a shorthand for the following CSS properties:
+
+mask-clip
+mask-composite
+mask-image
+mask-mode
+mask-origin
+mask-position
+mask-repeat
+mask-size
+
+
+Syntax
+        _____Keyword values_____
+        mask:  none;
+
+        ______Image values_____
+        mask: url(mask.img);
+        mask: url(masks.svg#star);
+
+        ______Combined values______
+        mask: url(mask.png) luminance;
+        mask: url(mask.png) 20px 30px; | url position
+        mask: url(mask.png) 0 0/50px 50px; url position/width height
+        mask: url(mask.png) repeat-x; url repeat-image
+        mask: url(mask.png) stroke-box; url box-enclosed
+        mask: url(mask.png) exclude; url non-overlapping parts
+
+        _____Multiple masks_____
+        mask:   url(masks.svg#star) left / 16px repeat-y,
+                Element within SVG graphic is used as a mask on the left-hand side with a width of 16px
+                url(masks.svg#circle) right / 16px repeat-y; Element within SVG graphic is used as a mask on the right-hand side with a width of 16px */
+
+.mask{
+    /* -webkit-mask: url(/mask/Image/w3logo.png) 0 0/400px 350px no-repeat; */
+    /* -webkit-mask-image: url(CHANDAN.png); */
+  /* mask-image: url('https://www.w3schools.com/css/w3logo.png'); */
+  /* -webkit-mask-repeat: no-repeat; */
+  /* mask-repeat: no-repeat;     */
+  /* -webkit-mask-size: 30rem; */
+  position: relative;
+}
+
+
+
+/* mask-image */
+/* The mask-image CSS property sets the image that is used as mask layer for an element. By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element.
+
+
+Syntax:
+        mask-image: none 
+                    url(masks.svg#mask) 
+                    linear-gradient(rgba(0,0,0,1), transparent) 
+                    image(url(mask.png),skyblue) 
+                    image(url(mask.png),skyblue) , linear-gradient(rgba(0,0,0,     1), transparent) ; */
+
+
+.mask{
+  -webkit-mask-image:url(/mask/Image/w3logo.png) ;  
+}
+
+
+
+/* mask-position */
+/* The mask-position CSS property sets the initial position, relative to the mask position layer set by mask-origin, for each defined mask image.
+
+Syntax:
+        image-position: left | right | top | bottom | center | 25px 50px | top right | 1rem 1rem, center; */
+
+
+.mask{
+  -webkit-mask-position: 14px 93px;
+}
+
+
+/* mask-size */
+/* The mask-size CSS property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
+
+Syntax: 
+        mask-size: cover | contain | 40px | auto | 50% 20% | 50% auto | 50%, 25%, 25%; */
+
+
+.mask{
+      -webkit-mask-size: 130px 140px;
+}
+
+
+/* mask-repeat */
+/* The mask-repeat CSS property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
+
+By default, the repeated images are clipped to the size of the element, but they can be scaled to fit (using round) or evenly distributed from end to end (using space).
+
+Suntax:
+        mask-repeat: repeat | repeat-x | repeat-x | space | round | no-repeat; */
+
+.mask{
+  -webkit-mask-repeat: no-report;
+}
+
+
+
+
+

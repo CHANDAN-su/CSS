@@ -14,6 +14,88 @@
             padding: 0;
         }
 
+        /* min() */
+        /* The min() CSS function lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value. The min() function can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+
+        the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). 
+
+        width: min(50%,500px); a = 50% , b = 500px
+        
+        900px x 50%  = 450px | a
+        1200px x 50% = 600px | b
+
+        Using:
+                margin
+                padding
+                font-size
+                box-shadow
+
+        Syntax: 
+        The min() function takes one or more comma-separated expressions as its parameter  */
+
+.min{
+    border: 2px solid black;
+    margin: 30px auto;
+    padding: 40px 0;
+    background-color: gray;
+    color: white;
+    width: 900px;
+}
+
+.min p:nth-child(1){
+    margin: 0 auto;
+    /* width: min(90%,600px); */
+}
+
+
+/* max() */
+/* The max() CSS function lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value. The max() function can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+
+(in which case 1vw would be 20px, so 20vw would be 400px). This technique uses an absolute unit to specify a fixed minimum value for the property, and a relative unit to allow the value to grow to suit larger viewports.
+
+    max(50% , 600px); a = 50% , b = 600px
+
+    900px x 50% = 450px | b
+    1200px x 50% = 600px | 600px 
+    
+    Syntax: 
+            max(50%,600px);
+    */
+
+.min p:nth-child(1){
+    margin: 0 auto;
+    /* width: max(80%,600px); */
+}
+
+
+/* clamp() */
+/* The clamp() CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
+
+Note that using clamp() for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as the code in Fluid Typography but in one line, and without the use of media queries.
+
+    width: clamp(350px , 50% , 500px);  a = 350px , b = 500px
+
+    900px x 50% = 450px | 450px
+    1200px x 50% = 600px | b
+    600px x 50% = 300px | a
+
+
+Syntax: 
+        width: clamp(min , val , max);
+
+        _____Static values____
+        width: clamp(200px, 40%, 400px);
+        width: clamp(20rem, 30vw, 70rem);
+        width: clamp(10vw, 20em, 100vw);
+
+        ____Calculated values___
+        width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem));
+        width: clamp(100px, calc(30% / 2rem + 10px), 900px); */
+
+.min p:nth-child(1){
+    margin: 0 auto;
+    width: clamp(350px , 80% , 520px);
+}
 
         /* min-width */
         /* kam se kam itana width to hona hi chahiye */
@@ -148,6 +230,10 @@
 </head>
 
 <body>
+
+    <section class="min">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dicta.</p>
+    </section>
 
     <div class="min-width-max-width">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dicta est, placeat dolore </p>
