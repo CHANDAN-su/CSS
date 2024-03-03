@@ -623,7 +623,6 @@ flex: 0 0 50px; | flex-grow flex-shrinks flex-basis
 Properties | Value
 ----- | -------
 display | grid
-
 grid-template-columns | ``` auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry ```
 grid-template-row | ``` auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry ```
 grid-auto-column | ```auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px```
