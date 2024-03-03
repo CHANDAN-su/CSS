@@ -469,6 +469,9 @@ Properties | Value
 ---- | ----
 overflow-x | visible, hidden, scroll, auto, clip
 overflow-y | visible, hidden, scroll, auto, clip
+overflow-wrap | ```break-word```
+hyphens | ```auto```
+hyphens-charactor | ``` ">>" ```
 
 #### Overflow shorthand propertes
 
@@ -612,6 +615,7 @@ flex-flow: row wrap: | flex-direction flex-wrap
 flex-flow: wrap column | flex-wrap flex-direction
 flex: 0 0 50px; | flex-grow flex-shrinks flex-basis
 
+
 ## Grid
 
 #### Grid properties
@@ -619,16 +623,17 @@ flex: 0 0 50px; | flex-grow flex-shrinks flex-basis
 Properties | Value
 ----- | -------
 display | grid
-grid-template-columns |  auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry 
-grid-template-row |  auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry 
-grid-auto-column | auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px
-grid-auto-row | auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px
-grid-auto-flow | row, colummn, dense, row dense, column dense
-grid-row-start | auto, positive interge value, span 2
-grid-row-end | auto, positive interge value, span 2
-grid-column-start | auto, positive interge value, span 2
-grid-column-end | auto, positive interge value, span 2
-grid-template-area | hd hd hd hd hd \n sd sd main main main \n fr fr fr fr fr
+
+grid-template-columns | ``` auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry ```
+grid-template-row | ``` auto, 140px 1fr, [lineName] 100px, [lineName1] 100px [lineName2 lineName3], minmax(100px, 1fr), fit-content(40%), repeat(3, 200px), subgrid, repat(auto-fit, minmax(200px, 1fr)), repat(auto-fill, minmax(200px, 1fr)), 200px repeat(auto-fill, 200px) 300px, masonry ```
+grid-auto-column | ```auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px```
+grid-auto-row | ```auto, min-content, max-content, 100px minmax(200px, 1fr), minmax(100px auto), minmax(max-content, 2fr), minmax(20%, 80vw), 100px 200px 300px```
+grid-auto-flow | ```row, colummn, dense, row dense, column dense```
+grid-row-start | ```auto, positive interge value, span 2```
+grid-row-end | ```auto, positive interge value, span 2```
+grid-column-start | ```auto, positive interge value, span 2```
+grid-column-end | ```auto, positive interge value, span 2```
+grid-template-area | ```hd hd hd hd hd \n sd sd main main main \n fr fr fr fr fr```
 gap | px, rem, em, %
 column-gap | px, rem, em, %
 row-gap | px, rem, em, %
@@ -659,7 +664,6 @@ grid-row: 1/4; | ```grid-row-start / grid-row-end```
 grid-area: auto; | ```grid-row-start, grid-colum-start, grid-row-end and grid-coumn-end```
 grid-ared: auto / auto; | ```grid-row-start grid-colum-start and grid-row-end grid-coumn-end```
 grid-ared: auto / auto / auto / auto; | ```grid-row-start, grid-colum-start, grid-row-end, grid-coumn-end```
-
 
 ## Animation
 
@@ -757,4 +761,77 @@ Properties | Equal
 ```skew(deg);``` | skewX() and skewY()
 ```skew(deg,deg);``` | skewX(), skewY()
 ```matrix(a,b,c,d,tx,ty);``` | a,b,c,d (linear transformation) and tx, ty (translateX(), translateY())
-```matrix3d(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3,a4,b4,c4,d4);``` | a1,b1,c1,a2,b2,c2,a3,b3,c3,a4,b4,c4 (linear transformation) and a4,b4,c4,d4 (hold the valueof translation
+
+## Gradient
+
+#### Gradient properties
+
+Properties | Value
+---- | -----
+linear-gradient | ```linear-gradient(direction, color 1, color 2, ....color N) and linear-gradient(<side-to-corner>, <angle>, <linear-color-step>, <color-hint>)```
+radial-gradient | ``` radienl-gradient(<ending-shaps> <size> at <position>, <color>, <color-hint>)```
+conic-gradient | ``` from <side-to-corner> <position> <color> <color-hint>```
+repeating-linear-gradient | ```linear-gradient(direction, color 1, color 2, ....color N) and linear-gradient(<side-to-corner>, <angle>, <linear-color-step>, <color-hint>)```
+repeating-radial-gradient | ``` radienl-gradient(<ending-shaps> <size> at <position>, <color>, <color-hint>)```
+repeating-conic-gradient | ``` from <side-to-corner> <position> <color> <color-hint>```
+
+Properties | Value
+---- | ----
+```<side-to-corner>``` | ```to top (0deg), to bottom (100deg), to left (270deg), to right (90deg), to left top, to left bottom, to right top, to right bottom```
+```<angle>``` | ```deg, .turn```
+```<linear-color-step> <color-hint>``` | ```color 10%, color 5% 10%```
+```<position>``` | ```left, right, top, bottom, center, length-percentage, left top, length-percentage length-percentage```
+```<ending-shaos>``` | ``` circle, ellipse```
+```<size>``` | ``` closest-side, closest-corner, farthat-side, fartest-corner```
+
+## Text
+
+#### Text properties
+
+Properties | Value
+---- | ----
+text-align | ```start, end, left, right, justify, center, justify-all, match-parent```
+text-decortion-color | ``` transparent, currentcolor, red, rgb() ..etc ```
+text-decoration-line | ``` none, underline, overline, line-through, underline overline, underline overline-through```
+text-decoration-style | ```none, solid, dotted, dashed, double, wavy```
+text-decoration-thickness | ``` px, rem, em, %```
+text-decoration-offset | ``` px, rem, em, %```
+text-decoration-position | ``` under, auto, left, right```
+text-emphasis-color | ``` transparent, currentcolor, red, rgb() ..etc ```
+text-emphasis-style | ``` none, filled, open, dot, circle, double-circle, trainagle, square```
+text-indent | ``` px, rem, em, %```
+text-overflow | ``` clip, ellipsis, ellipsis ellipsis, ellipsis "[_ _ _]"```
+text-transform | ``` none, capitalize, uppercase, lowercase, full-width, full-size-kana``` 
+
+#### Text shorthand properties
+
+Properties | Equal
+---- | ----
+```text-decoration: underline;``` | text-decoration-line
+``` text-decoration: underline dotted;``` | text-decoration-line text-decoration-style
+``` text-decoration: underline dashes red;```text-secoration-line text-decoration-style text-decoration-color
+``` text-decoration: dashed overline blue``` | text-decoration-style text-decoration-line text-decoration-color
+``` text-emphasis: open red;``` | text-emphasis-style text-emphasis-color
+``` text-shadow: 10px 10px;``` | x-oofset y-offset
+``` text-shadow: 4px 5px red;``` | x-offset y-offset color
+``` text-shadow: red 10px 15px;``` | color x-oofset y-oofset
+``` text-shadow: 10px 10px 2px red;``` | x-offset y-offset blue-radius color
+``` text-shadow: red 2px 2px 1px;``` |  color x-offset y-offset blue-radius
+
+## Shapes
+
+#### Shapes properties
+
+Properties | Value
+---- | ----
+shape-outside | ``` inset(), circle(), ellipsis(), polygon(), margin-box, border-box, padding-box, content-box, url(), linear-gradient()```
+shape-image-threshold | ``` 0, 1```
+shape-margin | ``` px, rem, em, %```
+
+Properties | Value
+---- | ----
+inset() | ``` top right bottom left, top right bottom boder-raduis left```
+circle() | ``` %, % at <corner>```
+ellipse() | ``` <position> <position>, <position> <position> at <corner>```
+polygon() | ``` 0 50px, 50px 80px, 50px 120px (triangle)```
+
