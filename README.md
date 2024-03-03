@@ -462,6 +462,9 @@ Properties | Value
 ---- | ----
 overflow-x | visible, hidden, scroll, auto, clip
 overflow-y | visible, hidden, scroll, auto, clip
+overflow-wrap | ```break-word```
+hyphens | ```auto```
+hyphens-charactor | ``` ">>" ```
 
 #### Overflow shorthand propertes
 
@@ -751,3 +754,76 @@ Properties | Equal
 ```skew(deg,deg);``` | skewX(), skewY()
 ```matrix(a,b,c,d,tx,ty);``` | a,b,c,d (linear transformation) and tx, ty (translateX(), translateY())
 ```matrix3d(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3,a4,b4,c4,d4);``` | a1,b1,c1,a2,b2,c2,a3,b3,c3,a4,b4,c4 (linear transformation) and a4,b4,c4,d4 (hold the valueof translation)
+
+## Gradient
+
+#### Gradient properties
+
+Properties | Value
+---- | -----
+linear-gradient | ```linear-gradient(direction, color 1, color 2, ....color N) and linear-gradient(<side-to-corner>, <angle>, <linear-color-step>, <color-hint>)```
+radial-gradient | ``` radienl-gradient(<ending-shaps> <size> at <position>, <color>, <color-hint>)```
+conic-gradient | ``` from <side-to-corner> <position> <color> <color-hint>```
+repeating-linear-gradient | ```linear-gradient(direction, color 1, color 2, ....color N) and linear-gradient(<side-to-corner>, <angle>, <linear-color-step>, <color-hint>)```
+repeating-radial-gradient | ``` radienl-gradient(<ending-shaps> <size> at <position>, <color>, <color-hint>)```
+repeating-conic-gradient | ``` from <side-to-corner> <position> <color> <color-hint>```
+
+Properties | Value
+---- | ----
+```<side-to-corner>``` | ```to top (0deg), to bottom (100deg), to left (270deg), to right (90deg), to left top, to left bottom, to right top, to right bottom```
+```<angle>``` | ```deg, .turn```
+```<linear-color-step> <color-hint>``` | ```color 10%, color 5% 10%```
+```<position>``` | ```left, right, top, bottom, center, length-percentage, left top, length-percentage length-percentage```
+```<ending-shaos>``` | ``` circle, ellipse```
+```<size>``` | ``` closest-side, closest-corner, farthat-side, fartest-corner```
+
+## Text
+
+#### Text properties
+
+Properties | Value
+---- | ----
+text-align | ```start, end, left, right, justify, center, justify-all, match-parent```
+text-decortion-color | ``` transparent, currentcolor, red, rgb() ..etc ```
+text-decoration-line | ``` none, underline, overline, line-through, underline overline, underline overline-through```
+text-decoration-style | ```none, solid, dotted, dashed, double, wavy```
+text-decoration-thickness | ``` px, rem, em, %```
+text-decoration-offset | ``` px, rem, em, %```
+text-decoration-position | ``` under, auto, left, right```
+text-emphasis-color | ``` transparent, currentcolor, red, rgb() ..etc ```
+text-emphasis-style | ``` none, filled, open, dot, circle, double-circle, trainagle, square```
+text-indent | ``` px, rem, em, %```
+text-overflow | ``` clip, ellipsis, ellipsis ellipsis, ellipsis "[_ _ _]"```
+text-transform | ``` none, capitalize, uppercase, lowercase, full-width, full-size-kana``` 
+
+#### Text shorthand properties
+
+Properties | Equal
+---- | ----
+```text-decoration: underline;``` | text-decoration-line
+``` text-decoration: underline dotted;``` | text-decoration-line text-decoration-style
+``` text-decoration: underline dashes red;```text-secoration-line text-decoration-style text-decoration-color
+``` text-decoration: dashed overline blue``` | text-decoration-style text-decoration-line text-decoration-color
+``` text-emphasis: open red;``` | text-emphasis-style text-emphasis-color
+``` text-shadow: 10px 10px;``` | x-oofset y-offset
+``` text-shadow: 4px 5px red;``` | x-offset y-offset color
+``` text-shadow: red 10px 15px;``` | color x-oofset y-oofset
+``` text-shadow: 10px 10px 2px red;``` | x-offset y-offset blue-radius color
+``` text-shadow: red 2px 2px 1px;``` |  color x-offset y-offset blue-radius
+
+## Shapes
+
+#### Shapes properties
+
+Properties | Value
+---- | ----
+shape-outside | ``` inset(), circle(), ellipsis(), polygon(), margin-box, border-box, padding-box, content-box, url(), linear-gradient()```
+shape-image-threshold | ``` 0, 1```
+shape-margin | ``` px, rem, em, %```
+
+Properties | Value
+---- | ----
+inset() | ``` top right bottom left, top right bottom boder-raduis left```
+circle() | ``` %, % at <corner>```
+ellipse() | ``` <position> <position>, <position> <position> at <corner>```
+polygon() | ``` 0 50px, 50px 80px, 50px 120px (triangle)```
