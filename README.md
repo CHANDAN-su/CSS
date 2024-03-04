@@ -238,18 +238,18 @@ rgba() | rgba(red, green, blue, alpha), rgba(255,99,71,0.5)
 
 | Properties | Value | tailwind
 | ------------ | -------- | ----- |
-| margin-top | px, em, rem ..etc | mt |
-| margin-left | px, em, rem ..etc | ml |
-| margin-bottom | px, em, rem ..etc | mb |
-| margin-right | px, em, rem ..etc | mr |
+| margin-top | px, em, rem ..etc | mt-{size} |
+| margin-left | px, em, rem ..etc | ml-{size} |
+| margin-bottom | px, em, rem ..etc | mb-{size} |
+| margin-right | px, em, rem ..etc | mr-{size} |
 
 #### Margin shorthand properties:
 
 | Properties | equal | tailwind
 | ----- | ----- | -------| 
-| margin: 10px; | all side | m |
-| margin: 10px 0; | margin-top and margon-bottom | my |
-| margin: 0 10px; | margin-left and margin-right | mx |
+| margin: 10px; | all side | m-{size} |
+| margin: 10px 0; | margin-top and margon-bottom | my-{size} |
+| margin: 0 10px; | margin-left and margin-right | mx-{size} |
 | margin: 10px 10px; | margin-top and margin-bottom, margin-left and margin-right |
 | margin: 10px 10px 10px | margin-top, margin-left and margin-right, margin-bottom |
 | margin: 10px 10px 10px 10px | margin-top, margin-right, margin-bottom , margin-left |
@@ -260,8 +260,8 @@ rgba() | rgba(red, green, blue, alpha), rgba(255,99,71,0.5)
 | ------ | ------ | --- |
 | margin-block-start | px, em, rem ..etc |
 | margin-block-end | px, em, rem ..etc |
-| margin-inline-start | px, em, rem ..etc | ms |
-| margin-inline-end | px, em, rem ..etc | me |
+| margin-inline-start | px, em, rem ..etc | ms-{size} |
+| margin-inline-end | px, em, rem ..etc | me-{size} |
 
 #### Margin physical sharthand properties:
 
@@ -275,36 +275,46 @@ rgba() | rgba(red, green, blue, alpha), rgba(255,99,71,0.5)
 | margin-block: 10px 10px; | margin-block-start, margin-block-end |
 | margin-inline: 10px; | margin-inline-start and margin-inline-end |
 | margin-inline: 10px 10px | margin-inline-start, margin-inline-end | 
- 
+
+## Space between properties (tailwind)
+
+#### Utilities for controlling the space between child elements.
+
+Properties | Value
+--- | ---
+space-x-{size} | margin-left
+space-y-{size} | margin-top
 
 ### Padding
 
 #### Padding properties:
 
-| Properties | Value |
-| ------------ | -------- |
-| padding-top | px, em, rem ..etc |
-| padding-left | px, em, rem ..etc |
-| padding-bottom | px, em, rem ..etc | 
-| padding-right | px, em, rem ..etc |
+| Properties | Value | Tailwind 
+| ------------ | -------- | -----
+| padding-top | px, em, rem ..etc | pt-{size}
+| padding-left | px, em, rem ..etc | pl-{size}
+| padding-bottom | px, em, rem ..etc | pb-{size}
+| padding-right | px, em, rem ..etc | pr-{size}
 
 #### padding shorthand properties:
 
-| Properties | equal |
-| ----- | ----- |
-| padding: 10px; | all side |
+| Properties | equal | Tailwind
+| ----- | ----- | -----
+| padding: 10px; | all side | p-{size}
+| padding: 10px 0; | padding-top and padding-bottom | py-{size} |
+| padding: 0 10px; | padding-left and padding-right | px-{size} |
 | padding: 10px 10px; | padding-top and padding-bottom, padding-left and padding-right |
 | padding: 10px 10px 10px; | padding-top, padding-left and padding-right | padding-bottom |
 | padding: 10px 10px 10px 10px | padding top, padding right, padding bottom , padding left |
 
 #### Padding physical properties:
 
-| Properties | Value |
-| ------ | ------ |
+| Properties | Value | tailwind
+| ------ | ------ | -----
 | padding-block-start | px, em, rem ..etc |
 | padding-block-end | px, em, rem ..etc |
-| padding-inline-start | px, em, rem ..etc |
-| padding-inline-end | px, em, rem ..etc |
+| padding-inline-start | px, em, rem ..etc | ps-{size}
+| padding-inline-end | px, em, rem ..etc | pe-{size}
 
 #### Padding physical sharthand properties:
 
@@ -324,20 +334,20 @@ rgba() | rgba(red, green, blue, alpha), rgba(255,99,71,0.5)
 
 #### Border propertie
 
-Properties | Value
--------- | ---------- 
-border-top-color | red, rgb() ..etc
-border-top-style | solid, dotted, double, wavys, dashed ..etc
-border-top-width | px, em, rem ..etc
-border-right-color | red, rgb() ..etc
-border-right-style | solid, dotted, double, wavys, dashed ..etc
-border-right-width | px, em, rem ..etc
-border-bottom-color | red, rgb() ..etc
-border-bottom-style | solid, dotted, double, wavys, dashed ..etc
-border-bottom-width | px, em, rem ..etc
-border-left-color | red, rgb() ..etc
-border-left-style | solid, dotted, double, wavys, dashed ..etc
-border-left-width | px, em, rem ..etc
+Properties | Value | Tailwind
+-------- | ---------- | ----
+border-top-color | red, rgb() ..etc | border-t-{color}
+border-top-style | solid, dotted, double, wavys, dashed ..etc |border-{style}
+border-top-width | px, em, rem ..etc | border-t-{width}
+border-right-color | red, rgb() ..etc | border-r-{color}
+border-right-style | solid, dotted, double, wavys, dashed ..etc |border-{style}
+border-right-width | px, em, rem ..etc | border-r-{width}
+border-bottom-color | red, rgb() ..etc | border-b-{color}
+border-bottom-style | solid, dotted, double, wavys, dashed ..etc |border-{style}
+border-bottom-width | px, em, rem ..etc | border-b-{width}
+border-left-color | red, rgb() ..etc | border-l-{color}
+border-left-style | solid, dotted, double, wavys, dashed ..etc |border-{style}
+border-left-width | px, em, rem ..etc | border-l--{width}
 border-collapse | collapse, separate
 border-specing | px, px px
 border | border-width border-style border-color
@@ -348,29 +358,44 @@ border-left | border-left-width border-left-style border-left-color
 
 #### Border shorthand properties
 
-Properties | Equal
-------- | -------
-border-color: white; | border-top-color and border-right-color and border-bottom and border-top-left
+Properties | Equal | Tailwind
+------- | ------- | ---
+border-color: white; | border-top-color and border-right-color and border-bottom and border-top-left | border-{color}
 border-color: white black; | border-top-color and border-bottom, border-left-color and border-right-color
 border-color: white red black; | border-top-color, border-left-color and border-right-color, border-bottom-color
 border-color: white red black orange; | border-top-color, border-right-color, border-bottom-color, border-left-color
-border-style: solid; | border-top-style and border-right-style and border-bottom-style, border-left-style
+|                 | border-top-color and border-bottom-color | border-y-{color}
+|                 | border-left-color and border-right-color | border-x-{color}
+border-style: solid; | border-top-style and border-right-style and border-bottom-style, border-left-style | border-{style}
 border-style: solid dashed; | border-top-style and border-bottom-style, border-left-style and border-right-style
 border-style: solid wavys double; | border-top-style, border-left-style and border-right-style. border-bottom-style
 border-style: solid, dashed, wavys, double; | border-top-style, border-right-style, border-bottom-style, border-left-style
-border-width: 2px; | border-top-width and border-right-width and border-bottom-width, border-left-width
+border-width: 2px; | border-top-width and border-right-width and border-bottom-width, border-left-width | border-{width}
 border-width: 2px 2px; | border-top-width and border-bottom-width, border-left-width and border-right-width
 border-width: 2px 2px 2px; | border-top-width, border-left-width and border-right-width. border-bottom-width
 border-width: 2px 2px 2px 2px; | border-top-width, border-right-width, border-bottom-width, border-left-width
+|                 | border-top-color and border-bottom-color | border-y-{width}
+|                 | border-left-color and border-right-color | border-x-{width}
+
+## Tailwindcss
+
+#### Utilities for controlling the border between child elements.
+
+Properties | Equal
+--- | ---
+divide-{color} | all side
+divide-{x}-{width} | border-left-width and border-right-width
+divide-{y}-{width} | border-top-width and border-bottom-width
+divide-{style} | all side
 
 ### Border radius
 
 #### Border-radius properties
 
-Properties | value
------- | -------
-border-top-left-radius | px, em, rem ..etc
-border-top-right-radius | px, em, rem ...etc
+Properties | value 
+------ | ------- 
+border-top-left-radius | px, em, rem ..etc 
+border-top-right-radius | px, em, rem ...etc 
 border-bottom-left-radius | px, em, rem ..etc
 border-bottom-right-radius | px, em, rem ...etc
 border-top-left-radius: 10px 20px; | horizontal_line_value vertical_line_value
@@ -381,9 +406,9 @@ border-bottom-left-radius: 10px 20px | horizontal_line_value vertical_line_value
 
 #### Border-radius shorthand properties
 
-Properties | Equal
--------- | -------
-border-radius: 20px; | border-top-left-radius and border-top-right-radius and border-bottom-left-radius and border-bottom-right-radius
+Properties | Equal | Tailwind
+-------- | ------- | ----
+border-radius: 20px; | border-top-left-radius and border-top-right-radius and border-bottom-left-radius and border-bottom-right-radius | rounded-{size}
 border-radius:10px 10px; | border-top-left-radius and border-bottom-right, border-top-right-radius and border-bottom-left-radius
 border-radius: 10px 10px 10px; | border-top-left-radius, border-top-right-radius and border-bottom-left-radius, border-bottom-right-tadius
 border-radius:10px 10px 10px 10px; | border-top-left-radius, border-top-right-radius | border-bottom-right-radius, border-bottom-left-radius
@@ -396,6 +421,27 @@ border-radius: 20px/30px 40px 50px; | border-top-left-radius: 20px 30px;, border
 border-radius: 20px/30px 40px 50px 60px; | border-top-left-radius: 20px 30px;, border-top-right:20px 40px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 60px;
 border-radius: 20px 30px/40px 50px; | border-top-left-radius: 20px 40px;, border-top-right:30px 50px;, border-bottom-right-radius: 20px 50px;, border-bottom-left-radius: 20px 50px;
 border-radius: 20px 30px 8px/10px 15px; | border-top-left-radius: 20px 10px;, border-top-right:30px 15px;, border-bottom-right-radius: 8px 10px;, border-bottom-left-radius: 30px 10px;
+
+## Tailwindcss border properties
+
+#### Rounded properties
+
+Properties | Value
+---- | ----
+rounded-s-{size} | border-start-start-radius and border-end-start-radius: 0.5rem;
+rounded-e-{size} | border-end-start-radius and border-end-end-radius: 0.5rem;
+rounded-t-{size} | botder-top-left-raduis and border-top-right-radius
+rounded-r-{size} | border-top-right-radius and border-bottom-right-radius
+rounded-b-{size} | border-bottom-left-redius and border-bottom-right-radius
+rounded-l-{size} | border-top-left-radius and border-bottom-radius
+rounded-ss-{size} | border-start-start-radius
+rounded-se-{size} | border-start-end-radius
+rounded-ee-{size} | border-end-end-radius
+rounded-es-{size} | border-end-start-radius
+rounded-tl-{size} | border-tio-left-radius
+rounded-tr-{size} | border-top-right-radius
+rounded-br-{size} | border-bottom-right-radius
+rounded-bl-{size} | border-bottom-left-radius
 
 #### Border other properties
 Properties | Value
