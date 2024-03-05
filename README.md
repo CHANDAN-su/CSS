@@ -478,15 +478,15 @@ border-image-repeat: round space; | top and bottom, left and right
 
 #### Background properties
 
-Properties | Value
------ | -----
-background-attachment | scroll, fixed
-background-clip | border-box, padding-box, content-box, text
-background-color | red, rgb(), rega(), hsl()
-bockground-image | url(), grandient
-background-position | px, rem em, %
-background-repeat | repeat, no-repeat, space, repeat-x, repeat-y, space
-background-size | px, rem em, %, cover, contain
+Properties | Value | Tailwindcss
+----- | ----- | ---
+background-attachment | scroll, fixed | bg-fixed, bg-scroll, bg-local
+background-clip | border-box, padding-box, content-box, text | bg-clip-padding, bg-clip-margin, bg-clip-content, bg-clip-text
+background-color | red, rgb(), rega(), hsl() | bg-{color}
+bockground-image | url(), grandient | bg-gradient-to-{direction}
+background-position | px, rem em, % | bg-{side}
+background-repeat | repeat, no-repeat, space, repeat-x, repeat-y, space | bg-repeat, bg-no-repeat, bg-space, bg-repeat-x, bg-repeat-y, bg-round
+background-size | px, rem em, %, cover, contain | bg-auto, bg-cover, bg-contain
 
 #### Background shorthand properties
 
@@ -513,10 +513,11 @@ writing-mode: lr; | left to right
 
 #### Overflow properties
 
-Properties | Value
----- | ----
-overflow-x | visible, hidden, scroll, auto, clip
-overflow-y | visible, hidden, scroll, auto, clip
+Properties | Value | Tailwindcss
+---- | ---- | ---
+overflow | auto, scroll, visible, hidden, clip | oveflow-{overflow-value}
+overflow-x | visible, hidden, scroll, auto, clip | overflow-x-{overflow-value}
+overflow-y | visible, hidden, scroll, auto, clip | overflow-y-{overflow-value}
 overflow-wrap | ```break-word```
 hyphens | ```auto```
 hyphens-charactor | ``` ">>" ```
@@ -532,9 +533,9 @@ overflow: hidden auto; | overflow-x, overflow-y
 
 ##### Object-fit properties
 
-Properties | Value
------ | -----
-object-fit | contain, cover, none, fill, scale-down
+Properties | Value | Tailwindcss
+----- | ----- | ---
+object-fit | contain, cover, none, fill, scale-down | object-contain, object-cover, object-none, object-fill, object-scale-dowm
 
 ## Typoraphy
 
