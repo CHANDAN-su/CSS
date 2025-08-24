@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counters</title>
+    <style>
+        /* Simple css counter  */
+        /* body{
+            counter-reset: section 9;
+        }
+
+        h2::before{
+            content: "Chapter" counter(section) " : ";
+            counter-increment: section 9;
+            color: red;
+        } */
+
+        /* css Nesting counters  */
+        /* body{
+            counter-reset: section 0;
+        }
+
+        h1{
+            counter-reset: subsection 0;
+        }
+
+        h2{
+            counter-reset: supersection 0;
+        }
+
+        h1:before{
+            content: "section" counter(section)  " :";
+            counter-increment: section;   
+        }
+
+        h2:before{
+            content: counter(section) "." counter(subsection) "  ";
+            counter-increment: subsection 5;
+        }
+
+        h3:before{
+            content: counter(section) " . " counter(subsection) " . " counter(supersection) "  " ;
+            counter-increment: supersection 2;
+        } */
+
+        /* different level of nesting counters  */
+        ol{
+            counter-reset: section ;
+            list-style: none;
+        }
+
+        li:before{
+            content: counters(section ," . ")  " ";
+            counter-increment: section ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- simple css counter  -->
+    <!-- <h1>This is heading</h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam adipisci officiis sint corrupti libero?</p>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates voluptate at esse reiciendis laborum exercitationem!</p>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias provident eius repellat quis!</p>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quos nam dolorem debitis temporibus!</p> -->
+
+    <!-- css Nesting counters  -->
+    <!-- <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem, ipsum.</h2>
+
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem, ipsum.</h2>
+
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <h3>Lorem ipsum dolor sit.</h3>
+    <h3>Lorem, ipsum dolor.</h3>
+    <h3>Lorem, ipsum.</h3> -->
+
+
+    <!-- different level of nesting counters  -->
+
+
+    <!-- not complete  -->
+
+    <ol>
+
+        <li>box</li>
+        <li>box</li>
+        <ol>
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <ol>
+                <li>box2</li>
+                <li>box3</li>
+                <li>box4</li>
+            </ol>
+            <ol>
+            
+            
+            <li>box3</li>
+        </ol>
+    
+    </ol>
+        <li>box4</li>
+        <li>box5</li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background clip </title>
+
+    <style>
+        body {
+            background-color: sandybrown;
+        }
+        .box{
+            border: 2px solid black;
+            width: 534px;
+            padding: 53px;
+            margin: 23px;
+            background-color: white;
+
+            background-clip: content-box !important;
+            /* dafulate value  */
+            background-clip: border-box ;
+
+            background-clip: padding-box ;
+        }
+
+        h1{
+            font-size: 73px;
+            color: transparent;
+            background-image: url("https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg");
+
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>This is my first heading for html</h1>
+    <div class="box">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ipsa assumenda voluptatibus corporis autem
+            impedit deleniti deserunt nulla aliquam aspernatur nam consequatur minus temporibus adipisci eligendi
+            fugiat, pariatur necessitatibus quo eaque id aperiam saepe maxime vel exercitationem. Nihil impedit iure eos
+            fuga sit ducimus odio perspiciatis praesentium corrupti magnam architecto esse velit suscipit quisquam eum
+            dolor, nesciunt ratione soluta possimus dicta! Doloribus, excepturi laudantium. Necessitatibus nulla
+            cupiditate, sequi et repudiandae, saepe labore itaque veritatis quibusdam incidunt vero nemo tempora minima
+            totam odit unde at! Esse consequuntur odio sunt quas saepe libero, explicabo quos aperiam impedit? Magnam
+            dolor in ab qui earum magni cumque esse fugiat quidem nobis id error minus quos fugit voluptatum fuga
+            adipisci, perferendis saepe recusandae sint porro libero expedita. Ipsum sapiente recusandae corrupti ipsa
+            sunt rem repellat iste enim sint modi. Similique doloribus laboriosam quam voluptatem aut dolore voluptate
+            odit soluta necessitatibus.</p>
+    </div>
+</body>
+
+</html>

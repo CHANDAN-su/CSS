@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            width: 600px;
+            height: 400px;
+            margin: 45px;
+            /* clip path circle  */
+            clip-path: circle(23% at 30% 40% );
+
+            /* clip path ellipse  */
+            clip-path: ellipse( 20% 10% at 20% 30%) ;
+
+            /* clip path inset  */
+            clip-path: inset(20% 25% 20% 10%) ;
+
+            /* clip path polygon  */
+            clip-path: polygon(40% 40% , 50% 80% , 30% 40%) ;
+
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="image">
+        <img src="/servics2.jpg" alt="">
+    </div>
+</body>
+</html>

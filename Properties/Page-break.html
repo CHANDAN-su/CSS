@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page break</title>
+    <style>
+        .print{
+            page-break-before: avoid;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="print">
+    <h1>This is my heading</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit ad consequatur officiis, quasi quis eos odio repudiandae nemo asperiores!</p>
+    <button onclick="func()">print the oage</button>
+    
+    </div>
+
+    <div class="print2">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ad minima id! Fugiat tempora aut a at minima eos?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cum magnam ex enim, cupiditate a autem sequi distinctio repudiandae id culpa corrupti sit quasi consectetur architecto quis tenetur laudantium fuga nesciunt deserunt.</p>
+    </div>
+    <script>
+        function func(){
+            window.print();
+        }
+    </script>
+</body>
+</html>

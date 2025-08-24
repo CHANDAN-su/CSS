@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow</title>
+    <style>
+        /* box-shadow: h-offset v-offset blur spread color |inset|inherit|initial|none; */
+
+        .box1 {
+            border: 2px solid rgb(175, 41, 41);
+            padding: 23px;
+            margin: 53px;
+            background-color: silver;
+            /* box-shadow: h-offset v-offset blur  */
+            box-shadow: 10px 10px 10px;
+        }
+
+        .box2 {
+            border: 2px solid black;
+            padding: 23px;
+            margin: 53px;
+            background-color: silver;
+            /* box-shadow: h-offset v-offset blur spread  */
+            box-shadow: 10px 10px 10px 8px;
+        }
+
+        .box3 {
+            border: 2px solid black;
+            padding: 23px;
+            margin: 53px;
+            background-color: silver;
+            /* box-shadow: h-offset v-offset blur spread color  */
+            box-shadow: 10px 10px 10px 8px red ,12px 12px 12px 8px rgb(37, 6, 6) ;
+        }
+
+        .box4 {
+            border: 2px solid black;
+            padding: 23px;
+            margin: 53px;
+            background-color: silver;
+            /* box-shadow: h-offset v-offset blur spread color |inset  */
+            box-shadow: 10px -10px 10px 8px red inset;
+        }
+
+        
+        
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <h1>Box 1</h1>
+    </div>
+    <div class="box2">
+        <h1>Box2</h1>
+    </div>
+    <div class="box3">
+        <h1>Box3</h1>
+    </div>
+    <div class="box4">
+        <h1>Box4</h1>
+    </div>
+    
+</body>
+
+</html>

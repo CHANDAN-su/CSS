@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* display: inline; */
+            border: 2px solid red;
+            width: 700px;
+        }
+
+        /* display inline -> vertical element to horizontal element  */
+        /* ul li {
+            border: 2px solid black;
+            display: inline;
+            padding: 23px;
+        } */
+        
+        /* display inline ->   horizontal element to  vertical  element  */
+        /* ul li {
+            border: 2px solid black;
+            display: block;
+            width: 267px;
+        } */
+        /* span{
+            border: 2px solid red;
+            display: block;
+            margin: 13px;
+            width: 900px;
+        } */
+
+
+        /* display item list -> list work */
+          span{
+            border: 2px solid red;
+            display: list-item;           
+            list-style-position: inside;
+            margin: 13px;
+            width: 900px;
+        } 
+
+        /* mix inline and block  */
+        /* ul li {
+            border: 2px solid black;
+            display: inline-block;
+        } */
+
+
+        ul li{
+            border: 2px solid black;
+            display: run-in;
+            width: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contant us</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <span>One</span>
+    <span>Two</span>
+    <span>Three</span>
+    <span>Four</span>
+</body>
+</html>
