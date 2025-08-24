@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D transforms</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            margin: 30px 200px;
+            background: linear-gradient(red, green);
+
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            cursor: pointer;
+            /* position: relative; */
+
+
+            /* translate Value x-axix , y-axix */
+            /* transform: translate( 20px , 80px); */
+            /* transform: translateX(30px); */
+            /* transform: translateY(90px); */
+
+
+
+
+            /* circle rotate  */
+            /* transform: rotate(30deg); */
+            /* transform-origin: top left; */
+            /* JHA SE APKO rotate karna h  */
+            /* transform-origin: bottom right; */
+
+
+
+
+
+            /* transform along with x-asix and y-asix */
+            /* transform: skew(20deg ,30deg); */
+            /* transform: skewX(25deg); */
+            /* transform: skewY(60deg); */
+
+
+
+            /* It is used to change the width and height of an element  */
+            /* transform: scale(2, 4); */
+            /* transform: scaleX(3); */
+            /* transform: scaleY(5); */
+
+
+            /* shortant  */
+
+            /* matrix(scaleX() , skewY() , skewX() , scaleY() , translateX() , translateY() ) */
+
+            transition-property: transform;
+            transition-duration: 3s;
+
+            transform: rotate(0deg);
+            /* transform-origin: top left; */
+            
+
+
+        }
+
+        #box:hover {
+            transform: rotate(270deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, dicta recusandae fugiat sapiente vero illum
+        distinctio officiis ad temporibus nostrum eaque, quibusdam cum vitae praesentium architecto atque provident.
+        Pariatur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, aperiam, corrupti optio laborum
+        tempore, harum modi laudantium aut excepturi veniam dolore voluptatibus? Repudiandae modi, adipisci impedit
+        neque ex ullam facere. </p>
+    <div>
+        <div id="box">
+            <h2>This is my heading</h2>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum sint vel est, exercitationem, possimus ab velit
+        animi sit aliquam officiis et, odio nostrum voluptates iure quis minus mollitia in quaerat quos hic natus.
+        Repudiandae modi aliquam fugiat nobis facilis libero? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Soluta quis autem temporibus numquam dolor eligendi, explicabo veniam doloribus quaerat minus quam, blanditiis
+        enim. Veniam quisquam natus in nisi itaque, beatae corporis architecto, et expedita provident soluta qui non
+        vitae inventore facilis nulla ducimus! Ex esse atque quibusdam in hic sed? </p>
+</body>
+
+</html>
