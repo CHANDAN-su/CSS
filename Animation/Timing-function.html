@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-name</title>
+    <style>
+        div {
+
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            position: relative;
+            animation-name: example;
+
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+
+
+
+        }
+
+        .box {
+            animation-timing-function: linear;
+        }
+
+        .box1 {
+            animation-timing-function: ease;
+        }
+
+        .box2 {
+            animation-timing-function: ease-in;
+        }
+
+        .box3 {
+            animation-timing-function: ease-out;
+        }
+
+        .box4 {
+            animation-timing-function: ease-in-out;
+        }
+
+       
+
+        @keyframes example {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    
+        <div class="box">linear</div>
+        <div class="box1">ease</div>
+        <div class="box2">ease-in</div>
+        <div class="box3">ease-out</div>
+        <div class="box4">ease-in-out</div>
+       
+    
+</body>
+
+</html>
