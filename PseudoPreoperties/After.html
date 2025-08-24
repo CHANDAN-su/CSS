@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after</title>
+    <style>
+        body {
+            overflow: hidden;
+            background: linear-gradient(  to right ,red ,blue , yellow);
+           
+        }
+
+        .heading {
+            display: grid;
+            place-items: center;
+            
+            
+        }
+        
+        h1 {
+            text-transform: uppercase;
+            font-size: 45px;
+            /* position: relative; */
+            color: rgb(156, 25, 13);
+            /* margin-top: 50px; */
+    
+        
+            
+            
+        }
+
+        h1::after {
+            content: " ";
+            position: absolute;
+            
+            top: 5%;
+            /* left: 33%; */
+            right: 67%;
+            height: 10%;
+            width: 100%;
+            /* border-left: 5px solid rgb(11, 161, 56); */
+            border-right: 5px solid rgb(11, 161, 56);
+            border-radius: 10px;
+         
+
+            animation: move;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            
+        }
+        
+        
+        @keyframes move {
+            0% {
+                transform: translateX(0%);
+                
+            }
+            
+            50% {
+                transform: translateX(33%);
+            }
+            
+            100% {
+                transform: translateX(0%);
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="before">
+        <div class="heading">
+            <h1>CHANDAN Thakur</h1>
+        </div>
+    </div>
+</body>
+
+</html>

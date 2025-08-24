@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .span4 {
+            margin-left: 15px;
+        }
+
+        .box {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        
+
+        .container {
+            display: flex;
+        }
+
+        .span4 li span {
+            display: inline-block;
+            font-size: 55px;
+            color: brown;
+            position: relative;
+            margin: 10px;
+        }
+
+        .span4 li span::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-left: 2px solid brown;
+
+
+            animation-name: silde;
+            animation-duration: .9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+
+
+        }
+
+        @keyframes silde {
+
+
+            100% {
+                left: 100%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="heading">
+                <h1>I'm a</h1>
+            </div>
+            <div class="span4">
+                <ul class="unorderlist">
+                <li><span>YouTube</span></li>
+                <li> <span>Designer</span></li>
+                <li><span>Developer</span></li>
+                <li> <span>Freelancer</span></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: yellow;
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+
+
+        .table1 {
+            background: yellow;
+        }
+
+
+       
+        /* Checked selector area  */
+        input[type='checkbox']:checked {
+            box-shadow: 0 0 15px red;
+        }
+
+         input[type='radio']:checked {
+            box-shadow: 0 0 15px red;
+            width: 20px;
+            height: 20px;
+        }
+
+        input[type='radio']:checked   +  label{
+            color: red;
+            font-size: 25px;
+        } 
+
+      
+
+
+        /* Disabled and enable Area  */
+        input:disabled{
+            border: 2px solid green;
+            background: greenyellow;
+        }
+
+        input[type='text']:disabled{
+            border: 3px solid rgb(189, 20, 48);
+            
+        }  
+
+        input:enabled{
+            border: 2px solid green;
+            background: greenyellow;
+        }
+ 
+        input[type='text']:enabled{
+            border: 3px solid rgb(158, 231, 176);
+            
+        } 
+
+      
+
+
+
+        /* required  area  */
+        input:required{
+            background-color: wheat;
+        }
+
+
+
+
+
+       /* Optional Area  */
+        input:optional{
+            background:yellowgreen ;
+        }
+
+
+
+
+        /* In range area  */
+        input[type="number"]:in-range{
+            background-color: rgb(216, 238, 119);
+        }
+       /* out rande area  */
+        input[type="number"]:out-of-range{
+            background-color: red;
+        }
+
+
+
+        /* read only area css  */
+        input:read-only{
+            background: rgb(216, 238, 119);
+            border: 2px solid yellowgreen;
+        }
+        input:read-write{
+            background: wheat;
+        }
+        
+
+        /* invaild area in css  */
+        input[type="email"]:invalid{
+            background: tomato;
+        }
+        input[type="email"]:valid{
+            background: wheat;
+        }
+
+
+        /* Default area in css  */
+        option:default{
+            color: red;
+        }
+
+
+
+        /* Fouces pseudo class area */
+        /* input:focus {
+            border: 3px solid red;
+            padding: 10px;
+            margin: 10px;
+            background: rosybrown;
+            font-size: 18px;
+            font-weight: bold;
+            width: 600px;
+            height: 10px;
+        } */
+ 
+        input[type="text"]{
+            width: 150px;
+
+            transition: width  .9s ease-in-out;
+        } 
+ 
+        input[type='text']:focus{
+            width: 300px;
+        } 
+    </style>
+</head>
+
+<body>
+    <!-- <h1><u><marquee > STUDENT REGISTRATION FORM</marquee> </u> </h1> -->
+    <h1> STUDENT REGISTRATION FORM </h1>
+    <hr size="3" width="1173" color="black">
+    <form action="#">
+    <table class="table1">
+        <tr>
+            <td>FIRST NAME:</td>
+            <td><input type="text" size="30px"  placeholder="FIRST NAME" required> (max 15 character a-z or A-Z)</td>
+        </tr>
+
+        <tr>
+            <td>LAST NAME::</td>
+            <td><input type="text" size="30px" placeholder="LAST NAME"  disabled> (max 15 character a-z or A-Z)</td>
+        </tr>
+        <tr>
+            <td>DATE:</td>
+            <td><input type="date" size="15px" placeholder="FIRST NAME"></td>
+        </tr>
+
+        <tr>
+            <td>EMAIL ID:</td>
+            <td><input type="email" size="25px" required></td>
+        </tr>
+
+        <tr>
+            <td>Age</td>
+            <td><input  type="number" value="age" min="18" max="28" placeholder="age"></td>
+        </tr>
+
+        <tr>
+            <td>MOBILE NUMBER: </td>
+            <td><input type="text" size="10px"   placeholder="10 digit number" required > (only number)</td>
+        </tr>
+
+        <tr>
+            <td>Genter:</td>
+            <td><input type="radio" value="MALE">MALE
+                <input type="radio" value="FEMALE">FMALE
+            </td>
+        </tr>
+
+        <tr>
+            <td>upload photo:</td>
+            <td><input type="file" required></td>
+        </tr>
+
+        <tr>
+            <td>ADDRESS:</td>
+            <td><textarea name="ADDRESS" id="ADDRESS" cols="80" rows="10" ></textarea></td>
+        </tr>
+
+        <tr>
+            <td>CITY:</td>
+            <td><input type="TEXT" size="30px" value="jaipur" readonly></td>
+        </tr>
+
+        <tr>
+            <td>PIN CODE:</td>
+            <td><input type="TEXT" size="30px" placeholder="6 digit number"></td>
+        </tr>
+
+        <tr>
+            <td>STATE:</td>
+            <td><select name="STATE" id="STATE">
+                    <option value="Select">Select</option>
+                    <option value="MP" selected>MP</option>
+                    <option value="Jaipur" >jaipur</option>
+                    <option value="UP" >UP</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Bagal" >Bagal</option>
+                </select></td>
+        </tr>
+
+        <tr>
+            <td>COUNTER:</td>
+            <td><input type="text" size="30px" value="India" readonly="readonly" disabled></td>
+        </tr>
+
+        <tr>
+            <td>HOBBIES:</td>
+            <td>Drawing<input type="checkbox" value="Drawing" checked>
+                Singing<input type="checkbox" value="Singing">
+                Dancing<input type="checkbox" value="Dancing">
+                Other<input type="checkbox" value="Order">
+            </td>
+        </tr>
+
+        <tr>
+            <td>QUALIFICATION:</td>
+            <td bgcolor="white">
+                <table border="2" class="table2">
+                    <tr>
+                        <th>SL.NO</th>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Marks</th>
+                        <th>Percents</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>COURESES APPLIED FOR:</td>
+            <td>
+                <input type="radio" value="B.Tech" checked> <label > B.Tech</label>
+                <input type="radio" value="B.com"> <label> B.com</label>
+                <input type="radio" value="B.Sc"> <label> B.sc</label>
+                <input type="radio" value="BCA"> <label> BCA</label>
+
+            </td>
+        </tr>
+
+    </table><br><br>
+
+
+
+    <input type="checkbox" checked="checked"> remember me
+    <button>Cancel</button>
+    Forget <a href="#">password</a>
+    <br><br>
+
+
+    <button type="submit" value="submit">Submit</button>
+    <button type="reset">reset</button>
+</form>
+
+    <!-- <input type="image" src="data:image/jpeg;base64,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" name="submit" width="300px" height="560px" alt="submit now"> -->
+
+
+   
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-letter pseudo element</title>
+    <style>
+        #container{
+            display: grid;
+            place-content: center;
+
+        }
+        .box{
+            width: 600px;
+            height: 400px;
+            font-size: 25px;
+            border: 2px solid red;
+            /* padding: 15px; */
+        }
+
+        p::first-letter{
+            color: red;
+            font-size: 45px;
+            letter-spacing: 15px;
+            padding: 50px;
+            margin: 30px;
+            /* border: 2px solid red; */
+        }
+
+
+
+        /* p::first-letter{
+            font-size: 55px;
+            margin: 23px;
+            color: blue;
+        } */
+
+        .para::first-letter{
+            font-size: 55px;
+            margin: 23px;
+            color: blue;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate ut maxime recusandae natus
+                ab vero pariatur assumenda autem.</p>
+        </div>
+    </div>
+</body>
+
+</html>
