@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box build</title>
+    <style>
+       .container{
+           border: 2px solid red;
+           width: 40%;
+           margin: 200px;
+           background-color: rgb(151, 129, 82);
+
+
+           
+           
+           display: flex;
+
+
+           flex-wrap: wrap-reverse;
+           flex-direction: row;
+       }
+
+       .box{
+           /* height: 60px; */
+           /* width: 80px; */
+           padding: 10px;
+           /* flex-basis: 50px; */
+       }
+        .box1 {
+            background-color: cadetblue;
+            flex-basis: 50px;
+            
+           
+        }
+
+        .box2 {
+            background-color: rgb(72, 29, 192);
+
+        }
+
+        .box3 {
+            background-color: rgb(231, 164, 20);
+            
+        }
+
+        .box4 {
+            background-color: rgb(151, 21, 123);
+           flex-grow: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">box1 </div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- Justify-contant same foe grid  -->
+<!-- aling-contant same for grid  -->
+<!-- aling-self same for grid     -->
+<!-- Justify-self same for grid  -->
+<!-- order same for grid  -->
+<!-- Nested flex same for grid  -->
