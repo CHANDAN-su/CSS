@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            /* height: 500px; */
+            width: 630px;
+            margin-left: 34px;
+            margin-top: 57px;
+
+            display: grid;
+
+            /* one by one columns cell size  -px  */
+            /* grid-template-columns: 157px 181px 261px; */
+
+            /* repeat by cell aize  */
+            grid-template-columns: repeat(2, 200px)  50px ;
+
+            /* rone by one columns cell size  -fr  */
+            /* grid-template-columns: 2fr 4fr 1fr; */
+
+            /* one by one row cell size  -px */
+            /* grid-template-rows: 107px 107px 121px ; */
+
+            /* repeat by cell aize  */
+            grid-template-rows: repeat(2, 187px)  50px;
+
+            /* one by one row cell size  -fr  */
+            /* grid-template-rows: 1fr 2fr 1fr; */
+
+            /* grid coloumns and grid rows space -px  */
+            grid-gap: 15px;
+        }
+
+
+        .Itam {
+            background-color: rosybrown;
+        }
+
+        .Itam1 {
+            background-color: royalblue;
+        }
+
+        .Itam2 {
+            background-color: bisque;
+        }
+
+        .Itam3 {
+            background-color: brown;
+        }
+
+        .Itam4 {
+            background-color: blue;
+        }
+
+        .Itam5 {
+            background-color: blueviolet;
+        }
+
+        .Itam6 {
+            background-color: rebeccapurple;
+        }
+
+
+        .Itam7 {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="Itam">First</div>
+        <div class="Itam1">Second</div>
+        <div class="Itam2">Three</div>
+        <div class="Itam3">Four</div>
+        <div class="Itam4">Five</div>
+        <div class="Itam5">six</div>
+        <div class="Itam6">Seven</div>
+        <div class="Itam7">Eight</div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: lightblue;
+            width: 100%;
+            margin: 50px  auto 0;
+
+            /* display: grid;
+            grid-template-columns: repeat(auto-fit, 100px);
+            grid-template-rows: repeat(2, 100px); */
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax( 150px, 1fr));
+            grid-template-rows: repeat(2, 100px);
+        }
+        .box{
+            background: lightcoral;
+        }
+
+        .box1{
+            background: rgb(112, 22, 230);
+        }
+
+        .box2{
+            background: rgb(8, 196, 8);
+        }
+
+        .box3{
+            background: rgb(181, 9, 187);
+            /* grid-column-end: -1; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">one</div>
+        <div class="box1">Two</div>
+        <div class="box2">Three</div>
+        <div class="box3">Four</div>
+    </div>
+</body>
+</html>

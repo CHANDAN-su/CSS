@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlaping</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            /* height: 500px; */
+            width: 300px;
+            margin-left: 34px;
+            margin-top: 57px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 150px);
+            grid-template-rows: repeat(2, 150px);
+        }
+
+        .itams {
+            max-width: 150px;
+        }
+
+        .itam {
+            background-color: tomato;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+
+            align-self: start;
+
+
+
+        }
+
+        .itam1 {
+            background-color: rgb(67, 59, 172);
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+
+            align-self: center;
+            justify-self: center;
+
+
+            z-index: 1;
+
+        }
+
+        .itam2 {
+            background-color: rgb(145, 209, 27);
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+
+            align-self: flex-end;
+            justify-self: end;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="itams itam">First Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolore deleniti
+            impedit quisquam maxime illo facilis distinctio quasi. Accusamus!</div>
+        <div class="itams itam1">Second Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi tempore et
+            quaerat repudiandae magnam necessitatibus molestias quo illo est!</div>
+        <div class="itams itam2">Three Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
+            perferendis sed totam quos amet natus ad veniam dolore.</div>
+
+    </div>
+</body>
+
+</html>

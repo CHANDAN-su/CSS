@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minmax</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            /* height: 500px; */
+            width: 80%;
+            margin-left: 34px;
+            margin-top: 57px;
+
+
+            display: grid;
+            /* grid-template-columns: max-content 1fr 1fr min-content ;
+            grid-template-rows: repeat(2, min-content); */
+
+            grid-template-columns: minmax(150px 1fr) 1fr 1fr min-content ;
+            grid-template-rows: repeat(2, Minmax( 150px min-content));
+
+
+            grid-gap: 10px;
+        }
+
+        .Itam {
+            background-color: rosybrown;
+
+
+        }
+
+        .Itam1 {
+            background-color: royalblue;
+
+        }
+
+        .Itam2 {
+            background-color: bisque;
+        }
+
+        .Itam3 {
+            background-color: brown;
+        }
+
+        .Itam4 {
+            background-color: blue;
+        }
+
+        .Itam5 {
+            background-color: blueviolet;
+        }
+
+        .Itam6 {
+            background-color: rebeccapurple;
+        }
+
+
+        .Itam7 {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="Itam">First l Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad corrupti illum ipsam impedit doloribus inventore, ipsa laudantium necessitatibus dolor corporis nulla officia est commodi debitis maxime distinctio magnam. Assumenda praesentium nulla quas quasi suscipit!.</div>
+        <div class="Itam1">Second</div>
+        <div class="Itam2">Three</div>
+        <div class="Itam3">Four </div>
+        <div class="Itam4">Five </div>
+        <div class="Itam5">six</div>
+        <div class="Itam6">Seven</div>
+        <div class="Itam7">Eight</div>
+
+
+    </div>
+</body>
+
+</html>

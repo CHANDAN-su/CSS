@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+            border: 2px solid red;
+            /* height: 500px; */
+            width: 630px;
+            margin-left: 34px;
+            margin-top: 57px;
+
+
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 100px 80px 90px  110px 110px 90px ;
+
+            grid-gap: 15px;
+        }
+
+
+
+        .Itam {
+            background-color: rosybrown;
+            grid-column: 1 / span 3;
+          
+        }
+
+        .Itam1 {
+            background-color: royalblue;
+            grid-column: 1 / span 3;
+
+        }
+
+        .Itam2 {
+            background-color: bisque;
+        }
+
+        .Itam3 {
+            background-color: brown;
+           
+        }
+
+        .Itam4 {
+            background-color: blue;
+            grid-row: 3 / span 3;
+
+        }
+
+        .Itam5 {
+            background-color: blueviolet;
+            grid-column: 1 / span 2;
+            grid-row: 4 / span 2;
+        }
+
+        .Itam6 {
+            background-color: rebeccapurple;
+           grid-column: 1 / span 3;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Itam">Header</div>
+        <div class="Itam1">Menu</div>
+        <div class="Itam2">Box 1</div>
+        <div class="Itam3">Box 2</div>
+        <div class="Itam4">sidebar</div>
+        <div class="Itam5">Contant</div>
+        <div class="Itam6">Footer</div>
+    </div>
+</body>
+</html>

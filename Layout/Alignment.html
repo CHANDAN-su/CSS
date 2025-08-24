@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            height: 800px;
+            width: 900px;
+            margin-left: 34px;
+            margin-top: 57px;
+
+
+            display: grid;
+            grid-template-columns: repeat(2, 80px);
+            grid-template-rows: repeat(2,90px);
+            grid-gap: 10px;
+
+            grid-auto-rows: 50px;
+            grid-auto-flow: column;
+            grid-auto-columns: .5fr;
+            grid-auto-flow: row;
+
+            
+            
+            
+            /* horiztaily move  */
+            justify-content: space-around ;
+            justify-content: space-between ;
+            justify-content: space-evenly !important;
+            /* justify-content: left;
+            justify-content: right;
+            justify-content: start; */
+            
+            
+            /* vertical move  */
+            align-content: center;
+            
+        }
+
+        .Itam {
+            background-color: rosybrown;
+
+
+        }
+
+        .Itam1 {
+            background-color: royalblue;
+
+        }
+
+        .Itam2 {
+            background-color: bisque;
+            grid-row: span 2;
+           
+        }
+
+        .Itam3 {
+            background-color: brown;
+        }
+
+        .Itam4 {
+            background-color: blue;
+        }
+
+        .Itam5 {
+            background-color: blueviolet;
+        }
+
+        .Itam6 {
+            background-color: rebeccapurple;
+        }
+
+
+        .Itam7 {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="Itam">First l.</div>
+        <div class="Itam1">Second</div>
+        <div class="Itam2">Three</div>
+        <div class="Itam3">Four </div>
+        <div class="Itam4">Five </div>
+        <div class="Itam5">six</div>
+        <div class="Itam6">Seven</div>
+        <div class="Itam7">Eight</div>
+        <div class="Itam6">Seven</div>
+        <div class="Itam7">Eight</div>
+       
+
+    </div>
+</body>
+
+</html>
