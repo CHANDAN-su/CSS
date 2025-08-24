@@ -1,0 +1,6 @@
+1. Blobmaker: Blobmaker is a free generative design tool made with 💕 by z creative labs, to help you quickly create random, unique, and organic-looking SVG shapes. URL[https://www.blobmaker.app/]
+
+2. Getwaves:-  Make some waves  URL[https://getwaves.io/]
+
+3. Neumorphism:-  css shadow genertors URL[neumorphism]
+
